@@ -5,6 +5,7 @@
 * 视频下载
 > 1. 分p下载  
 > 2. 互动视频下载
+> 3. 番剧下载
 * 视频投币等
 * 视频弹幕获取
 * 视频信息获取
@@ -13,4 +14,6 @@
 * 检查昵称是否可注册(实现)
 
 ----
-大部分的接口来源于项目： https://github.com/SocialSisterYi/bilibili-API-collect
+大部分的接口来源于项目： https://github.com/SocialSisterYi/bilibili-API-collect  
+开发阶段，所有代码以及结构都会发生不平滑变动  
+本人初学java，代码质量堪忧，望包容  

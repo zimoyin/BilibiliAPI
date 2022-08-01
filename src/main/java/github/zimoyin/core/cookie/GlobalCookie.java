@@ -15,7 +15,7 @@ import java.util.HashMap;
 /**
  *
  * 全局Cookie会在 HttpClientUtils.class 中使用，如果不想请求携带全局Cookie，请把 isGlobalCookie 设置为false<br>
- * 全局cookie，自动扫描指定目录（./cache/  可以修改路径）下的cookie，从而自动让程序使用该cookie<br>
+ * 全局cookie，自动扫描指定目录（./cache/cookie  可以修改路径）下的cookie，从而自动让程序使用该cookie<br>
  * 程序如何自动使用cookie的：类在初始化的时候会去看用户有没有去指定获取哪个cookie，如果没有就去获取全局cookie<br>
  * 程序获取不到cookie会这么办：程序会停止运行并抛出异常，程序不会自动去调用Login等方法提升用户登录<br>
  * 程序运行时我没自己初始化全局Cookie，但是他自己打印了异常：这是全局cookie在API系统内被初始化，并打印了异常<br>

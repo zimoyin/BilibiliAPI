@@ -25,17 +25,20 @@
 > github.zimoyin.core.video.operation.VideoProgress
 ### 视频高能进度条
 > github.zimoyin.core.video.info.VideoBarrageCurve
-### 互动视频（废弃）
+### 互动视频
 > github.zimoyin.core.video.info.InteractVideo
 ### 视频url信息（需要有防盗链与部分视频需要cookie）
 > github.zimoyin.core.video.url.WEBVideoURLFormat
-### 预判视频URL信息(360P,不需要cookie和防盗链)
-> github.zimoyin.core.video.url.WEBVideoURLPreviewFormat
+### 预览视频URL信息(360P,不需要cookie和防盗链)
+> github.zimoyin.core.video.url.VideoURLPreviewFormatP360
 ```java
-ArrayList<URL> 视频URL = new WEBVideoURLPreviewFormat().getURLs("bv号");
+ArrayList<URL> 视频URL = new VideoURLPreviewFormatP360().getURLs("bv号");
 ```
-### 视频下载
+### 预览视频URL信息(1080P,不需要cookie和防盗链)
+> github.zimoyin.core.video.url.VideoURLPreviewFormatP1080
+### 视频下载（上古案例）
 > github.zimoyin.core.video.url.download.WebVideoDownload
+新案例请见: github.zimoyin.core.video.Main
 ```java
         //下载器设置
         VideoDownloadSetting setting = new VideoDownloadSetting();
