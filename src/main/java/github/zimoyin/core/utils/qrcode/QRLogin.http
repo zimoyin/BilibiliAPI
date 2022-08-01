@@ -1,0 +1,17 @@
+
+POST http://api.bilibili.com/x/click-interface/web/heartbeat
+Content-Type: application/x-www-form-urlencoded
+bvid=BV1154y1J7H9&csrf=f7e71114c467879df4fdf1cd1fbb37b6&SESSDATA=6e6dcdf1%2C1660278479%2C74358%2A21
+
+
+
+#        params.put("SESSDATA","6e6dcdf1%2C1660278479%2C74358%2A21");
+#        params.put("csrf", "f7e71114c467879df4fdf1cd1fbb37b6");
+#        params.put("start_ts", String.valueOf(System.currentTimeMillis()/1000));
+#        params.put("realtime", "120");
+#
+#//        params.put("cid", "564531920");
+#        params.put("bvid", "BV1154y1J7H9");
+#        params.put("played_time", "120");
+#        params.put("play_type", "0");
+#        params.put("dt", "2");
