@@ -3,11 +3,43 @@ package github.zimoyin.core.live.massage.vertx;
 import io.vertx.core.buffer.Buffer;
 import io.vertx.core.buffer.impl.BufferImpl;
 import lombok.Data;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.ByteArrayOutputStream;
 
+/**
+ * TCP的数据包
+ */
+@Data
 public class Package {
     private volatile int sequence = 0;
+
+    public final Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    private Buffer buffer;
+    /**
+     * 包头
+     */
+    private Header header;
+    /**
+     * 负载
+     */
+    private Body body;
+
+    public Package(Buffer buffer) {
+        this.header = new Header(buffer);
+        this.body = new Body(buffer);
+        this.buffer = buffer;
+    }
+
+    public  Package(){}
+
+
+    public long length(){
+        return buffer.length();
+    }
+
 
     /**
      * 认证包
@@ -18,29 +50,22 @@ public class Package {
         Buffer buffer = new BufferImpl();
         //正文+头部大小
         int i = body.getBytes().length;
-        buffer.appendInt(16+i);
+        //头
+        Header header = new Header();
+        //正文+头部大小
+        header.setPageSize(16+i);
         //头部大小
-        buffer.appendShort((short) 16);
-        /**
-         * 协议版本:
-         * 0普通包正文不使用压缩
-         * 1心跳及认证包正文不使用压缩
-         * 2普通包正文使用zlib压缩
-         * 3普通包正文使用brotli压缩,解压为一个带头部的协议0普通包
-         */
-        buffer.appendShort((short) 2);
-        /**
-         * 操作码
-         * 2	心跳包
-         * 3	心跳包回复（人气值）
-         * 5	普通包（命令）
-         * 7	认证包
-         * 8	认证包回复
-         */
-        buffer.appendInt(7);
+        header.setHeaderSize((short) 16);
+        //协议版本
+        header.setVersion((short) 2);
+        //操作码
+        header.setCode(7);
         //递增
-        buffer.appendInt(sequence);
+        header.setSequence(sequence);
         sequence++;
+
+        //头部
+        buffer.appendBuffer(header.buildHeader());
         //正文
         buffer.appendString(body);
         return buffer;
@@ -70,6 +95,7 @@ public class Package {
 
     @Data
     public static class Header{
+        public final Logger logger = LoggerFactory.getLogger(this.getClass());
         /**
          * 字段偏移 0
          * 包大小
@@ -151,6 +177,10 @@ public class Package {
          */
         public Header(Buffer buffer) {
             this.pageSize=buffer.getInt(0);
+            if (buffer.length() != this.pageSize) {
+                logger.warn("这是一个损耗的包 包实际长度:{}, 包头描述包长度:{}",buffer.length(),this.pageSize);
+                return;
+            }
             this.headerSize = buffer.getShort(4);
             this.version=buffer.getShort(6);
             this.code=buffer.getInt(8);
@@ -158,6 +188,10 @@ public class Package {
         }
 
         public Header() {
+        }
+
+        public long length() {
+            return 16;
         }
     }
 
@@ -167,6 +201,11 @@ public class Package {
          * 字段偏移 16
          */
         private  String body;
+
+        /**
+         * 解压后的数据
+         */
+        private String deBody;
 
         /**
          * 构建 body 数据
@@ -179,6 +218,14 @@ public class Package {
         }
 
         /**
+         * 返回一个Byte 数组
+         * @return
+         */
+        public byte[] getBytes(){
+            return this.body.getBytes();
+        }
+
+        /**
          * 拆包
          * @param buffer
          */
@@ -188,6 +235,11 @@ public class Package {
 
 
         public Body() {
+        }
+
+
+        public long length() {
+            return getBytes().length;
         }
     }
 }

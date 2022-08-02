@@ -5,7 +5,6 @@ import github.zimoyin.core.live.pojo.info.DanmuInfoJsonRootBean;
 import github.zimoyin.core.utils.net.httpclient.HttpClientResult;
 import github.zimoyin.core.utils.net.httpclient.HttpClientUtils;
 import lombok.Data;
-import org.apache.http.HttpException;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -17,16 +16,16 @@ import java.security.NoSuchAlgorithmException;
  * 直播信息流：包含直播弹幕信息
  */
 @Data
-public class MassageStream {
+public class MassageStreamInfo {
     private final String URL = "http://api.live.bilibili.com/xlive/web-room/v1/index/getDanmuInfo?id=%s";
     /**
      * 直播间ID
      */
     private String id;
 
-    public MassageStream(){}
+    public MassageStreamInfo(){}
 
-    public MassageStream(String id){
+    public MassageStreamInfo(String id){
         this.id = id;
     }
 

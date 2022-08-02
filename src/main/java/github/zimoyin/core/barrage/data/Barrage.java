@@ -9,7 +9,19 @@ import java.util.Objects;
 /**
  * 弹幕数据类型
  */
+@lombok.Data
 public class Barrage implements Data {
+
+    /**
+     * 发送弹幕的人，直播弹幕才能获取，视频弹幕不能直接获取到
+     */
+    private String author;
+
+    /**
+     * 发送弹幕的人的mid
+     */
+    private String mid;
+
 
     /**
      * 弹幕在视频内出现的秒数
