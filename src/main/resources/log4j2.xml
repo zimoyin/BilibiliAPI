@@ -57,7 +57,8 @@
             <!-- 日志级别过滤器 -->
             <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY" />
             <!-- 日志消息格式 -->
-            <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%-5level] %l %c{36} - %msg%n" />
+<!--            <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%-5level] %l %c{36} - %msg%n" />-->
+            <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%-5level] [%t] %l :  %m%n" />
             <Policies>
                 <!-- 在系统启动时，出发拆分规则，生产一个新的日志文件 -->
                 <OnStartupTriggeringPolicy />

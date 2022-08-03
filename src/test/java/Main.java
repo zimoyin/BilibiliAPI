@@ -1,6 +1,7 @@
 import com.alibaba.fastjson.JSONObject;
 import github.zimoyin.core.exception.CodeException;
 import github.zimoyin.core.exception.URLFormatException;
+import github.zimoyin.core.live.video.data.Quality;
 import github.zimoyin.core.utils.JsonSerializeUtil;
 import github.zimoyin.core.video.Video;
 import github.zimoyin.core.video.download.DownloadControl;
@@ -31,8 +32,8 @@ import java.util.Set;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        String fileName ="【a】?a?n";
-       String a =  fileName.replaceAll("[\\[\\]【】.?/:<>|*\"\\\\]", "");
-        System.out.println(a);
+        Quality q = Quality.ORIGINAL_PAINTING;
+
+        System.out.println(q.name());
     }
 }

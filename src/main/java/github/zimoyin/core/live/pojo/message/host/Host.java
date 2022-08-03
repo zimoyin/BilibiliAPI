@@ -1,7 +1,7 @@
 /**
   * Copyright 2022 json.cn 
   */
-package github.zimoyin.core.live.pojo.info;
+package github.zimoyin.core.live.pojo.message.host;
 
 import lombok.Data;
 

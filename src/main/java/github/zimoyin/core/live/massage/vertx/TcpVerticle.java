@@ -2,11 +2,14 @@ package github.zimoyin.core.live.massage.vertx;
 
 import com.alibaba.fastjson.JSONObject;
 import github.zimoyin.core.live.massage.LiveMassageHandle;
+import github.zimoyin.core.live.massage.data.Massage;
 import github.zimoyin.core.live.massage.MassageStreamInfo;
-import github.zimoyin.core.live.pojo.info.DanmuInfoJsonRootBean;
-import github.zimoyin.core.live.pojo.info.Host;
+import github.zimoyin.core.live.pojo.message.host.DanmuInfoJsonRootBean;
+import github.zimoyin.core.live.pojo.message.host.Host;
 import github.zimoyin.core.utils.ZLibUtil;
 import io.vertx.core.*;
+import io.vertx.core.buffer.Buffer;
+import io.vertx.core.buffer.impl.BufferImpl;
 import io.vertx.core.net.NetClientOptions;
 import io.vertx.core.net.NetSocket;
 import org.slf4j.Logger;
@@ -29,6 +32,14 @@ public class TcpVerticle extends AbstractVerticle {
     private long mid;
     private long roomid;
     private volatile boolean run = true;
+    /**
+     * 临时包。防止服务器分包发送
+     */
+    private volatile Buffer timPacker;
+    /**
+     * 人气
+     */
+    private volatile int hot;
 
     public TcpVerticle(long roomid) {
         DanmuInfoJsonRootBean pojo = new MassageStreamInfo().getJsonPojo(roomid);
@@ -42,7 +53,7 @@ public class TcpVerticle extends AbstractVerticle {
     }
 
     private void init(DanmuInfoJsonRootBean json) {
-        Host host = json.getData().getHost_list().get(2);
+        Host host = json.getData().getHost_list().get(0);
 //        this.host = "tx-sh-live-comet-01.chat.bilibili.com";
 //        this.port = 2243;
         this.host = host.getHost();
@@ -63,7 +74,8 @@ public class TcpVerticle extends AbstractVerticle {
         logger.info("实例化了一个 Verticle");
         //tcp设置
         NetClientOptions netClientOptions = new NetClientOptions();
-        netClientOptions.setReceiveBufferSize(1024 * 32);//设置缓冲区大小
+        netClientOptions.setReceiveBufferSize(1024 * 5);//设置缓冲区大小
+        netClientOptions.setLogActivity(false);//网络活动日志
         //开启客户端
         vertx.createNetClient(netClientOptions)
                 .connect(port, host)
@@ -80,15 +92,16 @@ public class TcpVerticle extends AbstractVerticle {
      */
     private void successHandle(NetSocket socket) {
         Package pack = new Package();
-        logger.info("成功启动了一个 TCP 客户端在 {}:{}", host,port);
-        logger.info("直播间ID :{}",this.roomid);
-        //构建认证包的正文
+        logger.info("成功启动了一个 TCP 客户端在 {}:{}", host, port);
+        logger.info("直播间ID :{}", this.roomid);
+        //构建认证包的正文，注意：老版本服务器除了 roomid 其余参数都是可选
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("key", this.key);
         jsonObject.put("uid", this.mid);
         jsonObject.put("roomid", this.roomid);
-        jsonObject.put("protover", 2);//版本协议，2代表zilb压缩，3代码br压缩
+        jsonObject.put("protover", 2);//版本协议，2代表zilb压缩，3代表br压缩
         jsonObject.put("platform", "web");
+//        jsonObject.put("type", 2);
         //发送包
         socket.write(pack.getCertificationPackage(jsonObject.toString()));
         logger.debug("客户端发送信息体: " + jsonObject.toString());
@@ -116,24 +129,52 @@ public class TcpVerticle extends AbstractVerticle {
         NetSocket result = header.result();
         result.handler(buffer -> {
             //打印本次状态
-            Package page = new Package(buffer);
-            logger.debug("服务器响应实际长度 {} byte", page.length());
-            logger.debug(page.getHeader().toString());
-            //构建本次的信息体
-            LiveMassageHandle.Massage massage = new LiveMassageHandle.Massage();
-            massage.setPage(page);
+            Package.Header header0 = new Package.Header(buffer);
+            logger.debug("服务器响应实际长度 {} byte", buffer.length());
+            logger.debug(header0.toString());
+            //合并临时包
+            Buffer buffer0 = appendPacket(buffer);
+            if (buffer0 != null) {
+                //将变量从指向附加包，改为指向整包
+                buffer = buffer0;
+                //将变量从指向附加包头，改为指向整包头
+                header0 = new Package.Header(buffer);
+                logger.debug("变量置换完成");
+            }
+            //如果存在临时包就不进行操作
+            if (timPacker != null) {
+                logger.debug("等待一个附加包");
+                return;
+            }
+            //是否是分包,包头定义的数据大于传过来的数据
+            if (header0.getPageSize() > buffer.length()) {
+                timPacker = buffer;
+                //包头定义数值大于包本身
+                logger.debug("发现分包，开始等待附加包。 包头描述长度:{},包实际大小:{}", header0.getPageSize(), buffer.length());
+                return;
+            } else {
+                timPacker = null;
+            }
 
+            //构建包
+            Package page = new Package(buffer);
+            if (buffer.length() != page.getHeader().getPageSize())
+                logger.warn("这是一个损耗的包 包实际长度:{}, 包头描述包长度:{}。数据如下:\n{}",
+                        buffer.length(), page.getHeader().getPageSize(),
+                        buffer.toString()
+                );
+            //构建本次的信息体
+            Massage massage = new Massage();
+            massage.setPage(page);
+            massage.setHot(this.hot);
             //解压信息
             analyzeData(buffer.getBytes(), massage);
-            massage.init();
             //发送事件
-            vertx.exceptionHandler(throwable -> {
-                if (handles != null && handles.size() > 0)
-                    for (LiveMassageHandle handle : handles) {
-                        massage.init();
-                        handle.handle(massage);
-                    }
-            });
+            if (handles != null) {
+                for (LiveMassageHandle handle : handles) {
+                    handle.handle(massage);
+                }
+            }
         });
         //链接关闭
         result.closeHandler(handler -> {
@@ -143,6 +184,47 @@ public class TcpVerticle extends AbstractVerticle {
         });
     }
 
+
+    /**
+     * 合并临时包
+     *
+     * @param buffer
+     */
+    public Buffer appendPacket(Buffer buffer) {
+        //如果存在临时包就合并包
+        if (timPacker != null) {
+            //上次发来的分包与这次的包是否可以进行合并，如果不能就舍弃分包
+            Package.Header timHeader = new Package.Header(timPacker);
+            int pageSize = timHeader.getPageSize();
+            int bufLength = buffer.length();
+            int timLength = timPacker.length();
+            //判断这次的包是临时包的补充还是一个单独的整包,如果是整包就返回
+            if (buffer.length() == new Package.Header(buffer).getPageSize()) {
+                logger.debug("本次发包为整包，发现残留临时包，以清理临时包（此时应该称为残包）");
+                timPacker = null;//清理临时包，因为此时他是个残包了
+                return null;
+            }
+            //还缺包
+            if (pageSize > (bufLength + timLength)) {
+                logger.debug("还需等待一个附加包");
+                timPacker.appendBuffer(buffer);
+                return null;
+            }
+            //不缺包
+            else if (pageSize == (bufLength + timLength)) {
+                logger.debug("所有附加包等待完毕，开始合并");
+                Buffer buffer0 = new BufferImpl();
+                buffer0.appendBuffer(timPacker);
+                buffer0.appendBuffer(buffer);
+                buffer = buffer0;
+                timPacker = null;
+                logger.debug("合并包完成,并清理临时包。包头长度描述:{} ,包实际长度:{}",new Package.Header(buffer).getPageSize(), buffer.length());
+                return buffer;
+            }
+        }
+        return null;
+    }
+
     /**
      * 解压包
      * 等待后续拆包改进，减少不必要开销
@@ -150,7 +232,7 @@ public class TcpVerticle extends AbstractVerticle {
      * @param data
      * @Author mxnter
      */
-    private void analyzeData(byte[] data, LiveMassageHandle.Massage message) {
+    private void analyzeData(byte[] data, Massage message) {
         int dataLength = data.length;
         if (dataLength < 16) {
             logger.error("错误的数据");
@@ -159,7 +241,7 @@ public class TcpVerticle extends AbstractVerticle {
             try {
                 int msgLength = inputStream.readInt();
                 if (msgLength < 16) {
-                    logger.error("缓冲区大小可能需要扩大");
+                    logger.warn("缓冲区大小可能需要扩大");
                 } else if (msgLength > 16 && msgLength == dataLength) {
                     // 其实是两个char
                     inputStream.readInt();
@@ -170,6 +252,7 @@ public class TcpVerticle extends AbstractVerticle {
                         int userCount = inputStream.readInt();
                         logger.debug("人气：" + userCount);
                         message.setHot(userCount);
+                        this.hot=userCount;
                     } else if (action == 4) {
                         inputStream.readInt();
                         int msgBodyLength = dataLength - 16;
@@ -216,8 +299,8 @@ public class TcpVerticle extends AbstractVerticle {
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
-                if (run)socket.write(pack.getHeart());
-                if (run)logger.debug("发送心跳");
+                if (run) socket.write(pack.getHeart());
+                if (run) logger.debug("发送心跳");
             }
             logger.info("心跳停止发送");
         }).start();

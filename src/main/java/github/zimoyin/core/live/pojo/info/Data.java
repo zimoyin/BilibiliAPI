@@ -2,10 +2,9 @@
   * Copyright 2022 json.cn 
   */
 package github.zimoyin.core.live.pojo.info;
-import java.util.List;
 
 /**
- * Auto-generated: 2022-08-01 18:39:29
+ * Auto-generated: 2022-08-03 12:30:27
  *
  * @author json.cn (i@json.cn)
  * @website http://www.json.cn/java2pojo/
@@ -13,18 +12,75 @@ import java.util.List;
 @lombok.Data
 public class Data {
 
-    private String group;
-    private int business_id;
-    private double refresh_row_factor;
-    private int refresh_rate;
-    private int max_delay;
     /**
-     * 认证秘钥
+     * 直播间真实id
      */
-    private String token;
+    private int room_id;
     /**
-     * 信息流服务器节点列表
+     * 直播间id（短号）
      */
-    private List<Host> host_list;
-
+    private int short_id;
+    /**
+     * 主播用户mid
+     */
+    private long uid;
+    /**
+     * 是否p2p
+     */
+    private int need_p2p;
+    /**
+     * 	是否隐藏
+     */
+    private boolean is_hidden;
+    /**
+     * 是否锁定
+     */
+    private boolean is_locked;
+    /**
+     * 是否竖屏
+     */
+    private boolean is_portrait;
+    /**
+     * 直播状态
+     * 0：未开播
+     * 1：直播中
+     * 2：轮播中
+     */
+    private int live_status;
+    /**
+     * 隐藏时间戳
+     */
+    private int hidden_till;
+    /**
+     * 锁定时间戳
+     */
+    private int lock_till;
+    /**
+     * 是否加密
+     */
+    private boolean encrypted;
+    /**
+     * 加密房间是否通过密码验证
+     * encrypted=true时才有意义
+     */
+    private boolean pwd_verified;
+    /**
+     * 开播时间
+     * 未开播时为-62170012800
+     */
+    private long live_time;
+    private int room_shield;
+    /**
+     * 是否为特殊直播间
+     * 0：普通直播间
+     * 1：付费直播间
+     */
+    private int is_sp;
+    /**
+     * 特殊直播间标志
+     * 0：普通直播间
+     * 1：付费直播间
+     * 2：拜年祭直播间
+     */
+    private int special_type;
 }

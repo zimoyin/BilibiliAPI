@@ -1,7 +1,7 @@
 package github.zimoyin.core.live.massage;
 
 import com.alibaba.fastjson.JSONObject;
-import github.zimoyin.core.live.pojo.info.DanmuInfoJsonRootBean;
+import github.zimoyin.core.live.pojo.message.host.DanmuInfoJsonRootBean;
 import github.zimoyin.core.utils.net.httpclient.HttpClientResult;
 import github.zimoyin.core.utils.net.httpclient.HttpClientUtils;
 import lombok.Data;

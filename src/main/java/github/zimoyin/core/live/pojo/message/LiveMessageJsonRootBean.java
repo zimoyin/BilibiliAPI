@@ -1,7 +1,8 @@
 /**
   * Copyright 2022 json.cn 
   */
-package github.zimoyin.core.live.pojo.barrage;
+package github.zimoyin.core.live.pojo.message;
+import com.alibaba.fastjson.JSONObject;
 import lombok.Data;
 
 import java.util.List;
@@ -22,4 +23,8 @@ public class LiveMessageJsonRootBean {
      * 弹幕信息
      */
     private List<String> info;
+    /**
+     * 其他信息
+     */
+    private github.zimoyin.core.live.pojo.message.Data data;
 }

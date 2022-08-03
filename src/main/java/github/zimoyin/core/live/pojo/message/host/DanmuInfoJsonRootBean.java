@@ -1,7 +1,7 @@
 /**
   * Copyright 2022 json.cn 
   */
-package github.zimoyin.core.live.pojo.info;
+package github.zimoyin.core.live.pojo.message.host;
 
 /**
  * Auto-generated: 2022-08-01 18:39:29

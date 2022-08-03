@@ -338,22 +338,22 @@ public class Barrage implements Data {
         return Objects.hash(showTime, type, size, rbg, sendTime, barragePoolType, midHash, dmid, shieldingLevel, text);
     }
 
-    @Override
-    public String toString() {
-        return "Barrage{" +
-                "showTime=" + showTime +
-                ", type=" + type.val +
-                ", size=" + size.val +
-                ", rbg=" + rbg.getValHEX().toUpperCase() +
-                ", sendTime=" + sendTime +
-                ", barragePoolType=" + barragePoolType.val +
-                ", midHash='" + midHash + '\'' +
-                ", dmid='" + dmid + '\'' +
-                ", shieldingLevel='" + shieldingLevel + '\'' +
-                ", text='" + text + '\'' +
-                ", action='" + action + '\'' +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Barrage{" +
+//                "showTime=" + showTime +
+//                ", type=" + type.val +
+//                ", size=" + size.val +
+//                ", rbg=" + rbg.getValHEX().toUpperCase() +
+//                ", sendTime=" + sendTime +
+//                ", barragePoolType=" + barragePoolType.val +
+//                ", midHash='" + midHash + '\'' +
+//                ", dmid='" + dmid + '\'' +
+//                ", shieldingLevel='" + shieldingLevel + '\'' +
+//                ", text='" + text + '\'' +
+//                ", action='" + action + '\'' +
+//                '}';
+//    }
 
     /**
      * 将Barrage 对象 序列化成 json

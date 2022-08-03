@@ -177,14 +177,14 @@ public class Package {
          */
         public Header(Buffer buffer) {
             this.pageSize=buffer.getInt(0);
-            if (buffer.length() != this.pageSize) {
-                logger.warn("这是一个损耗的包 包实际长度:{}, 包头描述包长度:{}",buffer.length(),this.pageSize);
-                return;
+            try {
+                this.headerSize = buffer.getShort(4);
+                this.version = buffer.getShort(6);
+                this.code = buffer.getInt(8);
+                this.sequence = buffer.getInt(12);
+            }catch (Exception e){
+                logger.warn("包的包头格式非约定好的，读取失败",e);
             }
-            this.headerSize = buffer.getShort(4);
-            this.version=buffer.getShort(6);
-            this.code=buffer.getInt(8);
-            this.sequence=buffer.getInt(12);
         }
 
         public Header() {
@@ -192,6 +192,18 @@ public class Package {
 
         public long length() {
             return 16;
+        }
+
+
+        @Override
+        public String toString() {
+            return "Header{" +
+                    "pageSize=" + pageSize +
+                    ", headerSize=" + headerSize +
+                    ", version=" + version +
+                    ", code=" + code +
+                    ", sequence=" + sequence +
+                    '}';
         }
     }
 
