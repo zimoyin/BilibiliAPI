@@ -170,6 +170,19 @@ public class HttpClientUtils {
         return doPost(url, null, params, null);
     }
 
+
+    /**
+     * 发送post请求；带请求参数
+     *
+     * @param url    请求地址
+     * @param params 参数集合
+     * @return
+     * @throws Exception
+     */
+    public static HttpClientResult doPost(String url, Map<String, String> headers, Map<String, String> params) throws IOException {
+        return doPost(url, headers, params, null);
+    }
+
     /**
      * 发送post请求；带请求头和请求参数
      *
@@ -185,8 +198,6 @@ public class HttpClientUtils {
     public static HttpClientResult doPost(String url, Map<String, String> headers, Map<String, String> params, HttpEntity body) throws IOException {
         //判断是否携带cookie，如果没有就获取全局cookie
         setGlobalCookie(headers);
-
-
 
         // 创建httpClient对象
         CloseableHttpClient httpClient = HttpClients.createDefault();

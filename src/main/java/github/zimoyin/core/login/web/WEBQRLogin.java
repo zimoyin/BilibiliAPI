@@ -194,7 +194,7 @@ public class WEBQRLogin implements Login {
 
     private void show(){
         if (frame != null){
-            System.out.println(frame.isShowing());
+            frame.show();
         }
     }
 

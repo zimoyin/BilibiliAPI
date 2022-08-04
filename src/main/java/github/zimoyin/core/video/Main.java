@@ -32,21 +32,18 @@ public class Main {
 //        main.test00();
 
         VideoDownloadSetting setting = new VideoDownloadSetting();
-        setting.setBv("BV1pt41127mD");
-//        setting.setBv("BV1oa411K7MG");
-//        setting.setEp("ep508404");
-        setting.setFnval(Fnval.VideoFormat_dash);
-        setting.setQn(QN.P204);
         setting.setCookie(GlobalCookie.getInstance());
-        //设置剧集，如果不设置的话根据ep来下载，如果是ssid则下载第一集
-//        setting.setPage(3);
+        setting.setBv("BV1jG4y1Y77x");
+        setting.setFnval(Fnval.VideoFormat_dash);
+        setting.setQn(QN.P1080_cookie);
+        setting.setCookie(GlobalCookie.getInstance());
+
 
         VideoDownload videoDownload = new VideoDownload();
         videoDownload.setSetting(setting);
         videoDownload.setListens(info -> System.out.print("\r下载进度："+info.getDownloadSize()+"/"+info.getFileSize()));
         videoDownload.downloadThread(true);
-        System.out.println(videoDownload.merge());
-//        videoDownload.download();
+        videoDownload.merge();
     }
 
 

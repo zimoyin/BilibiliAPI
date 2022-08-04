@@ -151,7 +151,8 @@ public abstract class Cookie extends HashMap<String, String> implements Serializ
      *
      * @param header
      */
-    public void setCookieToHeader(HashMap<String, String> header) {
+    @Deprecated
+    public void setCookieToHeaderOld(HashMap<String, String> header) {
         header.put("Cookie", toString());
     }
 
@@ -159,8 +160,40 @@ public abstract class Cookie extends HashMap<String, String> implements Serializ
     /**
      * 填装Cookie到请求头
      */
-    public HashMap<String,String> toHeaderCookie(HashMap<String,String> map){
+    @Deprecated
+    public HashMap<String,String> toHeaderCookieOld(HashMap<String,String> map){
         map.put("Cookie",toString());
+        return map;
+    }
+
+    /**
+     * 填装Cookie到请求头
+     */
+    @Deprecated
+    public HashMap<String,String> toHeaderCookieOld(){
+        HashMap<String,String> map = new HashMap<>();
+        map.put("Cookie",toString());
+        return map;
+    }
+
+
+
+
+    /**
+     * 将cookie设置到header的map里面
+     *
+     * @param header
+     */
+    public void setCookieToHeader(HashMap<String, String> header) {
+        header.put("Cookie", toStringV2());
+    }
+
+
+    /**
+     * 填装Cookie到请求头
+     */
+    public HashMap<String,String> toHeaderCookie(HashMap<String,String> map){
+        map.put("Cookie",toStringV2());
         return map;
     }
 
@@ -169,7 +202,7 @@ public abstract class Cookie extends HashMap<String, String> implements Serializ
      */
     public HashMap<String,String> toHeaderCookie(){
         HashMap<String,String> map = new HashMap<>();
-        map.put("Cookie",toString());
+        map.put("Cookie",toStringV2());
         return map;
     }
 }
