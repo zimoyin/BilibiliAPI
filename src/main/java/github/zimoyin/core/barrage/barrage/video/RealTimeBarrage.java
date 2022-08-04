@@ -11,6 +11,7 @@ import github.zimoyin.core.cookie.GlobalCookie;
 import github.zimoyin.core.exception.CookieNotFoundException;
 import github.zimoyin.core.utils.net.httpclient.HttpClientResult;
 import github.zimoyin.core.utils.net.httpclient.HttpClientUtils;
+import sun.misc.GC;
 
 
 import java.util.ArrayList;

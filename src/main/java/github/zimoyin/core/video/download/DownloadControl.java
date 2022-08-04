@@ -15,7 +15,7 @@ import java.util.concurrent.Executors;
 @Data
 public class DownloadControl {
     /**
-     * 需要下载的文件
+     * 需要下载的文件的最终线程数，非核心线程
      */
     private volatile int finalThreadCount;
 
@@ -70,7 +70,7 @@ public class DownloadControl {
 
     public DownloadControl(int threadCount) {
         this.threadCount = threadCount;
-        executorService = Executors.newFixedThreadPool(threadCount/2+1);
+        executorService = Executors.newFixedThreadPool(threadCount / 2 + 1);
     }
 
     /**
@@ -98,9 +98,15 @@ public class DownloadControl {
     private void send(long fileSize, long downloadSize, String threadName, long threadSize, long threadDownloadSize) {
         for (DownloadHandle handle : handles) {
             handle.handle(new DownloadInfo(
+                    threadCount,
+                    finalThreadCount,
+                    finishCount,
+
                     fileSize,
                     downloadSize,
+
                     Thread.currentThread().getName(),
+
                     threadDownloadSize,
                     threadSize
             ));
@@ -134,12 +140,12 @@ public class DownloadControl {
     /**
      * 下载完成
      */
-    public void finish(){
+    public void finish() {
         executorService.submit(new Runnable() {
             @Override
             public void run() {
                 finishCount++;
-                if (finishCount >= threadCount){
+                if (finishCount >= threadCount) {
                     close();
                 }
             }
@@ -149,41 +155,91 @@ public class DownloadControl {
     /**
      * 清理类
      */
-    public void clear(){
-        this.finishCount=0;
+    public void clear() {
+        this.finishCount = 0;
         this.downloadSize = 0;
-        this.executorService = Executors.newFixedThreadPool(threadCount/2+1);
+        this.executorService = Executors.newFixedThreadPool(threadCount / 2 + 1);
     }
+
     @Data
     public class DownloadInfo {
+        /**
+         * 真实的线程数(核心线程)
+         */
+        private final int threadCount;
+        /**
+         * 需要利用的线程数，需要利用线程的次数（线程的任务数）。
+         * 这是个任务数量总计，当所有的任务完成后（threadFinishedCount） 就会和他保持一致
+         * 因此当使用通过下载字节数无法判断是否下载成功的时候请通过他来完成是否下载完成的判断
+         */
+        private volatile int threadDownloadCount;
+
+        /**
+         * 完成下载任务的线程数（线程的任务数）
+         * 这是个完成任务数量总计，当所有的任务完成后（threadFinishedCount） 就会和他（threadDownloadCount）保持一致
+         * 因此当使用通过下载字节数无法判断是否下载成功的时候请通过他来完成是否下载完成的判断
+         */
+        private volatile int threadFinishedCount;
+
+
         /**
          * 文件总长度
          */
         private volatile long fileSize;
         /**
-         * 下载的长度
+         * 已下载文件的长度（byte）
          */
         private volatile long downloadSize;
 
         /**
-         * 线程名称
+         * 当前执行统计的线程名称
          */
         private volatile String threadName;
         /**
-         * 线程需要下载的总量
+         * 线程需要下载文件的总字节数
          */
         private volatile long threadSize;
         /**
-         * 线程下载总量
+         * 线程已经下载的总字节数
          */
         private volatile long threadDownloadSize;
 
-        public DownloadInfo(long fileSize, long downloadSize, String threadName, long threadSize, long threadDownloadSize) {
+        public DownloadInfo(int threadCount, int threadFinishedCount,int threadDownloadCount,
+                            long fileSize, long downloadSize,
+                            String threadName,
+                            long threadSize, long threadDownloadSize) {
+            this.threadCount = threadCount;
+            this.threadDownloadCount = threadDownloadCount;
+            this.threadFinishedCount = threadFinishedCount;
+
             this.fileSize = fileSize;
             this.downloadSize = downloadSize;
+
             this.threadName = threadName;
+
             this.threadSize = threadSize;
             this.threadDownloadSize = threadDownloadSize;
+        }
+
+
+        /**
+         * 判断是否下载完成
+         * @return
+         */
+        public boolean isFinished() {
+            if (threadFinishedCount >= threadDownloadCount || downloadSize >=  fileSize ) return true;
+            return false;
+        }
+
+
+        /**
+         * 获取下载进度 这是个下载比率 为 1 (100%) 则下载完成
+         */
+        public double downloadProgress(){
+            double sizeProgress = (double) downloadSize / fileSize;
+            double threadProgress = (double) threadFinishedCount / threadDownloadCount;
+            if (threadProgress >= 1) return 1;
+            return sizeProgress;
         }
     }
 }

@@ -183,11 +183,8 @@ public class HttpClientUtils {
      *
      */
     public static HttpClientResult doPost(String url, Map<String, String> headers, Map<String, String> params, HttpEntity body) throws IOException {
-//        if (headers == null) {
-//            headers = new HashMap<>();
-//        }
-//        //判断是否携带cookie，如果没有就获取全局cookie
-//        setGlobalCookie(headers);
+        //判断是否携带cookie，如果没有就获取全局cookie
+        setGlobalCookie(headers);
 
 
 

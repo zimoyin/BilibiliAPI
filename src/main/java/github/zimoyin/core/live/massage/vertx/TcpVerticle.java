@@ -26,10 +26,22 @@ public class TcpVerticle extends AbstractVerticle {
     public final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     private volatile ArrayList<LiveMassageHandle> handles;
+    /**
+     * 服务器地址
+     */
     private String host;
     private String key;
+    /**
+     * 服务器端口
+     */
     private int port;
+    /**
+     * 用户mid
+     */
     private long mid;
+    /**
+     * 房间号
+     */
     private long roomid;
     private volatile boolean run = true;
     /**
@@ -116,7 +128,8 @@ public class TcpVerticle extends AbstractVerticle {
      * @param e
      */
     private void failureHandle(Throwable e) {
-        logger.error("失败启动了一个 TCP 客户端在 " + host + ":" + port, e);
+        logger.error("TCP 客户端，启动失败在 " + host + ":" + port, e);
+        close();
     }
 
 
@@ -127,6 +140,7 @@ public class TcpVerticle extends AbstractVerticle {
      */
     private void completeHandle(AsyncResult<NetSocket> header) {
         NetSocket result = header.result();
+        if (header.failed()) return;//启动失败就直接退出
         result.handler(buffer -> {
             //打印本次状态
             Package.Header header0 = new Package.Header(buffer);
@@ -179,8 +193,7 @@ public class TcpVerticle extends AbstractVerticle {
         //链接关闭
         result.closeHandler(handler -> {
             logger.info("tcp 客户端的链接被中断");
-            run = false;
-            vertx.close();
+            close();
         });
     }
 
@@ -297,7 +310,7 @@ public class TcpVerticle extends AbstractVerticle {
                 try {
                     Thread.sleep(8 * 1000);
                 } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
+                    logger.error("这是一个严重的错误，心跳线程没有正常的休眠",e);
                 }
                 if (run) socket.write(pack.getHeart());
                 if (run) logger.debug("发送心跳");
@@ -306,7 +319,20 @@ public class TcpVerticle extends AbstractVerticle {
         }).start();
     }
 
+    /**
+     * 添加监听
+     * @param handles
+     */
     public void setHandles(final ArrayList<LiveMassageHandle> handles) {
         this.handles = handles;
+    }
+
+    /**
+     * 关闭所有资源
+     */
+    public void close() {
+        vertx.close();
+        this.run = false;
+        logger.info("已销毁 Vertx,并对心跳线程发出停止指令");
     }
 }

@@ -183,7 +183,7 @@ public class Package {
                 this.code = buffer.getInt(8);
                 this.sequence = buffer.getInt(12);
             }catch (Exception e){
-                logger.warn("包的包头格式非约定好的，读取失败",e);
+                logger.warn("包的包头格式非约定好的，读取失败,\n包:{}\n异常：\n",buffer.toString(),e);
             }
         }
 

@@ -33,6 +33,15 @@ public abstract class Cookie extends HashMap<String, String> implements Serializ
     }
 
 
+    public String toStringV2() {
+        StringBuffer stringBuffer = new StringBuffer();
+        for (String key : keySet()) {
+            stringBuffer.append(key).append("=").append(get(key)).append(";");
+        }
+        return stringBuffer.toString();
+    }
+
+
     public JSONObject toJSONString() {
         JSONObject jsonObject = new JSONObject();
         for (String key : keySet()) {

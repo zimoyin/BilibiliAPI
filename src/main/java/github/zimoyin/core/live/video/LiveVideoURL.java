@@ -67,10 +67,4 @@ public class LiveVideoURL {
         HttpClientResult result = HttpClientUtils.doGet(url);
         return result.getContent();
     }
-
-    public static void main(String[] args) throws IOException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException {
-        LiveVideoURL liveVideoURL = new LiveVideoURL();
-        String page = liveVideoURL.getPage(5050, Quality.ORIGINAL_PAINTING);
-        System.out.println(page);
-    }
 }

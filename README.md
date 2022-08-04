@@ -14,6 +14,8 @@
 * 检查昵称是否可注册(实现)
 * 直播API
 
+### 日志
+代码中只有直播TCP部分代码使用了日志，其他的不使用日志
 ----
 大部分的接口来源于项目： https://github.com/SocialSisterYi/bilibili-API-collect  
 开发阶段，所有代码以及结构都会发生不平滑变动  

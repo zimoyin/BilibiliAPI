@@ -32,8 +32,13 @@ import java.util.Set;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        Quality q = Quality.ORIGINAL_PAINTING;
-
-        System.out.println(q.name());
+        VideoDownload videoDownload = new VideoDownload();
+        videoDownload.setListens(new DownloadHandle() {
+            @Override
+            public void handle(DownloadControl.DownloadInfo info) {
+                info.isFinished();
+                info.downloadProgress();
+            }
+        });
     }
 }

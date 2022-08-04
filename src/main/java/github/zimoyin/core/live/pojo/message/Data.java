@@ -2,13 +2,12 @@
   * Copyright 2022 json.cn 
   */
 package github.zimoyin.core.live.pojo.message;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Auto-generated: 2022-08-03 12:0:40
- *
- * @author json.cn (i@json.cn)
- * @website http://www.json.cn/java2pojo/
+ * 直播信息
+ * 注意直播信息是变化的不是固定的，所以有些值是无法是一直能被赋值的，请注意判断
  */
 @lombok.Data
 public class Data {
@@ -16,6 +15,7 @@ public class Data {
     private Contribution contribution;
     private int dmscore;
     private Fans_medal fans_medal;
+
     private List<Integer> identities;
     private int is_spread;
     /**
@@ -51,6 +51,58 @@ public class Data {
      */
     private String uname_color;
 
+    /************************************************* 另一个命令包的字段 ***********************************************/
+    /**
+     * count 在线排名统计
+     */
+    private long count;
+    /************************************************** 另一个命令包的字段 **********************************************/
+    /**
+     * 多少人看过
+     */
+    private long num;
+    /************************************************** 另一个命令包的字段 **********************************************/
+    /**
+     * 子分区
+     */
+    private String area_name;
 
+    /**
+     * 在子分区中的热度排名
+     */
+    private String rank_desc;
 
+    /**
+     * 热度排名
+     */
+    private long rank;
+    /************************************************** 另一个命令包的字段 **********************************************/
+    /**
+     * 粉丝数
+     */
+    private long fans;
+    /************************************************** 另一个命令包的字段 **********************************************/
+    /**
+     * 礼物名称
+     */
+    private String giftName;
+    private String giftType;
+    /**
+     * 礼物ID，请通过礼物表来进行对照
+     */
+    private int giftId;
+    /**
+     * 送礼方式
+     */
+    private String action;
+    /************************************************** 另一个命令包的字段 **********************************************/
+    /**
+     * 停播列表
+     */
+    private ArrayList<Long> room_id_list;
+    /************************************************** 另一个命令包的字段 **********************************************/
+    /**
+     * 高能用户列表
+     */
+    private ArrayList<UserJson> list;
 }

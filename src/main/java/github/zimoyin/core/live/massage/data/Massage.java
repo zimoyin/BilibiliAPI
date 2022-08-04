@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 import github.zimoyin.core.barrage.data.Barrage;
 import github.zimoyin.core.live.massage.vertx.Package;
 import github.zimoyin.core.live.pojo.message.LiveMessageJsonRootBean;
+import github.zimoyin.core.live.pojo.message.UserJson;
 import github.zimoyin.core.utils.JsonSerializeUtil;
 import lombok.Data;
 import org.slf4j.Logger;
@@ -13,6 +14,11 @@ import org.slf4j.LoggerFactory;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * 直播命令包解析
+ * 注意如果包中没有则获取不到部分内容，请手动判断这部分内容
+ */
 @Data
 public class Massage {
 
@@ -32,9 +38,217 @@ public class Massage {
         commands.add(command);
     }
 
+    /**
+     * 处理出全包进入直播间的信息
+     */
+    public ArrayList<github.zimoyin.core.live.pojo.message.Data> getEnterLive(){
+        ArrayList<github.zimoyin.core.live.pojo.message.Data> list = new ArrayList<>();
+        for (String command : commands) {
+            LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
+            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            if (data == null || !"INTERACT_WORD".equalsIgnoreCase(bean.getCmd())) continue;
+            //如果不是进场信息
+            if (data.getMsg_type() != 1) continue;
+            list.add(data);
+        }
+        return list;
+    }
 
     /**
-     * 处理全班弹幕
+     * 处理出全包送出的礼物
+     */
+    public ArrayList<github.zimoyin.core.live.pojo.message.Data> getGift(){
+        ArrayList<github.zimoyin.core.live.pojo.message.Data> list = new ArrayList<>();
+        for (String command : commands) {
+            LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
+            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            if (data == null || !"SEND_GIFT".equalsIgnoreCase(bean.getCmd())) continue;
+            list.add(data);
+        }
+        return list;
+    }
+    /**
+     * 获取包中的在线人数统计排名
+     */
+    public long getOnlineRankCount(){
+        for (String command : commands) {
+            LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
+            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            if (data == null || !"ONLINE_RANK_COUNT".equalsIgnoreCase(bean.getCmd())) continue;
+            return data.getCount();
+        }
+        return -1;
+    }
+    /**
+     * 获取包中高能用户列表 新版本
+     */
+    public ArrayList<UserJson> getUserRankCount(){
+        for (String command : commands) {
+            LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
+            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            if (data == null || !"ONLINE_RANK_V2".equalsIgnoreCase(bean.getCmd())) continue;
+            return data.getList();
+        }
+        return null;
+    }
+    /**
+     * 获取包中的热度排名
+     */
+    public long getHotRank(){
+        for (String command : commands) {
+            LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
+            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            if (data == null || !"HOT_RANK_CHANGED_V2".equalsIgnoreCase(bean.getCmd())) continue;
+            return data.getRank();
+        }
+        return -1;
+    }
+    /**
+     * 获取包中的热度排名 总结。
+     * 如：主播进入前5，就会发包祝贺主播进入前5
+     */
+    public long getHotRankSettlement(){
+        for (String command : commands) {
+            LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
+            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            if (data == null || !"HOT_RANK_SETTLEMENT_V2".equalsIgnoreCase(bean.getCmd())) continue;
+            return data.getRank();
+        }
+        return -1;
+    }
+    /**
+     * 主播下播，开播？
+     */
+    public String getPreparing(){
+        for (String command : commands) {
+            LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
+            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            if (data == null || !"PREPARING".equalsIgnoreCase(bean.getCmd())) continue;
+            return command;
+        }
+        return null;
+    }
+    /**
+     * 有大佬进入直播间？
+     */
+    public String getEnter_effect() {
+        for (String command : commands) {
+            LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
+            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            if (data == null || !"ENTRY_EFFECT".equalsIgnoreCase(bean.getCmd())) continue;
+            return command;
+        }
+        return null;
+    }
+    /**
+     * 广播、注意？
+     */
+    public String getCommonNoticeDanaku() {
+        for (String command : commands) {
+            LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
+            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            if (data == null || !"COMMON_NOTICE_DANMAKU".equalsIgnoreCase(bean.getCmd())) continue;
+            return command;
+        }
+        return null;
+    }
+    /**
+     * 广播、系统条幅？
+     */
+    public String getWidgetBanner(){
+        for (String command : commands) {
+            LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
+            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            if (data == null || !"WIDGET_BANNER".equalsIgnoreCase(bean.getCmd())) continue;
+            return command;
+        }
+        return null;
+    }
+    /**
+     * 广播、注意信息？
+     */
+    public String getNoticeMessage() {
+        for (String command : commands) {
+            LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
+            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            if (data == null || !"NOTICE_MSG".equalsIgnoreCase(bean.getCmd())) continue;
+            return command;
+        }
+        return null;
+    }
+
+    /**
+     * 获取包中的统计出的有多少人看过直播
+     */
+    public long getWatchedCount(){
+        for (String command : commands) {
+            LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
+            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            if (data == null || !"WATCHED_CHANGE".equalsIgnoreCase(bean.getCmd())) continue;
+            return data.getNum();
+        }
+        return -1;
+    }
+
+
+    /**
+     * 获取包中的实时信息
+     */
+    public String getRealMessage(){
+        for (String command : commands) {
+            LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
+            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            if (data == null || !"ROOM_REAL_TIME_MESSAGE_UPDATE".equalsIgnoreCase(bean.getCmd())) continue;
+            return command;
+        }
+        return null;
+    }
+
+
+    /**
+     * 获取包中的实时粉丝数
+     */
+    public long getRealFans(){
+        for (String command : commands) {
+            LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
+            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            if (data == null || !"ROOM_REAL_TIME_MESSAGE_UPDATE".equalsIgnoreCase(bean.getCmd())) continue;
+            return data.getFans();
+        }
+        return -1;
+    }
+
+    /**
+     * 直播停止列表
+     */
+    public ArrayList<Long> getStopLiveRoomList(){
+        for (String command : commands) {
+            LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
+            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            if (data == null || !"STOP_LIVE_ROOM_LIST".equalsIgnoreCase(bean.getCmd())) continue;
+            return data.getRoom_id_list();
+        }
+        return null;
+    }
+
+    /**
+     * 处理出全包关注直播的信息
+     */
+    public ArrayList<github.zimoyin.core.live.pojo.message.Data> getFollowLive(){
+        ArrayList<github.zimoyin.core.live.pojo.message.Data> list = new ArrayList<>();
+        for (String command : commands) {
+            LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
+            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            if (data == null || !"INTERACT_WORD".equalsIgnoreCase(bean.getCmd())) continue;
+            //如果不是进场信息
+            if (data.getMsg_type() != 2) continue;
+            list.add(data);
+        }
+        return list;
+    }
+
+    /**
+     * 处理出全包弹幕
      * @return
      */
     public ArrayList<Barrage> getBarrages() {

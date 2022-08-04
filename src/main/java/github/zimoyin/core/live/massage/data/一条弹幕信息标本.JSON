@@ -1,0 +1,71 @@
+// 这是一条弹幕信息的标本
+// 拥有的弹幕信息字段可以参考：github.zimoyin.core.live.pojo.barrage.Barrage 但是如何对应，我不知道
+
+{
+  "cmd": "DANMU_MSG",
+  "info": [
+    [
+      0,
+      1,
+      25,
+      16777215,
+      1659594456013,
+      639942574,
+      0,
+      "07e0eb46",
+      0,
+      0,
+      0,
+      "",
+      0,
+      "{}",
+      "{}",
+      {
+        "mode": 0,
+        "show_player_type": 0,
+        "extra": "{\"send_from_me\":false,\"mode\":0,\"color\":16777215,\"dm_type\":0,\"font_size\":25,\"player_mode\":1,\"show_player_type\":0,\"content\":\"你播不播\",\"user_hash\":\"132180806\",\"emoticon_unique\":\"\",\"bulge_display\":0,\"recommend_score\":0,\"main_state_dm_color\":\"\",\"objective_state_dm_color\":\"\",\"direction\":0,\"pk_direction\":0,\"quartet_direction\":0,\"anniversary_crowd\":0,\"yeah_space_type\":\"\",\"yeah_space_url\":\"\",\"jump_to_url\":\"\",\"space_type\":\"\",\"space_url\":\"\"}"
+      },
+      {
+        "activity_identity": "",
+        "activity_source": 0,
+        "not_show": 0
+      }
+    ],
+    "你播不播",
+    [
+      357906426,
+      "玉帝日王母1956",
+      0,
+      0,
+      0,
+      10000,
+      1,
+      ""
+    ],
+    [],
+    [
+      0,
+      0,
+      9868950,
+      ">50000",
+      0
+    ],
+    [
+      "",
+      ""
+    ],
+    0,
+    0,
+    null,
+    {
+      "ts": 1659594456,
+      "ct": "6E34AFD0"
+    },
+    0,
+    0,
+    null,
+    null,
+    0,
+    7
+  ]
+}

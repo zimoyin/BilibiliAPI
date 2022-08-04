@@ -1,0 +1,1016 @@
+[2022-08-02 20:36:39.512] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1813
+[2022-08-02 20:36:39.514] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:373, 包头描述包长度:332664527
+[2022-08-02 20:36:40.831] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2084
+[2022-08-02 20:36:40.832] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:644, 包头描述包长度:1681731932
+[2022-08-02 20:36:41.708] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2359
+[2022-08-02 20:36:41.710] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:919, 包头描述包长度:1056158659
+[2022-08-02 20:36:46.687] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1686
+[2022-08-02 20:36:46.688] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:246, 包头描述包长度:-459328539
+[2022-08-02 20:36:46.689] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:36:52.735] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2356
+[2022-08-02 20:36:52.736] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:916, 包头描述包长度:-1796024310
+[2022-08-02 20:36:52.737] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:37:07.593] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2113
+[2022-08-02 20:37:07.594] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:673, 包头描述包长度:1768185714
+[2022-08-02 20:37:07.603] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2118
+[2022-08-02 20:37:07.632] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:678, 包头描述包长度:-2029571099
+[2022-08-02 20:37:07.633] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:37:12.598] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1586
+[2022-08-02 20:37:12.599] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:146, 包头描述包长度:-466312654
+[2022-08-02 20:37:12.599] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:37:26.118] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1895
+[2022-08-02 20:37:26.118] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:455, 包头描述包长度:330471238
+[2022-08-02 20:37:28.493] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1749
+[2022-08-02 20:37:28.494] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:309, 包头描述包长度:1525874724
+[2022-08-02 20:37:30.053] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1477
+[2022-08-02 20:37:30.131] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:37, 包头描述包长度:892549169
+[2022-08-02 20:37:33.497] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1924
+[2022-08-02 20:37:33.498] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:484, 包头描述包长度:-1297907237
+[2022-08-02 20:37:33.499] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:37:34.766] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1490
+[2022-08-02 20:37:34.767] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:50, 包头描述包长度:263687193
+[2022-08-02 20:37:39.162] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1755
+[2022-08-02 20:37:39.163] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:315, 包头描述包长度:2137109184
+[2022-08-02 20:37:40.454] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2094
+[2022-08-02 20:37:40.456] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:654, 包头描述包长度:-1003458048
+[2022-08-02 20:37:40.456] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:37:41.482] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1506
+[2022-08-02 20:37:41.482] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:66, 包头描述包长度:1600902049
+[2022-08-02 20:37:44.982] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2284
+[2022-08-02 20:37:44.984] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:844, 包头描述包长度:-202276546
+[2022-08-02 20:37:44.984] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:37:48.300] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1961
+[2022-08-02 20:37:48.300] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:521, 包头描述包长度:237008824
+[2022-08-02 20:37:54.295] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1824
+[2022-08-02 20:37:54.296] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:384, 包头描述包长度:155329813
+[2022-08-02 20:37:55.443] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1779
+[2022-08-02 20:37:55.444] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:339, 包头描述包长度:-1654290837
+[2022-08-02 20:37:55.445] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:37:59.791] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1477
+[2022-08-02 20:37:59.801] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:37, 包头描述包长度:841757497
+[2022-08-02 20:38:05.553] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2450
+[2022-08-02 20:38:05.553] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1010, 包头描述包长度:765325054
+[2022-08-02 20:38:07.930] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1655
+[2022-08-02 20:38:07.931] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:215, 包头描述包长度:1422798294
+[2022-08-02 20:38:11.057] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1930
+[2022-08-02 20:38:11.058] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:490, 包头描述包长度:1427792557
+[2022-08-02 20:38:13.560] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2061
+[2022-08-02 20:38:13.561] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:621, 包头描述包长度:-1468507674
+[2022-08-02 20:38:13.561] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:38:22.731] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1531
+[2022-08-02 20:38:22.732] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:91, 包头描述包长度:-87024779
+[2022-08-02 20:38:22.732] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:38:23.994] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2275
+[2022-08-02 20:38:23.995] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:835, 包头描述包长度:-572880666
+[2022-08-02 20:38:23.995] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:38:25.113] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1515
+[2022-08-02 20:38:25.114] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:75, 包头描述包长度:-856718420
+[2022-08-02 20:38:25.115] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:38:27.585] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2094
+[2022-08-02 20:38:27.586] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:654, 包头描述包长度:-121356513
+[2022-08-02 20:38:27.586] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:38:28.674] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2158
+[2022-08-02 20:38:28.674] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:718, 包头描述包长度:-1780455309
+[2022-08-02 20:38:28.675] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:38:31.847] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1737
+[2022-08-02 20:38:31.849] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:297, 包头描述包长度:183388259
+[2022-08-02 20:38:33.333] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1757
+[2022-08-02 20:38:33.334] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:317, 包头描述包长度:-1130987111
+[2022-08-02 20:38:33.334] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:38:40.840] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1988
+[2022-08-02 20:38:40.841] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:548, 包头描述包长度:1744764608
+[2022-08-02 20:38:45.498] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1496
+[2022-08-02 20:38:45.498] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:56, 包头描述包长度:-308506558
+[2022-08-02 20:38:45.498] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:38:51.824] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1823
+[2022-08-02 20:38:51.825] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:383, 包头描述包长度:-951861491
+[2022-08-02 20:38:51.825] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:38:55.462] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1725
+[2022-08-02 20:38:55.462] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:285, 包头描述包长度:-1082258936
+[2022-08-02 20:38:55.462] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:38:59.811] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1538
+[2022-08-02 20:38:59.823] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:98, 包头描述包长度:842216499
+[2022-08-02 20:39:04.314] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1541
+[2022-08-02 20:39:04.314] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:101, 包头描述包长度:706033621
+[2022-08-02 20:39:06.554] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1909
+[2022-08-02 20:39:06.555] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:469, 包头描述包长度:-299346672
+[2022-08-02 20:39:06.556] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:39:07.575] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2229
+[2022-08-02 20:39:07.576] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:789, 包头描述包长度:-945153407
+[2022-08-02 20:39:07.576] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:39:09.643] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2256
+[2022-08-02 20:39:09.644] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:816, 包头描述包长度:1323452994
+[2022-08-02 20:39:16.385] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2186
+[2022-08-02 20:39:16.386] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:746, 包头描述包长度:379925810
+[2022-08-02 20:39:17.488] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1842
+[2022-08-02 20:39:17.489] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:402, 包头描述包长度:-979035642
+[2022-08-02 20:39:17.489] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:39:20.556] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1944
+[2022-08-02 20:39:20.557] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:504, 包头描述包长度:592002793
+[2022-08-02 20:39:20.888] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2084
+[2022-08-02 20:39:20.889] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:644, 包头描述包长度:1681731932
+[2022-08-02 20:39:21.593] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2228
+[2022-08-02 20:39:21.593] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:788, 包头描述包长度:-2035223195
+[2022-08-02 20:39:21.595] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:39:22.878] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2668
+[2022-08-02 20:39:22.879] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1228, 包头描述包长度:-1895816040
+[2022-08-02 20:39:22.879] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:39:26.095] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2099
+[2022-08-02 20:39:26.096] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:659, 包头描述包长度:-1729133212
+[2022-08-02 20:39:26.096] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:39:30.085] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1845
+[2022-08-02 20:39:30.176] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:405, 包头描述包长度:809053234
+[2022-08-02 20:39:36.964] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1593
+[2022-08-02 20:39:36.965] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:153, 包头描述包长度:966894616
+[2022-08-02 20:39:38.330] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2024
+[2022-08-02 20:39:38.331] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:584, 包头描述包长度:597234707
+[2022-08-02 20:39:46.777] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2099
+[2022-08-02 20:39:46.778] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:659, 包头描述包长度:932705203
+[2022-08-02 20:39:48.970] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1577
+[2022-08-02 20:39:48.971] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:137, 包头描述包长度:435471023
+[2022-08-02 20:39:52.810] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2356
+[2022-08-02 20:39:52.810] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:916, 包头描述包长度:842413663
+[2022-08-02 20:39:53.725] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1839
+[2022-08-02 20:39:53.725] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:399, 包头描述包长度:-1316149281
+[2022-08-02 20:39:53.725] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:39:59.820] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1469
+[2022-08-02 20:39:59.827] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:29, 包头描述包长度:825440049
+[2022-08-02 20:40:00.516] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2298
+[2022-08-02 20:40:00.517] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:858, 包头描述包长度:-341781133
+[2022-08-02 20:40:00.517] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:40:02.870] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1790
+[2022-08-02 20:40:02.871] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:350, 包头描述包长度:-1275345045
+[2022-08-02 20:40:02.871] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:40:15.815] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2084
+[2022-08-02 20:40:15.816] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:644, 包头描述包长度:1681731932
+[2022-08-02 20:40:15.980] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1736
+[2022-08-02 20:40:15.981] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:296, 包头描述包长度:-692057827
+[2022-08-02 20:40:15.981] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:40:16.981] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2113
+[2022-08-02 20:40:16.981] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:673, 包头描述包长度:1768185714
+[2022-08-02 20:40:17.804] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1683
+[2022-08-02 20:40:17.805] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:243, 包头描述包长度:-1495937298
+[2022-08-02 20:40:17.805] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:40:19.340] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1789
+[2022-08-02 20:40:19.340] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:349, 包头描述包长度:-2006354164
+[2022-08-02 20:40:19.341] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:40:22.602] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1559
+[2022-08-02 20:40:22.603] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:119, 包头描述包长度:-1475682597
+[2022-08-02 20:40:22.603] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:40:25.060] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1724
+[2022-08-02 20:40:25.061] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:284, 包头描述包长度:676225570
+[2022-08-02 20:40:28.189] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1519
+[2022-08-02 20:40:28.189] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:79, 包头描述包长度:-33963581
+[2022-08-02 20:40:28.190] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:40:30.462] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1568
+[2022-08-02 20:40:30.462] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:128, 包头描述包长度:-197604277
+[2022-08-02 20:40:30.463] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:40:32.731] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2952
+[2022-08-02 20:40:32.731] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1512, 包头描述包长度:778356771
+[2022-08-02 20:40:36.756] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1501
+[2022-08-02 20:40:36.756] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:61, 包头描述包长度:-1804581135
+[2022-08-02 20:40:36.757] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:40:40.770] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2084
+[2022-08-02 20:40:40.770] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:644, 包头描述包长度:1681731932
+[2022-08-02 20:40:42.308] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1576
+[2022-08-02 20:40:42.309] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:136, 包头描述包长度:267288433
+[2022-08-02 20:40:50.361] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1849
+[2022-08-02 20:40:50.363] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:409, 包头描述包长度:-1294127061
+[2022-08-02 20:40:50.364] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:40:51.459] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1582
+[2022-08-02 20:40:51.459] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:142, 包头描述包长度:1935343854
+[2022-08-02 20:40:54.900] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2076
+[2022-08-02 20:40:54.901] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:636, 包头描述包长度:-108828921
+[2022-08-02 20:40:54.901] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:40:56.361] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2389
+[2022-08-02 20:40:56.362] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:949, 包头描述包长度:1184814319
+[2022-08-02 20:40:58.450] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1588
+[2022-08-02 20:40:58.451] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:148, 包头描述包长度:-1521940522
+[2022-08-02 20:40:58.451] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:40:59.518] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1755
+[2022-08-02 20:40:59.519] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:315, 包头描述包长度:-816204880
+[2022-08-02 20:40:59.519] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:41:03.340] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1624
+[2022-08-02 20:41:03.340] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:184, 包头描述包长度:-1082987039
+[2022-08-02 20:41:03.340] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:41:14.333] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1982
+[2022-08-02 20:41:14.333] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:542, 包头描述包长度:-1793323443
+[2022-08-02 20:41:14.334] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:41:24.631] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1686
+[2022-08-02 20:41:24.632] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:246, 包头描述包长度:-1008603877
+[2022-08-02 20:41:24.633] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:41:25.787] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2084
+[2022-08-02 20:41:25.787] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:644, 包头描述包长度:1681731932
+[2022-08-02 20:41:29.911] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1554
+[2022-08-02 20:41:29.919] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:114, 包头描述包长度:808727852
+[2022-08-02 20:41:38.145] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2060
+[2022-08-02 20:41:38.145] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:620, 包头描述包长度:-1365924088
+[2022-08-02 20:41:38.145] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:41:39.766] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1876
+[2022-08-02 20:41:39.767] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:436, 包头描述包长度:-1513327191
+[2022-08-02 20:41:39.767] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:41:43.605] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1924
+[2022-08-02 20:41:43.605] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:484, 包头描述包长度:1339001073
+[2022-08-02 20:41:47.534] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1988
+[2022-08-02 20:41:47.535] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:548, 包头描述包长度:1722889594
+[2022-08-02 20:41:50.406] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1603
+[2022-08-02 20:41:50.407] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:163, 包头描述包长度:476138950
+[2022-08-02 20:41:51.448] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1652
+[2022-08-02 20:41:51.449] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:212, 包头描述包长度:-899295067
+[2022-08-02 20:41:51.449] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:41:52.502] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1810
+[2022-08-02 20:41:52.504] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:370, 包头描述包长度:-1345826753
+[2022-08-02 20:41:52.504] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:41:54.656] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1733
+[2022-08-02 20:41:54.657] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:293, 包头描述包长度:937665131
+[2022-08-02 20:41:59.883] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1538
+[2022-08-02 20:41:59.884] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:98, 包头描述包长度:943270962
+[2022-08-02 20:42:33.655] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1900
+[2022-08-02 20:42:33.657] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:460, 包头描述包长度:2074639085
+[2022-08-02 20:42:34.929] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1681
+[2022-08-02 20:42:34.930] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:241, 包头描述包长度:-360954490
+[2022-08-02 20:42:34.930] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:42:38.251] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1626
+[2022-08-02 20:42:38.252] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:186, 包头描述包长度:1919198222
+[2022-08-02 20:42:40.517] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1960
+[2022-08-02 20:42:40.518] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:520, 包头描述包长度:28000419
+[2022-08-02 20:42:41.860] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1536
+[2022-08-02 20:42:41.875] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:96, 包头描述包长度:500462269
+[2022-08-02 20:42:55.104] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1880
+[2022-08-02 20:42:55.105] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:440, 包头描述包长度:-384332552
+[2022-08-02 20:42:55.106] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:43:16.881] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1786
+[2022-08-02 20:43:16.882] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:346, 包头描述包长度:-391438126
+[2022-08-02 20:43:16.882] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:43:45.459] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1559
+[2022-08-02 20:43:45.459] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:119, 包头描述包长度:821621914
+[2022-08-02 20:43:48.193] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1679
+[2022-08-02 20:43:48.193] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:239, 包头描述包长度:-1532097340
+[2022-08-02 20:43:48.193] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:43:50.804] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2083
+[2022-08-02 20:43:50.805] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:643, 包头描述包长度:1026645109
+[2022-08-02 20:43:59.815] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1519
+[2022-08-02 20:43:59.829] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:79, 包头描述包长度:825701688
+[2022-08-02 20:44:05.474] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2083
+[2022-08-02 20:44:05.475] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:643, 包头描述包长度:-172363260
+[2022-08-02 20:44:05.475] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:44:06.612] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1716
+[2022-08-02 20:44:06.613] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:276, 包头描述包长度:-968810745
+[2022-08-02 20:44:06.613] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:44:33.406] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1748
+[2022-08-02 20:44:33.406] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:308, 包头描述包长度:897752639
+[2022-08-02 20:44:44.925] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1560
+[2022-08-02 20:44:44.925] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:120, 包头描述包长度:-2088744630
+[2022-08-02 20:44:44.926] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:44:46.572] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2156
+[2022-08-02 20:44:46.573] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:716, 包头描述包长度:-434480194
+[2022-08-02 20:44:46.573] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:44:59.800] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1480
+[2022-08-02 20:44:59.815] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:40, 包头描述包长度:959657260
+[2022-08-02 20:45:16.509] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1765
+[2022-08-02 20:45:16.510] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:325, 包头描述包长度:316195364
+[2022-08-02 20:45:22.910] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1521
+[2022-08-02 20:45:22.911] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:81, 包头描述包长度:-755632174
+[2022-08-02 20:45:22.911] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:45:25.506] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1841
+[2022-08-02 20:45:25.506] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:401, 包头描述包长度:2105042940
+[2022-08-02 20:45:27.483] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1651
+[2022-08-02 20:45:27.484] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:211, 包头描述包长度:1943134190
+[2022-08-02 20:45:29.930] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1676
+[2022-08-02 20:45:29.930] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:236, 包头描述包长度:1713571925
+[2022-08-02 20:45:30.833] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2083
+[2022-08-02 20:45:30.833] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:643, 包头描述包长度:1026645109
+[2022-08-02 20:45:31.333] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2446
+[2022-08-02 20:45:31.333] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1006, 包头描述包长度:1176842822
+[2022-08-02 20:45:35.041] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1803
+[2022-08-02 20:45:35.041] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:363, 包头描述包长度:1943063821
+[2022-08-02 20:45:42.617] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2052
+[2022-08-02 20:45:42.618] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:612, 包头描述包长度:-1491513814
+[2022-08-02 20:45:42.618] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:45:44.685] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1576
+[2022-08-02 20:45:44.686] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:136, 包头描述包长度:-152883838
+[2022-08-02 20:45:44.687] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:45:45.692] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1494
+[2022-08-02 20:45:45.693] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:54, 包头描述包长度:-1535134843
+[2022-08-02 20:45:45.694] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:45:58.087] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2549
+[2022-08-02 20:45:58.088] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1109, 包头描述包长度:668922783
+[2022-08-02 20:46:00.127] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1484
+[2022-08-02 20:46:00.210] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:44, 包头描述包长度:858993460
+[2022-08-02 20:46:01.812] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1786
+[2022-08-02 20:46:01.813] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:346, 包头描述包长度:-952219964
+[2022-08-02 20:46:01.813] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:46:03.619] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1700
+[2022-08-02 20:46:03.619] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:260, 包头描述包长度:-734131540
+[2022-08-02 20:46:03.620] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:46:07.467] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1527
+[2022-08-02 20:46:07.468] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:87, 包头描述包长度:-2106471294
+[2022-08-02 20:46:07.468] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:46:08.580] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1726
+[2022-08-02 20:46:08.580] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:286, 包头描述包长度:-2026985937
+[2022-08-02 20:46:08.580] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:46:11.557] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2112
+[2022-08-02 20:46:11.557] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:672, 包头描述包长度:1683976815
+[2022-08-02 20:46:22.540] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1684
+[2022-08-02 20:46:22.541] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:244, 包头描述包长度:-693386971
+[2022-08-02 20:46:22.541] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:46:23.933] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1855
+[2022-08-02 20:46:23.934] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:415, 包头描述包长度:939033490
+[2022-08-02 20:46:25.801] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2083
+[2022-08-02 20:46:25.802] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:643, 包头描述包长度:1026645109
+[2022-08-02 20:46:29.873] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1466
+[2022-08-02 20:46:29.876] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:26, 包头描述包长度:892745009
+[2022-08-02 20:46:34.147] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1503
+[2022-08-02 20:46:34.148] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:63, 包头描述包长度:-1034839070
+[2022-08-02 20:46:34.148] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:46:46.428] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1923
+[2022-08-02 20:46:46.429] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:483, 包头描述包长度:330518843
+[2022-08-02 20:46:48.518] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1772
+[2022-08-02 20:46:48.519] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:332, 包头描述包长度:831752906
+[2022-08-02 20:46:50.794] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2083
+[2022-08-02 20:46:50.794] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:643, 包头描述包长度:1026645109
+[2022-08-02 20:46:51.745] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1483
+[2022-08-02 20:46:51.746] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:43, 包头描述包长度:-238179140
+[2022-08-02 20:46:51.746] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:46:55.609] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1583
+[2022-08-02 20:46:55.610] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:143, 包头描述包长度:-1915547453
+[2022-08-02 20:46:55.610] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:47:08.497] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1545
+[2022-08-02 20:47:08.497] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:105, 包头描述包长度:1266606007
+[2022-08-02 20:47:10.812] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2083
+[2022-08-02 20:47:10.813] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:643, 包头描述包长度:1026645109
+[2022-08-02 20:47:21.790] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1669
+[2022-08-02 20:47:21.790] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:229, 包头描述包长度:1596837727
+[2022-08-02 20:47:44.483] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1668
+[2022-08-02 20:47:44.483] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:228, 包头描述包长度:-322229787
+[2022-08-02 20:47:44.483] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:47:49.479] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1595
+[2022-08-02 20:47:49.480] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:155, 包头描述包长度:1352273042
+[2022-08-02 20:47:51.652] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1735
+[2022-08-02 20:47:51.653] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:295, 包头描述包长度:-1801267622
+[2022-08-02 20:47:51.653] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:47:59.894] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1533
+[2022-08-02 20:47:59.908] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:93, 包头描述包长度:741487157
+[2022-08-02 20:48:03.667] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1710
+[2022-08-02 20:48:03.668] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:270, 包头描述包长度:-2088263210
+[2022-08-02 20:48:03.669] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:48:15.232] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1706
+[2022-08-02 20:48:15.232] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:266, 包头描述包长度:-1281224453
+[2022-08-02 20:48:15.232] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:48:17.523] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1640
+[2022-08-02 20:48:17.524] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:200, 包头描述包长度:-1943746670
+[2022-08-02 20:48:17.524] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:48:19.990] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1615
+[2022-08-02 20:48:19.991] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:175, 包头描述包长度:1849329435
+[2022-08-02 20:48:22.573] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1513
+[2022-08-02 20:48:22.573] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:73, 包头描述包长度:688462019
+[2022-08-02 20:48:26.647] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1469
+[2022-08-02 20:48:26.647] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:29, 包头描述包长度:733828628
+[2022-08-02 20:48:33.555] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1501
+[2022-08-02 20:48:33.555] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:61, 包头描述包长度:-1849488481
+[2022-08-02 20:48:33.555] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:48:35.758] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2764
+[2022-08-02 20:48:35.758] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1324, 包头描述包长度:-1766859430
+[2022-08-02 20:48:35.758] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:48:37.897] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1961
+[2022-08-02 20:48:37.898] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:521, 包头描述包长度:967632543
+[2022-08-02 20:48:41.663] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2815
+[2022-08-02 20:48:41.664] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1375, 包头描述包长度:-673827371
+[2022-08-02 20:48:41.665] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:48:49.871] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1800
+[2022-08-02 20:48:49.871] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:360, 包头描述包长度:-1649202320
+[2022-08-02 20:48:49.871] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:48:53.280] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1888
+[2022-08-02 20:48:53.280] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:448, 包头描述包长度:2018963618
+[2022-08-02 20:48:54.304] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1745
+[2022-08-02 20:48:54.306] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:305, 包头描述包长度:-1075208225
+[2022-08-02 20:48:54.307] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:48:59.829] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1519
+[2022-08-02 20:48:59.840] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:79, 包头描述包长度:842347825
+[2022-08-02 20:49:03.175] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1817
+[2022-08-02 20:49:03.176] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:377, 包头描述包长度:1332690427
+[2022-08-02 20:49:05.821] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2083
+[2022-08-02 20:49:05.821] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:643, 包头描述包长度:1026645109
+[2022-08-02 20:49:09.051] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1441
+[2022-08-02 20:49:09.052] [ERROR]  io.vertx.core.impl.ContextBase - Unhandled exception
+java.lang.IndexOutOfBoundsException: 0 + 4 > 1
+	at io.vertx.core.buffer.impl.BufferImpl.checkUpperBound(BufferImpl.java:211) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.buffer.impl.BufferImpl.getInt(BufferImpl.java:129) ~[vertx-core-4.3.2.jar:4.3.2]
+	at github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:179) ~[classes/:?]
+	at github.zimoyin.core.live.massage.vertx.Package.<init>(Package.java:31) ~[classes/:?]
+	at github.zimoyin.core.live.massage.vertx.TcpVerticle.lambda$completeHandle$0(TcpVerticle.java:122) ~[classes/:?]
+	at io.vertx.core.net.impl.NetSocketImpl.lambda$new$1(NetSocketImpl.java:98) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.streams.impl.InboundBuffer.handleEvent(InboundBuffer.java:239) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.streams.impl.InboundBuffer.write(InboundBuffer.java:129) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.net.impl.NetSocketImpl$DataMessageHandler.handle(NetSocketImpl.java:418) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.impl.EventLoopContext.emit(EventLoopContext.java:55) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.impl.ContextBase.emit(ContextBase.java:239) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.net.impl.NetSocketImpl.handleMessage(NetSocketImpl.java:394) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:155) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[?:1.8.0_181]
+[2022-08-02 20:49:10.269] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1811
+[2022-08-02 20:49:10.270] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:371, 包头描述包长度:1875572840
+[2022-08-02 20:49:12.541] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1484
+[2022-08-02 20:49:12.541] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:44, 包头描述包长度:-23206180
+[2022-08-02 20:49:12.542] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:49:13.529] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1679
+[2022-08-02 20:49:13.530] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:239, 包头描述包长度:-189373363
+[2022-08-02 20:49:13.530] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:49:15.650] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1701
+[2022-08-02 20:49:15.651] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:261, 包头描述包长度:-1891374644
+[2022-08-02 20:49:15.651] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:49:18.031] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1768
+[2022-08-02 20:49:18.031] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:328, 包头描述包长度:-1219074196
+[2022-08-02 20:49:18.032] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:49:23.721] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1479
+[2022-08-02 20:49:23.722] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:39, 包头描述包长度:-815294642
+[2022-08-02 20:49:23.723] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:49:24.787] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1446
+[2022-08-02 20:49:24.787] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:6, 包头描述包长度:-56152
+[2022-08-02 20:49:24.788] [ERROR]  io.vertx.core.impl.ContextBase - Unhandled exception
+java.lang.IllegalArgumentException: end must be greater or equal than start
+	at io.vertx.core.impl.Arguments.require(Arguments.java:29) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.buffer.impl.BufferImpl.getBytes(BufferImpl.java:222) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.buffer.impl.BufferImpl.getString(BufferImpl.java:261) ~[vertx-core-4.3.2.jar:4.3.2]
+	at github.zimoyin.core.live.massage.vertx.Package$Body.<init>(Package.java:245) ~[classes/:?]
+	at github.zimoyin.core.live.massage.vertx.Package.<init>(Package.java:32) ~[classes/:?]
+	at github.zimoyin.core.live.massage.vertx.TcpVerticle.lambda$completeHandle$0(TcpVerticle.java:122) ~[classes/:?]
+	at io.vertx.core.net.impl.NetSocketImpl.lambda$new$1(NetSocketImpl.java:98) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.streams.impl.InboundBuffer.handleEvent(InboundBuffer.java:239) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.streams.impl.InboundBuffer.write(InboundBuffer.java:129) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.net.impl.NetSocketImpl$DataMessageHandler.handle(NetSocketImpl.java:418) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.impl.EventLoopContext.emit(EventLoopContext.java:55) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.impl.ContextBase.emit(ContextBase.java:239) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.net.impl.NetSocketImpl.handleMessage(NetSocketImpl.java:394) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:155) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[?:1.8.0_181]
+[2022-08-02 20:49:27.038] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1643
+[2022-08-02 20:49:27.039] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:203, 包头描述包长度:-384508938
+[2022-08-02 20:49:27.039] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:49:29.430] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1735
+[2022-08-02 20:49:29.430] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:295, 包头描述包长度:2113696879
+[2022-08-02 20:49:31.780] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1728
+[2022-08-02 20:49:31.780] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:288, 包头描述包长度:-877504154
+[2022-08-02 20:49:31.781] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:49:34.486] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1907
+[2022-08-02 20:49:34.487] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:467, 包头描述包长度:585767826
+[2022-08-02 20:49:35.558] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1982
+[2022-08-02 20:49:35.559] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:542, 包头描述包长度:-737666198
+[2022-08-02 20:49:35.559] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:49:51.400] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1473
+[2022-08-02 20:49:51.401] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:33, 包头描述包长度:-184533294
+[2022-08-02 20:49:51.401] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:49:53.557] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1871
+[2022-08-02 20:49:53.558] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:431, 包头描述包长度:699421743
+[2022-08-02 20:49:56.523] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1948
+[2022-08-02 20:49:56.523] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:508, 包头描述包长度:-993802207
+[2022-08-02 20:49:56.523] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:49:59.397] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1672
+[2022-08-02 20:49:59.397] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:232, 包头描述包长度:-483363741
+[2022-08-02 20:49:59.397] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:49:59.839] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1641
+[2022-08-02 20:49:59.848] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:201, 包头描述包长度:892746028
+[2022-08-02 20:50:00.564] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1646
+[2022-08-02 20:50:00.565] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:206, 包头描述包长度:-1933292948
+[2022-08-02 20:50:00.565] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:50:03.085] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1634
+[2022-08-02 20:50:03.086] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:194, 包头描述包长度:-1317294301
+[2022-08-02 20:50:03.086] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:50:08.568] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1754
+[2022-08-02 20:50:08.569] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:314, 包头描述包长度:-1143195669
+[2022-08-02 20:50:08.569] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:50:11.463] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1567
+[2022-08-02 20:50:11.463] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:127, 包头描述包长度:816630041
+[2022-08-02 20:50:14.483] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1679
+[2022-08-02 20:50:14.483] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:239, 包头描述包长度:-340470300
+[2022-08-02 20:50:14.484] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:50:16.695] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1686
+[2022-08-02 20:50:16.696] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:246, 包头描述包长度:-356193876
+[2022-08-02 20:50:16.696] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:50:26.813] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1457
+[2022-08-02 20:50:26.814] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:17, 包头描述包长度:1608351420
+[2022-08-02 20:50:27.894] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1887
+[2022-08-02 20:50:27.895] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:447, 包头描述包长度:1466270623
+[2022-08-02 20:50:32.460] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2411
+[2022-08-02 20:50:32.461] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:971, 包头描述包长度:-589918478
+[2022-08-02 20:50:32.461] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:50:34.573] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1551
+[2022-08-02 20:50:34.574] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:111, 包头描述包长度:2004268599
+[2022-08-02 20:50:37.336] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2036
+[2022-08-02 20:50:37.336] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:596, 包头描述包长度:2080994236
+[2022-08-02 20:50:39.523] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2069
+[2022-08-02 20:50:39.523] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:629, 包头描述包长度:-514296481
+[2022-08-02 20:50:39.524] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:50:41.691] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1715
+[2022-08-02 20:50:41.692] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:275, 包头描述包长度:1052570966
+[2022-08-02 20:50:51.234] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1655
+[2022-08-02 20:50:51.234] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:215, 包头描述包长度:-2076283391
+[2022-08-02 20:50:51.235] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:50:52.314] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2110
+[2022-08-02 20:50:52.316] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:670, 包头描述包长度:1443727355
+[2022-08-02 20:50:53.477] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2206
+[2022-08-02 20:50:53.477] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:766, 包头描述包长度:-729024620
+[2022-08-02 20:50:53.478] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:50:58.312] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1613
+[2022-08-02 20:50:58.313] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:173, 包头描述包长度:-189131855
+[2022-08-02 20:50:58.314] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:50:59.690] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1652
+[2022-08-02 20:50:59.691] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:212, 包头描述包长度:1427649517
+[2022-08-02 20:51:03.116] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1816
+[2022-08-02 20:51:03.117] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:376, 包头描述包长度:917887940
+[2022-08-02 20:51:06.559] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1842
+[2022-08-02 20:51:06.560] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:402, 包头描述包长度:1788591725
+[2022-08-02 20:51:07.639] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1624
+[2022-08-02 20:51:07.639] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:184, 包头描述包长度:-345530191
+[2022-08-02 20:51:07.639] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:51:09.978] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1739
+[2022-08-02 20:51:09.979] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:299, 包头描述包长度:-1015447090
+[2022-08-02 20:51:09.979] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:51:13.764] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1828
+[2022-08-02 20:51:13.765] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:388, 包头描述包长度:-1363448472
+[2022-08-02 20:51:13.766] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:51:15.791] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1566
+[2022-08-02 20:51:15.791] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:126, 包头描述包长度:-1366696566
+[2022-08-02 20:51:15.791] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:51:22.007] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1592
+[2022-08-02 20:51:22.008] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:152, 包头描述包长度:2122862132
+[2022-08-02 20:51:23.582] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1645
+[2022-08-02 20:51:23.582] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:205, 包头描述包长度:-1113966417
+[2022-08-02 20:51:23.583] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:51:28.262] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1601
+[2022-08-02 20:51:28.263] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:161, 包头描述包长度:-1160282632
+[2022-08-02 20:51:28.263] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:51:29.889] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1445
+[2022-08-02 20:51:29.901] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:5, 包头描述包长度:808934781
+[2022-08-02 20:51:29.901] [ERROR]  io.vertx.core.impl.ContextBase - Unhandled exception
+java.lang.IllegalArgumentException: end must be greater or equal than start
+	at io.vertx.core.impl.Arguments.require(Arguments.java:29) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.buffer.impl.BufferImpl.getBytes(BufferImpl.java:222) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.buffer.impl.BufferImpl.getString(BufferImpl.java:261) ~[vertx-core-4.3.2.jar:4.3.2]
+	at github.zimoyin.core.live.massage.vertx.Package$Body.<init>(Package.java:245) ~[classes/:?]
+	at github.zimoyin.core.live.massage.vertx.Package.<init>(Package.java:32) ~[classes/:?]
+	at github.zimoyin.core.live.massage.vertx.TcpVerticle.lambda$completeHandle$0(TcpVerticle.java:122) ~[classes/:?]
+	at io.vertx.core.net.impl.NetSocketImpl.lambda$new$1(NetSocketImpl.java:98) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.streams.impl.InboundBuffer.handleEvent(InboundBuffer.java:239) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.streams.impl.InboundBuffer.write(InboundBuffer.java:129) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.net.impl.NetSocketImpl$DataMessageHandler.handle(NetSocketImpl.java:418) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.impl.EventLoopContext.emit(EventLoopContext.java:55) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.impl.ContextBase.emit(ContextBase.java:239) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.net.impl.NetSocketImpl.handleMessage(NetSocketImpl.java:394) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:155) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[?:1.8.0_181]
+[2022-08-02 20:51:38.601] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2072
+[2022-08-02 20:51:38.602] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:632, 包头描述包长度:-1561142040
+[2022-08-02 20:51:38.602] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:51:40.526] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1585
+[2022-08-02 20:51:40.526] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:145, 包头描述包长度:-159485828
+[2022-08-02 20:51:40.527] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:51:45.779] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2083
+[2022-08-02 20:51:45.780] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:643, 包头描述包长度:1026645109
+[2022-08-02 20:51:47.613] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1564
+[2022-08-02 20:51:47.614] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:124, 包头描述包长度:-1154495916
+[2022-08-02 20:51:47.614] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:51:53.175] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1588
+[2022-08-02 20:51:53.176] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:148, 包头描述包长度:1418840257
+[2022-08-02 20:51:54.386] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2139
+[2022-08-02 20:51:54.387] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:699, 包头描述包长度:-1010556762
+[2022-08-02 20:51:54.387] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:51:59.855] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1589
+[2022-08-02 20:51:59.867] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:149, 包头描述包长度:842346803
+[2022-08-02 20:52:00.740] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2140
+[2022-08-02 20:52:00.741] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:700, 包头描述包长度:-840917273
+[2022-08-02 20:52:00.741] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:52:01.776] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2689
+[2022-08-02 20:52:01.776] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1249, 包头描述包长度:-1127978427
+[2022-08-02 20:52:01.777] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:52:08.589] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2457
+[2022-08-02 20:52:08.589] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1017, 包头描述包长度:1675263446
+[2022-08-02 20:52:10.750] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2542
+[2022-08-02 20:52:10.750] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1102, 包头描述包长度:1749430675
+[2022-08-02 20:52:12.845] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:2880, 包头描述包长度:3535
+[2022-08-02 20:52:12.846] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:655, 包头描述包长度:1938591761
+[2022-08-02 20:52:13.891] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:3389
+[2022-08-02 20:52:13.892] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1949, 包头描述包长度:-1624737369
+[2022-08-02 20:52:13.892] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:52:14.935] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:3228
+[2022-08-02 20:52:14.936] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1788, 包头描述包长度:578855826
+[2022-08-02 20:52:17.023] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2298
+[2022-08-02 20:52:17.024] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:858, 包头描述包长度:-2037349741
+[2022-08-02 20:52:17.025] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:52:19.326] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:3083
+[2022-08-02 20:52:19.327] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1643, 包头描述包长度:-1313464786
+[2022-08-02 20:52:19.327] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:52:20.369] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2237
+[2022-08-02 20:52:20.369] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:797, 包头描述包长度:501066959
+[2022-08-02 20:52:21.465] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:3112
+[2022-08-02 20:52:21.466] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1672, 包头描述包长度:1781727480
+[2022-08-02 20:52:22.489] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2446
+[2022-08-02 20:52:22.489] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1006, 包头描述包长度:980889157
+[2022-08-02 20:52:24.624] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:3326
+[2022-08-02 20:52:24.624] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1886, 包头描述包长度:999251492
+[2022-08-02 20:52:26.240] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2112
+[2022-08-02 20:52:26.240] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:672, 包头描述包长度:1683976815
+[2022-08-02 20:52:26.694] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2284
+[2022-08-02 20:52:26.694] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:844, 包头描述包长度:-936473010
+[2022-08-02 20:52:26.694] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:52:28.978] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:3405
+[2022-08-02 20:52:28.979] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1965, 包头描述包长度:-697011477
+[2022-08-02 20:52:28.979] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:52:31.094] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2857
+[2022-08-02 20:52:31.094] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1417, 包头描述包长度:-682181076
+[2022-08-02 20:52:31.095] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:52:33.335] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2828
+[2022-08-02 20:52:33.335] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1388, 包头描述包长度:-350710382
+[2022-08-02 20:52:33.336] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:52:34.351] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2606
+[2022-08-02 20:52:34.352] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1166, 包头描述包长度:-727779215
+[2022-08-02 20:52:34.352] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:52:37.729] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2150
+[2022-08-02 20:52:37.730] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:710, 包头描述包长度:-1991406456
+[2022-08-02 20:52:37.730] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:52:40.060] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2092
+[2022-08-02 20:52:40.061] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:652, 包头描述包长度:-1391766599
+[2022-08-02 20:52:40.061] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:52:41.310] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2300
+[2022-08-02 20:52:41.311] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:860, 包头描述包长度:1440993753
+[2022-08-02 20:52:43.549] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2539
+[2022-08-02 20:52:43.550] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1099, 包头描述包长度:1119703842
+[2022-08-02 20:52:44.622] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2398
+[2022-08-02 20:52:44.622] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:958, 包头描述包长度:-500239500
+[2022-08-02 20:52:44.623] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:52:47.504] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2840
+[2022-08-02 20:52:47.505] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1400, 包头描述包长度:110090412
+[2022-08-02 20:52:49.636] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1796
+[2022-08-02 20:52:49.636] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:356, 包头描述包长度:-748205353
+[2022-08-02 20:52:49.636] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:52:50.672] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1889
+[2022-08-02 20:52:50.673] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:449, 包头描述包长度:2002775518
+[2022-08-02 20:52:52.919] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2291
+[2022-08-02 20:52:52.920] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:851, 包头描述包长度:1647055931
+[2022-08-02 20:52:54.387] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2577
+[2022-08-02 20:52:54.388] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1137, 包头描述包长度:-540262657
+[2022-08-02 20:52:54.389] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:52:55.436] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2377
+[2022-08-02 20:52:55.437] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:937, 包头描述包长度:640017934
+[2022-08-02 20:52:56.724] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2146
+[2022-08-02 20:52:56.725] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:706, 包头描述包长度:1265487729
+[2022-08-02 20:53:05.836] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2692
+[2022-08-02 20:53:05.836] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1252, 包头描述包长度:-56500817
+[2022-08-02 20:53:05.836] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:53:05.868] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2083
+[2022-08-02 20:53:05.877] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:643, 包头描述包长度:1026645109
+[2022-08-02 20:53:10.183] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2744
+[2022-08-02 20:53:10.183] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1304, 包头描述包长度:-1868978656
+[2022-08-02 20:53:10.184] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:53:12.543] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1758
+[2022-08-02 20:53:12.543] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:318, 包头描述包长度:-369180988
+[2022-08-02 20:53:12.543] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:53:15.837] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2076
+[2022-08-02 20:53:15.838] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:636, 包头描述包长度:496728299
+[2022-08-02 20:53:17.118] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1533
+[2022-08-02 20:53:17.118] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:93, 包头描述包长度:1136896636
+[2022-08-02 20:53:21.022] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1736
+[2022-08-02 20:53:21.023] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:296, 包头描述包长度:404888469
+[2022-08-02 20:53:21.519] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2112
+[2022-08-02 20:53:21.520] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:672, 包头描述包长度:1683976815
+[2022-08-02 20:53:32.645] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1791
+[2022-08-02 20:53:32.646] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:351, 包头描述包长度:1991731553
+[2022-08-02 20:53:33.796] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2487
+[2022-08-02 20:53:33.797] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1047, 包头描述包长度:-1119604990
+[2022-08-02 20:53:33.797] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:53:35.840] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2399
+[2022-08-02 20:53:35.841] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:959, 包头描述包长度:1766469749
+[2022-08-02 20:53:36.918] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1929
+[2022-08-02 20:53:36.919] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:489, 包头描述包长度:-423467744
+[2022-08-02 20:53:36.919] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:53:39.144] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2035
+[2022-08-02 20:53:39.144] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:595, 包头描述包长度:-1514240751
+[2022-08-02 20:53:39.145] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:53:41.576] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1849
+[2022-08-02 20:53:41.576] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:409, 包头描述包长度:-1444018239
+[2022-08-02 20:53:41.577] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:53:42.837] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1693
+[2022-08-02 20:53:42.838] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:253, 包头描述包长度:-1820022855
+[2022-08-02 20:53:42.839] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:53:43.882] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2583
+[2022-08-02 20:53:43.882] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1143, 包头描述包长度:-1063901892
+[2022-08-02 20:53:43.883] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:53:46.436] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2304
+[2022-08-02 20:53:46.436] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:864, 包头描述包长度:-2145348491
+[2022-08-02 20:53:46.436] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:53:47.452] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1710
+[2022-08-02 20:53:47.453] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:270, 包头描述包长度:-687296855
+[2022-08-02 20:53:47.453] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:53:49.492] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2258
+[2022-08-02 20:53:49.494] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:818, 包头描述包长度:-1423529220
+[2022-08-02 20:53:49.494] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:53:50.610] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1673
+[2022-08-02 20:53:50.610] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:233, 包头描述包长度:-1699054490
+[2022-08-02 20:53:50.610] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:53:51.804] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:2880, 包头描述包长度:2921
+[2022-08-02 20:53:51.843] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:41, 包头描述包长度:-517604266
+[2022-08-02 20:53:51.843] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:53:52.830] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1782
+[2022-08-02 20:53:52.830] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:342, 包头描述包长度:1482467697
+[2022-08-02 20:53:53.861] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2003
+[2022-08-02 20:53:53.861] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:563, 包头描述包长度:506205990
+[2022-08-02 20:53:59.833] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1689
+[2022-08-02 20:53:59.835] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:824980020
+[2022-08-02 20:53:59.859] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1116, 包头描述包长度:1736611661
+[2022-08-02 20:54:00.842] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2483
+[2022-08-02 20:54:00.842] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1043, 包头描述包长度:1558839787
+[2022-08-02 20:54:05.474] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2359
+[2022-08-02 20:54:05.475] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:919, 包头描述包长度:-414302021
+[2022-08-02 20:54:05.475] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:54:06.502] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2112
+[2022-08-02 20:54:06.502] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:672, 包头描述包长度:1683976815
+[2022-08-02 20:54:06.579] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1970
+[2022-08-02 20:54:06.579] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:530, 包头描述包长度:59743252
+[2022-08-02 20:54:07.615] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2288
+[2022-08-02 20:54:07.615] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:848, 包头描述包长度:-1431134944
+[2022-08-02 20:54:07.616] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:54:08.635] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2066
+[2022-08-02 20:54:08.636] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:626, 包头描述包长度:-2059680905
+[2022-08-02 20:54:08.636] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:54:10.831] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2083
+[2022-08-02 20:54:10.832] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:643, 包头描述包长度:1026645109
+[2022-08-02 20:54:11.535] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2112
+[2022-08-02 20:54:11.535] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:672, 包头描述包长度:1683976815
+[2022-08-02 20:54:13.600] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1855
+[2022-08-02 20:54:13.601] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:415, 包头描述包长度:-289029516
+[2022-08-02 20:54:13.601] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:54:18.443] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2309
+[2022-08-02 20:54:18.443] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:869, 包头描述包长度:-924350791
+[2022-08-02 20:54:18.443] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:54:19.542] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1791
+[2022-08-02 20:54:19.542] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:351, 包头描述包长度:1713891968
+[2022-08-02 20:54:25.023] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1874
+[2022-08-02 20:54:25.023] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:434, 包头描述包长度:-1130203244
+[2022-08-02 20:54:25.024] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:54:31.483] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1470
+[2022-08-02 20:54:31.483] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:30, 包头描述包长度:1950752754
+[2022-08-02 20:54:36.185] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1984
+[2022-08-02 20:54:36.185] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:544, 包头描述包长度:-2077023069
+[2022-08-02 20:54:36.186] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:54:37.732] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1612
+[2022-08-02 20:54:37.733] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:172, 包头描述包长度:-528166136
+[2022-08-02 20:54:37.734] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:54:48.537] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2236
+[2022-08-02 20:54:48.537] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:796, 包头描述包长度:2146163227
+[2022-08-02 20:54:55.433] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1636
+[2022-08-02 20:54:55.434] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:196, 包头描述包长度:504742605
+[2022-08-02 20:55:00.500] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1904
+[2022-08-02 20:55:00.500] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:464, 包头描述包长度:-1288732739
+[2022-08-02 20:55:00.500] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:55:01.534] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2748
+[2022-08-02 20:55:01.535] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1308, 包头描述包长度:323605870
+[2022-08-02 20:55:02.566] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2147
+[2022-08-02 20:55:02.566] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:707, 包头描述包长度:1520960954
+[2022-08-02 20:55:03.672] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2233
+[2022-08-02 20:55:03.672] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:793, 包头描述包长度:-499363007
+[2022-08-02 20:55:03.673] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:55:05.751] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2184
+[2022-08-02 20:55:05.752] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:744, 包头描述包长度:136519790
+[2022-08-02 20:55:05.842] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2083
+[2022-08-02 20:55:05.843] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:643, 包头描述包长度:1026645109
+[2022-08-02 20:55:12.606] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2438
+[2022-08-02 20:55:12.606] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:998, 包头描述包长度:-1335021178
+[2022-08-02 20:55:12.607] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:55:13.697] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1570
+[2022-08-02 20:55:13.698] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:130, 包头描述包长度:-119624223
+[2022-08-02 20:55:13.698] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:55:16.542] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1449
+[2022-08-02 20:55:16.542] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:9, 包头描述包长度:50331903
+[2022-08-02 20:55:16.543] [ERROR]  io.vertx.core.impl.ContextBase - Unhandled exception
+java.lang.IllegalArgumentException: end must be greater or equal than start
+	at io.vertx.core.impl.Arguments.require(Arguments.java:29) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.buffer.impl.BufferImpl.getBytes(BufferImpl.java:222) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.buffer.impl.BufferImpl.getString(BufferImpl.java:261) ~[vertx-core-4.3.2.jar:4.3.2]
+	at github.zimoyin.core.live.massage.vertx.Package$Body.<init>(Package.java:245) ~[classes/:?]
+	at github.zimoyin.core.live.massage.vertx.Package.<init>(Package.java:32) ~[classes/:?]
+	at github.zimoyin.core.live.massage.vertx.TcpVerticle.lambda$completeHandle$0(TcpVerticle.java:122) ~[classes/:?]
+	at io.vertx.core.net.impl.NetSocketImpl.lambda$new$1(NetSocketImpl.java:98) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.streams.impl.InboundBuffer.handleEvent(InboundBuffer.java:239) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.streams.impl.InboundBuffer.write(InboundBuffer.java:129) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.net.impl.NetSocketImpl$DataMessageHandler.handle(NetSocketImpl.java:418) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.impl.EventLoopContext.emit(EventLoopContext.java:55) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.impl.ContextBase.emit(ContextBase.java:239) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.net.impl.NetSocketImpl.handleMessage(NetSocketImpl.java:394) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:155) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153) ~[vertx-core-4.3.2.jar:4.3.2]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496) ~[netty-transport-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.78.Final.jar:4.1.78.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[?:1.8.0_181]
+[2022-08-02 20:55:18.352] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2508
+[2022-08-02 20:55:18.352] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1068, 包头描述包长度:398899051
+[2022-08-02 20:55:19.375] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1786
+[2022-08-02 20:55:19.376] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:346, 包头描述包长度:-1771092985
+[2022-08-02 20:55:19.376] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:55:21.574] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2039
+[2022-08-02 20:55:21.575] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:599, 包头描述包长度:1731704446
+[2022-08-02 20:55:23.590] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1627
+[2022-08-02 20:55:23.590] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:187, 包头描述包长度:1630730798
+[2022-08-02 20:55:28.138] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2199
+[2022-08-02 20:55:28.138] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:759, 包头描述包长度:-1108311225
+[2022-08-02 20:55:28.139] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:55:29.172] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2351
+[2022-08-02 20:55:29.172] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:911, 包头描述包长度:2108737428
+[2022-08-02 20:55:30.187] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1470
+[2022-08-02 20:55:30.223] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:30, 包头描述包长度:859057202
+[2022-08-02 20:55:31.349] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1613
+[2022-08-02 20:55:31.349] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:173, 包头描述包长度:-2068275997
+[2022-08-02 20:55:31.350] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:55:32.406] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2096
+[2022-08-02 20:55:32.406] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:656, 包头描述包长度:3650027
+[2022-08-02 20:55:33.516] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1674
+[2022-08-02 20:55:33.517] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:234, 包头描述包长度:-1522354636
+[2022-08-02 20:55:33.518] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:55:36.597] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1939
+[2022-08-02 20:55:36.598] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:499, 包头描述包长度:-1303535846
+[2022-08-02 20:55:36.598] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:55:37.732] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1456
+[2022-08-02 20:55:37.732] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:16, 包头描述包长度:-1218974747
+[2022-08-02 20:55:37.732] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:55:42.582] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1747
+[2022-08-02 20:55:42.582] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:307, 包头描述包长度:66547769
+[2022-08-02 20:55:44.635] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1818
+[2022-08-02 20:55:44.636] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:378, 包头描述包长度:764565326
+[2022-08-02 20:55:51.585] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1647
+[2022-08-02 20:55:51.586] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:207, 包头描述包长度:786962252
+[2022-08-02 20:55:52.857] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1632
+[2022-08-02 20:55:52.858] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:192, 包头描述包长度:-833863411
+[2022-08-02 20:55:52.858] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:55:55.037] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1964
+[2022-08-02 20:55:55.038] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:524, 包头描述包长度:-1294229668
+[2022-08-02 20:55:55.038] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:55:56.303] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1979
+[2022-08-02 20:55:56.303] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:539, 包头描述包长度:-985152069
+[2022-08-02 20:55:56.304] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:55:59.880] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1520
+[2022-08-02 20:55:59.893] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:80, 包头描述包长度:892482353
+[2022-08-02 20:56:01.665] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2032
+[2022-08-02 20:56:01.665] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:592, 包头描述包长度:-904297602
+[2022-08-02 20:56:01.665] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:56:02.729] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1498
+[2022-08-02 20:56:02.730] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:58, 包头描述包长度:-1867257474
+[2022-08-02 20:56:02.730] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:56:03.925] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1873
+[2022-08-02 20:56:03.926] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:433, 包头描述包长度:804765688
+[2022-08-02 20:56:05.160] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1887
+[2022-08-02 20:56:05.160] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:447, 包头描述包长度:-249192082
+[2022-08-02 20:56:05.160] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:56:08.961] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1861
+[2022-08-02 20:56:08.961] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:421, 包头描述包长度:474614141
+[2022-08-02 20:56:10.211] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1668
+[2022-08-02 20:56:10.211] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:228, 包头描述包长度:1578598620
+[2022-08-02 20:56:11.322] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1944
+[2022-08-02 20:56:11.323] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:504, 包头描述包长度:2104840694
+[2022-08-02 20:56:15.502] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2367
+[2022-08-02 20:56:15.503] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:927, 包头描述包长度:-313129178
+[2022-08-02 20:56:15.503] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:56:16.842] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1469
+[2022-08-02 20:56:16.843] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:29, 包头描述包长度:1351164925
+[2022-08-02 20:56:17.863] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2096
+[2022-08-02 20:56:17.864] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:656, 包头描述包长度:71406336
+[2022-08-02 20:56:19.463] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1776
+[2022-08-02 20:56:19.464] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:336, 包头描述包长度:830623817
+[2022-08-02 20:56:20.649] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1790
+[2022-08-02 20:56:20.650] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:350, 包头描述包长度:-1483096781
+[2022-08-02 20:56:20.650] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:56:26.642] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1748
+[2022-08-02 20:56:26.643] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:308, 包头描述包长度:1949606899
+[2022-08-02 20:56:27.776] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2133
+[2022-08-02 20:56:27.776] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:693, 包头描述包长度:2100320875
+[2022-08-02 20:56:29.840] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1474
+[2022-08-02 20:56:29.851] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:34, 包头描述包长度:892744503
+[2022-08-02 20:56:30.495] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1884
+[2022-08-02 20:56:30.496] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:444, 包头描述包长度:-699621677
+[2022-08-02 20:56:30.496] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:56:33.694] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2252
+[2022-08-02 20:56:33.695] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:812, 包头描述包长度:1212402516
+[2022-08-02 20:56:34.949] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2439
+[2022-08-02 20:56:34.950] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:999, 包头描述包长度:-1088660293
+[2022-08-02 20:56:34.951] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:56:35.969] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1797
+[2022-08-02 20:56:35.970] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:357, 包头描述包长度:787294956
+[2022-08-02 20:56:39.886] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2521
+[2022-08-02 20:56:39.887] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1081, 包头描述包长度:-190628974
+[2022-08-02 20:56:39.887] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:56:44.604] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2482
+[2022-08-02 20:56:44.605] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1042, 包头描述包长度:-1216443936
+[2022-08-02 20:56:44.606] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:56:45.620] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1699
+[2022-08-02 20:56:45.621] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:259, 包头描述包长度:889765759
+[2022-08-02 20:56:46.661] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1936
+[2022-08-02 20:56:46.664] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:496, 包头描述包长度:-85908567
+[2022-08-02 20:56:46.665] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:56:48.116] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2856
+[2022-08-02 20:56:48.117] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1416, 包头描述包长度:-1772902562
+[2022-08-02 20:56:48.117] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:56:49.132] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2360
+[2022-08-02 20:56:49.133] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:920, 包头描述包长度:1999717602
+[2022-08-02 20:56:50.246] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2212
+[2022-08-02 20:56:50.247] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:772, 包头描述包长度:1137695902
+[2022-08-02 20:56:51.513] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2277
+[2022-08-02 20:56:51.514] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:837, 包头描述包长度:-1515990812
+[2022-08-02 20:56:51.516] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:56:52.670] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2134
+[2022-08-02 20:56:52.670] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:694, 包头描述包长度:-1241476882
+[2022-08-02 20:56:52.671] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:56:59.342] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2418
+[2022-08-02 20:56:59.343] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:978, 包头描述包长度:1975440784
+[2022-08-02 20:57:03.806] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2202
+[2022-08-02 20:57:03.807] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:762, 包头描述包长度:1736211256
+[2022-08-02 20:57:04.984] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2453
+[2022-08-02 20:57:04.984] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1013, 包头描述包长度:1960718866
+[2022-08-02 20:57:06.228] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2541
+[2022-08-02 20:57:06.229] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1101, 包头描述包长度:-1193851386
+[2022-08-02 20:57:06.229] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:57:07.624] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2130
+[2022-08-02 20:57:07.625] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:690, 包头描述包长度:-626930521
+[2022-08-02 20:57:07.625] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:57:08.844] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2248
+[2022-08-02 20:57:08.846] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:808, 包头描述包长度:792109693
+[2022-08-02 20:57:10.142] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2232
+[2022-08-02 20:57:10.143] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:792, 包头描述包长度:1951173725
+[2022-08-02 20:57:12.531] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2342
+[2022-08-02 20:57:12.531] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:902, 包头描述包长度:-1314347119
+[2022-08-02 20:57:12.532] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:57:13.647] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2364
+[2022-08-02 20:57:13.647] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:924, 包头描述包长度:-962626502
+[2022-08-02 20:57:13.648] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:57:14.746] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:2052
+[2022-08-02 20:57:14.747] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:612, 包头描述包长度:644041895
+[2022-08-02 20:57:17.588] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1513
+[2022-08-02 20:57:17.589] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:73, 包头描述包长度:1192187639
+[2022-08-02 20:57:19.725] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1758
+[2022-08-02 20:57:19.726] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:318, 包头描述包长度:-265129808
+[2022-08-02 20:57:19.726] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大
+[2022-08-02 20:57:23.498] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1890
+[2022-08-02 20:57:23.499] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:450, 包头描述包长度:850648591
+[2022-08-02 20:57:29.925] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1585
+[2022-08-02 20:57:29.939] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:145, 包头描述包长度:808791090
+[2022-08-02 20:57:33.507] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1440, 包头描述包长度:1490
+[2022-08-02 20:57:33.507] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:50, 包头描述包长度:-2035356096
+[2022-08-02 20:57:33.508] [ERROR] github.zimoyin.core.live.massage.vertx.TcpVerticle.analyzeData(TcpVerticle.java:162) github.zimoyin.core.live.massage.vertx.TcpVerticle - 缓冲区大小可能需要扩大

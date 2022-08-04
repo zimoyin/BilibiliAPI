@@ -1,0 +1,4 @@
+[2022-08-04 18:24:08.165] [INFO ] [vert.x-eventloop-thread-0] github.zimoyin.core.live.massage.vertx.TcpVerticle.start(TcpVerticle.java:86) :  实例化了一个 Verticle
+[2022-08-04 18:24:13.598] [INFO ] [vert.x-eventloop-thread-0] github.zimoyin.core.live.massage.vertx.TcpVerticle.successHandle(TcpVerticle.java:107) :  成功启动了一个 TCP 客户端在 hw-sh-live-comet-02.chat.bilibili.com:2243
+[2022-08-04 18:24:13.599] [INFO ] [vert.x-eventloop-thread-0] github.zimoyin.core.live.massage.vertx.TcpVerticle.successHandle(TcpVerticle.java:108) :  直播间ID :169669
+[2022-08-04 18:24:13.614] [INFO ] [Thread-4] github.zimoyin.core.live.massage.vertx.TcpVerticle.lambda$sendHeatLoop$2(TcpVerticle.java:308) :  心跳开始发送
