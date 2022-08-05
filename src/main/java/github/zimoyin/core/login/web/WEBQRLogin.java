@@ -28,6 +28,7 @@ import static github.zimoyin.core.utils.JsonSerializeUtil.getJsonPath;
  * @Description: 通过扫码二维码来登录 WEB 端
  * @API: https://github.com/SocialSisterYi/bilibili-API-collect
  */
+@Deprecated
 public class WEBQRLogin implements Login {
     /**
      * 获取登录（URL）二维码的URL

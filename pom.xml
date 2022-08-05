@@ -15,11 +15,13 @@
 
     <dependencies>
 
-<!--        <dependency>-->
-<!--            <groupId>org.webjars.npm</groupId>-->
-<!--            <artifactId>brotli</artifactId>-->
-<!--            <version>1.3.2</version>-->
-<!--        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-controls -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>18.0.2</version>
+        </dependency>
+
 
 <!--        <dependency>-->
 <!--            <groupId>com.nixxcode.jvmbrotli</groupId>-->
@@ -27,10 +29,6 @@
 <!--            <version>0.2.0</version>-->
 <!--            <optional>true</optional>-->
 <!--        </dependency>-->
-
-        <!-- https://mvnrepository.com/artifact/com.github.rdblue/brotli-codec -->
-
-
 
         <!-- 使用slf4j 作为日志门面 -->
         <dependency>

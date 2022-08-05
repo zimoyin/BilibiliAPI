@@ -15,11 +15,11 @@ public class Data {
     /**
      * 直播间真实id
      */
-    private int room_id;
+    private long room_id;
     /**
      * 直播间id（短号）
      */
-    private int short_id;
+    private long short_id;
     /**
      * 主播用户mid
      */

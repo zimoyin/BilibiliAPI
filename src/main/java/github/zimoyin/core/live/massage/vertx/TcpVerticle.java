@@ -1,6 +1,7 @@
 package github.zimoyin.core.live.massage.vertx;
 
 import com.alibaba.fastjson.JSONObject;
+import github.zimoyin.core.cookie.Cookie;
 import github.zimoyin.core.live.massage.LiveMassageHandle;
 import github.zimoyin.core.live.massage.data.Massage;
 import github.zimoyin.core.live.massage.MassageStreamInfo;
@@ -17,6 +18,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -59,20 +61,19 @@ public class TcpVerticle extends AbstractVerticle {
         init(pojo);
     }
 
-
     public TcpVerticle(DanmuInfoJsonRootBean json) {
         init(json);
     }
 
     private void init(DanmuInfoJsonRootBean json) {
-        Host host = json.getData().getHost_list().get(0);
-//        this.host = "tx-sh-live-comet-01.chat.bilibili.com";
-//        this.port = 2243;
+        logger.debug("获取直播间信息流前置信息：{}",json.toString());
+        List<Host> host_list = json.getData().getHost_list();
+        Host host = host_list.get(host_list.size() - 1);
         this.host = host.getHost();
         this.port = host.getPort();
         this.key = json.getData().getToken();
-        roomid = json.getRoomID();
-        mid = json.getMid();
+        this.roomid = json.getRoomID();
+        this.mid = json.getMid();
     }
 
     /**
@@ -88,6 +89,7 @@ public class TcpVerticle extends AbstractVerticle {
         NetClientOptions netClientOptions = new NetClientOptions();
         netClientOptions.setReceiveBufferSize(1024 * 5);//设置缓冲区大小
         netClientOptions.setLogActivity(false);//网络活动日志
+        netClientOptions.setConnectTimeout(30*1000);//设置超时时间
         //开启客户端
         vertx.createNetClient(netClientOptions)
                 .connect(port, host)
@@ -109,11 +111,12 @@ public class TcpVerticle extends AbstractVerticle {
         //构建认证包的正文，注意：老版本服务器除了 roomid 其余参数都是可选
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("key", this.key);
+//        jsonObject.put("uid", 204700919);
         jsonObject.put("uid", this.mid);
         jsonObject.put("roomid", this.roomid);
         jsonObject.put("protover", 2);//版本协议，2代表zilb压缩，3代表br压缩
         jsonObject.put("platform", "web");
-//        jsonObject.put("type", 2);
+        jsonObject.put("type", 2);
         //发送包
         socket.write(pack.getCertificationPackage(jsonObject.toString()));
         logger.debug("客户端发送信息体: " + jsonObject.toString());
@@ -128,7 +131,7 @@ public class TcpVerticle extends AbstractVerticle {
      * @param e
      */
     private void failureHandle(Throwable e) {
-        logger.error("TCP 客户端，启动失败在 " + host + ":" + port, e);
+        logger.error("TCP 客户端启动失败,请等待30s后服务器重置链接后再试。访问地址：{}:{} ", host , port, e);
         close();
     }
 

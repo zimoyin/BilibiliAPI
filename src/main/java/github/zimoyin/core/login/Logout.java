@@ -39,8 +39,4 @@ public class Logout {
         }
         return false;
     }
-
-    public static void main(String[] args) throws IOException, CookieNotFoundException {
-        Logout.Logout(GlobalCookie.getInstance());
-    }
 }

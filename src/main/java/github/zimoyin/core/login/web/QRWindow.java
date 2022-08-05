@@ -2,10 +2,12 @@ package github.zimoyin.core.login.web;
 
 import com.google.zxing.WriterException;
 import github.zimoyin.core.utils.qrcode.QRCodeUtils;
+import lombok.Data;
 
 import javax.swing.*;
 import java.io.IOException;
 
+@Deprecated
 public class QRWindow {
 
     /**

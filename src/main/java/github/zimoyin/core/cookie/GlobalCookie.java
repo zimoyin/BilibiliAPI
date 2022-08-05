@@ -28,6 +28,9 @@ import java.util.HashMap;
 public class GlobalCookie extends Cookie {
     private static final long serialVersionUID = 2168152194164783950L;
 
+    /**
+     * 暂存第二全局Cookie，如果没设置则默认与第一全局Cookie 保证一致
+     */
     private static Cookie cookie;
 
     /**
@@ -53,9 +56,9 @@ public class GlobalCookie extends Cookie {
             ArrayList<File> json = IO.getFileType(cookiePath, "json");
             if (json != null && json.size() != 0) {
                 File file = json.get(0);
-
+                //设置第二Cookie
                 cookie = readCookie(file.getCanonicalPath());
-
+                //设置第一Cookie（本身）
                 putAll(cookie);
             }
         } catch (Exception e) {
@@ -68,7 +71,9 @@ public class GlobalCookie extends Cookie {
             ArrayList<File> cookieFiles = IO.getFileType(cookiePath, "cookie");
             if (cookieFiles != null && cookieFiles.size() != 0) {
                 File file = cookieFiles.get(0);
+                //设置第二Cookie
                 cookie = readSerializable(file.getCanonicalPath());
+                //设置第一Cookie（本身）
                 putAll(cookie);
             }
         } catch (IOException | ClassNotFoundException e) {
