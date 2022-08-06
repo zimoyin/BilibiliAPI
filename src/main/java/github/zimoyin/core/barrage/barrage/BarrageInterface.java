@@ -20,26 +20,26 @@ import java.util.ArrayList;
 public interface BarrageInterface {
     /**
      * 返回弹幕集合
-     * @param bv
-     * @return
-     * @throws Exception
+     * @param bv b站的视频BV号
+     * @return 弹幕列表
+     * @throws Exception 最大错误
      */
     public  ArrayList<Barrage> getBarrage(String bv) throws Exception;
 
     /**
      * 返回弹幕原始数据
-     * @param bv
-     * @return
-     * @throws Exception
+     * @param bv 视频bv号
+     * @return 原始数据
+     * @throws Exception 最大错误
      */
     public  String getPage(String bv) throws Exception;
 
     /**
      * 获取视频的CID
      *
-     * @param bv
-     * @return
-     * @throws Exception
+     * @param bv bv id
+     * @return cid
+     * @throws Exception 最大错误
      */
     public default String getCID(String bv) throws Exception {
         return IDConvert.BvToCID(bv);

@@ -29,4 +29,12 @@ public class Pendant {
     private int expire;
     private String image_enhance;
     private String image_enhance_frame;
+
+
+    /**
+     * 评论区的用户头像框 id
+     */
+    private int id;
+    private String jump_url;
+    private String type;
 }

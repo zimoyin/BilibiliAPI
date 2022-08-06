@@ -7,11 +7,9 @@ import github.zimoyin.core.barrage.barrage.BarrageInterface;
 import github.zimoyin.core.barrage.com.github.proto.BarrageProto;
 import github.zimoyin.core.barrage.data.Barrage;
 import github.zimoyin.core.cookie.Cookie;
-import github.zimoyin.core.cookie.GlobalCookie;
-import github.zimoyin.core.exception.CookieNotFoundException;
 import github.zimoyin.core.utils.net.httpclient.HttpClientResult;
 import github.zimoyin.core.utils.net.httpclient.HttpClientUtils;
-import sun.misc.GC;
+
 
 
 import java.util.ArrayList;

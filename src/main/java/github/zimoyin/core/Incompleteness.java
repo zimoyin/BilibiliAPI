@@ -10,5 +10,9 @@ import static java.lang.annotation.ElementType.*;
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target(value={CONSTRUCTOR, FIELD, LOCAL_VARIABLE, METHOD, PACKAGE, PARAMETER, TYPE})
+@Deprecated
+/**
+ * 标有此注释的类都是未检测可行性的类
+ */
 public @interface Incompleteness {
 }

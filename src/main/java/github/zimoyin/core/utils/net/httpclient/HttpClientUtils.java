@@ -21,6 +21,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
+import java.net.URI;
 import java.net.URISyntaxException;
 import java.security.KeyManagementException;
 import java.security.KeyStoreException;
@@ -58,7 +59,7 @@ public class HttpClientUtils {
      * @return
      * @throws Exception
      */
-    public static HttpClientResult doGet(String url) throws IOException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException {
+    public static HttpClientResult doGet(String url) throws IOException {
         return doGet(url, null, null);
     }
 
@@ -70,7 +71,7 @@ public class HttpClientUtils {
      * @return
      * @throws Exception
      */
-    public static HttpClientResult doGet(String url, Map<String, String> params) throws IOException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException {
+    public static HttpClientResult doGet(String url, Map<String, String> params) throws IOException {
         return doGet(url, null, params);
     }
 
@@ -83,41 +84,31 @@ public class HttpClientUtils {
      * @return
      * @throws Exception
      */
-    public static HttpClientResult doGet(String url, Map<String, String> headers, Map<String, String> params) throws IOException, NoSuchAlgorithmException, KeyStoreException, KeyManagementException, URISyntaxException {
+    public static HttpClientResult doGet(String url, Map<String, String> headers, Map<String, String> params) throws IOException {
         if (headers == null) {
             headers = new HashMap<>();
         }
         //判断是否携带cookie，如果没有就获取全局cookie
         setGlobalCookie(headers);
 
-        //使用 loadTrustMaterial() 方法实现一个信任策略，信任所有证书
-        SSLContext sslContext = new SSLContextBuilder().loadTrustMaterial(null, new TrustStrategy() {
-            // 信任所有
-            public boolean isTrusted(X509Certificate[] chain, String authType) throws CertificateException {
-                return true;
-            }
-        }).build();
-        //NoopHostnameVerifier类:  作为主机名验证工具，实质上关闭了主机名验证，它接受任何
-        //有效的SSL会话并匹配到目标主机。
-        HostnameVerifier hostnameVerifier = NoopHostnameVerifier.INSTANCE;
-        SSLConnectionSocketFactory sslsf = new SSLConnectionSocketFactory(sslContext, hostnameVerifier);
-
+        //构建
+        SSLConnectionSocketFactory sslsf = null;
+        URI uri = null;
+        try {
+            //构建SSL
+            sslsf = buildSSL();
+            //构建URI
+            uri = buildURI(url, params);
+        } catch (NoSuchAlgorithmException | KeyStoreException | KeyManagementException | URISyntaxException e) {
+            throw new RuntimeException(e);
+        }
 
         // 创建httpClient对象
 //        CloseableHttpClient httpClient = HttpClients.createDefault();
         CloseableHttpClient httpClient = HttpClients.custom().setSSLSocketFactory(sslsf).build();
 
-        // 创建访问的地址
-        URIBuilder uriBuilder = new URIBuilder(url);
-        if (params != null) {
-            Set<Entry<String, String>> entrySet = params.entrySet();
-            for (Entry<String, String> entry : entrySet) {
-                uriBuilder.setParameter(entry.getKey(), entry.getValue());
-            }
-        }
-
         // 创建http对象
-        HttpGet httpGet = new HttpGet(uriBuilder.build());
+        HttpGet httpGet = new HttpGet(uri);
         /**
          * setConnectTimeout：设置连接超时时间，单位毫秒。
          * setConnectionRequestTimeout：设置从connect Manager(连接池)获取Connection
@@ -131,7 +122,8 @@ public class HttpClientUtils {
                 .build();
         httpGet.setConfig(requestConfig);
 
-        httpGet.setHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36");
+//        httpGet.setHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36");
+        httpGet.setHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36");
         // 设置请求头
         packageHeader(headers, httpGet);
 
@@ -145,6 +137,48 @@ public class HttpClientUtils {
         // 释放资源
 //			release(httpResponse, httpClient);
 //        }
+    }
+
+
+    /**
+     * 构建SSL
+     *
+     * @return
+     * @throws NoSuchAlgorithmException
+     * @throws KeyStoreException
+     * @throws KeyManagementException
+     */
+    private static SSLConnectionSocketFactory buildSSL() throws NoSuchAlgorithmException, KeyStoreException, KeyManagementException {
+        //使用 loadTrustMaterial() 方法实现一个信任策略，信任所有证书
+        SSLContext sslContext = new SSLContextBuilder().loadTrustMaterial(null, new TrustStrategy() {
+            // 信任所有
+            public boolean isTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+                return true;
+            }
+        }).build();
+        //NoopHostnameVerifier类:  作为主机名验证工具，实质上关闭了主机名验证，它接受任何
+        //有效的SSL会话并匹配到目标主机。
+        HostnameVerifier hostnameVerifier = NoopHostnameVerifier.INSTANCE;
+        SSLConnectionSocketFactory sslsf = new SSLConnectionSocketFactory(sslContext, hostnameVerifier);
+        return sslsf;
+    }
+
+    /**
+     * 构建请求地址
+     *
+     * @throws URISyntaxException
+     */
+    private static URI buildURI(String url, Map<String, String> params) throws URISyntaxException {
+        // 创建访问的地址
+        URIBuilder uriBuilder = new URIBuilder(url);
+        if (params != null) {
+            Set<Entry<String, String>> entrySet = params.entrySet();
+            for (Entry<String, String> entry : entrySet) {
+                uriBuilder.setParameter(entry.getKey(), entry.getValue());
+            }
+        }
+        URI uri = uriBuilder.build();
+        return uri;
     }
 
     /**
@@ -189,11 +223,10 @@ public class HttpClientUtils {
      * @param url     请求地址
      * @param headers 请求头集合
      * @param params  请求参数集合
-     *  HttpEntity reqEntity = MultipartEntityBuilder.create().addPart("file", bin).addPart("comment", comment).build();
+     *                HttpEntity reqEntity = MultipartEntityBuilder.create().addPart("file", bin).addPart("comment", comment).build();
      * @return
      * @throws Exception
      * @body 二进制文件参数，用于上传二进制文件，构建方式<br>
-     *
      */
     public static HttpClientResult doPost(String url, Map<String, String> headers, Map<String, String> params, HttpEntity body) throws IOException {
         //判断是否携带cookie，如果没有就获取全局cookie

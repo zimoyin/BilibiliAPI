@@ -101,7 +101,7 @@ public class HistoryBarrage extends ArrayList<Barrage> implements BarrageInterfa
     /**
      * 设置cookie
      *
-     * @param cookie
+     * @param cookie cookie
      */
     public void setCookie(Cookie cookie) {
         this.cookie = cookie;
@@ -116,8 +116,8 @@ public class HistoryBarrage extends ArrayList<Barrage> implements BarrageInterfa
      * @param bv 视频的BV号
      * @param sleepTime 睡眠时间，只有睡眠了才会一定程度上的降低IP被封的概率
      * @param handle 对具体一天中的弹幕列表进行处理
-     * @return
-     * @throws Exception
+     * @return 弹幕集合
+     * @throws Exception 最大异常
      */
     public ArrayList<Barrage> getBarrageAll(String bv, long sleepTime, HistoryBarrageAllHandle handle) throws Exception {
         ArrayList<Barrage> barrages = null; //临时弹幕集合
@@ -148,6 +148,8 @@ public class HistoryBarrage extends ArrayList<Barrage> implements BarrageInterfa
      *
      * @param bv 视频的BV号
      * @param sleepTime 睡眠时间，只有睡眠了才会一定程度上的降低IP被封的概率
+      * @return 弹幕集合
+      * @throws Exception -
      */
     public ArrayList<Barrage> getBarrageAll(String bv, long sleepTime) throws Exception {
         ArrayList<Barrage> barrages = null; //临时弹幕集合
@@ -176,8 +178,8 @@ public class HistoryBarrage extends ArrayList<Barrage> implements BarrageInterfa
     /**
      * 获取该视频的所有的历史弹幕,每1s获取一天的弹幕列表
      * @param bv 视频的BV号
-     * @return
-     * @throws Exception
+     * @return 弹幕集合
+     * @throws Exception -
      */
     public ArrayList<Barrage> getBarrageAll(String bv) throws Exception {
         ArrayList<Barrage> barrages = null; //临时弹幕集合，只有获取当天的弹幕
@@ -206,8 +208,8 @@ public class HistoryBarrage extends ArrayList<Barrage> implements BarrageInterfa
     /**
      * 返回弹幕列表到一个新的集合，而不是使用自身的集合
      *
-     * @param bv
-     * @return
+     * @param bv bv id
+     * @return 弹幕集合
      * @throws Exception
      */
     @Override

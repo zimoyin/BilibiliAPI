@@ -22,11 +22,24 @@ public class Vip {
      */
     private int type;
     /**
+     * 评论区用户会员类型
+     * 0：无
+     * 1：月大会员
+     * 2：年度及以上大会员
+     */
+    private int vipType;
+    /**
      * 会员状态
      * 0：无
      * 1：有
      */
     private int status;
+    /**
+     * 评论区用户会员状态
+     * 0：无
+     * 1：有
+     */
+    private int vipStatus;
     /**
      * 会员过期时间	Unix时间戳(毫秒)
      */
