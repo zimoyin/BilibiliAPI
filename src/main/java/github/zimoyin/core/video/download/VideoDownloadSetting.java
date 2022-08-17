@@ -10,6 +10,7 @@ import github.zimoyin.core.fanju.pojo.info.seriesI.Episodes;
 import github.zimoyin.core.fanju.pojo.info.seriesI.Result;
 import github.zimoyin.core.fanju.pojo.info.seriesI.SeriesJsonRootBean;
 import github.zimoyin.core.user.pojo.user.Series;
+import github.zimoyin.core.utils.IDConvert;
 import github.zimoyin.core.video.info.VideoInfo;
 import github.zimoyin.core.video.info.pojo.info.WEBVideoINFOJsonRootBean;
 import github.zimoyin.core.video.info.pojo.info.data.Pages;
@@ -102,12 +103,40 @@ public class VideoDownloadSetting {
      */
     private String ssid;
 
+    /**
+     * 如果不存在cookie，且要求画质在1080p 则是否开启 预览1080p视频下载方案
+     */
+    private boolean isPreview1080p;
 
     public VideoDownloadSetting() {
     }
 
-    public VideoDownloadSetting(String bv) {
-        this.bv = bv;
+    /**
+     * 视频id 可以是 ssid avid bvid epid
+     *
+     * @param id
+     */
+    public VideoDownloadSetting(String id) {
+        if (id.trim().length() <= 2) throw new IllegalArgumentException("Invalid id");
+        String pr = id.trim().substring(0, 2).toUpperCase();
+        switch (pr) {
+            case "BV":
+                this.bv = id;
+                break;
+            case "AV":
+                this.bv = IDConvert.AvToBv(id);
+                break;
+            case "EP":
+                this.ep = id;
+                this.setPage(0);
+                break;
+            case "SS":
+                this.ssid = id;
+                this.setPage(0);
+                break;
+            default:
+                this.bv = IDConvert.AvToBv("av"+id);
+        }
     }
 
     public VideoDownloadSetting(String bv, int qn, int fnval) {
@@ -144,10 +173,24 @@ public class VideoDownloadSetting {
         buildCid(this.videoInfo);
         //文件名称
         buildFileName(this.videoInfo);
+        //智能判断是否需要开启预览1080p视频下载
+        buildPrevie1080p();
         return this;
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////
+
+    /**
+     * 构建是否下载预览1080p视频
+     * 开启条件（满足一种即可）：
+     * 1. 用户自己开启（如果是下载番剧则自动关闭）
+     * 2. 清晰度为1080p，格式为mp4，不是下载番剧等
+     */
+    public void buildPrevie1080p() {
+        boolean empty = this.getCookie().isEmpty();
+        if (!isPreview1080p) this.isPreview1080p = empty && qn == QN.P1080_cookie && fnval == Fnval.VideoFormat_mp4;
+        if (ep != null || ssid != null) this.isPreview1080p = false;
+    }
 
     /**
      * 设置 videoInfo
@@ -289,7 +332,7 @@ public class VideoDownloadSetting {
             //设置ssid
             this.ssid = String.valueOf(result.getSeason_id());
             //设置剧情信息
-            episodes = result.getPage(page-1);
+            episodes = result.getPage(page - 1);
         }
         //设置bv
         String bvid = episodes.getBvid();

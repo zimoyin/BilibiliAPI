@@ -31,50 +31,163 @@
 > github.zimoyin.core.video.url.WEBVideoURLFormat
 ### 预览视频URL信息(360P,不需要cookie和防盗链)
 > github.zimoyin.core.video.url.VideoURLPreviewFormatP360
-```java
+```
 ArrayList<URL> 视频URL = new VideoURLPreviewFormatP360().getURLs("bv号");
 ```
 ### 预览视频URL信息(1080P,不需要cookie和防盗链)
 > github.zimoyin.core.video.url.VideoURLPreviewFormatP1080
 ### 视频下载（上古案例）
 > github.zimoyin.core.video.url.download.WebVideoDownload
-新案例请见: github.zimoyin.core.video.Main
+下载视频需要配置三个东西：  
+* VideoDownloadSetting：下载设置类，用来设置下载什么类型的视频包括清晰度
+* VideoDownload： 下载器，下载器会根据 VideoDownloadSetting 的实例去获取对应的下载URl，之后会根据URL去调用响应的底层下载器
+* DownloadHandle: 下载器监听类：用来监听下载器下载文件的进度等待，但是多线程可能导致当前统计的已经下载的字节数小于实际的下载字节数。所以判断是否下载完成可以通过线程完成数来进行
 ```java
-        //下载器设置
+     class Demo{
+    /**
+     * 下载视频
+     */
+    public void test00() {
         VideoDownloadSetting setting = new VideoDownloadSetting();
-        setting.setBv("BV11L411G7he");
+        setting.setBv("BV1oa411K7MG");
+        setting.setFnval(Fnval.VideoFormat_mp4);
+        setting.setQn(QN.P306);
+
+        VideoDownload videoDownload = new VideoDownload();
+        videoDownload.setSetting(setting);
+        videoDownload.setListens(info -> System.out.print("\r下载进度：" + info.getDownloadSize() + "/" + info.getFileSize()));
+        videoDownload.download();
+//        videoDownload.downloadThread(true);
+    }
+
+    /**
+     * 下载所有p视频
+     */
+    public void test01() {
+        VideoDownloadSetting setting = new VideoDownloadSetting();
+        setting.setBv("BV1Qa411p7o8");
+        setting.setFnval(Fnval.VideoFormat_mp4);
+        setting.setQn(QN.P306);
         setting.setPage(1);
-        setting.setCookie(Cookie.readCookie("./cache/webcookie.json"));
-        setting.setQn(QN.P1080_60_cookie_vip);
-        setting.setFnval(Fnval.VideoFormat_dash);
-        setting.build();
-        //获取下载器
-        VideoDownload videoDownload = new VideoDownload(setting);
-        //设置下载控制器
-        DownloadControl control = new DownloadControl();
-        //设置监听
-        control.setListenDownloadSize(new DownloadHandle<DownloadControl.DownloadInfo, Object>() {
-@Override
-public Object handle(DownloadControl.DownloadInfo t) {
-//                System.out.print("\r下载进度："+t.getDownloadSize()/(double)t.getFileSize()+" %");
-        System.out.print("\r"+t.getDownloadSize()+" : "+t.getFileSize());
-        if (t.getDownloadSize()/(double)t.getFileSize() == 1) {
-        System.out.println();
-        System.out.println("下载完毕: "+setting.getFileName());
-        System.out.println("文件大小: "+(double)t.getFileSize()/1024/1024+" mb");
-        System.out.println("用时: "+(double) (System.currentTimeMillis() - control.getInitTime()) / 1000+"s");
-        }
-        return super.handle(t);
-        }
+
+        VideoDownload videoDownload = new VideoDownload();
+        videoDownload.setSetting(setting);
+        videoDownload.setListens(new DownloadHandle() {
+            @Override
+            public void handle(DownloadControl.DownloadInfo info) {
+                System.out.print("\r" + info.getDownloadSize() + "/" + info.getFileSize());
+            }
         });
-        //控制器添加到下载器中
-        videoDownload.setControl(control);
-        //开始下载
-        ArrayList<Future<DownloadResult>> futures = videoDownload.downloadThread(true);
-        //下载结果信息
-//        for (Future<DownloadResult> future : futures) {
-//            System.out.println(future.get());
-//        }
-        //合并文件
-        videoDownload.merge();
+
+//        videoDownload.downloadThread(true);
+//        videoDownload.download();
+        for (int i = 0; i < setting.getPageCount(); i++) {
+            System.out.print("download: " + (i + 1) + "p ");
+            setting.setPage(i + 1);
+//            videoDownload.download();
+            videoDownload.downloadThread(true);
+            System.out.print(" done\r\n");
+        }
+    }
+
+
+    /**
+     * 下载所有的互动视频片段
+     */
+    public void test02() throws Exception {
+        //获取互动视频的所有模块的cid
+        InteractVideoInfo interactVideoInfo = new InteractVideoInfo("BV1hu411d7R6");
+        HashMap<Long, Node> cidMaps = interactVideoInfo.getCidMaps();
+        Set<Long> cids = cidMaps.keySet();
+        System.out.println("互动视频遍历完毕");
+        //配置下载设置
+        VideoDownloadSetting setting = new VideoDownloadSetting();
+        setting.setBv("BV1hu411d7R6");
+        //获取下载器
+        VideoDownload videoDownload = new VideoDownload();
+        videoDownload.setSetting(setting);
+        //下载
+        //注意异常捕获，可能导致的异常有超时等
+        for (long cid : cids) {
+            System.out.print("download :" + cidMaps.get(cid));
+            setting.setCid(cid);
+            setting.setPage(cidMaps.get(cid).getLevel());
+            setting.setPageName(cidMaps.get(cid).getTitle());
+            try {
+//                videoDownload.download();
+                videoDownload.downloadThread(true);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            System.out.println(" done");
+        }
+    }
+
+
+    /**
+     * 获取CC弹幕文件(json)的链接
+     */
+    public void test03() throws IOException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException {
+        VideoInfo videoInfo = new VideoInfo();
+        WEBVideoINFOJsonRootBean videoInfoInfo = videoInfo.getInfo("BV1H44y1a7JM");
+        List<CC> list = videoInfoInfo.getData().getSubtitle().getList();
+        for (CC cc : list) {
+            System.out.println(cc.getSubtitle_url());
+        }
+    }
+
+
+    /**
+     * 下载番剧
+     * 需要bv与cid
+     */
+    public void test04() {
+        VideoDownloadSetting setting = new VideoDownloadSetting();
+        setting.setBv("BV1ZY4y187fA");
+        setting.setFnval(Fnval.VideoFormat_mp4);
+        setting.setQn(QN.P306);
+        setting.setCid(785726095);
+
+        VideoDownload videoDownload = new VideoDownload();
+        videoDownload.setSetting(setting);
+        videoDownload.setListens(info -> System.out.print("\r下载进度：" + info.getDownloadSize() + "/" + info.getFileSize()));
+        videoDownload.download();
+    }
+
+
+    /**
+     * 下载番剧
+     * 需要ep或者ssid
+     */
+    public void test05() {
+        VideoDownloadSetting setting = new VideoDownloadSetting();
+        setting.setEp("ep567956");
+        setting.setFnval(Fnval.VideoFormat_mp4);
+        setting.setQn(QN.P306);
+        //设置剧集，如果不设置的话根据ep来下载，如果是ssid则下载第一集
+        setting.setPage(4);
+
+        VideoDownload videoDownload = new VideoDownload();
+        videoDownload.setSetting(setting);
+        videoDownload.setListens(info -> System.out.print("\r下载进度：" + info.getDownloadSize() + "/" + info.getFileSize()));
+        videoDownload.downloadThread(true);
+    }
+
+    /**
+     * 无需 cookie 下载 1080p mp4格式视频
+     * 注意仅限 1080p 与 mp4格式的视频，不能是番剧或其他
+     */
+    public void test06() {
+        VideoDownloadSetting setting = new VideoDownloadSetting();
+        setting.setBv("BV1jG4y1Y77x");
+        setting.setPreview1080p(true);
+
+
+        VideoDownload videoDownload = new VideoDownload();
+        videoDownload.setSetting(setting);
+        videoDownload.setListens(info -> System.out.print("\r下载进度：" + info.getDownloadSize() + "/" + info.getFileSize()));
+        videoDownload.downloadThread(true);
+
+    }
+}
 ```

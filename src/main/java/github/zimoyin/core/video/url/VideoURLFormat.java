@@ -54,6 +54,7 @@ public class VideoURLFormat {
 
     public VideoURLFormat(Cookie cookie) {
         this.cookie = cookie;
+        if (cookie == null) throw new IllegalArgumentException("Cookie cannot be null");
         cookie.setCookieToHeader(header);
     }
 

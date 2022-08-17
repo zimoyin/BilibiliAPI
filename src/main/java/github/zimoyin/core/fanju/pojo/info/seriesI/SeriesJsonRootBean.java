@@ -5,6 +5,8 @@ package github.zimoyin.core.fanju.pojo.info.seriesI;
 
 import lombok.Data;
 
+import java.util.List;
+
 /**
  * Auto-generated: 2022-07-31 20:29:51
  *
@@ -17,4 +19,14 @@ public class SeriesJsonRootBean {
     private int code;
     private String message;
     private Result result;
+
+    /**
+     * 获取所有分集
+     * @return
+     */
+    public List<Episodes> getEpisodes(){
+        return result.getEpisodes();
+    }
+
+
 }

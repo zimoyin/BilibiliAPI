@@ -48,7 +48,8 @@ public class VideoInfo {
      */
     public WEBVideoINFOJsonRootBean getInfo(String bv) throws IOException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException {
         HttpClientResult httpClientResult = HttpClientUtils.doGet(String.format(URL1,bv), header, new HashMap<>());
-        WEBVideoINFOJsonRootBean webVideoINFOJsonRootBean = JSONObject.parseObject(httpClientResult.getContent(), WEBVideoINFOJsonRootBean.class);
+        String content = httpClientResult.getContent();
+        WEBVideoINFOJsonRootBean webVideoINFOJsonRootBean = JSONObject.parseObject(content, WEBVideoINFOJsonRootBean.class);
         return webVideoINFOJsonRootBean;
     }
 

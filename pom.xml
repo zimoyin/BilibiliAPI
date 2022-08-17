@@ -152,6 +152,8 @@
             <artifactId>commons-compress</artifactId>
             <version>1.20</version>
         </dependency>
+
+
     </dependencies>
 
 
@@ -160,7 +162,7 @@
     <artifactId>BilibiliAPI</artifactId>
     <!--需要特别注意,你上传的是SNAPSHOT仓库,所以此处版本号后缀必须带SNAPSHOT-->
 <!--    <version>0.1-SNAPSHOT</version>-->
-    <version>0.1</version>
+    <version>0.2</version>
 
     <!--项目信息...-->
     <name>BilibiliAPI</name>
@@ -249,19 +251,19 @@
                     </plugin>
 
                     <!--生成API文档插件-->
-<!--                    <plugin>-->
-<!--                        <groupId>org.apache.maven.plugins</groupId>-->
-<!--                        <artifactId>maven-javadoc-plugin</artifactId>-->
-<!--                        <version>2.9.1</version>-->
-<!--                        <executions>-->
-<!--                            <execution>-->
-<!--                                <id>attach-javadocs</id>-->
-<!--                                <goals>-->
-<!--                                    <goal>jar</goal>-->
-<!--                                </goals>-->
-<!--                            </execution>-->
-<!--                        </executions>-->
-<!--                    </plugin>-->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>3.4.0</version>
+                        <executions>
+                            <execution>
+                                <id>attach-javadocs</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
 
                     <!--gpg插件-->
                     <plugin>

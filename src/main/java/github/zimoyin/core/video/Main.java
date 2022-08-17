@@ -32,25 +32,21 @@ public class Main {
 //        main.test00();
 
         VideoDownloadSetting setting = new VideoDownloadSetting();
-        setting.setCookie(GlobalCookie.getInstance());
         setting.setBv("BV1jG4y1Y77x");
-        setting.setFnval(Fnval.VideoFormat_dash);
-        setting.setQn(QN.P1080_cookie);
-        setting.setCookie(GlobalCookie.getInstance());
+        setting.setPreview1080p(true);
 
 
         VideoDownload videoDownload = new VideoDownload();
         videoDownload.setSetting(setting);
-        videoDownload.setListens(info -> System.out.print("\r下载进度："+info.getDownloadSize()+"/"+info.getFileSize()));
+        videoDownload.setListens(info -> System.out.print("\r下载进度：" + info.getDownloadSize() + "/" + info.getFileSize()));
         videoDownload.downloadThread(true);
-        videoDownload.merge();
     }
 
 
     /**
      * 下载视频
      */
-    public void test00(){
+    public void test00() {
         VideoDownloadSetting setting = new VideoDownloadSetting();
         setting.setBv("BV1oa411K7MG");
         setting.setFnval(Fnval.VideoFormat_mp4);
@@ -58,7 +54,7 @@ public class Main {
 
         VideoDownload videoDownload = new VideoDownload();
         videoDownload.setSetting(setting);
-        videoDownload.setListens(info -> System.out.print("\r下载进度："+info.getDownloadSize()+"/"+info.getFileSize()));
+        videoDownload.setListens(info -> System.out.print("\r下载进度：" + info.getDownloadSize() + "/" + info.getFileSize()));
         videoDownload.download();
 //        videoDownload.downloadThread(true);
     }
@@ -66,7 +62,7 @@ public class Main {
     /**
      * 下载所有p视频
      */
-    public void test01(){
+    public void test01() {
         VideoDownloadSetting setting = new VideoDownloadSetting();
         setting.setBv("BV1Qa411p7o8");
         setting.setFnval(Fnval.VideoFormat_mp4);
@@ -78,15 +74,15 @@ public class Main {
         videoDownload.setListens(new DownloadHandle() {
             @Override
             public void handle(DownloadControl.DownloadInfo info) {
-                System.out.print("\r"+info.getDownloadSize()+"/"+info.getFileSize());
+                System.out.print("\r" + info.getDownloadSize() + "/" + info.getFileSize());
             }
         });
 
 //        videoDownload.downloadThread(true);
 //        videoDownload.download();
         for (int i = 0; i < setting.getPageCount(); i++) {
-            System.out.print("download: "+(i+1)+"p ");
-            setting.setPage(i+1);
+            System.out.print("download: " + (i + 1) + "p ");
+            setting.setPage(i + 1);
 //            videoDownload.download();
             videoDownload.downloadThread(true);
             System.out.print(" done\r\n");
@@ -112,14 +108,14 @@ public class Main {
         //下载
         //注意异常捕获，可能导致的异常有超时等
         for (long cid : cids) {
-            System.out.print("download :"+cidMaps.get(cid));
+            System.out.print("download :" + cidMaps.get(cid));
             setting.setCid(cid);
             setting.setPage(cidMaps.get(cid).getLevel());
             setting.setPageName(cidMaps.get(cid).getTitle());
             try {
 //                videoDownload.download();
                 videoDownload.downloadThread(true);
-            }catch (Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
             System.out.println(" done");
@@ -144,7 +140,7 @@ public class Main {
      * 下载番剧
      * 需要bv与cid
      */
-    public void test04(){
+    public void test04() {
         VideoDownloadSetting setting = new VideoDownloadSetting();
         setting.setBv("BV1ZY4y187fA");
         setting.setFnval(Fnval.VideoFormat_mp4);
@@ -153,17 +149,16 @@ public class Main {
 
         VideoDownload videoDownload = new VideoDownload();
         videoDownload.setSetting(setting);
-        videoDownload.setListens(info -> System.out.print("\r下载进度："+info.getDownloadSize()+"/"+info.getFileSize()));
+        videoDownload.setListens(info -> System.out.print("\r下载进度：" + info.getDownloadSize() + "/" + info.getFileSize()));
         videoDownload.download();
     }
-
 
 
     /**
      * 下载番剧
      * 需要ep或者ssid
      */
-    public void test05(){
+    public void test05() {
         VideoDownloadSetting setting = new VideoDownloadSetting();
         setting.setEp("ep567956");
         setting.setFnval(Fnval.VideoFormat_mp4);
@@ -173,7 +168,24 @@ public class Main {
 
         VideoDownload videoDownload = new VideoDownload();
         videoDownload.setSetting(setting);
-        videoDownload.setListens(info -> System.out.print("\r下载进度："+info.getDownloadSize()+"/"+info.getFileSize()));
+        videoDownload.setListens(info -> System.out.print("\r下载进度：" + info.getDownloadSize() + "/" + info.getFileSize()));
         videoDownload.downloadThread(true);
+    }
+
+    /**
+     * 无需 cookie 下载 1080p mp4格式视频
+     * 注意仅限 1080p 与 mp4格式的视频，不能是番剧或其他
+     */
+    public void test06() {
+        VideoDownloadSetting setting = new VideoDownloadSetting();
+        setting.setBv("BV1jG4y1Y77x");
+        setting.setPreview1080p(true);
+
+
+        VideoDownload videoDownload = new VideoDownload();
+        videoDownload.setSetting(setting);
+        videoDownload.setListens(info -> System.out.print("\r下载进度：" + info.getDownloadSize() + "/" + info.getFileSize()));
+        videoDownload.downloadThread(true);
+
     }
 }

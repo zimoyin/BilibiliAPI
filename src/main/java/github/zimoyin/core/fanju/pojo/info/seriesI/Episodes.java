@@ -89,4 +89,8 @@ public class Episodes {
      * 单集vid	vupload_+{cid}
      */
     private String vid;
+
+    public long getEpId(){
+        return id;
+    }
 }

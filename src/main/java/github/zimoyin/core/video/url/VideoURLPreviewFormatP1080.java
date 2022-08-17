@@ -46,6 +46,22 @@ public class VideoURLPreviewFormatP1080 {
 
 
     /**
+     * 获取下载链接
+     * @param bv
+     * @return
+     */
+    public ArrayList<java.net.URL> getURLs(String bv,String cid){
+        try {
+            VideoURLJsonRoot jsonRoot = getJsonPojo(bv,cid);
+            ArrayList<java.net.URL> urLs = jsonRoot.getURLs();
+            return urLs;
+        } catch (Exception e) {
+            throw new JSONException("无法解析出URL",e);
+        }
+    }
+
+
+    /**
      * 获取JSON实体类
      * @param bv
      * @return
@@ -64,6 +80,24 @@ public class VideoURLPreviewFormatP1080 {
 
 
     /**
+     * 获取JSON实体类
+     * @param bv
+     * @return
+     * @throws CodeException
+     * @throws IOException
+     * @throws NoSuchAlgorithmException
+     * @throws KeyStoreException
+     * @throws URISyntaxException
+     * @throws KeyManagementException
+     */
+    public VideoURLJsonRoot getJsonPojo(String bv,String cid) throws CodeException, IOException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException {
+        String page = getPage(bv,cid);
+        VideoURLJsonRoot jsonRoot = JSONObject.parseObject(page, VideoURLJsonRoot.class);
+        return jsonRoot;
+    }
+
+
+    /**
      * 获取原始信息
      * @param bv
      * @return
@@ -75,7 +109,26 @@ public class VideoURLPreviewFormatP1080 {
      * @throws KeyManagementException
      */
     public String getPage(String bv) throws CodeException, IOException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException {
-        String url = String.format(URL, bv, IDConvert.BvToCID(bv));
+//        String url = String.format(URL, bv, IDConvert.BvToCID(bv));
+//        HttpClientResult httpClientResult = HttpClientUtils.doGet(url);
+//        return httpClientResult.getContent();
+        return getPage(bv,IDConvert.BvToCID(bv));
+    }
+
+
+    /**
+     * 获取原始信息
+     * @param bv
+     * @return
+     * @throws CodeException
+     * @throws IOException
+     * @throws NoSuchAlgorithmException
+     * @throws KeyStoreException
+     * @throws URISyntaxException
+     * @throws KeyManagementException
+     */
+    public String getPage(String bv,String cid) throws CodeException, IOException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException {
+        String url = String.format(URL, bv, cid);
         HttpClientResult httpClientResult = HttpClientUtils.doGet(url);
         return httpClientResult.getContent();
     }

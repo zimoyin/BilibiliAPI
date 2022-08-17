@@ -205,4 +205,9 @@ public abstract class Cookie extends HashMap<String, String> implements Serializ
         map.put("Cookie",toStringV2());
         return map;
     }
+
+    @Override
+    public boolean isEmpty() {
+        return super.isEmpty() || !this.containsKey("SESSDATA");
+    }
 }

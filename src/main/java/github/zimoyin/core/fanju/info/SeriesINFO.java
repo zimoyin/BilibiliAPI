@@ -20,6 +20,9 @@ import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * 番剧信息
+ */
 public class SeriesINFO {
     /**
      * season_id   番剧ssid，web端打开番剧，里面有ss开头的一个（restful样式）参数（https://www.bilibili.com/bangumi/play/ss41410）

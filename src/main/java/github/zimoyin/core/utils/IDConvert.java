@@ -4,6 +4,9 @@ import github.zimoyin.core.exception.Code;
 import github.zimoyin.core.exception.CodeException;
 import github.zimoyin.core.utils.net.httpclient.HttpClientResult;
 import github.zimoyin.core.utils.net.httpclient.HttpClientUtils;
+import github.zimoyin.core.video.info.VideoInfo;
+import github.zimoyin.core.video.info.pojo.info.WEBVideoINFOJsonRootBean;
+import github.zimoyin.core.video.info.pojo.info.data.Pages;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -12,7 +15,9 @@ import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.function.BiConsumer;
 
 /**
  * 实现 BV 转 AV
@@ -106,6 +111,42 @@ public class IDConvert {
         Code.throwCodeException(content,"服务器接口异常 code 不为 0 (成功)\r\n 访问URL："+url+"\r\n");
         String cid = JsonSerializeUtil.getJsonPath().read(content, "/data/0/cid");
         return cid;
+    }
+
+    /**
+     * BV转为CID
+     * @param bv
+     * @param pageNum 第几p视频的cid
+     * @return
+     * @throws Exception
+     */
+    public static String BvToCID(String bv,int pageNum) throws IOException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException, CodeException {
+        HashMap<Integer, Long> map = BvToCIDs(bv);
+        final long[] cid = {0};
+        map.forEach((integer, aLong) -> {
+            if (integer == pageNum){
+                cid[0] = aLong;
+                return;
+            }
+        });
+        return String.valueOf(cid[0]);
+    }
+
+    /**
+     * BV转为CID
+     * @param bv
+     * @return HashMap<Integer, Long> 当前p对于的cid
+     * @throws Exception
+     */
+    public static HashMap<Integer, Long> BvToCIDs(String bv) throws IOException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException, CodeException {
+        HashMap<Integer, Long> cidMap = new HashMap<Integer, Long>();
+        VideoInfo videoInfo = new VideoInfo();
+        WEBVideoINFOJsonRootBean b = videoInfo.getInfo("BV1PE411i7CV");
+        List<Pages> pages = b.getData().getPages();
+        for (Pages page1 : pages) {
+            cidMap.put(page1.getPage(), page1.getCid());
+        }
+        return cidMap;
     }
 
 

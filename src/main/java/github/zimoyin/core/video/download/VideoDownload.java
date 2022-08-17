@@ -4,6 +4,7 @@ import github.zimoyin.core.exception.DownloadException;
 import github.zimoyin.core.video.download.videoDownload.WebDashVideoDownload;
 import github.zimoyin.core.video.download.videoDownload.WebDurlVideoDownload;
 import github.zimoyin.core.video.url.VideoURLFormat;
+import github.zimoyin.core.video.url.VideoURLPreviewFormatP1080;
 import github.zimoyin.core.video.url.pojo.VideoURLJsonRoot;
 import lombok.Data;
 
@@ -13,6 +14,8 @@ import java.util.concurrent.Future;
 /**
  * 注释请见父类
  * 进行多任务下载时注意使用多线程要节制
+ * 下载地址的初始化，他会在调用download等方法时进行初始化也可以调用init方法手动初始化
+ * 如何获取下载地址：不需要向类里面传入下载地址，他会自己生成。如果要获取请get以下对象（根据需要）:urlPojo、durlDownloadObj、dashDownloadObj
  * bug：无法并发（指多次调用download等方法）下载多任务（控制器失效，下载文件字节块丢失）,控制器在使用非多线程下载时会报错
  */
 @Data
@@ -109,7 +112,8 @@ public class VideoDownload extends VideoDownloadAbs {
                 try {
                     Thread.currentThread().setName("downloadFile-" + setting.getFileName());
                     if (isDurl()) durlDownloadObj.durlDownload(setting.getFileName(), control);
-                    if (isDash()) dashDownloadObj.dashDownload(setting.getDashTemplate(), setting.getFileName(), control);
+                    if (isDash())
+                        dashDownloadObj.dashDownload(setting.getDashTemplate(), setting.getFileName(), control);
                 } catch (Exception e) {
                     stop();
                     control.close();
@@ -182,8 +186,7 @@ public class VideoDownload extends VideoDownloadAbs {
 
     @Override
     public boolean downloadInit() {
-        initUrlPojo();
-        initDownloadObj();
+        init();
         return true;
     }
 
@@ -201,7 +204,7 @@ public class VideoDownload extends VideoDownloadAbs {
         initUrlPojo();
         initDownloadObj();
         initControl();
-         //将下载器、控制器保存下来
+        //将下载器、控制器保存下来
         dashDownloadObjArray.add(dashDownloadObj);
         durlDownloadObjArray.add(durlDownloadObj);
         controlArray.add(control);
@@ -212,7 +215,7 @@ public class VideoDownload extends VideoDownloadAbs {
      * 每次下载新任务的时候都去新初始化一个控制器
      * 新的控制器将拥有全局处理器，与当前处理器
      */
-    private void initControl(){
+    private void initControl() {
         //获取一个新的控制器
         this.control = new DownloadControl(setting.getThreadCount());
         //将全局处理器交给新的控制器
@@ -233,26 +236,34 @@ public class VideoDownload extends VideoDownloadAbs {
 
 
     private void initUrlPojo() throws DownloadException {
+        //视频的bv号
+        String bv = setting.getBv();
+        //视频的cid，cid是用于对bv视频确定具体分p的
+        String cid = String.valueOf(setting.getCid());
+        //清晰度
+        int qn = setting.getQn();
+        //视频格式
+        int fnval = setting.getFnval();
         try {
-            //视频的bv号
-            String bv = setting.getBv();
-            //视频的cid，cid是用于对bv视频确定具体分p的
-            String cid = String.valueOf(setting.getCid());
-            //清晰度
-            int qn = setting.getQn();
-            //视频格式
-            int fnval = setting.getFnval();
-            //视频URL获取对象
-            VideoURLFormat videoURLFormat = new VideoURLFormat(setting.getCookie());
-            //获取url的pojo
-            this.urlPojo = videoURLFormat.getJsonPOJO(bv, cid, qn, fnval);
-
+            if (setting.isPreview1080p()) {
+                //视频URL获取对象
+                VideoURLPreviewFormatP1080 urlPreviewFormatP1080 = new VideoURLPreviewFormatP1080();
+                //获取url的pojo
+                this.urlPojo = urlPreviewFormatP1080.getJsonPojo(bv, cid);
+            } else {
+                //视频URL获取对象
+                VideoURLFormat videoURLFormat = new VideoURLFormat(setting.getCookie());
+                //获取url的pojo
+                this.urlPojo = videoURLFormat.getJsonPOJO(bv, cid, qn, fnval);
+            }
         } catch (Exception e) {
             throw new DownloadException("获取视频URL失败", e);
         }
     }
+
     /**
      * 获取URL的pojo类，注意，该方法会执行init方法，导致类在下载之前进行初始化
+     *
      * @return
      */
     public VideoURLJsonRoot getUrlPojo() {
@@ -265,7 +276,7 @@ public class VideoDownload extends VideoDownloadAbs {
      * 为当前的一个控制器设置一个监听器（只能设置一个）
      * 如果想为所有的控制器添加监听器请调用 setAllListens 方法
      */
-    public void setListens(DownloadHandle handle){
+    public void setListens(DownloadHandle handle) {
         if (handle == null) return;
 //        this.getControl().setListenDownloadSize(handle);
         this.thisHandle = handle;
@@ -275,7 +286,7 @@ public class VideoDownload extends VideoDownloadAbs {
     /**
      * 为所有控制器设置一个监听器
      */
-    public void setAllListens(DownloadHandle handle){
+    public void setAllListens(DownloadHandle handle) {
         if (handle == null) return;
         handles.add(handle);
         for (DownloadControl control0 : this.controlArray) {
