@@ -7,6 +7,7 @@ import github.zimoyin.core.fanju.pojo.info.seriesI.Result;
 import github.zimoyin.core.fanju.pojo.info.seriesI.SeriesJsonRootBean;
 import github.zimoyin.core.live.video.LiveVideoURL;
 import github.zimoyin.core.live.video.data.Quality;
+import github.zimoyin.core.search.enums.SearchType;
 import github.zimoyin.core.utils.IDConvert;
 import github.zimoyin.core.video.download.VideoDownload;
 import github.zimoyin.core.video.download.VideoDownloadSetting;
@@ -33,12 +34,9 @@ import java.util.List;
 import java.util.function.BiConsumer;
 
 public class T {
+    SearchType type;
     @Test
     public void s() throws HttpException, IOException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException, CodeException {
-        System.out.println(IDConvert.BvToCID("BV1PE411i7CV"));
-        SeriesINFO seriesINFO = new SeriesINFO();
-        Episodes ss = seriesINFO.getEpisodes("ss39661");
-        System.out.println(ss.getBvid());
-        System.out.println(ss.getCid());
+        System.out.println(type.getType());
     }
 }

@@ -1,6 +1,5 @@
 package github.zimoyin.core.utils.net.httpclient;
 
-import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
 import github.zimoyin.core.exception.DownloadException;
 import github.zimoyin.core.utils.AllocateBytes;
 import github.zimoyin.core.video.download.DownloadControl;
