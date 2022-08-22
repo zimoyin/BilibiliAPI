@@ -5,6 +5,8 @@ import github.zimoyin.core.utils.AllocateBytes;
 import github.zimoyin.core.video.download.DownloadControl;
 import github.zimoyin.core.video.download.DownloadResult;
 import lombok.Data;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -32,7 +34,7 @@ public class VideoDownloadUtil {
         this.bv = bv;
     }
 
-
+    private static Logger logger = LoggerFactory.getLogger(VideoDownloadUtil.class);
 
     /**
      * 多线程下载文件，不阻断main线程
@@ -50,9 +52,22 @@ public class VideoDownloadUtil {
     public static ArrayList<Future<DownloadResult>> downloadFileThread(ExecutorService executorService, String url, String filePath, long fileSize,
                                                                        int threadCount, HashMap<String, String> header, String bv,
                                                                        DownloadControl downloadControl) throws IOException {
-        if (threadCount != downloadControl.getThreadCount() && downloadControl.getFinalThreadCount() < downloadControl.getThreadCount()){
-            throw new DownloadException("禁止下载 开启文件下载的线程数与控制器中描述的线程数不符");
+//        logger.debug("=========================================================");
+//        logger.debug("开启一个多线程下载任务");
+//        logger.debug("URL:{}",url);
+//        logger.debug("保存路径：{}",filePath);
+//        logger.debug("文件大小：{}",fileSize);
+//        logger.debug("开启线程数：{}",threadCount);
+//        logger.debug("控制器描述线程数：{}",downloadControl.getThreadCount());
+//        logger.debug("控制器描述实际线程数：{}",downloadControl.getFinalThreadCount());
+//        logger.debug("=========================================================");
+
+        if (threadCount != downloadControl.getThreadCount() &&
+                downloadControl.getFinalThreadCount() >= downloadControl.getThreadCount()){
+            throw new DownloadException("禁止下载 开启文件下载的线程数 "+threadCount+" 与控制器 "+downloadControl.getThreadCount()+
+                    " 中描述的线程数不符,并且控制器中描述的最终线程数"+downloadControl.getFinalThreadCount()+"小于描述线程数 "+downloadControl.getThreadCount());
         }
+
         //将文件下载线程池放入控制器中进行托管
         downloadControl.setDownloadExecutorService(executorService);
         //创建任务结果队列

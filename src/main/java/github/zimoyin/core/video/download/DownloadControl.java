@@ -1,6 +1,8 @@
 package github.zimoyin.core.video.download;
 
 import lombok.Data;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -15,7 +17,7 @@ import java.util.concurrent.Executors;
 @Data
 public class DownloadControl {
     /**
-     * 需要下载的文件的最终线程数，非核心线程
+     * 需要下载的文件的实际线程数
      */
     private volatile int finalThreadCount;
 
@@ -67,7 +69,8 @@ public class DownloadControl {
      */
     private ExecutorService downloadExecutorService;
 
-
+    private static boolean warn = false;
+    private Logger logger = LoggerFactory.getLogger(DownloadControl.class);
     public DownloadControl(int threadCount) {
         this.threadCount = threadCount;
         executorService = Executors.newFixedThreadPool(threadCount / 2 + 1);
@@ -96,6 +99,10 @@ public class DownloadControl {
      * @param threadDownloadSize 线程当前下载大小
      */
     private void send(long fileSize, long downloadSize, String threadName, long threadSize, long threadDownloadSize) {
+        if (downloadSize>fileSize && !warn) {
+            warn= true;
+            logger.warn("当前已下载的字节数大于控制器中描述的文件字节长度，这说明获取文件长度的方法有缺陷，但是不影响下载");
+        }
         for (DownloadHandle handle : handles) {
             handle.handle(new DownloadInfo(
                     threadCount,
@@ -122,7 +129,9 @@ public class DownloadControl {
 
 
     public void setFileSize(long fileSize) {
-        this.fileSize += fileSize;
+        long size = this.fileSize;
+        this.fileSize = this.fileSize + fileSize;
+//        logger.debug("控制器描述当前文件长度：{}，追加文件长度:{},最终文件长度:{}",size,fileSize,this.fileSize);
     }
 
 

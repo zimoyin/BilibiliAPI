@@ -1,2 +1,0 @@
-[2022-08-02 20:19:39.747] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:1424, 包头描述包长度:1753
-[2022-08-02 20:19:39.748] [WARN ] github.zimoyin.core.live.massage.vertx.Package$Header.<init>(Package.java:181) github.zimoyin.core.live.massage.vertx.Package$Header - 这是一个损耗的包 包实际长度:329, 包头描述包长度:1783074139
