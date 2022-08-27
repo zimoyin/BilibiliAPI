@@ -33,13 +33,14 @@ public class Main {
 
         VideoDownloadSetting setting = new VideoDownloadSetting();
         setting.setBv("BV1jG4y1Y77x");
-        setting.setPreview1080p(true);
-
+//        setting.setPreview1080p(true);
+        setting.setFnval(Fnval.VideoFormat_dash);
 
         VideoDownload videoDownload = new VideoDownload();
         videoDownload.setSetting(setting);
         videoDownload.setListens(info -> System.out.print("\r下载进度：" + info.getDownloadSize() + "/" + info.getFileSize()));
-        videoDownload.downloadThread(true);
+//        videoDownload.downloadThread(true);
+        videoDownload.download();
     }
 
 

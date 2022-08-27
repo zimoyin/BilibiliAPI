@@ -51,7 +51,7 @@ public class Data {
     /**
      * 分类结果数目信息
      */
-    private Pageinfo top_tlist;
+    private Pageinfo2 top_tlist;
     private int show_column;
     /**
      * 返回结果类型列表

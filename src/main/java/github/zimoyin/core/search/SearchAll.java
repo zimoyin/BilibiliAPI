@@ -20,6 +20,13 @@ public class SearchAll {
     private static final String URL = "http://api.bilibili.com/x/web-interface/search/all/v2?keyword=%s";
     private Cookie cookie;
 
+    public SearchAll() {
+    }
+
+    public SearchAll(Cookie cookie) {
+        this.cookie = cookie;
+    }
+
     /**
      * 返回和关键字相关的20条信息
      * @param keyword

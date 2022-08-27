@@ -64,8 +64,8 @@ public class VideoDownloadUtil {
 
         if (threadCount != downloadControl.getThreadCount() &&
                 downloadControl.getFinalThreadCount() >= downloadControl.getThreadCount()){
-            throw new DownloadException("禁止下载 开启文件下载的线程数 "+threadCount+" 与控制器 "+downloadControl.getThreadCount()+
-                    " 中描述的线程数不符,并且控制器中描述的最终线程数"+downloadControl.getFinalThreadCount()+"小于描述线程数 "+downloadControl.getThreadCount());
+            throw new DownloadException("禁止下载 开启文件下载的线程数 "+threadCount+" 与控制器中描述的线程数"+downloadControl.getThreadCount()+
+                    "不符,并且控制器中描述的最终线程数"+downloadControl.getFinalThreadCount()+"小于描述线程数 "+downloadControl.getThreadCount());
         }
 
         //将文件下载线程池放入控制器中进行托管

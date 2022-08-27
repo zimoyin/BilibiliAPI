@@ -37,6 +37,7 @@ public class SearchCategories {
 
     /**
      * 获取该词下载能搜到的所有东西
+     *
      * @param word
      * @return
      * @throws IOException
@@ -61,6 +62,7 @@ public class SearchCategories {
 
     /**
      * 分类搜索
+     *
      * @param params 查询参数
      * @return
      * @throws IOException
@@ -72,6 +74,7 @@ public class SearchCategories {
 
     /**
      * 分类搜索
+     *
      * @param params 查询参数
      * @return
      * @throws IOException
@@ -82,115 +85,114 @@ public class SearchCategories {
         return result.getContent();
     }
 
+    /**
+     * 分类搜索参数封装
+     */
+    @Data
+    public static class SearchCategoriesParams {
+        /**
+         * 需要搜索的关键词(必要)
+         */
+        private String keyword;
+        /**
+         * 搜索目标类型(必要)
+         */
+        private SearchType searchType = SearchType.Video;
 
 
-}
+        /**
+         * 页码(非必要)
+         */
+        private int page = -1;
+        /**
+         * 返回条数，默认42,最大 50
+         */
+        private int page_size = -1;
+        /**
+         * 结果偏移数，默认0
+         */
+        private int dynamic_offset = -1;
+        /**
+         * 专栏及相簿分区筛选(非必要)
+         */
+        private SearchCategoryID searchCategoryID;
+        /**
+         * order(非必要): 结果排序方式
+         */
+        private SearchOrder searchOrder;
+        /**
+         * (非必要) 用户粉丝数及等级排序顺序
+         * 仅用于搜索用户
+         */
+        private SearchSort searchSort;
+        /**
+         * 视频分区筛选(非必要)	仅用于搜索视频
+         */
+        private SearchTids searchTids;
+        /**
+         * (非必要) 用户分类筛选:仅用于搜索用户
+         */
+        private SearchUserType searchUserType;
+        /**
+         * 视频时长筛选(非必要)	仅用于搜索视频
+         */
+        private SearchVideoDuration searchVideoDuration;
 
-/**
- * 分类搜索参数封装
- */
-@Data
-class SearchCategoriesParams {
-    /**
-     * 需要搜索的关键词(必要)
-     */
-    private String keyword;
-    /**
-     * 搜索目标类型(必要)
-     */
-    private SearchType searchType = SearchType.Video;
+        /**
+         * 参数
+         */
+        private HashMap<String, String> params = new HashMap<String, String>();
 
+        public SearchCategoriesParams(String keyword, SearchType searchType) {
+            this.keyword = keyword;
+            this.searchType = searchType;
+        }
 
-    /**
-     * 页码(非必要)
-     */
-    private int page = -1;
-    /**
-     * 返回条数，默认42,最大 50
-     */
-    private int page_size = -1;
-    /**
-     * 结果偏移数，默认0
-     */
-    private int dynamic_offset = -1;
-    /**
-     * 专栏及相簿分区筛选(非必要)
-     */
-    private SearchCategoryID searchCategoryID;
-    /**
-     * order(非必要): 结果排序方式
-     */
-    private SearchOrder searchOrder;
-    /**
-     * (非必要) 用户粉丝数及等级排序顺序
-     * 仅用于搜索用户
-     */
-    private SearchSort searchSort;
-    /**
-     * 视频分区筛选(非必要)	仅用于搜索视频
-     */
-    private SearchTids searchTids;
-    /**
-     * (非必要) 用户分类筛选:仅用于搜索用户
-     */
-    private SearchUserType searchUserType;
-    /**
-     * 视频时长筛选(非必要)	仅用于搜索视频
-     */
-    private SearchVideoDuration searchVideoDuration;
-
-    /**
-     * 参数
-     */
-    private HashMap<String, String> params = new HashMap<String, String>();
-
-    public SearchCategoriesParams(String keyword, SearchType searchType) {
-        this.keyword = keyword;
-        this.searchType = searchType;
-    }
-
-    public SearchCategoriesParams(String keyword) {
-        this.keyword = keyword;
-    }
+        public SearchCategoriesParams(String keyword) {
+            this.keyword = keyword;
+        }
 
 
-    /**
-     * 为所有的属性赋值默认类型
-     */
-    public void setAllVal() {
-        this.searchType = SearchType.Video;
-        this.page = 1;
-        this.page_size = 42;
-        this.dynamic_offset = 0;
-        this.searchCategoryID = SearchCategoryID.Column_All;
-        this.searchOrder = SearchOrder.TotalRank;
-        this.searchSort = SearchSort.AscendingOrder;
-        this.searchTids = SearchTids.All;
-        this.searchUserType = SearchUserType.All;
-        this.searchVideoDuration = SearchVideoDuration.All;
-    }
+        /**
+         * 为所有的属性赋值默认类型
+         */
+        public void setAllVal() {
+            this.searchType = SearchType.Video;
+            this.page = 1;
+            this.page_size = 42;
+            this.dynamic_offset = 0;
+            this.searchCategoryID = SearchCategoryID.Column_All;
+            this.searchOrder = SearchOrder.TotalRank;
+            this.searchSort = SearchSort.AscendingOrder;
+            this.searchTids = SearchTids.All;
+            this.searchUserType = SearchUserType.All;
+            this.searchVideoDuration = SearchVideoDuration.All;
+        }
 
-    /**
-     * 构建参数
-     *
-     * @return
-     */
-    public HashMap<String, String> getParams() {
-        //必要参数
-        params.put("search_type", searchType.getType());//搜索目标类型
-        params.put("keyword", keyword);//需要搜索的关键词
-        //非必要参数
-        if (searchOrder != null) params.put("order", searchOrder.getOrder());//结果排序方式
-        if (searchSort != null) params.put("order_sort", searchSort.getSort());//用户粉丝数及等级排序顺序
-        if (searchUserType != null) params.put("user_type", searchUserType.getType());//用户分类筛选
-        if (searchVideoDuration != null) params.put("duration", searchVideoDuration.getDuration());//视频时长筛选
-        if (searchTids != null) params.put("tids", searchTids.getTid());//视频分区筛选
-        if (searchCategoryID != null) params.put("category_id", searchCategoryID.getId());//专栏及相簿分区筛选
-        if (this.page > -1) params.put("page", String.valueOf(this.page));//页码
-        if (this.dynamic_offset > -1) params.put("dynamic_offset", String.valueOf(this.dynamic_offset));//结果偏移数，默认0
-        if (this.page_size > -1 && this.page_size <= 50) params.put("page_size", String.valueOf(this.page_size));//返回条数，默认42
+        /**
+         * 构建参数
+         *
+         * @return
+         */
+        public HashMap<String, String> getParams() {
+            //必要参数
+            params.put("search_type", searchType.getType());//搜索目标类型
+            params.put("keyword", keyword);//需要搜索的关键词
+            //非必要参数
+            if (searchOrder != null) params.put("order", searchOrder.getOrder());//结果排序方式
+            if (searchSort != null) params.put("order_sort", searchSort.getSort());//用户粉丝数及等级排序顺序
+            if (searchUserType != null) params.put("user_type", searchUserType.getType());//用户分类筛选
+            if (searchVideoDuration != null) params.put("duration", searchVideoDuration.getDuration());//视频时长筛选
+            if (searchTids != null) params.put("tids", searchTids.getTid());//视频分区筛选
+            if (searchCategoryID != null) params.put("category_id", searchCategoryID.getId());//专栏及相簿分区筛选
+            if (this.page > -1) params.put("page", String.valueOf(this.page));//页码
+            if (this.dynamic_offset > -1) params.put("dynamic_offset", String.valueOf(this.dynamic_offset));//结果偏移数，默认0
+            if (this.page_size > -1 && this.page_size <= 50)
+                params.put("page_size", String.valueOf(this.page_size));//返回条数，默认42
 
 
-        return params;
+            return params;
+        }
     }
 }
+

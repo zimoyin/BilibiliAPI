@@ -1,0 +1,441 @@
+package github.zimoyin.core.favorites;
+
+
+import github.zimoyin.core.cookie.Cookie;
+import github.zimoyin.core.favorites.info.FavoriteContentList;
+import github.zimoyin.core.favorites.info.FavoriteInfo;
+import github.zimoyin.core.favorites.info.UserFavorites;
+import github.zimoyin.core.favorites.operation.ClearInvalidFavorite;
+import github.zimoyin.core.favorites.operation.CreateFavorite;
+import github.zimoyin.core.favorites.operation.DeleteFavorite;
+import github.zimoyin.core.favorites.operation.ModifyFavorite;
+import github.zimoyin.core.favorites.pojo.conter.Medias;
+import github.zimoyin.core.favorites.pojo.userfavorites.Data;
+import github.zimoyin.core.favorites.pojo.userfavorites.FavList;
+import github.zimoyin.core.user.pojo.search.Result;
+import github.zimoyin.core.user.up.SearchUser;
+import github.zimoyin.core.video.download.DownloadResult;
+import github.zimoyin.core.video.download.VideoDownload;
+import github.zimoyin.core.video.download.VideoDownloadSetting;
+import github.zimoyin.core.video.url.data.Fnval;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.security.KeyManagementException;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.concurrent.Future;
+
+/**
+ * 收藏夹便捷工具
+ */
+public class FavoriteUtil {
+    private Cookie cookie;
+
+    private Logger logger = LoggerFactory.getLogger(FavoriteUtil.class);
+
+    public FavoriteUtil() {
+    }
+
+    public FavoriteUtil(Cookie cookie) {
+        this.cookie = cookie;
+    }
+
+    /**
+     * 获取用户的所有收藏
+     *
+     * @param userName 用户的名称
+     * @return
+     * @throws IOException
+     */
+    public HashMap<github.zimoyin.core.favorites.pojo.info.Data, List<Medias>> getUserFavorites(String userName) throws IOException {
+//        SearchUser searchUser = new SearchUser();
+//        Result search = searchUser.search(userName);
+//        long mid = search.getMid();
+        long mid = getUserID(userName);
+        return getUserFavorites(mid);
+    }
+
+    /**
+     * 获取用户的所有收藏
+     *
+     * @param mid 用户的id
+     * @return
+     * @throws IOException
+     */
+    public HashMap<github.zimoyin.core.favorites.pojo.info.Data, List<Medias>> getUserFavorites(long mid) throws IOException {
+        HashMap<github.zimoyin.core.favorites.pojo.info.Data, List<Medias>> favoritesMap = new HashMap<>();
+        //获取用户的所有文件夹
+        UserFavorites favorites = new UserFavorites(cookie);
+        Data data = favorites.getJsonPojo(mid).getData();
+        //遍历所有收藏文件夹
+        for (FavList favList : data.getList()) {
+            long id = favList.getId();//完整id
+            int media_count = favList.getMedia_count();//收藏的视频数量
+            FavoriteContentList contentList = new FavoriteContentList(cookie);
+            //遍历出文件夹中所有的收藏
+            ArrayList<Medias> list0 = new ArrayList<>();
+            github.zimoyin.core.favorites.pojo.info.Data info = null;
+            //20个收藏为一组
+            double length = (double) media_count / 20;
+            if (length <= 0 || length > (int) length) length++;
+            for (int i = 1; i <= length; i++) {
+                github.zimoyin.core.favorites.pojo.conter.Data list = contentList.getJsonPojo(id, i).getData();
+                if (list.getInfo() != null) info = list.getInfo();
+                List<Medias> medias = list.getMedias();
+                list0.addAll(medias);
+            }
+            //保存到集合
+            favoritesMap.put(info, list0);
+        }
+        return favoritesMap;
+    }
+
+    /**
+     * 获取用户的指定的收藏
+     *
+     * @param userName 用户的名称
+     * @param title    收藏的名称
+     * @return
+     * @throws IOException
+     */
+    public ArrayList<Medias> getUserFavorites(String userName, String title) throws IOException {
+//        SearchUser searchUser = new SearchUser();
+//        Result search = searchUser.search(userName);
+//        long mid = search.getMid();
+        long mid = getUserID(userName);
+        return getUserFavorites(mid, title);
+    }
+
+    /**
+     * 获取用户的指定的收藏
+     *
+     * @param mid   用户的id
+     * @param title 收藏的名称
+     * @return
+     * @throws IOException
+     */
+    public ArrayList<Medias> getUserFavorites(long mid, String title) throws IOException {
+        ArrayList<Medias> list0 = new ArrayList<>();
+        //获取用户的所有文件夹
+        UserFavorites favorites = new UserFavorites(cookie);
+        List<FavList> lists = favorites.getJsonPojo(mid).getData().getList();
+        //找到指定的文件夹并遍历出所有的收藏
+        for (FavList fav : lists) {
+            if (!fav.getTitle().trim().equalsIgnoreCase(title.trim())) continue;
+            long id = fav.getId();//完整id
+            int media_count = fav.getMedia_count();//收藏的视频数量
+            FavoriteContentList contentList = new FavoriteContentList(cookie);
+            //遍历出文件夹中所有的收藏
+            //20个收藏为一组
+            double length = (double) media_count / 20;
+            if (length <= 0 || length > (int) length) length++;
+            for (int i = 1; i <= length; i++) {
+                github.zimoyin.core.favorites.pojo.conter.Data list = contentList.getJsonPojo(id, i).getData();
+                List<Medias> medias = list.getMedias();
+                list0.addAll(medias);
+            }
+        }
+        return list0;
+    }
+
+    /**
+     * 获取用户的指定的收藏内的内容
+     *
+     * @param username 收藏夹的id
+     * @param title    收藏的名称
+     * @return
+     * @throws IOException
+     */
+    public ArrayList<Medias> getUserFavoriteList(String username, String title) throws IOException {
+        long id = getFavoriteID(username, title);
+        return getUserFavoriteList(id);
+    }
+
+
+    /**
+     * 获取用户的指定的收藏内的内容
+     *
+     * @param fid 收藏夹的id
+     * @return
+     * @throws IOException
+     */
+    public ArrayList<Medias> getUserFavoriteList(long fid) throws IOException {
+        ArrayList<Medias> list0 = new ArrayList<>();
+        //收藏信息
+        FavoriteInfo favoriteInfo = new FavoriteInfo(cookie);
+        int count = favoriteInfo.getJsonPojo(fid).getData().getMedia_count();
+        //收藏列表
+        FavoriteContentList contentList = new FavoriteContentList(cookie);
+        //遍历出文件夹中所有的收藏
+        //20个收藏为一组
+        double length = (double) count / 20;
+        if (length <= 0 || length > (int) length) length++;
+        for (int i = 1; i <= length; i++) {
+            github.zimoyin.core.favorites.pojo.conter.Data list = contentList.getJsonPojo(fid, i).getData();
+            List<Medias> medias = list.getMedias();
+            list0.addAll(medias);
+        }
+        return list0;
+    }
+
+    /**
+     * 获取指定收藏（名称）的ID
+     *
+     * @param userName 用户的id
+     * @param title    收藏夹名称
+     * @return
+     * @throws IOException
+     */
+    public long getFavoriteID(String userName, String title) throws IOException {
+//        SearchUser searchUser = new SearchUser(cookie);
+//        Result search = searchUser.search(userName);
+//        System.out.println(search);
+//        long mid = search.getMid();
+        long mid = getUserID(userName);
+        return getFavoriteID(mid, title);
+    }
+
+    /**
+     * 获取指定收藏（名称）的ID
+     *
+     * @param mid   用户的id
+     * @param title 收藏夹名称
+     * @return
+     * @throws IOException
+     */
+    public long getFavoriteID(long mid, String title) throws IOException {
+        //获取用户的所有文件夹
+        UserFavorites favorites = new UserFavorites(cookie);
+        List<FavList> lists = favorites.getJsonPojo(mid).getData().getList();
+        //找到指定的文件夹并遍历出所有的收藏
+        for (FavList fav : lists) {
+            if (!fav.getTitle().trim().equalsIgnoreCase(title.trim())) continue;
+            long id = fav.getId();//完整id
+            return id;
+        }
+        return -1;
+    }
+
+    /**
+     * 创建个收藏文件夹
+     *
+     * @param title 收藏夹标题
+     * @return
+     */
+    public boolean create(String title) throws IOException {
+        CreateFavorite favorite = new CreateFavorite(cookie);
+        return favorite.create(title);
+    }
+
+    /**
+     * 创建个收藏文件夹
+     *
+     * @param title 收藏夹标题
+     * @param intro 收藏夹简介
+     * @return
+     */
+    public boolean create(String title, String intro) throws IOException {
+        CreateFavorite favorite = new CreateFavorite(cookie);
+        return favorite.create(title, intro);
+    }
+
+    /**
+     * 创建个收藏文件夹
+     *
+     * @param title   收藏夹标题
+     * @param privacy 是否公开
+     * @return
+     */
+    public boolean create(String title, boolean privacy) throws IOException {
+        CreateFavorite favorite = new CreateFavorite(cookie);
+        return favorite.create(title, privacy);
+    }
+
+    /**
+     * 创建个收藏文件夹
+     *
+     * @param title   收藏夹标题
+     * @param intro   收藏夹简介
+     * @param privacy 是否公开
+     * @return
+     */
+    public boolean create(String title, String intro, boolean privacy) throws IOException {
+        CreateFavorite favorite = new CreateFavorite(cookie);
+        return favorite.create(title, intro, privacy);
+    }
+
+    /**
+     * 创建个收藏文件夹
+     *
+     * @param title   收藏夹标题
+     * @param intro   收藏夹简介
+     * @param privacy 是否公开
+     * @param cover   封面图url(封面会被审核)
+     * @return
+     */
+    public boolean create(String title, String intro, boolean privacy, String cover) throws IOException {
+        CreateFavorite favorite = new CreateFavorite(cookie);
+        return favorite.create(title, intro, privacy, cover);
+    }
+
+
+    /**
+     * 删除收藏的文件夹
+     *
+     * @param id 收藏文件夹的id
+     * @return
+     * @throws IOException
+     */
+    public boolean delete(long id) throws IOException {
+        DeleteFavorite deleteFavorite = new DeleteFavorite(id, cookie);
+        return deleteFavorite.delete();
+    }
+
+    /**
+     * 删除收藏的文件夹
+     *
+     * @param username 用户的昵称
+     * @param title    收藏文件夹的名称
+     * @return
+     * @throws IOException
+     */
+    public boolean delete(String username, String title) throws IOException {
+        DeleteFavorite deleteFavorite = new DeleteFavorite(username, title, cookie);
+        return deleteFavorite.delete();
+    }
+
+
+    /**
+     * 删除收藏的文件夹
+     *
+     * @param id 收藏文件夹的id
+     * @return
+     * @throws IOException
+     */
+    public boolean clearInvalid(long id) throws IOException {
+        ClearInvalidFavorite favorite = new ClearInvalidFavorite(id, cookie);
+        return favorite.clear();
+    }
+
+    /**
+     * 清理收藏文件夹内所有失效的内容
+     *
+     * @param username 用户的昵称
+     * @param title    收藏文件夹的名称
+     * @return
+     * @throws IOException
+     */
+    public boolean clearInvalid(String username, String title) throws IOException {
+        ClearInvalidFavorite favorite = new ClearInvalidFavorite(username, title, cookie);
+        return favorite.clear();
+    }
+
+
+    /**
+     * 修改收藏文件夹
+     *
+     * @param username 用户的昵称
+     * @param oldTitle 收藏文件夹的标题
+     * @param newTitle 收藏文件夹的新标题
+     * @param privacy  是否公开
+     * @return
+     * @throws IOException
+     */
+    public boolean modify(String username, String oldTitle, String newTitle, boolean privacy) throws IOException {
+        ModifyFavorite favorite = new ModifyFavorite(username, oldTitle, cookie);
+        return favorite.modify(newTitle, privacy);
+    }
+
+    /**
+     * 修改收藏文件夹
+     *
+     * @param id       收藏文件夹的id
+     * @param newTitle 文件夹新标题
+     * @param privacy  是否公开
+     * @return
+     * @throws IOException
+     */
+    public boolean modify(long id, String newTitle, boolean privacy) throws IOException {
+        ModifyFavorite favorite = new ModifyFavorite(id, cookie);
+        return favorite.modify(newTitle, privacy);
+    }
+
+    /**
+     * 修改收藏文件夹 是否可见
+     *
+     * @param username 用户昵称
+     * @param title    收藏文件夹名称
+     * @param privacy  是否公开
+     * @return
+     * @throws IOException
+     */
+    public boolean modify(String username, String title, boolean privacy) throws IOException {
+        ModifyFavorite favorite = new ModifyFavorite(username, title, cookie);
+        return favorite.modify(title, privacy);
+    }
+
+    /**
+     * 下载收藏夹内的所有视频
+     * @param username 用户名称
+     * @param title 收藏夹标题
+     * @throws IOException
+     */
+    public ArrayList<Future<DownloadResult>> download(String username, String title) throws IOException {
+       return download(getFavoriteID(username, title));
+    }
+
+    /**
+     * 下载收藏夹内的所有视频
+     * @param mid 用户的mid
+     * @param title 收藏夹标题
+     * @throws IOException
+     */
+    public ArrayList<Future<DownloadResult>> download(long mid, String title) throws IOException {
+        return download(getFavoriteID(mid, title));
+    }
+
+    /**
+     * 下载收藏夹内的所有视频
+     * @param id
+     * @throws IOException
+     */
+    public ArrayList<Future<DownloadResult>> download(long id) throws IOException {
+        ArrayList<Future<DownloadResult>> futures = new ArrayList<Future<DownloadResult>>();
+        ArrayList<Medias> list = getUserFavoriteList(id);
+        for (Medias medias : list) {
+            String bvid = medias.getBvid();
+            logger.info("开始下载：{}", medias);
+            ArrayList<Future<DownloadResult>> download = download(bvid);
+            futures.addAll(download);
+            logger.info("下载完成：{}", medias);
+        }
+        return futures;
+    }
+
+    private ArrayList<Future<DownloadResult>> download(String bv) {
+        VideoDownloadSetting videoDownloadSetting = new VideoDownloadSetting(bv);
+        videoDownloadSetting.setPreview1080p(true);
+        VideoDownload videoDownload = new VideoDownload();
+        videoDownload.setSetting(videoDownloadSetting);
+        ArrayList<Future<DownloadResult>> futures = videoDownload.downloadThread(true);
+        return futures;
+    }
+
+    private long getUserID(String username) throws IOException {
+        SearchUser searchUser = new SearchUser(cookie);
+        long mid = -1;
+        try {
+            Result search = searchUser.search(username);
+            mid = search.getMid();
+        } catch (Exception e) {
+            mid = searchUser.getMid2(username);
+        }
+        return mid;
+    }
+}

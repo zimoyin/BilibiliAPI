@@ -1,6 +1,6 @@
 package github.zimoyin.core.exception;
 
-public class CodeException extends Exception{
+public class CodeException extends RuntimeException{
     public CodeException() {
         super("服务器响应码不符合程序预期，疑似服务器返回了预期之外的信息");
     }

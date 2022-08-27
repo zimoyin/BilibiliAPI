@@ -94,8 +94,8 @@ public class WebDashVideoDownload {
         ArrayList<Media> select = select(tem);
         //因为要下载两个文件所以要把线程数开到2倍，但是实际线程数还是不变。这里只是为了统计完成下载的线程数为2倍才结束线程池
         //设置线程完成任务次数
-        control.setThreadCount(control.getThreadCount() * 2);
         control.setFinalThreadCount(control.getThreadCount());
+        control.setThreadCount(control.getThreadCount() * 2);
         //下载音频和视频
         for (Media media : select) {
             String format = media.getMimeType().replaceAll("/", "_");
@@ -144,8 +144,8 @@ public class WebDashVideoDownload {
         //创建线程池
         ExecutorService executorService = Executors.newFixedThreadPool(control.getThreadCount());
         //设置线程完成任务次数
-        control.setThreadCount(control.getThreadCount() * 2);
         control.setFinalThreadCount(control.getThreadCount());
+        control.setThreadCount(control.getThreadCount() * 2);
         //任务列表
         ArrayList<Future<DownloadResult>> tasks = new ArrayList<>();
         //下载音频和视频
