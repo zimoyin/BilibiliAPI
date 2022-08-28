@@ -1,3 +1,4 @@
+import github.zimoyin.core.column.AnthologyInfo;
 import github.zimoyin.core.cookie.GlobalCookie;
 import github.zimoyin.core.exception.CodeException;
 import github.zimoyin.core.exception.CookieNotFoundException;
@@ -38,16 +39,7 @@ public class T {
     }
 
     public static void main(String[] args) throws CookieNotFoundException, IOException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException {
-//        ModifyFavorite modifyFavorite = new ModifyFavorite(1737680219, GlobalCookie.getInstance());
-//        modifyFavorite.modify("test1");
-
-        System.out.println(new SearchUser(GlobalCookie.getInstance()).getMid2("子墨茵"));
-
-
-//        SearchCategories searchCategories = new SearchCategories(GlobalCookie.getInstance());
-//        SearchCategoriesJsonRoot pojo = searchCategories.getJsonPojo(new SearchCategories.SearchCategoriesParams("子墨茵", SearchType.User));
-//        for (ResultUser user : pojo.getData().getResult().getUserType()) {
-//            System.out.println(user.getUname()+":"+user.getMid());
-//        }
+        AnthologyInfo anthologyInfo = new AnthologyInfo();
+        System.out.println(anthologyInfo.getJsonPojo(343404));
     }
 }

@@ -9,13 +9,14 @@ import java.io.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-
+        //推荐方法
         Login login = new LoginImpl();
         Cookie cookie = login.login();
     }
 
     @Deprecated
     public void 登录并将Cookie保存到硬盘上() throws Exception {
+        //过时的方法
         /**
          * 登录web版 WEBQRLogin
          */

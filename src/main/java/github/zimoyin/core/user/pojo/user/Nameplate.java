@@ -38,4 +38,5 @@ public class Nameplate {
      * 勋章条件
      */
     private String condition;
+
 }

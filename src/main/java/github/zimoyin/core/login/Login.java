@@ -7,7 +7,8 @@ import github.zimoyin.core.login.tv.TVQRLogin;
 import github.zimoyin.core.login.web.WEBQRLogin;
 
 /**
- * 登录接口，所有的登录都必须实现它。并且提供了具体登录的逻辑，直接调用就好，这些登录方法是静态的
+ * 登录接口，所有的登录都必须实现它。
+ * 实现类：LoginImpl
  */
 public interface Login {
     public static final int ConsoleQR = 0;
@@ -80,6 +81,7 @@ public interface Login {
     /**
      * 登录TV端，并把cookie序列化到本地
      */
+    @Deprecated
     public static Cookie loginTV() throws Exception {
         WebCookie login = new WEBQRLogin().login(1);
         login.serializable(cookiePath);
