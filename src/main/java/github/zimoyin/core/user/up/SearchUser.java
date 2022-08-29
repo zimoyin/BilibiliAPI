@@ -166,7 +166,8 @@ public class SearchUser {
      */
     public String searchPage(String userName, int page) throws IOException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException {
         String url = String.format(URL_2, page, userName);
-        HttpClientResult result = HttpClientUtils.doGet(url, cookie != null ? cookie.toHeaderCookie() : null);
+
+        HttpClientResult result = HttpClientUtils.doGet(url, cookie != null ? cookie.toHeaderCookie() : null,null);
         return result.getContent();
     }
 

@@ -1,6 +1,6 @@
 package column;
 
-import github.zimoyin.core.column.Column;
+import github.zimoyin.core.column.info.Column;
 
 public class B {
     public static void main(String[] args) {

@@ -1,7 +1,7 @@
-package github.zimoyin.core.column;
+package github.zimoyin.core.column.info;
 
 import com.alibaba.fastjson.JSONObject;
-import github.zimoyin.core.column.pojo.info.ColumnInfoJsonRoot;
+import github.zimoyin.core.column.info.pojo.info.ColumnInfoJsonRoot;
 import github.zimoyin.core.cookie.Cookie;
 import github.zimoyin.core.utils.net.httpclient.HttpClientResult;
 import github.zimoyin.core.utils.net.httpclient.HttpClientUtils;

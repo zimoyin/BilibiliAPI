@@ -1,7 +1,7 @@
 /**
   * Copyright 2022 json.cn 
   */
-package github.zimoyin.core.column.pojo.anthology;
+package github.zimoyin.core.column.info.pojo.anthology;
 
 import lombok.Data;
 

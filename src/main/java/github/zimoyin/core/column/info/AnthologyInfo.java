@@ -1,9 +1,9 @@
-package github.zimoyin.core.column;
+package github.zimoyin.core.column.info;
 
 
 import com.alibaba.fastjson.JSONObject;
 import github.zimoyin.core.Incompleteness;
-import github.zimoyin.core.column.pojo.anthology.AnthologyInfoJsonRoot;
+import github.zimoyin.core.column.info.pojo.anthology.AnthologyInfoJsonRoot;
 import github.zimoyin.core.cookie.Cookie;
 import github.zimoyin.core.utils.net.httpclient.HttpClientResult;
 import github.zimoyin.core.utils.net.httpclient.HttpClientUtils;
@@ -14,7 +14,6 @@ import java.util.HashMap;
 /**
  * 获取文集基本信息
  */
-@Incompleteness
 public class AnthologyInfo {
     private static final String URL = "http://api.bilibili.com/x/article/list/web/articles";
     private Cookie cookie;

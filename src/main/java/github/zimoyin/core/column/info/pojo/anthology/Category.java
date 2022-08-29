@@ -1,7 +1,7 @@
 /**
   * Copyright 2022 json.cn 
   */
-package github.zimoyin.core.column.pojo.anthology;
+package github.zimoyin.core.column.info.pojo.anthology;
 
 import lombok.Data;
 
@@ -12,7 +12,7 @@ import lombok.Data;
  * @website http://www.json.cn/java2pojo/
  */
 @Data
-public class Categories {
+public class Category {
 
     private int id;
     private int parent_id;

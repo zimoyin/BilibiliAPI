@@ -1,4 +1,4 @@
-package github.zimoyin.core.column;
+package github.zimoyin.core.column.info;
 
 import github.zimoyin.core.utils.net.httpclient.HttpClientResult;
 import github.zimoyin.core.utils.net.httpclient.HttpClientUtils;

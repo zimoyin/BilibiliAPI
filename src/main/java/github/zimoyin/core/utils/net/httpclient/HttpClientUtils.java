@@ -3,6 +3,7 @@ package github.zimoyin.core.utils.net.httpclient;
 import github.zimoyin.core.cookie.GlobalCookie;
 import github.zimoyin.core.exception.CookieNotFoundException;
 import org.apache.http.*;
+import org.apache.http.client.config.CookieSpecs;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.*;
@@ -14,6 +15,8 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.ssl.SSLContextBuilder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLContext;
@@ -52,6 +55,7 @@ public class HttpClientUtils {
     // 请求获取数据的超时时间(即响应时间)，单位毫秒。
     private static final int SOCKET_TIMEOUT = 12 * 1000;
 
+    static final Logger logger = LoggerFactory.getLogger(HttpClientUtils.class);
     /**
      * 发送get请求；不带请求头和请求参数
      *
@@ -103,6 +107,7 @@ public class HttpClientUtils {
             throw new RuntimeException(e);
         }
 
+        logger.trace("HttpClientUtils.doGet -> {}",uri);
         // 创建httpClient对象
 //        CloseableHttpClient httpClient = HttpClients.createDefault();
         CloseableHttpClient httpClient = HttpClients.custom().setSSLSocketFactory(sslsf).build();
@@ -119,6 +124,7 @@ public class HttpClientUtils {
                 .setProxy(setProxy())
                 .setConnectTimeout(CONNECT_TIMEOUT)
                 .setSocketTimeout(SOCKET_TIMEOUT)
+                .setCookieSpec(CookieSpecs.STANDARD)//切换cookie的解析模式，当发生无法解析的cookie的时候请务必去修改他
                 .build();
         httpGet.setConfig(requestConfig);
 
@@ -229,6 +235,7 @@ public class HttpClientUtils {
      * @body 二进制文件参数，用于上传二进制文件，构建方式<br>
      */
     public static HttpClientResult doPost(String url, Map<String, String> headers, Map<String, String> params, HttpEntity body) throws IOException {
+        logger.trace("HttpClientUtils.doPost -> {}",url);
         //判断是否携带cookie，如果没有就获取全局cookie
         setGlobalCookie(headers);
 
@@ -421,7 +428,6 @@ public class HttpClientUtils {
             // 执行请求
             httpResponse = httpClient.execute(httpMethod);
             InputStream input = null;
-
             // 获取返回结果
             if (httpResponse != null && httpResponse.getStatusLine() != null) {
                 HttpClientResult httpClientResult = new HttpClientResult(httpResponse.getStatusLine().getStatusCode(), httpResponse, httpClient);

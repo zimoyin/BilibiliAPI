@@ -1,16 +1,16 @@
 /**
   * Copyright 2022 json.cn 
   */
-package github.zimoyin.core.favorites.pojo.info;
+package github.zimoyin.core.column.info.pojo.anthology;
 
 /**
- * Auto-generated: 2022-08-26 15:26:48
+ * Auto-generated: 2022-08-28 18:54:44
  *
  * @author json.cn (i@json.cn)
  * @website http://www.json.cn/java2pojo/
  */
 @lombok.Data
-public class FavoriteInfoJsonRoot {
+public class AnthologyInfoJsonRoot {
 
     private int code;
     private String message;

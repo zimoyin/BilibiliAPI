@@ -2,6 +2,7 @@ package github.zimoyin.core.favorites;
 
 
 import github.zimoyin.core.cookie.Cookie;
+import github.zimoyin.core.exception.CodeException;
 import github.zimoyin.core.favorites.info.FavoriteContentList;
 import github.zimoyin.core.favorites.info.FavoriteInfo;
 import github.zimoyin.core.favorites.info.UserFavorites;
@@ -10,6 +11,7 @@ import github.zimoyin.core.favorites.operation.CreateFavorite;
 import github.zimoyin.core.favorites.operation.DeleteFavorite;
 import github.zimoyin.core.favorites.operation.ModifyFavorite;
 import github.zimoyin.core.favorites.pojo.conter.Medias;
+import github.zimoyin.core.favorites.pojo.info.FavoriteInfoJsonRoot;
 import github.zimoyin.core.favorites.pojo.userfavorites.Data;
 import github.zimoyin.core.favorites.pojo.userfavorites.FavList;
 import github.zimoyin.core.user.pojo.search.Result;
@@ -36,7 +38,11 @@ import java.util.concurrent.Future;
  */
 public class FavoriteUtil {
     private Cookie cookie;
-
+    /**
+     * 当下载完成当前视频后就停止下载，注意下载方法是阻塞式的请开启一个线程开控制它
+     * 如果你想要更加自由的下载方法请自行实现
+     */
+    public volatile boolean isStop;
     private Logger logger = LoggerFactory.getLogger(FavoriteUtil.class);
 
     public FavoriteUtil() {
@@ -45,6 +51,7 @@ public class FavoriteUtil {
     public FavoriteUtil(Cookie cookie) {
         this.cookie = cookie;
     }
+
 
     /**
      * 获取用户的所有收藏
@@ -165,11 +172,15 @@ public class FavoriteUtil {
      * @return
      * @throws IOException
      */
-    public ArrayList<Medias> getUserFavoriteList(long fid) throws IOException {
+    public ArrayList<Medias> getUserFavoriteList(long fid) throws IOException, CodeException {
         ArrayList<Medias> list0 = new ArrayList<>();
         //收藏信息
         FavoriteInfo favoriteInfo = new FavoriteInfo(cookie);
-        int count = favoriteInfo.getJsonPojo(fid).getData().getMedia_count();
+        FavoriteInfoJsonRoot info = favoriteInfo.getJsonPojo(fid);
+        if (info.getCode() != 0) {
+            throw new CodeException("无法获取的收藏夹信息  fid：" + fid);
+        }
+        int count = info.getData().getMedia_count();
         //收藏列表
         FavoriteContentList contentList = new FavoriteContentList(cookie);
         //遍历出文件夹中所有的收藏
@@ -381,18 +392,20 @@ public class FavoriteUtil {
     }
 
     /**
-     * 下载收藏夹内的所有视频
+     * 下载收藏夹内的所有视频,但是当文件夹中存在同名称的文件时不能覆盖他
+     *  阻塞方法，且不提供视频下载时终止下载
      * @param username 用户名称
-     * @param title 收藏夹标题
+     * @param title    收藏夹标题
      * @throws IOException
      */
     public ArrayList<Future<DownloadResult>> download(String username, String title) throws IOException {
-       return download(getFavoriteID(username, title));
+        return download(getFavoriteID(username, title));
     }
 
     /**
-     * 下载收藏夹内的所有视频
-     * @param mid 用户的mid
+     * 下载收藏夹内的所有视频,但是当文件夹中存在同名称的文件时不能覆盖他
+     *阻塞方法，且不提供视频下载时终止下载
+     * @param mid   用户的mid
      * @param title 收藏夹标题
      * @throws IOException
      */
@@ -401,7 +414,8 @@ public class FavoriteUtil {
     }
 
     /**
-     * 下载收藏夹内的所有视频
+     * 下载收藏夹内的所有视频,但是当文件夹中存在同名称的文件时不能覆盖他
+     *阻塞方法，且不提供视频下载时终止下载
      * @param id
      * @throws IOException
      */
@@ -409,32 +423,66 @@ public class FavoriteUtil {
         ArrayList<Future<DownloadResult>> futures = new ArrayList<Future<DownloadResult>>();
         ArrayList<Medias> list = getUserFavoriteList(id);
         for (Medias medias : list) {
+            if (isStop){
+                logger.info("停止下载收藏夹({})内的视频",id);
+                this.isStop = false;
+                return futures;
+            }
             String bvid = medias.getBvid();
-            logger.info("开始下载：{}", medias);
+            logger.info("开始下载：{}({})", medias.getTitle(), medias.getBvid());
             ArrayList<Future<DownloadResult>> download = download(bvid);
             futures.addAll(download);
-            logger.info("下载完成：{}", medias);
+            logger.info("下载完成：{}({})", medias.getTitle(), medias.getBvid());
         }
         return futures;
     }
 
+    /**
+     * 具体下载逻辑
+     * @param bv
+     * @return
+     */
     private ArrayList<Future<DownloadResult>> download(String bv) {
-        VideoDownloadSetting videoDownloadSetting = new VideoDownloadSetting(bv);
-        videoDownloadSetting.setPreview1080p(true);
+        ArrayList<Future<DownloadResult>> futures0 = new ArrayList<Future<DownloadResult>>();
+        VideoDownloadSetting setting = new VideoDownloadSetting(bv);
+        setting.setPreview1080p(true);
+        setting.setOverride(false);
         VideoDownload videoDownload = new VideoDownload();
-        videoDownload.setSetting(videoDownloadSetting);
-        ArrayList<Future<DownloadResult>> futures = videoDownload.downloadThread(true);
-        return futures;
+        videoDownload.setSetting(setting);
+
+        for (int i = 0; i < setting.getPageCount(); i++) {
+            logger.info("开始下载：第 {}p", i + 1);
+            setting.setPage(i + 1);
+            ArrayList<Future<DownloadResult>> futures = videoDownload.downloadThread(true);
+            futures0.addAll(futures);
+            logger.info("下载完成：第 {}p", i + 1);
+        }
+//        ArrayList<Future<DownloadResult>> futures = videoDownload.downloadThread(true);
+        return futures0;
     }
 
-    private long getUserID(String username) throws IOException {
+    /**
+     * 停止下载下一个视频的下载（不会立刻暂停的）
+     */
+    public void stopDownload(){
+        this.isStop=true;
+    }
+
+    private long getUserID(String username) throws IOException, CodeException {
         SearchUser searchUser = new SearchUser(cookie);
         long mid = -1;
         try {
             Result search = searchUser.search(username);
             mid = search.getMid();
         } catch (Exception e) {
-            mid = searchUser.getMid2(username);
+            try {
+                mid = searchUser.getMid2(username);
+            } catch (NullPointerException exception) {
+                throw new CodeException("无法获取到该名称所对应的mid：" + username);
+            } catch (IOException ex) {
+                throw new IOException(ex);
+            }
+
         }
         return mid;
     }

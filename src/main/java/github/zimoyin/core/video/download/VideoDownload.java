@@ -8,7 +8,9 @@ import github.zimoyin.core.video.url.VideoURLPreviewFormatP1080;
 import github.zimoyin.core.video.url.pojo.VideoURLJsonRoot;
 import lombok.Data;
 
+import java.io.File;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.concurrent.Future;
 
 /**
@@ -89,6 +91,8 @@ public class VideoDownload extends VideoDownloadAbs {
     public boolean download() throws DownloadException {
         setting.setThreadCount(1);//这是个单线程下载
         init();
+        //是否允许下载
+        if (!isOverride()) return false;
         if (isNotDownload()) throw new DownloadException("URL信息状态码不为 0 ，禁止下载该视频");
         boolean b = false;
         try {
@@ -106,6 +110,8 @@ public class VideoDownload extends VideoDownloadAbs {
     public void downloadAsynchronous() throws DownloadException {
         setting.setThreadCount(1);//这是个单线程下载
         init();
+        //是否允许下载
+        if (!isOverride()) return;
         if (isNotDownload()) throw new DownloadException("URL信息状态码不为 0 ，禁止下载该视频");
         new Thread(new Runnable() {
             public void run() {
@@ -126,6 +132,8 @@ public class VideoDownload extends VideoDownloadAbs {
     @Override
     public ArrayList<Future<DownloadResult>> downloadThread(boolean isWaitTakeFinish) throws DownloadException {
         init();
+        //是否允许下载
+        if (!isOverride()) return new ArrayList<Future<DownloadResult>>();
         if (isNotDownload()) throw new DownloadException("URL信息状态码不为 0 ，禁止下载该视频");
         try {
             if (isDurl())
@@ -140,6 +148,22 @@ public class VideoDownload extends VideoDownloadAbs {
         return null;
     }
 
+    /**
+     * 当有同名称的文件的时候是否允许下载并覆盖他
+     * @return
+     */
+    private boolean isOverride(){
+        if (!setting.isOverride()){
+               for (File file : Objects.requireNonNull(new File(setting.getPath()).listFiles())) {
+                String name = file.getName();
+                String substring = name.substring(0, name.lastIndexOf("."));
+                if (setting.getFileName().equals(substring)) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 
     /**
      * 合并所有视频，注意只能合并在这个下载器内下载的视频，其他的无法合并

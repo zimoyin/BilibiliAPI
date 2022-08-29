@@ -1,7 +1,7 @@
 /**
   * Copyright 2022 json.cn 
   */
-package github.zimoyin.core.column.pojo.info;
+package github.zimoyin.core.column.info.pojo.info;
 import java.util.List;
 
 /**

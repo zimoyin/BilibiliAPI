@@ -2,6 +2,7 @@ package github.zimoyin.core.utils.net.httpclient;
 
 import github.zimoyin.core.utils.IO;
 import github.zimoyin.core.video.download.DownloadControl;
+import lombok.Data;
 import org.apache.http.Header;
 import org.apache.http.HeaderElement;
 import org.apache.http.NameValuePair;
@@ -139,6 +140,9 @@ public class HttpClientResult implements Serializable {
         release();
     }
 
+    public CloseableHttpClient getHttpClient() {
+        return httpClient;
+    }
 
     /**
      * Description: 释放资源

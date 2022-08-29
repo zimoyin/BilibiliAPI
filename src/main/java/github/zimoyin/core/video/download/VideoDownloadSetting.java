@@ -107,6 +107,10 @@ public class VideoDownloadSetting {
      * 如果不存在cookie，且要求画质在1080p 则是否开启 预览1080p视频下载方案
      */
     private boolean isPreview1080p;
+    /**
+     * 如果已经存在同名称的文件是否覆盖重写
+     */
+    private boolean isOverride=true;
 
     public VideoDownloadSetting() {
     }
@@ -117,6 +121,30 @@ public class VideoDownloadSetting {
      * @param id
      */
     public VideoDownloadSetting(String id) {
+        initID(id);
+    }
+
+    public VideoDownloadSetting(String id,boolean isOverride) {
+        this.isOverride = isOverride;
+        initID(id);
+    }
+
+    public VideoDownloadSetting(boolean isOverride) {
+        this.isOverride = isOverride;
+    }
+
+    public VideoDownloadSetting(String id, int qn, int fnval) {
+//        this.bv = bv;
+        this.qn = qn;
+        this.fnval = fnval;
+        initID(id);
+    }
+
+    /**
+     * 根据给出的id智能判断属于什么类型，并赋值给相应的id类型，如：bv，av，ep等
+     * @param id
+     */
+    private void  initID(String id){
         if (id.trim().length() <= 2) throw new IllegalArgumentException("Invalid id");
         String pr = id.trim().substring(0, 2).toUpperCase();
         switch (pr) {
@@ -139,12 +167,13 @@ public class VideoDownloadSetting {
         }
     }
 
-    public VideoDownloadSetting(String bv, int qn, int fnval) {
-        this.bv = bv;
-        this.qn = qn;
-        this.fnval = fnval;
+    /**
+     * 根据给出的id智能判断属于什么类型，并赋值给相应的id类型，如：bv，av，ep等
+     * @param id
+     */
+    public void  setID(String id) {
+        initID(id);
     }
-
     /**
      * 推导未赋值的属性的参数
      *

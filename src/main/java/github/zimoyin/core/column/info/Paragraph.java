@@ -1,10 +1,12 @@
-package github.zimoyin.core.column;
+package github.zimoyin.core.column.info;
 
 import lombok.Data;
 import org.jsoup.nodes.Attribute;
 import org.jsoup.nodes.Attributes;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -177,7 +179,10 @@ public class Paragraph {
 //            System.out.println("[图片-0]");
 //            imageAtt(element1);
             this.image.put(element1.attr("data-src"), element1.attributes());
+            this.imageFerSrc.add(element1.attr("data-src"));
+            this.imageFerHtml = this.imageFerHtml + element1.text();
         });
+        //-------------------------------------------------------------------------------
         //图片 1
         Elements images = element.getElementsByClass("image-package");
         if (images.size() > 0) {
@@ -189,7 +194,13 @@ public class Paragraph {
             for (Element img2 : image.getElementsByTag("img")) {
 //                imageAtt(img2);
                 this.image.put(img2.attr("data-src"), img2.attributes());
+                this.imageSrc.add(img2.attr("data-src"));
+                this.imageHtml = this.imageHtml + img2.text();
             }
+        }
+
+        if (this.imageFerSrc != null && this.imageSrc != null && this.imageFerSrc.size() > 0 && this.imageSrc.size() > 0) {
+            LoggerFactory.getLogger(Paragraph.class).warn("该段落同时解析了两次相同图片：\r\n{}", element);
         }
     }
 

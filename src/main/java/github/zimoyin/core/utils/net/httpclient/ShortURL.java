@@ -4,6 +4,8 @@ import github.zimoyin.core.utils.JsonSerializeUtil;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ShortURL {
     /**
@@ -26,4 +28,21 @@ public class ShortURL {
             return url;
         }
     }
+    /**
+     * 获取字段值
+     *
+     * @param urlStr
+     * @param field
+     * @return
+     */
+    public static String getURLValue(String urlStr, String field) {
+        String result = "";
+        Pattern pXM = Pattern.compile(field + "=([^&]*)");
+        Matcher mXM = pXM.matcher(urlStr);
+        while (mXM.find()) {
+            result += mXM.group(1) + "\t\t";
+        }
+        return result;
+    }
+
 }
