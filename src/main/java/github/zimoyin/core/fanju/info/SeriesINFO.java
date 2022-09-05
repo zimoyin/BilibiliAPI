@@ -3,6 +3,7 @@ package github.zimoyin.core.fanju.info;
 import com.alibaba.fastjson.JSONObject;
 import github.zimoyin.core.cookie.Cookie;
 import github.zimoyin.core.cookie.GlobalCookie;
+import github.zimoyin.core.exception.CodeException;
 import github.zimoyin.core.exception.CookieNotFoundException;
 import github.zimoyin.core.fanju.pojo.info.essential.FanJuEssentialINFOJsonRootBean;
 import github.zimoyin.core.fanju.pojo.info.seriesI.Episodes;
@@ -40,6 +41,8 @@ public class SeriesINFO {
         Episodes episodes0=null;
         SeriesJsonRootBean pojo = this.getPojo(id);
         Result result = pojo.getResult();
+        if (pojo.getCode() == -404) throw new NullPointerException("无法获取到剧集信息");
+        if (pojo.getCode() != 0 )throw new CodeException();
         List<Episodes> episodes = result.getEpisodes();
         if (id.contains("ss"))return episodes.get(0);//如果是ssid就返回第一集
         for (Episodes episode : episodes) {
@@ -89,6 +92,8 @@ public class SeriesINFO {
         }else if (id.contains("ss")){
             id = id.replaceAll("[a-z]|[A-Z]+","");
             param +="?season_id="+id;
+        }else {
+            throw new IllegalArgumentException("非法的番剧ep或ssid： "+id);
         }
         //构建URL
         String url = URL +param;

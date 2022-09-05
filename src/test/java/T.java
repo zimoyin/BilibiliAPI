@@ -6,6 +6,7 @@ import github.zimoyin.core.search.enums.SearchType;
 import github.zimoyin.core.utils.net.httpclient.HttpClientResult;
 import github.zimoyin.core.utils.net.httpclient.HttpClientUtils;
 import github.zimoyin.core.collection.VideoCollection;
+import github.zimoyin.core.video.download.VideoDownload;
 import org.apache.http.HttpException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -35,8 +36,7 @@ public class T {
     }
 
     public static void main(String[] args) throws CookieNotFoundException, IOException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException, ExecutionException, InterruptedException {
-
-        System.out.println(new VideoCollection("BV1WT41177px"));
+        VideoDownload videoDownload = new VideoDownload();
     }
 
     /**

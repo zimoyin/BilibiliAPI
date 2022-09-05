@@ -68,4 +68,5 @@ public class Vip {
     private int tv_vip_status;
     private int tv_vip_pay_type;
 
+
 }

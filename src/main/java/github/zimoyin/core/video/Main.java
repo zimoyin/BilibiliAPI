@@ -2,6 +2,7 @@ package github.zimoyin.core.video;
 
 
 import github.zimoyin.core.cookie.GlobalCookie;
+import github.zimoyin.core.utils.IDConvert;
 import github.zimoyin.core.video.download.DownloadControl;
 import github.zimoyin.core.video.download.DownloadHandle;
 import github.zimoyin.core.video.download.VideoDownload;
@@ -32,15 +33,20 @@ public class Main {
 //        main.test00();
 
         VideoDownloadSetting setting = new VideoDownloadSetting();
-        setting.setBv("BV1jG4y1Y77x");
-//        setting.setPreview1080p(true);
+        String av = IDConvert.BvToAv("BV1RY4y1u7Tw");
+        setting.setID("8481");
+        setting.setPreview1080p(true);
         setting.setFnval(Fnval.VideoFormat_dash);
 
         VideoDownload videoDownload = new VideoDownload();
         videoDownload.setSetting(setting);
+        videoDownload.downloadInit();
+        System.out.println(setting.getFileName());
+        System.out.println(setting.getEp());
+        System.out.println(videoDownload.getUrlPojo(false).getURLs());
         videoDownload.setListens(info -> System.out.print("\r下载进度：" + info.getDownloadSize() + "/" + info.getFileSize()));
 //        videoDownload.downloadThread(true);
-        videoDownload.download();
+//        videoDownload.download();
     }
 
 

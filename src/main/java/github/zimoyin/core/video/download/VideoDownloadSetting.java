@@ -145,9 +145,9 @@ public class VideoDownloadSetting {
      * @param id
      */
     private void  initID(String id){
-        if (id.trim().length() <= 2) throw new IllegalArgumentException("Invalid id");
+        if (id.trim().length() <= 2) throw new IllegalArgumentException("不合法的id，无法判断的id类型");
         String pr = id.trim().substring(0, 2).toUpperCase();
-        switch (pr) {
+        switch (pr.toUpperCase()) {
             case "BV":
                 this.bv = id;
                 break;
@@ -163,12 +163,13 @@ public class VideoDownloadSetting {
                 this.setPage(0);
                 break;
             default:
-                this.bv = IDConvert.AvToBv("av"+id);
+                throw new IllegalArgumentException("不合法的id，无法判断的id类型");
+//                this.bv = IDConvert.AvToBv("av"+id);
         }
     }
 
     /**
-     * 根据给出的id智能判断属于什么类型，并赋值给相应的id类型，如：bv，av，ep等
+     * 根据给出的id智能判断属于什么类型，并赋值给相应的id类型，如：bv，av，ep,ssid等
      * @param id
      */
     public void  setID(String id) {
@@ -359,7 +360,7 @@ public class VideoDownloadSetting {
             SeriesJsonRootBean pojo = series.getPojo(ssid == null ? ep : ssid);
             Result result = pojo.getResult();
             //设置ssid
-            this.ssid = String.valueOf(result.getSeason_id());
+            this.ssid = String.valueOf("ss"+result.getSeason_id());
             //设置剧情信息
             episodes = result.getPage(page - 1);
         }
@@ -371,7 +372,7 @@ public class VideoDownloadSetting {
         this.setCid(cid);
         //设置ep
         long ep = episodes.getId();
-        this.ep = String.valueOf(ep);
+        this.ep = String.valueOf("ep"+ep);
     }
 
 
@@ -389,6 +390,7 @@ public class VideoDownloadSetting {
 
     /**
      * 视频的p数，默认下载第一p内容
+     * 注意该p数为视频列表中的p数位置，如果第2p为预告，第10p为真正的第二集内容那么将会根据你的提供的p数来获取是预告还是真正的内容
      */
     public VideoDownloadSetting setPage(int page) {
         //设置名称为null

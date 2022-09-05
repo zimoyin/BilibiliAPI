@@ -208,6 +208,7 @@ public class VideoDownload extends VideoDownloadAbs {
         control.setStop(true);
     }
 
+    @Deprecated
     @Override
     public boolean downloadInit() {
         init();
@@ -295,6 +296,15 @@ public class VideoDownload extends VideoDownloadAbs {
         return urlPojo;
     }
 
+    /**
+     * 获取URL的pojo类，注意，该方法会执行init方法，导致类在下载之前进行初始化
+     * @param isInit 是否在获取URL的时候进行初始化
+     * @return
+     */
+    public VideoURLJsonRoot getUrlPojo(boolean isInit) {
+        if (isInit)init();
+        return urlPojo;
+    }
 
     /**
      * 为当前的一个控制器设置一个监听器（只能设置一个）

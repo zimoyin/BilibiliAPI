@@ -40,6 +40,7 @@ public class VideoURLJsonRoot {
     /**
      * 访问的哪个URL得到的该信息
      */
+    @Deprecated
     private URI uri;
 
     /**
@@ -67,9 +68,9 @@ public class VideoURLJsonRoot {
      *
      * @return
      */
-    @Deprecated
     public ArrayList<URL> getURLs() {
         ArrayList<URL> urls = new ArrayList<>();
+        if (this.data == null) throw new NullPointerException("您大概是没有权限下载该视频吧，无法获取到该视频的下载URL");
         if (this.data.durl != null) {
             for (Durl durl : this.data.durl) urls.add(durl.url);
         }
@@ -89,6 +90,7 @@ public class VideoURLJsonRoot {
      *
      * @return
      */
+    @Deprecated
     public VideoDownload getVideoDownload() {
         return new VideoDownload(this.getBv());
     }

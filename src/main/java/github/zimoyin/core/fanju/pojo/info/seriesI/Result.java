@@ -80,7 +80,7 @@ public class Result {
     /**
      * 番剧ssid
      */
-    private int season_id;
+    private long season_id;
     /**
      * 剧集标题
      */
