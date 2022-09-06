@@ -33,5 +33,4 @@ public class Data {
      * 歌单列表
      */
     private List<MyList> data;
-
 }

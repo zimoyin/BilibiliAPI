@@ -19,8 +19,10 @@
 > github.zimoyin.core.video.operation.VideoStatusOperation
 ### 视频快照（图片墙）
 > github.zimoyin.core.video.info.VideoSnapshot
-### 视频推荐
+### 视频推荐（根据一个视频推荐同类型视频）
 > github.zimoyin.core.video.info.VideoRecommendation
+### 视频首页推荐（有cookie则是个性推荐）
+> github.zimoyin.core.video.info.VideoHomePageRecommendation
 ### 视频进度上报
 > github.zimoyin.core.video.operation.VideoProgress
 ### 视频高能进度条
