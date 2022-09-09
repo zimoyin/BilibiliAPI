@@ -26,7 +26,7 @@ import java.util.concurrent.*;
 @lombok.Data
 public class WebDurlVideoDownload{
     private volatile VideoURLJsonRoot json;
-    private volatile Data data;
+    private volatile VideoURLJsonRoot.Data data;
     private volatile HashMap<String, String> header = new HashMap<>();
 
     /**

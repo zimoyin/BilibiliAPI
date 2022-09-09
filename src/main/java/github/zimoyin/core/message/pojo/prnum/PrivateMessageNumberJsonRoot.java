@@ -15,32 +15,21 @@ public class PrivateMessageNumberJsonRoot {
     private String message;
     private int ttl;
     private Data data;
-    public void setCode(int code) {
-         this.code = code;
-     }
-     public int getCode() {
-         return code;
-     }
 
-    public void setMessage(String message) {
-         this.message = message;
-     }
-     public String getMessage() {
-         return message;
-     }
 
-    public void setTtl(int ttl) {
-         this.ttl = ttl;
-     }
-     public int getTtl() {
-         return ttl;
-     }
+    @lombok.Data
+    public class Data {
 
-    public void setData(Data data) {
-         this.data = data;
-     }
-     public Data getData() {
-         return data;
-     }
+        /**
+         * 未关注用户未读私信数
+         */
+        private int unfollow_unread;
+        /**
+         * 	已关注用户未读私信数
+         */
+        private int follow_unread;
+        private int gt;
+
+    }
 
 }

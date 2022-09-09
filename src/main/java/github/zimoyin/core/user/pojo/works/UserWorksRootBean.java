@@ -16,4 +16,20 @@ public class UserWorksRootBean {
     private String message;
     private int ttl;
     private Data data;
+
+
+    @lombok.Data
+    public class Data {
+
+        /**
+         * 作品
+         */
+        private ListWorks list;
+        /**
+         * 页数坐标
+         */
+        private Page page;
+        private Episodic_button episodic_button;
+
+    }
 }

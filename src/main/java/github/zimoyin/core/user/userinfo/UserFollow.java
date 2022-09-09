@@ -51,6 +51,7 @@ public class UserFollow {
         ArrayList<Item> arrayList = new ArrayList<>();
         ArrayList<UserFollowJsonRootBean> pojo = getPojo(mid);
         for (UserFollowJsonRootBean user : pojo) {
+
             List<Item> list = user.getData().getList();
             arrayList.addAll(list);
         }

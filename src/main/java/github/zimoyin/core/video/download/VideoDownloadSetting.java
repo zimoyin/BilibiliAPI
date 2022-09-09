@@ -7,7 +7,6 @@ import github.zimoyin.core.exception.CookieNotFoundException;
 import github.zimoyin.core.exception.DownloadException;
 import github.zimoyin.core.fanju.info.SeriesINFO;
 import github.zimoyin.core.fanju.pojo.info.seriesI.Episodes;
-import github.zimoyin.core.fanju.pojo.info.seriesI.Result;
 import github.zimoyin.core.fanju.pojo.info.seriesI.SeriesJsonRootBean;
 import github.zimoyin.core.user.pojo.user.Series;
 import github.zimoyin.core.utils.IDConvert;
@@ -15,6 +14,7 @@ import github.zimoyin.core.video.info.VideoInfo;
 import github.zimoyin.core.video.info.pojo.info.WEBVideoINFOJsonRootBean;
 import github.zimoyin.core.video.info.pojo.info.data.Pages;
 import github.zimoyin.core.video.url.data.Fnval;
+import github.zimoyin.core.video.url.data.ID;
 import github.zimoyin.core.video.url.data.QN;
 import lombok.Data;
 import org.apache.http.HttpException;
@@ -31,6 +31,7 @@ import java.util.List;
  */
 @Data
 public class VideoDownloadSetting {
+    private String id;
     /**
      * 视频的bv号
      */
@@ -145,6 +146,7 @@ public class VideoDownloadSetting {
      * @param id
      */
     private void  initID(String id){
+        this.id = id;
         if (id.trim().length() <= 2) throw new IllegalArgumentException("不合法的id，无法判断的id类型");
         String pr = id.trim().substring(0, 2).toUpperCase();
         switch (pr.toUpperCase()) {
@@ -201,24 +203,29 @@ public class VideoDownloadSetting {
         buildCidMap(this.videoInfo);
         //设置cid
         buildCid(this.videoInfo);
-        //文件名称
-        buildFileName(this.videoInfo);
         //智能判断是否需要开启预览1080p视频下载
         buildPrevie1080p();
+        //文件名称
+        buildFileName(this.videoInfo);
         return this;
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////
 
     /**
-     * 构建是否下载预览1080p视频
-     * 开启条件（满足一种即可）：
-     * 1. 用户自己开启（如果是下载番剧则自动关闭）
-     * 2. 清晰度为1080p，格式为mp4，不是下载番剧等
+     * 构建是否下载预览1080p视频: 默认开启，
      */
     public void buildPrevie1080p() {
         boolean empty = this.getCookie().isEmpty();
-        if (!isPreview1080p) this.isPreview1080p = empty && qn == QN.P1080_cookie && fnval == Fnval.VideoFormat_mp4;
+        if (!isPreview1080p) {
+            //isPreview1080p 为 false 时就进行判断是否开启
+            //条件：不存在cookie，但是想要下载1080p视频
+            if (empty && qn == QN.P1080_cookie){
+                this.isPreview1080p=true;
+                this.qn=QN.P1080_cookie;
+                this.fnval= Fnval.VideoFormat_mp4;
+            }
+        }
         if (ep != null || ssid != null) this.isPreview1080p = false;
     }
 
@@ -253,7 +260,7 @@ public class VideoDownloadSetting {
      * @param info 视频信息类
      */
     private void buildFileName(WEBVideoINFOJsonRootBean info) {
-        github.zimoyin.core.video.info.pojo.info.Data data = info.getData();
+        WEBVideoINFOJsonRootBean.Data data = info.getData();
         //是否存在文件名，如果没有就赋值一个
         if (fileName == null) {
             fileName = data.getTitle();
@@ -273,7 +280,7 @@ public class VideoDownloadSetting {
      * @param info 视频信息类
      */
     private void buildPageName(WEBVideoINFOJsonRootBean info) {
-        github.zimoyin.core.video.info.pojo.info.Data data = info.getData();
+        WEBVideoINFOJsonRootBean.Data data = info.getData();
         //如果就一个p就不去遍历了 或者 这个p有名称就不重复构建了
         if (this.getPageCount() <= 1 || this.getPageName() != null) {
             return;
@@ -294,7 +301,7 @@ public class VideoDownloadSetting {
      * 设置 视频的所有page总数
      */
     private void buildPageCount(WEBVideoINFOJsonRootBean info) {
-        github.zimoyin.core.video.info.pojo.info.Data data = info.getData();
+        WEBVideoINFOJsonRootBean.Data data = info.getData();
         this.setPageCount(data.getVideos());
     }
 
@@ -302,7 +309,7 @@ public class VideoDownloadSetting {
      * 设置 page 到 cid 的映射
      */
     private void buildCidMap(WEBVideoINFOJsonRootBean info) {
-        github.zimoyin.core.video.info.pojo.info.Data data = info.getData();
+        WEBVideoINFOJsonRootBean.Data data = info.getData();
         this.cidMap = new HashMap<>();
         List<Pages> pages = data.getPages();
         for (Pages page1 : pages) {
@@ -316,7 +323,7 @@ public class VideoDownloadSetting {
     private void buildCid(WEBVideoINFOJsonRootBean info) {
         //如果有cid就不构建
         if (this.getCid() != 0) return;
-        github.zimoyin.core.video.info.pojo.info.Data data = info.getData();
+        WEBVideoINFOJsonRootBean.Data data = info.getData();
         //设置cid
         this.setCid(data.getCid());
         //如果设置的p数大于视频所有的p数总量则抛出异常
@@ -358,7 +365,7 @@ public class VideoDownloadSetting {
             this.ep = String.valueOf(ep);
         } else {
             SeriesJsonRootBean pojo = series.getPojo(ssid == null ? ep : ssid);
-            Result result = pojo.getResult();
+            SeriesJsonRootBean.Result result = pojo.getResult();
             //设置ssid
             this.ssid = String.valueOf("ss"+result.getSeason_id());
             //设置剧情信息

@@ -15,32 +15,36 @@ public class MessageNumberJsonRoot {
     private String message;
     private int ttl;
     private Data data;
-    public void setCode(int code) {
-         this.code = code;
-     }
-     public int getCode() {
-         return code;
-     }
 
-    public void setMessage(String message) {
-         this.message = message;
-     }
-     public String getMessage() {
-         return message;
-     }
 
-    public void setTtl(int ttl) {
-         this.ttl = ttl;
-     }
-     public int getTtl() {
-         return ttl;
-     }
+    @lombok.Data
+    public class Data {
 
-    public void setData(Data data) {
-         this.data = data;
-     }
-     public Data getData() {
-         return data;
-     }
+        /**
+         * AT 数
+         */
+        private int at;
+        /**
+         * 信息数
+         */
+        private int chat;
+        /**
+         * 点赞数
+         */
+        private int like;
+        /**
+         * 回复数
+         */
+        private int reply;
+        /**
+         * 系统信息数
+         */
+        private int sys_msg;
+        /**
+         * up信息助手信息
+         */
+        private int up;
+
+    }
 
 }

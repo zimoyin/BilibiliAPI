@@ -152,9 +152,11 @@ public class VideoCollection {
         //播放列表
         Elements e6 = parse.select(".video-episode-card > *");
         for (Element str : e6) {
-            System.out.print(str.getElementsByClass("video-episode-card__info-title").get(0).text());
-            System.out.print("\t");
-            System.out.println(str.getElementsByClass("video-episode-card__info-duration").get(0).text());
+            //打印播放列表
+//            System.out.print(str.getElementsByClass("video-episode-card__info-title").get(0).text());
+//            System.out.print("\t");
+//            System.out.println(str.getElementsByClass("video-episode-card__info-duration").get(0).text());
+
             String videoTitle = str.getElementsByClass("video-episode-card__info-title").get(0).text();
             String duration = str.getElementsByClass("video-episode-card__info-duration").get(0).text();
             VideoItem videoItem = new VideoItem(videoTitle,duration);

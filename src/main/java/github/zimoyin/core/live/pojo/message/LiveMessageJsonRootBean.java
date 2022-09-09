@@ -26,5 +26,5 @@ public class LiveMessageJsonRootBean {
     /**
      * 其他信息
      */
-    private github.zimoyin.core.live.pojo.message.Data data;
+    private MessageData data;
 }

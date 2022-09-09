@@ -3,6 +3,7 @@ package github.zimoyin.core.user.up;
 import com.alibaba.fastjson.JSONObject;
 import github.zimoyin.core.cookie.Cookie;
 import github.zimoyin.core.cookie.GlobalCookie;
+import github.zimoyin.core.cookie.WebCookie;
 import github.zimoyin.core.exception.CodeException;
 import github.zimoyin.core.search.SearchCategories;
 import github.zimoyin.core.search.enums.SearchType;
@@ -33,6 +34,12 @@ public class SearchUser {
     private Cookie cookie;
 
     public SearchUser() {
+        this.cookie = new WebCookie();
+        try {
+            cookie.updateCookie();
+        } catch (IOException e) {
+            throw new RuntimeException("Cookie更新失败",e);
+        }
     }
 
     public SearchUser(Cookie cookie) {

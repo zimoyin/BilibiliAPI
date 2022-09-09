@@ -10,10 +10,12 @@ import github.zimoyin.core.favorites.operation.ClearInvalidFavorite;
 import github.zimoyin.core.favorites.operation.CreateFavorite;
 import github.zimoyin.core.favorites.operation.DeleteFavorite;
 import github.zimoyin.core.favorites.operation.ModifyFavorite;
+import github.zimoyin.core.favorites.pojo.conter.FavoriteContentListJsonRoot;
 import github.zimoyin.core.favorites.pojo.conter.Medias;
 import github.zimoyin.core.favorites.pojo.info.FavoriteInfoJsonRoot;
 import github.zimoyin.core.favorites.pojo.userfavorites.Data;
 import github.zimoyin.core.favorites.pojo.userfavorites.FavList;
+import github.zimoyin.core.favorites.pojo.userfavorites.UserFavoritesJsonRoot;
 import github.zimoyin.core.user.pojo.search.Result;
 import github.zimoyin.core.user.up.SearchUser;
 import github.zimoyin.core.video.download.DownloadResult;
@@ -60,7 +62,7 @@ public class FavoriteUtil {
      * @return
      * @throws IOException
      */
-    public HashMap<github.zimoyin.core.favorites.pojo.info.Data, List<Medias>> getUserFavorites(String userName) throws IOException {
+    public HashMap<FavoriteInfoJsonRoot.Data, List<Medias>> getUserFavorites(String userName) throws IOException {
 //        SearchUser searchUser = new SearchUser();
 //        Result search = searchUser.search(userName);
 //        long mid = search.getMid();
@@ -75,11 +77,11 @@ public class FavoriteUtil {
      * @return
      * @throws IOException
      */
-    public HashMap<github.zimoyin.core.favorites.pojo.info.Data, List<Medias>> getUserFavorites(long mid) throws IOException {
-        HashMap<github.zimoyin.core.favorites.pojo.info.Data, List<Medias>> favoritesMap = new HashMap<>();
+    public HashMap<FavoriteInfoJsonRoot.Data, List<Medias>> getUserFavorites(long mid) throws IOException {
+        HashMap<FavoriteInfoJsonRoot.Data, List<Medias>> favoritesMap = new HashMap<>();
         //获取用户的所有文件夹
         UserFavorites favorites = new UserFavorites(cookie);
-        Data data = favorites.getJsonPojo(mid).getData();
+        UserFavoritesJsonRoot.Data data = favorites.getJsonPojo(mid).getData();
         //遍历所有收藏文件夹
         for (FavList favList : data.getList()) {
             long id = favList.getId();//完整id
@@ -87,12 +89,12 @@ public class FavoriteUtil {
             FavoriteContentList contentList = new FavoriteContentList(cookie);
             //遍历出文件夹中所有的收藏
             ArrayList<Medias> list0 = new ArrayList<>();
-            github.zimoyin.core.favorites.pojo.info.Data info = null;
+            FavoriteInfoJsonRoot.Data info = null;
             //20个收藏为一组
             double length = (double) media_count / 20;
             if (length <= 0 || length > (int) length) length++;
             for (int i = 1; i <= length; i++) {
-                github.zimoyin.core.favorites.pojo.conter.Data list = contentList.getJsonPojo(id, i).getData();
+                FavoriteContentListJsonRoot.Data list = contentList.getJsonPojo(id, i).getData();
                 if (list.getInfo() != null) info = list.getInfo();
                 List<Medias> medias = list.getMedias();
                 list0.addAll(medias);
@@ -143,7 +145,7 @@ public class FavoriteUtil {
             double length = (double) media_count / 20;
             if (length <= 0 || length > (int) length) length++;
             for (int i = 1; i <= length; i++) {
-                github.zimoyin.core.favorites.pojo.conter.Data list = contentList.getJsonPojo(id, i).getData();
+                FavoriteContentListJsonRoot.Data list = contentList.getJsonPojo(id, i).getData();
                 List<Medias> medias = list.getMedias();
                 list0.addAll(medias);
             }
@@ -188,7 +190,7 @@ public class FavoriteUtil {
         double length = (double) count / 20;
         if (length <= 0 || length > (int) length) length++;
         for (int i = 1; i <= length; i++) {
-            github.zimoyin.core.favorites.pojo.conter.Data list = contentList.getJsonPojo(fid, i).getData();
+            FavoriteContentListJsonRoot.Data list = contentList.getJsonPojo(fid, i).getData();
             List<Medias> medias = list.getMedias();
             list0.addAll(medias);
         }

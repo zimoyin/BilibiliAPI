@@ -17,7 +17,11 @@ public class UserCollectionListJsonRoot {
     private int ttl;
     private Data data;
 
-    public Items_lists getData2() {
+    public Items_lists getData() {
         return data.getItems_lists();
+    }
+    @lombok.Data
+    public class Data {
+        private Items_lists items_lists;
     }
 }

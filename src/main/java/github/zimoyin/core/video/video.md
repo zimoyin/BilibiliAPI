@@ -1,51 +1,100 @@
 所有pojo基本都有data对象，每个pojo的data类都不一样，因此禁止用data传值，定义全局变量  
-在video.Main 里面有一些例子  
+在video.Main 里面有一些例子
+
 # 视频操作
+
 ### 视频操作集合
+
 > github.zimoyin.core.video.Video
+
 ### 视频信息
+
 > github.zimoyin.core.video.info.VideoInfo  
-注意如果你想要下载CC字幕请查看 CC类下的subtitle_url字段，他是一个下载字幕的URL。    
-对于如何获取CC对象： 他是 json pojo -> WEBVideoINFOJsonRootBean.data.subtitle.list.cc  
+> 注意如果你想要下载CC字幕请查看 CC类下的subtitle_url字段，他是一个下载字幕的URL。    
+> 对于如何获取CC对象： 他是 json pojo -> WEBVideoINFOJsonRootBean.data.subtitle.list.cc
+
 #### 视频信息摘要
+
 > github.zimoyin.core.video.info.VideoINFOSummary
+
 ### 在线观看人数
+
 > github.zimoyin.core.video.info.VideoOnlinePopulation
+
 ### 视频标签信息
+
 > github.zimoyin.core.video.info.VideoTAG
+
 #### 视频标签点赞等
+
 > github.zimoyin.core.video.info.VideoTAG
+
 ### 点赞、投币、收藏等
+
 > github.zimoyin.core.video.operation.VideoStatusOperation
+
 ### 视频快照（图片墙）
+
 > github.zimoyin.core.video.info.VideoSnapshot
+
 ### 视频推荐（根据一个视频推荐同类型视频）
+
 > github.zimoyin.core.video.info.VideoRecommendation
+
 ### 视频首页推荐（有cookie则是个性推荐）
+
 > github.zimoyin.core.video.info.VideoHomePageRecommendation
+
 ### 视频进度上报
+
 > github.zimoyin.core.video.operation.VideoProgress
+
 ### 视频高能进度条
+
 > github.zimoyin.core.video.info.VideoBarrageCurve
+
 ### 互动视频
+
 > github.zimoyin.core.video.info.InteractVideo
+
 ### 视频url信息（需要有防盗链与部分视频需要cookie）
+
 > github.zimoyin.core.video.url.WEBVideoURLFormat
+获取视频下载的URL，示例（并不具备使用价值请勿模仿）
+```
+VideoURLFormat urlFormat = new VideoURLFormat();
+VideoURLJsonRoot pojo = urlFormat.getJsonPOJO(setting);
+pojo.getURLs().forEach(new Consumer<URL>() {
+    @Override
+    public void accept(URL url) {
+        System.out.println(url);
+    }
+});
+```
+
 ### 预览视频URL信息(360P,不需要cookie和防盗链)
+
 > github.zimoyin.core.video.url.VideoURLPreviewFormatP360
+
 ```
 ArrayList<URL> 视频URL = new VideoURLPreviewFormatP360().getURLs("bv号");
 ```
+
 ### 预览视频URL信息(1080P,不需要cookie和防盗链)
+
 > github.zimoyin.core.video.url.VideoURLPreviewFormatP1080
+
 ### 视频下载（上古案例）
+
 > github.zimoyin.core.video.url.download.WebVideoDownload
-下载视频需要配置三个东西：  
+> 下载视频需要配置三个东西：
+
 * VideoDownloadSetting：下载设置类，用来设置下载什么类型的视频包括清晰度
 * VideoDownload： 下载器，下载器会根据 VideoDownloadSetting 的实例去获取对应的下载URl，之后会根据URL去调用响应的底层下载器
 * DownloadHandle: 下载器监听类：用来监听下载器下载文件的进度等待，但是多线程可能导致当前统计的已经下载的字节数小于实际的下载字节数。所以判断是否下载完成可以通过线程完成数来进行
+
 ```java
-     class Demo{
+     class Demo {
     /**
      * 下载视频
      */

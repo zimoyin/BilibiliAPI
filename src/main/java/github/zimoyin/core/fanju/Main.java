@@ -2,7 +2,6 @@ package github.zimoyin.core.fanju;
 
 import github.zimoyin.core.fanju.info.SeriesINFO;
 import github.zimoyin.core.fanju.pojo.info.seriesI.Episodes;
-import github.zimoyin.core.fanju.pojo.info.seriesI.Result;
 import github.zimoyin.core.fanju.pojo.info.seriesI.SeriesJsonRootBean;
 import org.apache.http.HttpException;
 
@@ -17,7 +16,10 @@ public class Main {
 //        SeriesJsonRootBean pojo = series.getPojo("ss41410");
         SeriesJsonRootBean pojo = series.getPojo("ep567956");
 
-        Episodes ep567956 = series.getEpisodes("ep567956");
-        System.out.println(ep567956);
+        for (Episodes episode : pojo.getEpisodes()) {
+            System.out.println(episode.getEpId());
+        }
+//        Episodes ep567956 = series.getEpisodes("ep567956");
+//        System.out.println(ep567956);
     }
 }

@@ -1,7 +1,9 @@
 /**
-  * Copyright 2022 json.cn 
-  */
+ * Copyright 2022 json.cn
+ */
 package github.zimoyin.core.column.info.pojo.anthology;
+
+import java.util.List;
 
 /**
  * Auto-generated: 2022-08-28 18:54:44
@@ -16,32 +18,34 @@ public class AnthologyInfoJsonRoot {
     private String message;
     private int ttl;
     private Data data;
-    public void setCode(int code) {
-         this.code = code;
-     }
-     public int getCode() {
-         return code;
-     }
 
-    public void setMessage(String message) {
-         this.message = message;
-     }
-     public String getMessage() {
-         return message;
-     }
-
-    public void setTtl(int ttl) {
-         this.ttl = ttl;
-     }
-     public int getTtl() {
-         return ttl;
-     }
-
-    public void setData(Data data) {
-         this.data = data;
-     }
-     public Data getData() {
-         return data;
-     }
+    @lombok.Data
+    public class Data {
+        /**
+         * 文集概览
+         */
+        private AnthologyList list;
+        /**
+         * 文集内的文章列表
+         */
+        private List<Articles> articles;
+        /**
+         * 文集作者信息
+         */
+        private Author author;
+        /**
+         * 作用尚不明确
+         * 结构与data.articles[]中相似
+         */
+        private Last last;
+        /**
+         * 是否关注文集作者
+         * false：未关注
+         * true：已关注
+         * 需要登录(Cookie)
+         * 未登录为false
+         */
+        private boolean attention;
+    }
 
 }

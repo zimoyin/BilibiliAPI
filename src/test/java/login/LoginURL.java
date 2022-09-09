@@ -1,22 +1,12 @@
 package login;
 
-import com.google.zxing.WriterException;
-import github.zimoyin.core.cookie.WebCookie;
-import github.zimoyin.core.exception.LoginException;
-import github.zimoyin.core.exception.QRcodeLoginTimeOutException;
-import github.zimoyin.core.login.web.QRWindow;
+
 import github.zimoyin.core.utils.net.httpclient.HttpClientResult;
 import github.zimoyin.core.utils.net.httpclient.HttpClientUtils;
-import github.zimoyin.core.utils.qrcode.QRCodeUtils;
-import github.zimoyin.core.utils.qrcode.ZxingImageQR;
-import lombok.Data;
+
 import lombok.Getter;
 
-import javax.swing.*;
-import java.io.IOException;
-import java.net.URL;
 import java.util.HashMap;
-import java.util.regex.Pattern;
 
 import static github.zimoyin.core.utils.JsonSerializeUtil.getJsonPath;
 

@@ -1,8 +1,14 @@
 import github.zimoyin.core.cookie.GlobalCookie;
+import github.zimoyin.core.cookie.WebCookie;
 import github.zimoyin.core.exception.CodeException;
 import github.zimoyin.core.exception.CookieNotFoundException;
 import github.zimoyin.core.favorites.FavoriteUtil;
+import github.zimoyin.core.search.SearchCategories;
 import github.zimoyin.core.search.enums.SearchType;
+import github.zimoyin.core.search.pojo.search.SearchCategoriesJsonRoot;
+import github.zimoyin.core.search.pojo.search.result.ResultVideo;
+import github.zimoyin.core.user.pojo.search.Result;
+import github.zimoyin.core.user.up.SearchUser;
 import github.zimoyin.core.utils.net.httpclient.HttpClientResult;
 import github.zimoyin.core.utils.net.httpclient.HttpClientUtils;
 import github.zimoyin.core.collection.VideoCollection;
@@ -36,7 +42,10 @@ public class T {
     }
 
     public static void main(String[] args) throws CookieNotFoundException, IOException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException, ExecutionException, InterruptedException {
-        VideoDownload videoDownload = new VideoDownload();
+        SearchUser user = new SearchUser();
+        for (Result name : user.searchPojo("子墨").getData().getResult()) {
+            System.out.println(name.getUname());
+        }
     }
 
     /**

@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 import github.zimoyin.core.barrage.data.Barrage;
 import github.zimoyin.core.live.massage.vertx.Package;
 import github.zimoyin.core.live.pojo.message.LiveMessageJsonRootBean;
+import github.zimoyin.core.live.pojo.message.MessageData;
 import github.zimoyin.core.live.pojo.message.UserJson;
 import github.zimoyin.core.utils.JsonSerializeUtil;
 import lombok.Data;
@@ -41,11 +42,11 @@ public class Massage {
     /**
      * 处理出全包进入直播间的信息
      */
-    public ArrayList<github.zimoyin.core.live.pojo.message.Data> getEnterLive(){
-        ArrayList<github.zimoyin.core.live.pojo.message.Data> list = new ArrayList<>();
+    public ArrayList<MessageData> getEnterLive(){
+        ArrayList<MessageData> list = new ArrayList<>();
         for (String command : commands) {
             LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
-            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            MessageData data = bean.getData();
             if (data == null || !"INTERACT_WORD".equalsIgnoreCase(bean.getCmd())) continue;
             //如果不是进场信息
             if (data.getMsg_type() != 1) continue;
@@ -57,11 +58,11 @@ public class Massage {
     /**
      * 处理出全包送出的礼物
      */
-    public ArrayList<github.zimoyin.core.live.pojo.message.Data> getGift(){
-        ArrayList<github.zimoyin.core.live.pojo.message.Data> list = new ArrayList<>();
+    public ArrayList<MessageData> getGift(){
+        ArrayList<MessageData> list = new ArrayList<>();
         for (String command : commands) {
             LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
-            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            MessageData data = bean.getData();
             if (data == null || !"SEND_GIFT".equalsIgnoreCase(bean.getCmd())) continue;
             list.add(data);
         }
@@ -73,7 +74,7 @@ public class Massage {
     public long getOnlineRankCount(){
         for (String command : commands) {
             LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
-            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            MessageData data = bean.getData();
             if (data == null || !"ONLINE_RANK_COUNT".equalsIgnoreCase(bean.getCmd())) continue;
             return data.getCount();
         }
@@ -85,7 +86,7 @@ public class Massage {
     public ArrayList<UserJson> getUserRankCount(){
         for (String command : commands) {
             LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
-            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            MessageData data = bean.getData();
             if (data == null || !"ONLINE_RANK_V2".equalsIgnoreCase(bean.getCmd())) continue;
             return data.getList();
         }
@@ -97,7 +98,7 @@ public class Massage {
     public long getHotRank(){
         for (String command : commands) {
             LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
-            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            MessageData data = bean.getData();
             if (data == null || !"HOT_RANK_CHANGED_V2".equalsIgnoreCase(bean.getCmd())) continue;
             return data.getRank();
         }
@@ -110,7 +111,7 @@ public class Massage {
     public long getHotRankSettlement(){
         for (String command : commands) {
             LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
-            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            MessageData data = bean.getData();
             if (data == null || !"HOT_RANK_SETTLEMENT_V2".equalsIgnoreCase(bean.getCmd())) continue;
             return data.getRank();
         }
@@ -122,7 +123,7 @@ public class Massage {
     public String getPreparing(){
         for (String command : commands) {
             LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
-            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            MessageData data = bean.getData();
             if (data == null || !"PREPARING".equalsIgnoreCase(bean.getCmd())) continue;
             return command;
         }
@@ -134,7 +135,7 @@ public class Massage {
     public String getEnter_effect() {
         for (String command : commands) {
             LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
-            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            MessageData data = bean.getData();
             if (data == null || !"ENTRY_EFFECT".equalsIgnoreCase(bean.getCmd())) continue;
             return command;
         }
@@ -146,7 +147,7 @@ public class Massage {
     public String getCommonNoticeDanaku() {
         for (String command : commands) {
             LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
-            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            MessageData data = bean.getData();
             if (data == null || !"COMMON_NOTICE_DANMAKU".equalsIgnoreCase(bean.getCmd())) continue;
             return command;
         }
@@ -158,7 +159,7 @@ public class Massage {
     public String getWidgetBanner(){
         for (String command : commands) {
             LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
-            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            MessageData data = bean.getData();
             if (data == null || !"WIDGET_BANNER".equalsIgnoreCase(bean.getCmd())) continue;
             return command;
         }
@@ -170,7 +171,7 @@ public class Massage {
     public String getNoticeMessage() {
         for (String command : commands) {
             LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
-            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            MessageData data = bean.getData();
             if (data == null || !"NOTICE_MSG".equalsIgnoreCase(bean.getCmd())) continue;
             return command;
         }
@@ -183,7 +184,7 @@ public class Massage {
     public long getWatchedCount(){
         for (String command : commands) {
             LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
-            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            MessageData data = bean.getData();
             if (data == null || !"WATCHED_CHANGE".equalsIgnoreCase(bean.getCmd())) continue;
             return data.getNum();
         }
@@ -197,7 +198,7 @@ public class Massage {
     public String getRealMessage(){
         for (String command : commands) {
             LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
-            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            MessageData data = bean.getData();
             if (data == null || !"ROOM_REAL_TIME_MESSAGE_UPDATE".equalsIgnoreCase(bean.getCmd())) continue;
             return command;
         }
@@ -211,7 +212,7 @@ public class Massage {
     public long getRealFans(){
         for (String command : commands) {
             LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
-            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            MessageData data = bean.getData();
             if (data == null || !"ROOM_REAL_TIME_MESSAGE_UPDATE".equalsIgnoreCase(bean.getCmd())) continue;
             return data.getFans();
         }
@@ -224,7 +225,7 @@ public class Massage {
     public ArrayList<Long> getStopLiveRoomList(){
         for (String command : commands) {
             LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
-            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            MessageData data = bean.getData();
             if (data == null || !"STOP_LIVE_ROOM_LIST".equalsIgnoreCase(bean.getCmd())) continue;
             return data.getRoom_id_list();
         }
@@ -234,11 +235,11 @@ public class Massage {
     /**
      * 处理出全包关注直播的信息
      */
-    public ArrayList<github.zimoyin.core.live.pojo.message.Data> getFollowLive(){
-        ArrayList<github.zimoyin.core.live.pojo.message.Data> list = new ArrayList<>();
+    public ArrayList<MessageData> getFollowLive(){
+        ArrayList<MessageData> list = new ArrayList<>();
         for (String command : commands) {
             LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
-            github.zimoyin.core.live.pojo.message.Data data = bean.getData();
+            MessageData data = bean.getData();
             if (data == null || !"INTERACT_WORD".equalsIgnoreCase(bean.getCmd())) continue;
             //如果不是进场信息
             if (data.getMsg_type() != 2) continue;

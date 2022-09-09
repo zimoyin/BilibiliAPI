@@ -3,6 +3,7 @@ package github.zimoyin.core.utils.net.httpclient;
 import github.zimoyin.core.cookie.GlobalCookie;
 import github.zimoyin.core.exception.CookieNotFoundException;
 import org.apache.http.*;
+import org.apache.http.client.CookieStore;
 import org.apache.http.client.config.CookieSpecs;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -11,6 +12,8 @@ import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.conn.ssl.NoopHostnameVerifier;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
 import org.apache.http.conn.ssl.TrustStrategy;
+import org.apache.http.cookie.Cookie;
+import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
@@ -108,9 +111,14 @@ public class HttpClientUtils {
         }
 
         logger.trace("HttpClientUtils.doGet -> {}",uri);
+        //获取cookie
+        CookieStore httpCookieStore = new BasicCookieStore();
         // 创建httpClient对象
 //        CloseableHttpClient httpClient = HttpClients.createDefault();
-        CloseableHttpClient httpClient = HttpClients.custom().setSSLSocketFactory(sslsf).build();
+        CloseableHttpClient httpClient = HttpClients.custom()
+                .setSSLSocketFactory(sslsf)
+                .setDefaultCookieStore(httpCookieStore)//获取cookie
+                .build();
 
         // 创建http对象
         HttpGet httpGet = new HttpGet(uri);
@@ -137,13 +145,11 @@ public class HttpClientUtils {
         // 创建httpResponse对象
         CloseableHttpResponse httpResponse = null;
 
-//        try {
+        httpResponse = httpClient.execute(httpGet);
         // 执行请求并获得响应结果
-        return getHttpClientResult(httpResponse, httpClient, httpGet);
-//        } finally {
-        // 释放资源
-//			release(httpResponse, httpClient);
-//        }
+        HttpClientResult result = getHttpClientResult(httpResponse, httpClient, httpGet);
+        result.setCookie(httpCookieStore);//将网站返回的cookie放到结果集里面
+        return result;
     }
 
 
@@ -276,13 +282,8 @@ public class HttpClientUtils {
         // 创建httpResponse对象
         CloseableHttpResponse httpResponse = null;
 
-//        try {
         // 执行请求并获得响应结果
         return getHttpClientResult(httpResponse, httpClient, httpPost);
-//        } finally {
-        // 释放资源
-//			release(httpResponse, httpClient);
-//        }
     }
 
     /**
@@ -314,11 +315,7 @@ public class HttpClientUtils {
 
         CloseableHttpResponse httpResponse = null;
 
-//        try {
         return getHttpClientResult(httpResponse, httpClient, httpPut);
-//        } finally {
-//			release(httpResponse, httpClient);
-//        }
     }
 
     /**
@@ -335,11 +332,7 @@ public class HttpClientUtils {
         httpDelete.setConfig(requestConfig);
 
         CloseableHttpResponse httpResponse = null;
-//        try {
         return getHttpClientResult(httpResponse, httpClient, httpDelete);
-//        } finally {
-//			release(httpResponse, httpClient);
-//        }
     }
 
     /**
@@ -428,6 +421,7 @@ public class HttpClientUtils {
         try {
             // 执行请求
             httpResponse = httpClient.execute(httpMethod);
+
             InputStream input = null;
             // 获取返回结果
             if (httpResponse != null && httpResponse.getStatusLine() != null) {
@@ -470,6 +464,7 @@ public class HttpClientUtils {
      * @param url
      * @return 字符串
      */
+    @Deprecated
     public static String httpGet(String url) throws IOException {
         return httpGet(url, "utf-8");
     }
@@ -481,6 +476,7 @@ public class HttpClientUtils {
      * @param charsetName
      * @return 字符串
      */
+    @Deprecated
     public static String httpGet(String url, String charsetName) throws IOException {
         //创建HttpClient实例
         CloseableHttpClient httpClient = HttpClients.createDefault();
@@ -512,7 +508,6 @@ public class HttpClientUtils {
             }
             httpClient.getConnectionManager().shutdown();
         }
-//        return null;  删除可用： throws IOException
     }
 
 

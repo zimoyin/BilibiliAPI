@@ -3,6 +3,8 @@
   */
 package github.zimoyin.core.collection.pojo.collection;
 
+import java.util.List;
+
 /**
  * Auto-generated: 2022-08-29 22:30:20
  *
@@ -16,32 +18,24 @@ public class CollectionJsonRoot {
     private String message;
     private int ttl;
     private Data data;
-    public void setCode(int code) {
-         this.code = code;
-     }
-     public int getCode() {
-         return code;
-     }
 
-    public void setMessage(String message) {
-         this.message = message;
-     }
-     public String getMessage() {
-         return message;
-     }
-
-    public void setTtl(int ttl) {
-         this.ttl = ttl;
-     }
-     public int getTtl() {
-         return ttl;
-     }
-
-    public void setData(Data data) {
-         this.data = data;
-     }
-     public Data getData() {
-         return data;
-     }
-
+    @lombok.Data
+    public class Data {
+        /**
+         * 当前这一页的视频av id列表
+         */
+        private List<Long> aids;
+        /**
+         * 视频列表
+         */
+        private List<Archives> archives;
+        /**
+         * 合集信息
+         */
+        private Meta meta;
+        /**
+         * 当前页的数据信息
+         */
+        private Page page;
+    }
 }

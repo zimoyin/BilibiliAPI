@@ -10,7 +10,7 @@ import java.util.List;
  * 注意直播信息是变化的不是固定的，所以有些值是无法是一直能被赋值的，请注意判断
  */
 @lombok.Data
-public class Data {
+public class MessageData {
 
     private Contribution contribution;
     private int dmscore;

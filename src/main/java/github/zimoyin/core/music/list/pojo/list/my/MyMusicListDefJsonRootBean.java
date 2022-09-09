@@ -15,4 +15,5 @@ public class MyMusicListDefJsonRootBean {
     private int code;
     private String msg;
     private MyList data;
+
 }

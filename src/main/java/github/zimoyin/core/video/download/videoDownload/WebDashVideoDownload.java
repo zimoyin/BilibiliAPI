@@ -31,7 +31,7 @@ import java.util.concurrent.Future;
 @lombok.Data
 public class WebDashVideoDownload {
     private volatile VideoURLJsonRoot json;
-    private volatile Data data;
+    private volatile VideoURLJsonRoot.Data data;
     private volatile HashMap<String, String> header = new HashMap<>();
 
     private volatile ArrayList<String> filePaths = new ArrayList<>();

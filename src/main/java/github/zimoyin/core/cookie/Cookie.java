@@ -2,6 +2,8 @@ package github.zimoyin.core.cookie;
 
 import com.alibaba.fastjson.JSONObject;
 import github.zimoyin.core.utils.JsonSerializeUtil;
+import github.zimoyin.core.utils.net.httpclient.HttpClientResult;
+import github.zimoyin.core.utils.net.httpclient.HttpClientUtils;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -20,6 +22,7 @@ public abstract class Cookie extends HashMap<String, String> implements Serializ
     public String getCsrf(){
         return this.get("bili_jct");
     }
+
     @Override
     public String toString() {
         StringBuffer stringBuffer = new StringBuffer();
@@ -206,6 +209,18 @@ public abstract class Cookie extends HashMap<String, String> implements Serializ
         return map;
     }
 
+
+    /**
+     * 刷新Cookie，将访问 www.bilibili.com 以此来获取最新的cookie验证，否则部分场景将会禁止访问
+     */
+    public void updateCookie() throws IOException {
+        HttpClientResult result = HttpClientUtils.doGet("http://www.bilibili.com");
+        for (org.apache.http.cookie.Cookie cookie : result.getCookie().getCookies()) {
+            String key = cookie.getName();
+            String value = cookie.getValue();
+            this.put(key, value);
+        }
+    }
     @Override
     public boolean isEmpty() {
         return super.isEmpty() || !this.containsKey("SESSDATA");

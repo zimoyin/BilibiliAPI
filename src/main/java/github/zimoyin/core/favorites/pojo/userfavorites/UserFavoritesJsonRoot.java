@@ -3,6 +3,8 @@
   */
 package github.zimoyin.core.favorites.pojo.userfavorites;
 
+import java.util.List;
+
 /**
  * Auto-generated: 2022-08-26 14:56:55
  *
@@ -16,32 +18,16 @@ public class UserFavoritesJsonRoot {
     private String message;
     private int ttl;
     private Data data;
-    public void setCode(int code) {
-         this.code = code;
-     }
-     public int getCode() {
-         return code;
-     }
-
-    public void setMessage(String message) {
-         this.message = message;
-     }
-     public String getMessage() {
-         return message;
-     }
-
-    public void setTtl(int ttl) {
-         this.ttl = ttl;
-     }
-     public int getTtl() {
-         return ttl;
-     }
-
-    public void setData(Data data) {
-         this.data = data;
-     }
-     public Data getData() {
-         return data;
-     }
-
+    @lombok.Data
+    public class Data {
+        /**
+         * 创建的收藏夹总数
+         */
+        private int count;
+        /**
+         * 创建的收藏夹列表
+         */
+        private List<FavList> list;
+        private String season;
+    }
 }

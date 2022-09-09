@@ -3,9 +3,12 @@ package github.zimoyin.core.utils.net.httpclient;
 import github.zimoyin.core.utils.IO;
 import github.zimoyin.core.video.download.DownloadControl;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.apache.http.Header;
 import org.apache.http.HeaderElement;
 import org.apache.http.NameValuePair;
+import org.apache.http.client.CookieStore;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.util.EntityUtils;
@@ -37,7 +40,9 @@ public class HttpClientResult implements Serializable {
 
     private CloseableHttpClient httpClient;
     private CloseableHttpResponse response;
-
+    @Setter
+    @Getter
+    private CookieStore cookie;
 
     public HttpClientResult() {
     }

@@ -16,25 +16,22 @@ public class MusicTagJsonRoot {
     private int code;
     private String msg;
     private List<Data> data;
-    public void setCode(int code) {
-         this.code = code;
-     }
-     public int getCode() {
-         return code;
-     }
 
-    public void setMsg(String msg) {
-         this.msg = msg;
-     }
-     public String getMsg() {
-         return msg;
-     }
 
-    public void setData(List<Data> data) {
-         this.data = data;
-     }
-     public List<Data> getData() {
-         return data;
-     }
-
+    @lombok.Data
+    public class Data {
+        /**
+         * 类型
+         */
+        private String type;
+        /**
+         * 子分区类型id
+         */
+        private int subtype;
+        private int key;
+        /**
+         * TAG名
+         */
+        private String info;
+    }
 }

@@ -3,6 +3,8 @@
   */
 package github.zimoyin.core.message.pojo.group;
 
+import java.util.List;
+
 /**
  * Auto-generated: 2022-08-17 10:52:23
  *
@@ -16,39 +18,20 @@ public class MessageGroupJson {
     private String message;
     private int ttl;
     private Data data;
-    public void setCode(int code) {
-         this.code = code;
-     }
-     public int getCode() {
-         return code;
-     }
 
-    public void setMsg(String msg) {
-         this.msg = msg;
-     }
-     public String getMsg() {
-         return msg;
-     }
 
-    public void setMessage(String message) {
-         this.message = message;
-     }
-     public String getMessage() {
-         return message;
-     }
 
-    public void setTtl(int ttl) {
-         this.ttl = ttl;
-     }
-     public int getTtl() {
-         return ttl;
-     }
+    @lombok.Data
+    public class Data {
 
-    public void setData(Data data) {
-         this.data = data;
-     }
-     public Data getData() {
-         return data;
-     }
+        /**
+         * 会话信息
+         */
+        private List<Session_list> session_list;
+        private int has_more;
+        private boolean anti_disturb_cleaning;
+        private int is_address_list_empty;
+        private boolean show_level;
+    }
 
 }

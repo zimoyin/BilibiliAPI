@@ -7,7 +7,6 @@ import github.zimoyin.core.exception.CodeException;
 import github.zimoyin.core.exception.CookieNotFoundException;
 import github.zimoyin.core.fanju.pojo.info.essential.FanJuEssentialINFOJsonRootBean;
 import github.zimoyin.core.fanju.pojo.info.seriesI.Episodes;
-import github.zimoyin.core.fanju.pojo.info.seriesI.Result;
 import github.zimoyin.core.fanju.pojo.info.seriesI.SeriesJsonRootBean;
 import github.zimoyin.core.utils.net.httpclient.HttpClientResult;
 import github.zimoyin.core.utils.net.httpclient.HttpClientUtils;
@@ -40,7 +39,8 @@ public class SeriesINFO {
     public Episodes getEpisodes(String id) throws HttpException {
         Episodes episodes0=null;
         SeriesJsonRootBean pojo = this.getPojo(id);
-        Result result = pojo.getResult();
+        //此处修改，做标记于此
+        SeriesJsonRootBean.Result result = pojo.getResult();
         if (pojo.getCode() == -404) throw new NullPointerException("无法获取到剧集信息");
         if (pojo.getCode() != 0 )throw new CodeException();
         List<Episodes> episodes = result.getEpisodes();

@@ -3,6 +3,7 @@ package github.zimoyin.core.search;
 import com.alibaba.fastjson.JSONObject;
 import github.zimoyin.core.cookie.Cookie;
 import github.zimoyin.core.cookie.GlobalCookie;
+import github.zimoyin.core.cookie.WebCookie;
 import github.zimoyin.core.exception.CookieNotFoundException;
 import github.zimoyin.core.search.enums.*;
 import github.zimoyin.core.search.pojo.search.Result;
@@ -28,6 +29,12 @@ public class SearchCategories {
     private Cookie cookie;
 
     public SearchCategories() {
+        cookie = new WebCookie();
+        try {
+            cookie.updateCookie();
+        } catch (IOException e) {
+            throw new RuntimeException("Cookie更新失败，请手动更新或设置Cookie",e);
+        }
     }
 
     public SearchCategories(Cookie cookie) {
@@ -46,7 +53,7 @@ public class SearchCategories {
         Result result0 = new Result();
         for (SearchType value : SearchType.values()) {
             SearchCategoriesParams params = new SearchCategoriesParams(word, value);
-            github.zimoyin.core.search.pojo.search.Data data = getJsonPojo(params).getData();
+            SearchCategoriesJsonRoot.Data data = getJsonPojo(params).getData();
             Result result = data.getResult();
             if (result.getLiveType() != null) result0.setLiveType(result.getLiveType());
             if (result.getColumnType() != null) result0.setColumnType(result.getColumnType());

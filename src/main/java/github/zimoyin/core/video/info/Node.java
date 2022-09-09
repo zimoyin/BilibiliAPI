@@ -1,13 +1,14 @@
 package github.zimoyin.core.video.info;
 
-import github.zimoyin.core.video.info.pojo.interact.Data;
+
+import github.zimoyin.core.video.info.pojo.interact.InteractVideoRootBean;
 
 @lombok.Data
 public class Node {
     /**
      * 节点信息
      */
-    private Data nodeInfo;
+    private InteractVideoRootBean.Data nodeInfo;
 
     private boolean isLeft;
 

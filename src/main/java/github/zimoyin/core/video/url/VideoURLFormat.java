@@ -6,6 +6,7 @@ import github.zimoyin.core.exception.CodeException;
 import github.zimoyin.core.exception.URLFormatException;
 import github.zimoyin.core.utils.net.httpclient.HttpClientResult;
 import github.zimoyin.core.utils.net.httpclient.HttpClientUtils;
+import github.zimoyin.core.video.download.VideoDownloadSetting;
 import github.zimoyin.core.video.url.data.Fnval;
 import github.zimoyin.core.video.url.data.ID;
 import github.zimoyin.core.video.url.data.QN;
@@ -67,6 +68,18 @@ public class VideoURLFormat {
      * 待会要访问 WEB_URL 链接的参数
      */
     private static HashMap<String, String> val = new HashMap<>();
+
+    /**
+     * 获取访问URL的实体类
+     * @return JSON实体类
+     */
+    public VideoURLJsonRoot getJsonPOJO(VideoDownloadSetting setting) throws IOException, CodeException, URLFormatException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException {
+        setting.build();
+        return getJsonPOJO(setting.getId(),setting.getQn(),setting.getFnval());
+    }
+
+
+
 
     /**
      * 获取访问URL的实体类

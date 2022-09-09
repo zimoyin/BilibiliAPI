@@ -12,17 +12,21 @@ import github.zimoyin.core.video.info.Node;
 import github.zimoyin.core.video.info.VideoInfo;
 import github.zimoyin.core.video.info.pojo.info.WEBVideoINFOJsonRootBean;
 import github.zimoyin.core.video.info.pojo.info.data.subtitle.CC;
+import github.zimoyin.core.video.url.VideoURLFormat;
 import github.zimoyin.core.video.url.data.Fnval;
 import github.zimoyin.core.video.url.data.QN;
+import github.zimoyin.core.video.url.pojo.VideoURLJsonRoot;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.security.KeyManagementException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
+import java.util.function.Consumer;
 
 /**
  * 案例
@@ -33,19 +37,14 @@ public class Main {
 //        main.test00();
 
         VideoDownloadSetting setting = new VideoDownloadSetting();
-        String av = IDConvert.BvToAv("BV1RY4y1u7Tw");
-        setting.setID("8481");
-        setting.setPreview1080p(true);
-        setting.setFnval(Fnval.VideoFormat_dash);
+        setting.setID("BV1PE411i7CV");
+        setting.setPage(31);
+        setting.setQn(QN.P1080_cookie);
 
         VideoDownload videoDownload = new VideoDownload();
         videoDownload.setSetting(setting);
-        videoDownload.downloadInit();
-        System.out.println(setting.getFileName());
-        System.out.println(setting.getEp());
-        System.out.println(videoDownload.getUrlPojo(false).getURLs());
         videoDownload.setListens(info -> System.out.print("\r下载进度：" + info.getDownloadSize() + "/" + info.getFileSize()));
-//        videoDownload.downloadThread(true);
+        videoDownload.downloadThread(true);
 //        videoDownload.download();
     }
 

@@ -3,44 +3,37 @@
   */
 package github.zimoyin.core.user.pojo.follow;
 
+import github.zimoyin.core.user.pojo.fans.Item;
+import lombok.Data;
+
+import java.util.List;
+
 /**
  * Auto-generated: 2022-07-31 18:24:3
  *
  * @author json.cn (i@json.cn)
  * @website http://www.json.cn/java2pojo/
  */
+@lombok.Data
 public class UserFollowJsonRootBean {
 
     private int code;
     private String message;
     private int ttl;
     private Data data;
-    public void setCode(int code) {
-         this.code = code;
-     }
-     public int getCode() {
-         return code;
-     }
 
-    public void setMessage(String message) {
-         this.message = message;
-     }
-     public String getMessage() {
-         return message;
-     }
 
-    public void setTtl(int ttl) {
-         this.ttl = ttl;
-     }
-     public int getTtl() {
-         return ttl;
-     }
+    @lombok.Data
+    public class Data {
 
-    public void setData(Data data) {
-         this.data = data;
-     }
-     public Data getData() {
-         return data;
-     }
-
+        /**
+         * 关注列表
+         */
+        private List<Item> list;
+        private int re_version;
+        /**
+         * 关注总数
+         */
+        private int total;
+    }
 }

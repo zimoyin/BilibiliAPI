@@ -24,4 +24,18 @@ public class FanJuEssentialINFOJsonRootBean {
      * 信息本体
      */
     private Result result;
+
+    @Data
+    public class Result {
+
+        /**
+         * 剧集信息
+         */
+        private Media media;
+        /**
+         * 用户操作信息	仅登录时存在此项
+         */
+        private Review review;
+
+    }
 }

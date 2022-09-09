@@ -1,8 +1,7 @@
 package github.zimoyin.core.live.info;
 
 import com.alibaba.fastjson.JSONObject;
-import github.zimoyin.core.live.pojo.state.LiveStateJsonRootBean;
-import github.zimoyin.core.live.pojo.statev2.Data;
+
 import github.zimoyin.core.live.pojo.statev2.LiveStateV2JsonRootBean;
 import github.zimoyin.core.utils.net.httpclient.HttpClientResult;
 import github.zimoyin.core.utils.net.httpclient.HttpClientUtils;
