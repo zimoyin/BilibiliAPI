@@ -18,7 +18,7 @@ public class FavoriteInfoJsonRoot {
     private Data data;
 
     @lombok.Data
-    public class Data {
+    public static class Data{
 
         /**
          * '收藏夹mlid（完整id）	收藏夹原始id+创建者mid尾号2位

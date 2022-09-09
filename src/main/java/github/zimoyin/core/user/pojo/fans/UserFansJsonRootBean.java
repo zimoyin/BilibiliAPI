@@ -21,7 +21,7 @@ public class UserFansJsonRootBean {
 
 
     @lombok.Data
-    public class Data {
+    public static class Data{
 
         /**
          * 具体粉丝详细列表

@@ -102,7 +102,7 @@ public class VideoURLJsonRoot {
      * data对象，里面的字段只保留了部分
      */
     @lombok.Data
-    public class Data {
+    public static class Data{
         /**
          * 字段	类型	内容	备注
          * durl	array	视频分段	注：仅flv/mp4存在此项

@@ -30,7 +30,7 @@ public class CommentAreaLazyLoadJsonRoot {
 
 
     @lombok.Data
-    public class Data {
+    public static class Data{
 
         /**
          * 游标信息

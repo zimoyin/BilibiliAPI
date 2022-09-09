@@ -19,7 +19,7 @@ public class OnlinePopulationRootBean {
 
 
     @lombok.Data
-    public class Data {
+    public static class Data{
 
         /**
          * 所有终端总计人数

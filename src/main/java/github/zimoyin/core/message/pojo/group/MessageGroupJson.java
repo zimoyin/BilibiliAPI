@@ -22,7 +22,7 @@ public class MessageGroupJson {
 
 
     @lombok.Data
-    public class Data {
+    public static class Data{
 
         /**
          * 会话信息

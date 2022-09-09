@@ -19,7 +19,7 @@ public class UserFavoritesJsonRoot {
     private int ttl;
     private Data data;
     @lombok.Data
-    public class Data {
+    public static class Data{
         /**
          * 创建的收藏夹总数
          */

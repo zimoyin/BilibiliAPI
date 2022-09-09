@@ -24,7 +24,7 @@ public class UserFollowJsonRootBean {
 
 
     @lombok.Data
-    public class Data {
+    public static class Data{
 
         /**
          * 关注列表

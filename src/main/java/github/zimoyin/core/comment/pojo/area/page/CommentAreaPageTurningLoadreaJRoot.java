@@ -39,7 +39,7 @@ public class CommentAreaPageTurningLoadreaJRoot {
 
 
     @lombok.Data
-    public class Data {
+    public static class Data{
 
         /**
          * 页信息

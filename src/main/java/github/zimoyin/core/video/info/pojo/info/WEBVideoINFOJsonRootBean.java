@@ -87,7 +87,7 @@ public class WEBVideoINFOJsonRootBean {
 
 
     @lombok.Data
-    public class Data {
+    public static class Data{
 
         /**
          * 稿件bvid

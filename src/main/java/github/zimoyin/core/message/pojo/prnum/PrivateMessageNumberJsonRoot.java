@@ -18,7 +18,7 @@ public class PrivateMessageNumberJsonRoot {
 
 
     @lombok.Data
-    public class Data {
+    public static class Data{
 
         /**
          * 未关注用户未读私信数

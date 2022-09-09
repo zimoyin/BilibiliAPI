@@ -24,7 +24,7 @@ public class UserMyRootBean {
 
 
     @lombok.Data
-    public class Data {
+    public static class Data{
 
         /**
          * mid

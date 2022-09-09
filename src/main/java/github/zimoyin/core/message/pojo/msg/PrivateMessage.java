@@ -21,7 +21,7 @@ public class PrivateMessage {
 
 
     @lombok.Data
-    public class Data {
+    public static class Data{
 
         /**
          * 聊天记录列表

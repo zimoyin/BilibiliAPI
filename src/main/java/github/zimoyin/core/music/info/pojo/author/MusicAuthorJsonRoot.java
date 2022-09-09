@@ -19,7 +19,7 @@ public class MusicAuthorJsonRoot {
 
 
     @lombok.Data
-    public class Data {
+    public static class Data{
         /**
          * 成员列表
          */

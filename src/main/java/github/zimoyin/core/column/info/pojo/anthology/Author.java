@@ -7,6 +7,7 @@ import github.zimoyin.core.user.pojo.user.Nameplate;
 import github.zimoyin.core.user.pojo.user.Official;
 import github.zimoyin.core.user.pojo.user.Pendant;
 import github.zimoyin.core.user.pojo.user.Vip;
+import lombok.Data;
 
 /**
  * Auto-generated: 2022-08-28 18:54:44
@@ -14,6 +15,7 @@ import github.zimoyin.core.user.pojo.user.Vip;
  * @author json.cn (i@json.cn)
  * @website http://www.json.cn/java2pojo/
  */
+@Data
 public class Author {
     /**
      * 作者mid

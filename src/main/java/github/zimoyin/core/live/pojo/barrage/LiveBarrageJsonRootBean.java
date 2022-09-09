@@ -21,7 +21,7 @@ public class LiveBarrageJsonRootBean {
 
 
     @lombok.Data
-    public class Data {
+    public static class Data{
         /**
          * 为当前直播间内管理员最新的10条弹幕消息
          */

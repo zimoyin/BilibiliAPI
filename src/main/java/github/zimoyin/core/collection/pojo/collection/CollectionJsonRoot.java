@@ -20,7 +20,7 @@ public class CollectionJsonRoot {
     private Data data;
 
     @lombok.Data
-    public class Data {
+    public static class Data{
         /**
          * 当前这一页的视频av id列表
          */

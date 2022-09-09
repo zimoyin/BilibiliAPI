@@ -19,7 +19,7 @@ public class LiveStateJsonRootBean {
 
 
     @lombok.Data
-    public class Data {
+    public static class Data{
 
         /**
          * 直播间状态

@@ -26,7 +26,7 @@ public class FanJuEssentialINFOJsonRootBean {
     private Result result;
 
     @Data
-    public class Result {
+    public static class Result {
 
         /**
          * 剧集信息

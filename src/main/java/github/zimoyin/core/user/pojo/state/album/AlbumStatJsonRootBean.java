@@ -22,7 +22,7 @@ public class AlbumStatJsonRootBean {
 
 
     @lombok.Data
-    public class Data {
+    public static class Data{
 
         /**
          * 相簿总数	总数为以下三者之和

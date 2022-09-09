@@ -138,7 +138,7 @@ public class HttpClientUtils {
 
 //        httpGet.setHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36");
         httpGet.setHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36");
-        httpGet.setHeader("referer", "www.bilibili.com");
+        httpGet.setHeader("referer", "http://www.bilibili.com");
         // 设置请求头
         packageHeader(headers, httpGet);
 

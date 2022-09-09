@@ -18,7 +18,7 @@ public class MessageNumberJsonRoot {
 
 
     @lombok.Data
-    public class Data {
+    public static class Data{
 
         /**
          * AT 数

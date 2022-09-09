@@ -21,7 +21,7 @@ public class MusicURLJsonRoot {
 
 
     @lombok.Data
-    public class Data {
+    public static class Data{
         /**
          * 音频auid
          */

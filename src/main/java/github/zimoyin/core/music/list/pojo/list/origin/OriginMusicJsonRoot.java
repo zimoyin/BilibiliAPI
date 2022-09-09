@@ -11,7 +11,7 @@ public class OriginMusicJsonRoot {
     private Data data;
 
     @lombok.Data
-    public class Data {
+    public static class Data{
 
         /**
          * 当前页码

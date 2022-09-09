@@ -21,7 +21,7 @@ public class AreaListJsonRoot {
      */
     private List<Data> data;
 
-    public class Data {
+    public static class Data{
 
         /**
          * 父分区id

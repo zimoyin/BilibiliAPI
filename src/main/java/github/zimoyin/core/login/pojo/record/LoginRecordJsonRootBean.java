@@ -22,7 +22,7 @@ public class LoginRecordJsonRootBean {
 
 
     @lombok.Data
-    public class Data {
+    public static class Data{
 
         private long mid;
         /**

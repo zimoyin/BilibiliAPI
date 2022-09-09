@@ -3,12 +3,15 @@
   */
 package github.zimoyin.core.comment.pojo.table;
 
+import lombok.Data;
+
 /**
  * Auto-generated: 2022-08-05 21:6:5
  *
  * @author json.cn (i@json.cn)
  * @website http://www.json.cn/java2pojo/
  */
+@Data
 public class Reply_control {
 
     /**

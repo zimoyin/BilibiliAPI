@@ -34,7 +34,7 @@ public class VideoRecommendationRootBean {
 
 
     @lombok.Data
-    public class Data {
+    public static class Data{
 
         /**
          * 稿件bvid

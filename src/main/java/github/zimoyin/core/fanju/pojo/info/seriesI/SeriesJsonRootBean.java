@@ -30,7 +30,7 @@ public class SeriesJsonRootBean {
 
 
     @Data
-    public class Result {
+    public static class Result {
 
         /**
          * 参与的活动

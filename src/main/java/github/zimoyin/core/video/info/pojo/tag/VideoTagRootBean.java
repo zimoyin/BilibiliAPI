@@ -26,7 +26,7 @@ public class VideoTagRootBean {
 
 
     @lombok.Data
-    public class Data {
+    public static class Data{
 
         /**
          * tag_id

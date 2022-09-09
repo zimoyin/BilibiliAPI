@@ -3,12 +3,15 @@
   */
 package github.zimoyin.core.user.pojo.state.contribution;
 
+import lombok.Data;
+
 /**
  * Auto-generated: 2022-07-23 19:35:58
  *
  * @author json.cn (i@json.cn)
  * @website http://www.json.cn/java2pojo/
  */
+@Data
 public class Favourite {
 
     /**

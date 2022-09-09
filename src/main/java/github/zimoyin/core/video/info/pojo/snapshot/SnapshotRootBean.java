@@ -21,7 +21,7 @@ public class SnapshotRootBean {
 
 
     @lombok.Data
-    public class Data {
+    public static class Data{
 
         /**
          * bin格式截取时间表url

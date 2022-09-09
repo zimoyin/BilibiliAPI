@@ -32,7 +32,7 @@ public class LiveInfoJsonRootBean {
 
 
     @lombok.Data
-    public class Data {
+    public static class Data{
 
         /**
          * 直播间真实id

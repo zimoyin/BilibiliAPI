@@ -37,7 +37,7 @@ public class LiveVideoURLJsonRoot {
 
 
     @lombok.Data
-    public class Data {
+    public static class Data{
 
         /**
          * 当前画质代码qn

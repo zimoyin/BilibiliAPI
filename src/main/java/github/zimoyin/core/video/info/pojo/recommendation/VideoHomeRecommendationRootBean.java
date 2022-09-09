@@ -39,7 +39,7 @@ public class VideoHomeRecommendationRootBean {
 
 
     @lombok.Data
-    public class Data {
+    public static class Data {
 
         /**
          * 稿件bvid

@@ -22,7 +22,7 @@ public class InteractVideoRootBean {
 
 
     @lombok.Data
-    public class Data {
+    public static class Data{
 
         /**
          * 视频模块（分P）标题

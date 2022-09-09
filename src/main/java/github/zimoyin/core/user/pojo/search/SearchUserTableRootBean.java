@@ -24,7 +24,7 @@ public class SearchUserTableRootBean {
 
 
     @lombok.Data
-    public class Data {
+    public static class Data{
 
         /**
          * 未知

@@ -22,7 +22,7 @@ public class FavoriteContentListJsonRoot {
     private Data data;
 
     @lombok.Data
-    public class Data {
+    public static class Data{
 
         /**
          * 收藏夹元数据

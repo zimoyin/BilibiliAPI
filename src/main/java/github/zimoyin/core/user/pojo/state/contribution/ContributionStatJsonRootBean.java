@@ -19,7 +19,7 @@ public class ContributionStatJsonRootBean {
     private int ttl;
     private Data data;
     @lombok.Data
-    public class Data {
+    public static class Data{
 
         /**
          * 投稿视频数

@@ -21,7 +21,7 @@ public class UpStatJsonRootBean {
 
 
     @lombok.Data
-    public class Data {
+    public static class Data{
 
         /**
          * 视频播放量

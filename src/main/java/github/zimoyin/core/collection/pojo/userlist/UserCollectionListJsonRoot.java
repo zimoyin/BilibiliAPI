@@ -21,7 +21,7 @@ public class UserCollectionListJsonRoot {
         return data.getItems_lists();
     }
     @lombok.Data
-    public class Data {
+    public static class Data{
         private Items_lists items_lists;
     }
 }

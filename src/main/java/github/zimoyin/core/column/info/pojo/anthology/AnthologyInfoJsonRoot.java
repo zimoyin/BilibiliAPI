@@ -20,7 +20,7 @@ public class AnthologyInfoJsonRoot {
     private Data data;
 
     @lombok.Data
-    public class Data {
+    public static class Data{
         /**
          * 文集概览
          */
