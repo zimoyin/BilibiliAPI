@@ -141,7 +141,8 @@ public class IDConvert {
     public static HashMap<Integer, Long> BvToCIDs(String bv) throws IOException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException, CodeException {
         HashMap<Integer, Long> cidMap = new HashMap<Integer, Long>();
         VideoInfo videoInfo = new VideoInfo();
-        WEBVideoINFOJsonRootBean b = videoInfo.getInfo("BV1PE411i7CV");
+//        WEBVideoINFOJsonRootBean b = videoInfo.getInfo("BV1PE411i7CV");
+        WEBVideoINFOJsonRootBean b = videoInfo.getInfo(bv);
         List<Pages> pages = b.getData().getPages();
         for (Pages page1 : pages) {
             cidMap.put(page1.getPage(), page1.getCid());

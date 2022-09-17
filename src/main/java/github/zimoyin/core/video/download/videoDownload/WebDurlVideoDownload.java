@@ -87,14 +87,16 @@ public class WebDurlVideoDownload{
         //目前作者并没有找到分段视频，所以这里不提供视频合并(目前统计数据从2022 - 2014，时长》30+，每年稿件分别》6 )
         //flv视频下载速率不到 1kb，平均在650 Byte
         int count = 0;//统计下载的视频分段
-        int countLe = data.getDurl().size();//统计下载的视频分段
+        int countLe = data.getDurl().size();//统计下载的视频分段(视频个数通常为1
         for (Durl durl : data.getDurl()) {
             //设置文件保存路径
             if (countLe != 1) filePath = path + "//" + fileName + "." + count + "." + format;
             //文件的URL
             String url = durl.getUrl().toString();
             //文件大小放入控制器中
-            control.setFileSize(NetFileUtil.getFileLength2(url,header));
+//            long fileSize = NetFileUtil.getFileLength2(url, header);//获取文件大小
+            long fileSize = durl.getSize();//获取文件大小
+            control.setFileSize(fileSize);
             HttpClientResult result = HttpClientUtils.doGet(url,header,new HashMap<>());
             result.toFile(filePath,control);
             count++;

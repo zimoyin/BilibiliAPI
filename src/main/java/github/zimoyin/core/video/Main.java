@@ -34,18 +34,33 @@ import java.util.function.Consumer;
 public class Main {
     public static void main(String[] args) throws Exception {
 //        Main main = new Main();
-//        main.test00();
+//        main.test01();
 
         VideoDownloadSetting setting = new VideoDownloadSetting();
-        setting.setID("BV1PE411i7CV");
-        setting.setPage(31);
-        setting.setQn(QN.P1080_cookie);
+        setting.setID("ss297");
+        setting.setFnval(Fnval.VideoFormat_mp4);
+        setting.setQn(QN.P306);
+        setting.setPage(1);
 
         VideoDownload videoDownload = new VideoDownload();
         videoDownload.setSetting(setting);
-        videoDownload.setListens(info -> System.out.print("\r下载进度：" + info.getDownloadSize() + "/" + info.getFileSize()));
-        videoDownload.downloadThread(true);
+        videoDownload.setListens(new DownloadHandle() {
+            @Override
+            public void handle(DownloadControl.DownloadInfo info) {
+                if (info.isFinished()){
+                    System.out.println(info.getThreadName()+" done");
+                }
+            }
+        });
+
+//        videoDownload.downloadThread(true);
 //        videoDownload.download();
+        for (int i = 1; i <= setting.getPageCount(); i++) {
+            setting.setPage(i);
+            setting.update();
+            System.out.println("download: " + i + "p ");
+            videoDownload.downloadAsynchronous();
+        }
     }
 
 
@@ -66,11 +81,12 @@ public class Main {
     }
 
     /**
-     * 下载所有p视频
+     * 下载所有p视频,包括番剧
      */
     public void test01() {
         VideoDownloadSetting setting = new VideoDownloadSetting();
-        setting.setBv("BV1Qa411p7o8");
+        setting.setBv("BV1Qa411p7o8");//视频
+//        setting.setID("ss297");//番剧
         setting.setFnval(Fnval.VideoFormat_mp4);
         setting.setQn(QN.P306);
         setting.setPage(1);
@@ -86,10 +102,10 @@ public class Main {
 
 //        videoDownload.downloadThread(true);
 //        videoDownload.download();
-        for (int i = 0; i < setting.getPageCount(); i++) {
-            System.out.print("download: " + (i + 1) + "p ");
-            setting.setPage(i + 1);
-//            videoDownload.download();
+        for (int i = 1; i <= setting.getPageCount(); i++) {
+            setting.setPage(i);
+            setting.update();
+            System.out.print("download: " + i + "p ");
             videoDownload.downloadThread(true);
             System.out.print(" done\r\n");
         }

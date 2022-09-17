@@ -13,6 +13,7 @@ import java.util.ArrayList;
  */
 @Data
 public class Media {
+    public long bandwidth;
     /**
      * 视频画质代码
      */

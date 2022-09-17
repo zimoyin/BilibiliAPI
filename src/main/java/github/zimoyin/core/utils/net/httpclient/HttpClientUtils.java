@@ -110,7 +110,6 @@ public class HttpClientUtils {
             throw new RuntimeException(e);
         }
 
-        logger.trace("HttpClientUtils.doGet -> {}",uri);
         //获取cookie
         CookieStore httpCookieStore = new BasicCookieStore();
         // 创建httpClient对象
@@ -142,6 +141,16 @@ public class HttpClientUtils {
         // 设置请求头
         packageHeader(headers, httpGet);
 
+        //========================== 日志 ===================================
+        StringBuffer sb = new StringBuffer();
+        sb.append("============================ Header ===================================").append("\r\n");
+        for (Header header : httpGet.getAllHeaders()) {
+            sb.append(header).append("\r\n");
+        }
+        sb.append("========================================================================").append("\r\n");
+        logger.trace("HttpClientUtils.doGet: Header -> {} \r\n{}",uri,sb.toString());
+
+        //=============================================================
         // 创建httpResponse对象
         CloseableHttpResponse httpResponse = null;
 
@@ -288,11 +297,12 @@ public class HttpClientUtils {
 
     /**
      * 发送put请求；不带请求参数
-     *
+     * 注意：重复调用了自己
      * @param url 请求地址
      * @return
      * @throws Exception
      */
+    @Deprecated
     public static HttpClientResult doPut(String url) throws IOException {
         return doPut(url);
     }

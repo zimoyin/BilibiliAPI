@@ -50,6 +50,10 @@ public class VideoHomeRecommendationRootBean {
          */
         private long aid;
         /**
+         * 稿件avid
+         */
+        private long id;
+        /**
          * 稿件分P总数
          */
         private int videos;

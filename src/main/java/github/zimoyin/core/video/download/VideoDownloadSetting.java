@@ -16,12 +16,16 @@ import github.zimoyin.core.video.info.pojo.info.data.Pages;
 import github.zimoyin.core.video.url.data.Fnval;
 import github.zimoyin.core.video.url.data.ID;
 import github.zimoyin.core.video.url.data.QN;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.apache.http.HttpException;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.function.Consumer;
 
 
 /**
@@ -31,6 +35,7 @@ import java.util.List;
  */
 @Data
 public class VideoDownloadSetting {
+    private ArrayList<EpisodesInfo> episodesList = new ArrayList<EpisodesInfo>();
     private String id;
     /**
      * 视频的bv号
@@ -111,11 +116,17 @@ public class VideoDownloadSetting {
     /**
      * 如果已经存在同名称的文件是否覆盖重写
      */
-    private boolean isOverride=true;
+    private boolean isOverride = true;
 
     public VideoDownloadSetting() {
     }
-
+    public VideoDownloadSetting(Cookie cookie) {
+        setCookie(cookie);
+    }
+    public VideoDownloadSetting(String id,Cookie cookie) {
+        setID(id);
+        setCookie(cookie);
+    }
     /**
      * 视频id 可以是 ssid avid bvid epid
      *
@@ -125,7 +136,7 @@ public class VideoDownloadSetting {
         initID(id);
     }
 
-    public VideoDownloadSetting(String id,boolean isOverride) {
+    public VideoDownloadSetting(String id, boolean isOverride) {
         this.isOverride = isOverride;
         initID(id);
     }
@@ -143,9 +154,10 @@ public class VideoDownloadSetting {
 
     /**
      * 根据给出的id智能判断属于什么类型，并赋值给相应的id类型，如：bv，av，ep等
+     *
      * @param id
      */
-    private void  initID(String id){
+    private void initID(String id) {
         this.id = id;
         if (id.trim().length() <= 2) throw new IllegalArgumentException("不合法的id，无法判断的id类型");
         String pr = id.trim().substring(0, 2).toUpperCase();
@@ -172,37 +184,45 @@ public class VideoDownloadSetting {
 
     /**
      * 根据给出的id智能判断属于什么类型，并赋值给相应的id类型，如：bv，av，ep,ssid等
+     *
      * @param id
      */
-    public void  setID(String id) {
+    public void setID(String id) {
         initID(id);
     }
+
     /**
      * 推导未赋值的属性的参数
      *
      * @return
      */
     public VideoDownloadSetting build() {
+        boolean isFanju = false;
+        //id赋值
+        if (bv != null) id = bv;
+        if (ep != null) id = ep;
+        if (ssid != null) id = ssid;
         //cookie
         buildCookie();
         //文件保存路径构建
         buildFileDirectory();
         //剧集
         try {
-            buildFanJu();
+            isFanju=buildFanJu();
         } catch (HttpException e) {
             throw new RuntimeException(e);
         }
         //视频信息对象
         buildVideoInfo();
         //视频的所有page数
-        buildPageCount(this.videoInfo);
+        if (!isFanju)buildPageCount(this.videoInfo);
         //当前p名称
-        buildPageName(this.videoInfo);
+        if (!isFanju)buildPageName(this.videoInfo);
         //page到 cid 的映射
-        buildCidMap(this.videoInfo);
+        if (!isFanju)buildCidMap(this.videoInfo);
+
         //设置cid
-        buildCid(this.videoInfo);
+        buildCid();
         //智能判断是否需要开启预览1080p视频下载
         buildPrevie1080p();
         //文件名称
@@ -210,6 +230,24 @@ public class VideoDownloadSetting {
         return this;
     }
 
+    public void update() {
+        //id赋值
+        if (bv != null) id = bv;
+        if (ep != null) id = ep;
+        if (ssid != null) id = ssid;
+        //cookie
+        buildCookie();
+        //文件保存路径构建
+        buildFileDirectory();
+        //当前p名称
+        if (episodesList.size() == 0)buildPageName(this.videoInfo);
+        //设置bv号
+        if (episodesList.size() > 0)this.setBv(episodesList.get(this.getPage()-1).getBvid());
+        buildCid();
+        //文件名称
+        buildFileName(this.videoInfo);
+
+    }
     ///////////////////////////////////////////////////////////////////////////////////////////
 
     /**
@@ -220,10 +258,10 @@ public class VideoDownloadSetting {
         if (!isPreview1080p) {
             //isPreview1080p 为 false 时就进行判断是否开启
             //条件：不存在cookie，但是想要下载1080p视频
-            if (empty && qn == QN.P1080_cookie){
-                this.isPreview1080p=true;
-                this.qn=QN.P1080_cookie;
-                this.fnval= Fnval.VideoFormat_mp4;
+            if (empty && qn == QN.P1080_cookie) {
+                this.isPreview1080p = true;
+                this.qn = QN.P1080_cookie;
+                this.fnval = Fnval.VideoFormat_mp4;
             }
         }
         if (ep != null || ssid != null) this.isPreview1080p = false;
@@ -260,6 +298,14 @@ public class VideoDownloadSetting {
      * @param info 视频信息类
      */
     private void buildFileName(WEBVideoINFOJsonRootBean info) {
+        //如果是番剧就直接返回
+        if (episodesList.size() > 0) {
+            fileName = episodesList.get(this.getPage() - 1).getName();
+            //去掉非法字符
+            fileName = fileName.replaceAll("[.?/:<>|*\"\\\\]", "");
+            fileName = fileName.replaceAll("\\s+", "_");
+            return;
+        }
         WEBVideoINFOJsonRootBean.Data data = info.getData();
         //是否存在文件名，如果没有就赋值一个
         if (fileName == null) {
@@ -318,17 +364,17 @@ public class VideoDownloadSetting {
     }
 
     /**
-     * 设置 cid 的映射
+     * 根据page 设置 cid 的映射
      */
-    private void buildCid(WEBVideoINFOJsonRootBean info) {
-        //如果有cid就不构建
-        if (this.getCid() != 0) return;
-        WEBVideoINFOJsonRootBean.Data data = info.getData();
-        //设置cid
-        this.setCid(data.getCid());
+    private void buildCid() {
+        //如果获取不到cidMap 映射表则抛出异常
+        if (cidMap == null || cidMap.size() == 0)
+            throw new NullPointerException("无法获取到该视频的cidMap 映射表，无法获取对应cid");
         //如果设置的p数大于视频所有的p数总量则抛出异常
-        if (getPageCount() < getPage()) throw new IllegalArgumentException("视频没有第 " + getPage() + " p");
-        if (this.getPage() != 1) this.setCid(cidMap.get(this.getPage()));
+        if (getPageCount() < getPage() || getPage() <= -1)
+            throw new IllegalArgumentException("视频没有第 " + getPage() + " p");
+        //获取cid
+        setCid(getCidMap().get(getPage()));
     }
 
     /**
@@ -347,39 +393,35 @@ public class VideoDownloadSetting {
         }
     }
 
+
+
+
     /**
      * 如果是番剧就构建
      */
-    private void buildFanJu() throws HttpException {
+    private boolean buildFanJu() throws HttpException {
+        cidMap = new HashMap<>();
         //判断是否是番剧
-        if (ssid == null && ep == null) return;
+        if (ssid == null && ep == null) return false;
         //番剧信息
         SeriesINFO series = new SeriesINFO();
-        //当前集信息
-        Episodes episodes = null;
-        //如果当前page（p数）为0就下载当前(p)集的视频
-        //如果不为0就下载指定page的集视频
-        if (this.getPage() == 0) {
-            //获取剧集，根据ep获取，如果ep为null就获取第一集
-            episodes = series.getEpisodes(ssid == null ? ep : ssid);
-            this.ep = String.valueOf(ep);
-        } else {
-            SeriesJsonRootBean pojo = series.getPojo(ssid == null ? ep : ssid);
-            SeriesJsonRootBean.Result result = pojo.getResult();
-            //设置ssid
-            this.ssid = String.valueOf("ss"+result.getSeason_id());
-            //设置剧情信息
-            episodes = result.getPage(page - 1);
-        }
-        //设置bv
-        String bvid = episodes.getBvid();
-        this.setBv(bvid);
-        //设置cid
-        long cid = episodes.getCid();
-        this.setCid(cid);
-        //设置ep
-        long ep = episodes.getId();
-        this.ep = String.valueOf("ep"+ep);
+        SeriesJsonRootBean pojo = series.getPojo(ssid == null ? ep : ssid);
+        SeriesJsonRootBean.Result result = pojo.getResult();
+        //设置ssid
+        this.ssid = String.valueOf("ss" + result.getSeason_id());
+        //设置其他信息
+        List<Episodes> episodesList1 = result.getEpisodes();
+        pageCount = episodesList1.size();//设置总p数
+        //设置番剧具体信息
+        episodesList1.forEach(episodes0 -> {
+            String ebvid = episodes0.getBvid();
+            long ecid = episodes0.getCid();
+            String ename = episodes0.getShare_copy();
+            String epage = episodes0.getTitle();
+            cidMap.put(Integer.parseInt(epage),ecid);
+            episodesList.add(new EpisodesInfo(Integer.parseInt(epage), result.getEpisodes().size(), ecid, ebvid, ename));
+        });
+        return true;
     }
 
 
@@ -425,5 +467,25 @@ public class VideoDownloadSetting {
     public void setSsid(String ssid) {
         this.ssid = ssid;
         this.setPage(0);
+    }
+
+
+    @Data
+    @NoArgsConstructor
+    static class EpisodesInfo {
+        private int page;
+        private int pageCount;
+        private long cid;
+        private String bvid;
+        private String name;
+
+
+        public EpisodesInfo(int page, int pageCount, long cid, String bvid, String name) {
+            this.page = page;
+            this.pageCount = pageCount;
+            this.cid = cid;
+            this.bvid = bvid;
+            this.name = name;
+        }
     }
 }

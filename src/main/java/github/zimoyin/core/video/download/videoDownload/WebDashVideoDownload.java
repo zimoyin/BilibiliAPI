@@ -10,6 +10,7 @@ import github.zimoyin.core.video.download.DashTemplate;
 import github.zimoyin.core.video.download.DownloadControl;
 import github.zimoyin.core.video.download.DownloadResult;
 import github.zimoyin.core.video.url.pojo.*;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
@@ -151,6 +152,9 @@ public class WebDashVideoDownload {
         //下载音频和视频
         for (Media media : select) {
             String format = media.getMimeType().replaceAll("/", "_");
+
+
+
             //有备用url就先用备用url
             if (media.getBackupUrl() != null) {
                 //视频的url
@@ -233,6 +237,7 @@ public class WebDashVideoDownload {
     }
 
     private ArrayList<Future<DownloadResult>> durlDownloadThread(ExecutorService executorService, boolean isWaitTakeFinish, int threadCount, String filePath, String url, long fileSize, DownloadControl control) throws IOException, ExecutionException, InterruptedException {
+        LoggerFactory.getLogger("Test").trace("文件长度: "+ fileSize);
         //创建任务结果队列
         ArrayList<Future<DownloadResult>> tasks = new ArrayList<>();
         //多线程下载文件

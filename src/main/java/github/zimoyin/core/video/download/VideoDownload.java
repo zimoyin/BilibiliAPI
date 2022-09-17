@@ -5,6 +5,8 @@ import github.zimoyin.core.video.download.videoDownload.WebDashVideoDownload;
 import github.zimoyin.core.video.download.videoDownload.WebDurlVideoDownload;
 import github.zimoyin.core.video.url.VideoURLFormat;
 import github.zimoyin.core.video.url.VideoURLPreviewFormatP1080;
+import github.zimoyin.core.video.url.pojo.Dash;
+import github.zimoyin.core.video.url.pojo.Durl;
 import github.zimoyin.core.video.url.pojo.VideoURLJsonRoot;
 import lombok.Data;
 
@@ -76,6 +78,7 @@ public class VideoDownload extends VideoDownloadAbs {
 
     public VideoDownload(VideoDownloadSetting setting) {
         this.setting = setting;
+        this.setting.build();
     }
 
     /**
@@ -224,7 +227,7 @@ public class VideoDownload extends VideoDownloadAbs {
     private void init() {
         //构建设置
         if (this.setting != null) {
-            this.setting.build();
+            this.setting.update();
         }
         initUrlPojo();
         initDownloadObj();
@@ -341,7 +344,7 @@ public class VideoDownload extends VideoDownloadAbs {
 
     public void setSetting(VideoDownloadSetting setting) {
         this.setting = setting;
-//        init();
+        this.setting.build();
     }
 
 

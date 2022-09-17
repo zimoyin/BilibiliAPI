@@ -12,7 +12,9 @@ import github.zimoyin.core.user.up.SearchUser;
 import github.zimoyin.core.utils.net.httpclient.HttpClientResult;
 import github.zimoyin.core.utils.net.httpclient.HttpClientUtils;
 import github.zimoyin.core.collection.VideoCollection;
-import github.zimoyin.core.video.download.VideoDownload;
+import github.zimoyin.core.video.download.*;
+import github.zimoyin.core.video.url.data.Fnval;
+import github.zimoyin.core.video.url.data.QN;
 import org.apache.http.HttpException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -25,7 +27,9 @@ import java.net.URISyntaxException;
 import java.security.KeyManagementException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
 
 public class T {
     SearchType type;
@@ -42,10 +46,20 @@ public class T {
     }
 
     public static void main(String[] args) throws CookieNotFoundException, IOException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException, ExecutionException, InterruptedException {
-        SearchUser user = new SearchUser();
-        for (Result name : user.searchPojo("子墨").getData().getResult()) {
-            System.out.println(name.getUname());
-        }
+        VideoDownloadSetting setting = new VideoDownloadSetting();
+//        setting.setID("ep469140");
+        setting.setID("BV1ra411X7RX");
+        setting.setFnval(Fnval.VideoFormat_dash);
+        setting.setQn(QN.P306);
+        setting.build();
+
+        System.out.println(setting.getPageCount());
+        VideoDownload videoDownload = new VideoDownload();
+        videoDownload.setSetting(setting);
+        videoDownload.setListens(info -> System.out.print("\r下载进度：" + info.getDownloadSize() + "/" + info.getFileSize()));
+
+            videoDownload.downloadThread(true);
+//        videoDownload.download();
     }
 
     /**
@@ -60,17 +74,17 @@ public class T {
         Elements elementsByClass2 = parse.getElementsByClass("first-line-title");
         for (Element str : elementsByClass2) {
             //合集链接
-            System.out.println("URL: http:"+str.attr("href"));
+            System.out.println("URL: http:" + str.attr("href"));
             //合集名称
-            System.out.println("Title:"+str.text());
+            System.out.println("Title:" + str.text());
             //合集的season_id
-            System.out.println("season id:"+str.attr("href").split("\\?")[1].split("=")[1]);
+            System.out.println("season id:" + str.attr("href").split("\\?")[1].split("=")[1]);
         }
 
         //简介
         Elements elementsByClass = parse.getElementsByClass("abstract");
         for (Element str : elementsByClass) {
-            System.out.println(str.text()+" end");
+            System.out.println(str.text() + " end");
         }
         //播放量
         Elements elementsByClas = parse.getElementsByClass("play-num");
