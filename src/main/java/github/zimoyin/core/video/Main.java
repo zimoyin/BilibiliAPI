@@ -36,10 +36,10 @@ public class Main {
 //        Main main = new Main();
 //        main.test01();
 
-        VideoDownloadSetting setting = new VideoDownloadSetting();
-        setting.setID("ss297");
-        setting.setFnval(Fnval.VideoFormat_mp4);
-        setting.setQn(QN.P306);
+        VideoDownloadSetting setting = new VideoDownloadSetting(GlobalCookie.getInstance());
+        setting.setID("BV11d4y1w7r5");
+        setting.setFnval(Fnval.VideoFormat_flv);
+        setting.setQn(QN.P1080_cookie);
         setting.setPage(1);
 
         VideoDownload videoDownload = new VideoDownload();
@@ -47,20 +47,13 @@ public class Main {
         videoDownload.setListens(new DownloadHandle() {
             @Override
             public void handle(DownloadControl.DownloadInfo info) {
-                if (info.isFinished()){
-                    System.out.println(info.getThreadName()+" done");
+                System.out.print("\r"+info.getDownloadSize()+"/"+info.getFileSize());
+                if (info.isFinished()) {
+                    System.out.print("\r"+info.getFileName() + " done");
                 }
             }
         });
-
-//        videoDownload.downloadThread(true);
-//        videoDownload.download();
-        for (int i = 1; i <= setting.getPageCount(); i++) {
-            setting.setPage(i);
-            setting.update();
-            System.out.println("download: " + i + "p ");
-            videoDownload.downloadAsynchronous();
-        }
+        videoDownload.downloadThread(true);
     }
 
 

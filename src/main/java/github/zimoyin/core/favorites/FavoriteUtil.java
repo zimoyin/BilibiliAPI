@@ -22,8 +22,8 @@ import github.zimoyin.core.video.download.DownloadResult;
 import github.zimoyin.core.video.download.VideoDownload;
 import github.zimoyin.core.video.download.VideoDownloadSetting;
 import github.zimoyin.core.video.url.data.Fnval;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -45,7 +45,8 @@ public class FavoriteUtil {
      * 如果你想要更加自由的下载方法请自行实现
      */
     public volatile boolean isStop;
-    private Logger logger = LoggerFactory.getLogger(FavoriteUtil.class);
+//    private Logger logger = LoggerFactory.getLogger(FavoriteUtil.class);
+    private final org.apache.logging.log4j.Logger logger = LogManager.getLogger(FavoriteUtil.class);
 
     public FavoriteUtil() {
     }

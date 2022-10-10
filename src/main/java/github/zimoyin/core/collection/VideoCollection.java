@@ -13,12 +13,12 @@ import github.zimoyin.core.video.download.VideoDownloadSetting;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.apache.logging.log4j.LogManager;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -26,7 +26,8 @@ import java.util.concurrent.Future;
 
 @Data
 public class VideoCollection {
-    private static final Logger logger = LoggerFactory.getLogger(VideoCollection.class);
+//    private static final Logger logger = LoggerFactory.getLogger(VideoCollection.class);
+    private static final org.apache.logging.log4j.Logger logger = LogManager.getLogger(VideoCollection.class);
     private Cookie cookie;
     /**
      * 合集的URL

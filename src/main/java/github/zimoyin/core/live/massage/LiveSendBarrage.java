@@ -6,8 +6,8 @@ import github.zimoyin.core.exception.CookieNotFoundException;
 import github.zimoyin.core.utils.JsonSerializeUtil;
 import github.zimoyin.core.utils.net.httpclient.HttpClientResult;
 import github.zimoyin.core.utils.net.httpclient.HttpClientUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -20,7 +20,8 @@ import java.util.function.BiConsumer;
  * 发送直播弹幕
  */
 public class LiveSendBarrage {
-    public final Logger logger = LoggerFactory.getLogger(this.getClass());
+//    public final Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final org.apache.logging.log4j.Logger logger = LogManager.getLogger(this.getClass());
     private final String url = "https://api.live.bilibili.com/msg/send";
     Map<String, String> paramMap = new HashMap<String, String>();
 

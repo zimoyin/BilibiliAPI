@@ -1,12 +1,12 @@
 package github.zimoyin.core.column.info;
 
 import lombok.Data;
+import org.apache.logging.log4j.LogManager;
 import org.jsoup.nodes.Attribute;
 import org.jsoup.nodes.Attributes;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -200,7 +200,8 @@ public class Paragraph {
         }
 
         if (this.imageFerSrc != null && this.imageSrc != null && this.imageFerSrc.size() > 0 && this.imageSrc.size() > 0) {
-            LoggerFactory.getLogger(Paragraph.class).warn("该段落同时解析了两次相同图片：\r\n{}", element);
+            LogManager.getLogger(Paragraph.class).warn("该段落同时解析了两次相同图片：\r\n{}", element);
+
         }
     }
 

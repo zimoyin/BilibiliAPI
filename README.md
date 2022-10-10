@@ -16,118 +16,36 @@
 * 专栏API
 * 合集API
 * 歌单API
-**注意：一点要看源码的pojo类的字段，否则你不会用的**
-### 日志
+  **注意：一点要看源码的pojo类的字段，否则你不会用的**
+* 关于视频下载： 对于视频下载只提供了简陋的下载工具，如有需求请定制
 
-代码中只有直播TCP部分代码与视频下载等部分代码使用了日志，其他的不使用日志
+### 依赖对应
 
-#### 解决日志绑定冲突
+阐述每层代码对应的不共用依赖
 
-##### 问题描述：
+| 代码层                         | 依赖                |
+| :----------------------------- | :------------------ |
+| github.zimoyin.core.barrage    | com.google.protobuf |
+| github.zimoyin.core.collection | org.jsoup           |
+| github.zimoyin.core.column     | org.jsoup           |
+| github.zimoyin.core.login      | com.google.zxing    |
+| github.zimoyin.core.login      | org.openjfx         |
+| github.zimoyin.core.live       | io.vertx            |
 
-使用 **Releases** 中的jar 再导入项目后，如果项目内有日志的绑定，那么他们会发生冲突
-
-##### 问题原因：
-
-jar 中导入了日志依赖与你项目里面的日志依赖发生了冲突。  
-但是 Releases 中打包的jar，不能使用 exclusions 去除，因为他将所有的依赖都整合进了jar中。  
-需要手动打包一份没有依赖的jar，或者手动删除冲突依赖
-
-##### 解决方法：
-
-1. 重新使用maven打包项目，打包后的jar不应该包含依赖的jar
-   但是请将 BiliCore 所需的依赖导入你所在的项目里面
+### 本地导入jar
 
 ```xml
 
-<dependencies>
-
-    <dependency>
-        <!--maven 导入本地jar-->
-        <groupId>io.github.zimoyin</groupId>
-        <artifactId>BilibiliAPI</artifactId>
-        <version>0.3</version>
-        <scope>system</scope>
-        <!-- 本地jar 路径-->
-        <systemPath>${project.basedir}/lib/BilibiliAPI-0.3.jar</systemPath>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-controls -->
-    <dependency>
-        <groupId>org.openjfx</groupId>
-        <artifactId>javafx-controls</artifactId>
-        <version>18.0.2</version>
-    </dependency>
-
-
-    <dependency>
-        <groupId>io.vertx</groupId>
-        <artifactId>vertx-core</artifactId>
-        <version>4.3.2</version>
-    </dependency>
-    
-    <!--logo二维码 工具-->
-    <dependency>
-        <groupId>com.github.binarywang</groupId>
-        <artifactId>qrcode-utils</artifactId>
-        <version>1.2</version>
-    </dependency>
-    <dependency>
-        <groupId>com.google.zxing</groupId>
-        <artifactId>core</artifactId>
-        <version>3.3.0</version>
-    </dependency>
-    <dependency>
-        <groupId>com.google.zxing</groupId>
-        <artifactId>javase</artifactId>
-        <version>3.3.0</version>
-    </dependency>
-    <dependency>
-        <groupId>net.coobird</groupId>
-        <artifactId>thumbnailator</artifactId>
-        <version>0.4.8</version>
-    </dependency>
-
-
-    <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
-    <dependency>
-        <groupId>org.apache.httpcomponents</groupId>
-        <artifactId>httpclient</artifactId>
-        <version>4.5.13</version>
-    </dependency>
-    <dependency>
-        <groupId>org.apache.httpcomponents</groupId>
-        <artifactId>httpmime</artifactId>
-        <version>4.5</version>
-    </dependency>
-
-
-    <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
-    <dependency>
-        <groupId>org.jsoup</groupId>
-        <artifactId>jsoup</artifactId>
-        <version>1.14.3</version>
-    </dependency>
-    
-    <!-- https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java -->
-    <dependency>
-        <groupId>com.google.protobuf</groupId>
-        <artifactId>protobuf-java</artifactId>
-        <version>3.19.3</version>
-    </dependency>
-    <dependency>
-        <groupId>com.alibaba</groupId>
-        <artifactId>fastjson</artifactId>
-        <version>1.2.60</version>
-    </dependency>
-    <dependency>
-        <groupId>org.apache.commons</groupId>
-        <artifactId>commons-compress</artifactId>
-        <version>1.20</version>
-    </dependency>
-</dependencies>
+<dependency>
+    <!--maven 导入本地jar-->
+    <groupId>io.github.zimoyin</groupId>
+    <artifactId>BilibiliAPI</artifactId>
+    <version>0.3</version>
+    <scope>system</scope>
+    <!-- 本地jar 路径-->
+    <systemPath>${project.basedir}/lib/BilibiliAPI-0.3.jar</systemPath>
+</dependency>
 ```
-
-2. 暴力删除jar中的依赖
 
 ----
 大部分的接口来源于项目： https://github.com/SocialSisterYi/bilibili-API-collect  

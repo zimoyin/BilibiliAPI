@@ -3,8 +3,8 @@ package github.zimoyin.core.live.massage.vertx;
 import io.vertx.core.buffer.Buffer;
 import io.vertx.core.buffer.impl.BufferImpl;
 import lombok.Data;
+import org.apache.logging.log4j.LogManager;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.ByteArrayOutputStream;
 
@@ -15,7 +15,8 @@ import java.io.ByteArrayOutputStream;
 public class Package {
     private volatile int sequence = 0;
 
-    public final Logger logger = LoggerFactory.getLogger(this.getClass());
+    //    public final Logger logger = LoggerFactory.getLogger(this.getClass());
+    public final org.apache.logging.log4j.Logger logger = LogManager.getLogger(this.getClass());
 
     private Buffer buffer;
     /**
@@ -33,27 +34,29 @@ public class Package {
         this.buffer = buffer;
     }
 
-    public  Package(){}
+    public Package() {
+    }
 
 
-    public long length(){
+    public long length() {
         return buffer.length();
     }
 
 
     /**
      * 认证包
+     *
      * @param body
      * @return
      */
-    public Buffer getCertificationPackage(String body){
+    public Buffer getCertificationPackage(String body) {
         Buffer buffer = new BufferImpl();
         //正文+头部大小
         int i = body.getBytes().length;
         //头
         Header header = new Header();
         //正文+头部大小
-        header.setPageSize(16+i);
+        header.setPageSize(16 + i);
         //头部大小
         header.setHeaderSize((short) 16);
         //协议版本
@@ -73,9 +76,10 @@ public class Package {
 
     /**
      * 心跳包
+     *
      * @return
      */
-    public Buffer getHeart(){
+    public Buffer getHeart() {
         Header header = new Header();
         //正文+头部大小
         header.setPageSize(16);
@@ -94,8 +98,9 @@ public class Package {
     }
 
     @Data
-    public static class Header{
-        public final Logger logger = LoggerFactory.getLogger(this.getClass());
+    public static class Header {
+        //        public final Logger logger = LoggerFactory.getLogger(this.getClass());
+        public final org.apache.logging.log4j.Logger logger = LogManager.getLogger(this.getClass());
         /**
          * 字段偏移 0
          * 包大小
@@ -134,10 +139,11 @@ public class Package {
 
         /**
          * 设置头部信息
+         *
          * @param buffer
          * @return
          */
-        public Buffer buildHeader(Buffer buffer){
+        public Buffer buildHeader(Buffer buffer) {
             //正文+头部大小
             buffer.appendInt(this.pageSize);
             //头部大小
@@ -154,9 +160,10 @@ public class Package {
 
         /**
          * 设置头部信息
+         *
          * @return
          */
-        public Buffer buildHeader(){
+        public Buffer buildHeader() {
             Buffer buffer = new BufferImpl();
             //正文+头部大小
             buffer.appendInt(this.pageSize);
@@ -173,17 +180,18 @@ public class Package {
 
         /**
          * 拆包
+         *
          * @param buffer
          */
         public Header(Buffer buffer) {
-            this.pageSize=buffer.getInt(0);
+            this.pageSize = buffer.getInt(0);
             try {
                 this.headerSize = buffer.getShort(4);
                 this.version = buffer.getShort(6);
                 this.code = buffer.getInt(8);
                 this.sequence = buffer.getInt(12);
-            }catch (Exception e){
-                logger.warn("包的包头格式非约定好的，读取失败,\n包:{}\n异常：\n",buffer.toString(),e);
+            } catch (Exception e) {
+                logger.warn("包的包头格式非约定好的，读取失败,\n包:{}\n异常：\n", buffer.toString(), e);
             }
         }
 
@@ -208,11 +216,11 @@ public class Package {
     }
 
     @Data
-    public static class Body{
+    public static class Body {
         /**
          * 字段偏移 16
          */
-        private  String body;
+        private String body;
 
         /**
          * 解压后的数据
@@ -221,28 +229,31 @@ public class Package {
 
         /**
          * 构建 body 数据
+         *
          * @param buffer
          * @return
          */
-        public Buffer buildBody(Buffer buffer){
-                buffer.appendString(this.body);
-                return buffer;
+        public Buffer buildBody(Buffer buffer) {
+            buffer.appendString(this.body);
+            return buffer;
         }
 
         /**
          * 返回一个Byte 数组
+         *
          * @return
          */
-        public byte[] getBytes(){
+        public byte[] getBytes() {
             return this.body.getBytes();
         }
 
         /**
          * 拆包
+         *
          * @param buffer
          */
         public Body(Buffer buffer) {
-            this.body = buffer.getString(16,buffer.length());
+            this.body = buffer.getString(16, buffer.length());
         }
 
 

@@ -36,23 +36,7 @@ public class Main {
         setting.setQn(QN.P306);
         setting.build();
 
-        System.out.println(setting.getPageCount());
-        VideoDownload videoDownload = new VideoDownload();
-        videoDownload.setSetting(setting);
-        videoDownload.setListens(info -> System.out.print("\r下载进度：" + info.getDownloadSize() + "/" + info.getFileSize()));
-
-        for (int i = 1; i <= setting.getPageCount(); i++) {
-            setting.setPage(i);
-//            setting.update();
-//            videoDownload.downloadThread(true);
-            videoDownload.download();
-//            System.out.println(setting.getFileName());
-//            System.out.println(setting.getBv());
-//            System.out.println(setting.getCid());
-
-            System.out.println("done："+i);
-//            System.out.println("================================================================");
-        }
-
+        VideoURLFormat urlFormat = new VideoURLFormat();
+        System.out.println(urlFormat.getJsonPOJO(setting).getURLs());
     }
 }

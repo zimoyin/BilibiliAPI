@@ -9,8 +9,8 @@ import github.zimoyin.core.live.pojo.message.MessageData;
 import github.zimoyin.core.live.pojo.message.UserJson;
 import github.zimoyin.core.utils.JsonSerializeUtil;
 import lombok.Data;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +33,9 @@ public class Massage {
      */
     private long hot;
     private ArrayList<Barrage> barrages = new ArrayList<Barrage>();
-    public final Logger logger = LoggerFactory.getLogger(this.getClass());
+
+//    public final Logger logger = LoggerFactory.getLogger(this.getClass());
+    public final org.apache.logging.log4j.Logger logger = LogManager.getLogger(this.getClass());
 
     public void addCommand(String command) {
         commands.add(command);

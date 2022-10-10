@@ -13,8 +13,9 @@ import io.vertx.core.buffer.Buffer;
 import io.vertx.core.buffer.impl.BufferImpl;
 import io.vertx.core.net.NetClientOptions;
 import io.vertx.core.net.NetSocket;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 
 import java.io.*;
 import java.util.ArrayList;
@@ -25,7 +26,8 @@ import java.util.List;
  * b站直播的TCP客户端
  */
 public class TcpVerticle extends AbstractVerticle {
-    public final Logger logger = LoggerFactory.getLogger(this.getClass());
+//    public final Logger logger = LoggerFactory.getLogger(this.getClass());
+    public final Logger logger = LogManager.getLogger(this.getClass());
 
     private volatile ArrayList<LiveMassageHandle> handles;
     /**

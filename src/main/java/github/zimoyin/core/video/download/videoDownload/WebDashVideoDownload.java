@@ -10,7 +10,8 @@ import github.zimoyin.core.video.download.DashTemplate;
 import github.zimoyin.core.video.download.DownloadControl;
 import github.zimoyin.core.video.download.DownloadResult;
 import github.zimoyin.core.video.url.pojo.*;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+
 
 import java.io.File;
 import java.io.IOException;
@@ -237,7 +238,7 @@ public class WebDashVideoDownload {
     }
 
     private ArrayList<Future<DownloadResult>> durlDownloadThread(ExecutorService executorService, boolean isWaitTakeFinish, int threadCount, String filePath, String url, long fileSize, DownloadControl control) throws IOException, ExecutionException, InterruptedException {
-        LoggerFactory.getLogger("Test").trace("文件长度: "+ fileSize);
+        LogManager.getLogger("Test").trace("文件长度: "+ fileSize);
         //创建任务结果队列
         ArrayList<Future<DownloadResult>> tasks = new ArrayList<>();
         //多线程下载文件

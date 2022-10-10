@@ -18,8 +18,7 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.ssl.SSLContextBuilder;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLContext;
@@ -58,7 +57,8 @@ public class HttpClientUtils {
     // 请求获取数据的超时时间(即响应时间)，单位毫秒。
     private static final int SOCKET_TIMEOUT = 12 * 1000;
 
-    static final Logger logger = LoggerFactory.getLogger(HttpClientUtils.class);
+//    static final Logger logger = LoggerFactory.getLogger(HttpClientUtils.class);
+    static final org.apache.logging.log4j.Logger logger = LogManager.getLogger(HttpClientUtils.class);
     /**
      * 发送get请求；不带请求头和请求参数
      *

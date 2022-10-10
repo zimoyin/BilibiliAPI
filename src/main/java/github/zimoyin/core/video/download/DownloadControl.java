@@ -1,8 +1,9 @@
 package github.zimoyin.core.video.download;
 
 import lombok.Data;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.NoArgsConstructor;
+import org.apache.logging.log4j.LogManager;
+
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -16,6 +17,8 @@ import java.util.concurrent.Executors;
  */
 @Data
 public class DownloadControl {
+    private volatile String filePath = null;
+    private volatile String fileName = null;
     /**
      * 需要下载的文件的实际线程数
      */
@@ -70,7 +73,8 @@ public class DownloadControl {
     private ExecutorService downloadExecutorService;
 
     private static boolean warn = false;
-    private Logger logger = LoggerFactory.getLogger(DownloadControl.class);
+//    private Logger logger = LoggerFactory.getLogger(DownloadControl.class);
+    private final org.apache.logging.log4j.Logger logger = LogManager.getLogger(DownloadControl.class);
     public DownloadControl(int threadCount) {
         this.threadCount = threadCount;
         executorService = Executors.newFixedThreadPool(threadCount / 2 + 1);
@@ -104,7 +108,7 @@ public class DownloadControl {
             logger.warn("当前已下载的字节数大于控制器中描述的文件字节长度，这说明获取文件长度的方法有缺陷，但是不影响下载");
         }
         for (DownloadHandle handle : handles) {
-            handle.handle(new DownloadInfo(
+            DownloadInfo info = new DownloadInfo(
                     threadCount,
                     finalThreadCount,
                     finishCount,
@@ -116,7 +120,11 @@ public class DownloadControl {
 
                     threadDownloadSize,
                     threadSize
-            ));
+            );
+            info.setThreadFinishedCount(finishCount);
+            info.setFilePath(filePath);
+            info.setFileName(fileName);
+            handle.handle(info);
         }
     }
 
@@ -144,10 +152,27 @@ public class DownloadControl {
         if (downloadExecutorService != null) downloadExecutorService.shutdown();
         //关闭事件线程池
         executorService.shutdown();
+        //发出事件
+        for (DownloadHandle handle : handles) {
+            DownloadInfo info = new DownloadInfo(
+                    threadCount,
+                    finalThreadCount,
+                    finishCount,
+                    fileSize,
+                    downloadSize,
+                    Thread.currentThread().getName(),
+                    0,
+                    0
+            );
+            info.setThreadFinishedCount(finishCount);
+            info.setFilePath(filePath);
+            info.setFileName(fileName);
+            handle.handle(info);
+        }
     }
 
     /**
-     * 下载完成
+     * 下载完成: 当所有线程完成任务时则完成
      */
     public void finish() {
         executorService.submit(new Runnable() {
@@ -171,11 +196,14 @@ public class DownloadControl {
     }
 
     @Data
+    @NoArgsConstructor
     public class DownloadInfo {
+        private volatile String filePath = null;
+        private volatile String fileName = null;
         /**
          * 真实的线程数(核心线程)
          */
-        private final int threadCount;
+        private volatile int threadCount;
         /**
          * 需要利用的线程数，需要利用线程的次数（线程的任务数）。
          * 这是个任务数量总计，当所有的任务完成后（threadFinishedCount） 就会和他保持一致
@@ -236,7 +264,7 @@ public class DownloadControl {
          * @return
          */
         public boolean isFinished() {
-            if (threadFinishedCount >= threadDownloadCount || downloadSize >=  fileSize ) return true;
+            if (this.threadFinishedCount >= this.threadCount) return true;
             return false;
         }
 

@@ -246,6 +246,8 @@ public class VideoDownload extends VideoDownloadAbs {
     private void initControl() {
         //获取一个新的控制器
         this.control = new DownloadControl(setting.getThreadCount());
+        this.control.setFilePath(this.setting.getPath());
+        this.control.setFileName(this.setting.getFileName());
         //将全局处理器交给新的控制器
         this.control.getHandles().addAll(this.handles);
         //将当前处理器交给新的控制器

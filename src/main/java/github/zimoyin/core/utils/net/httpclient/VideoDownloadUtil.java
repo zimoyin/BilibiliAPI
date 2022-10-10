@@ -5,8 +5,8 @@ import github.zimoyin.core.utils.AllocateBytes;
 import github.zimoyin.core.video.download.DownloadControl;
 import github.zimoyin.core.video.download.DownloadResult;
 import lombok.Data;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -34,7 +34,8 @@ public class VideoDownloadUtil {
         this.bv = bv;
     }
 
-    private static Logger logger = LoggerFactory.getLogger(VideoDownloadUtil.class);
+//    private static Logger logger = LoggerFactory.getLogger(VideoDownloadUtil.class);
+    private final static org.apache.logging.log4j.Logger logger = LogManager.getLogger(VideoDownloadUtil.class);
 
     /**
      * 多线程下载文件，不阻断main线程

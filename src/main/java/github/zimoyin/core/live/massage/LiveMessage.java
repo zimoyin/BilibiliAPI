@@ -10,7 +10,7 @@ import org.apache.http.HttpException;
 
 import java.util.ArrayList;
 
-public class LiveMassage {
+public class LiveMessage {
     private ArrayList<LiveMassageHandle> handles = new ArrayList<LiveMassageHandle>();
     private TcpVerticle tcpVerticle;
 
