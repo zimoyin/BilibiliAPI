@@ -1,0 +1,14 @@
+### 下载视频
+GET https://cn-jsnt-ct-01-27.bilivideo.com/upgcxcode/60/42/455794260/455794260-1-30127.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&uipk=5&nbs=1&deadline=1666196998&gen=playurlv2&os=bcache&oi=2075630434&trid=00004bcf5487d5eb42ab888bf42e7945762du&mid=102664436&platform=pc&upsig=d07282afe84373cc6e0926e7fdcde3fd&uparams=e,uipk,nbs,deadline,gen,os,oi,trid,mid,platform&cdnid=14708&bvc=vod&nettype=0&orderid=0,3&agrr=1&bw=3249835&logo=80000000
+# 请求头
+referer: https://www.bilibili.com/
+#user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+#Cookie: bili_jct=c286c4e10900293d8c1d9c6fb3872196;DedeUserID=204700919;gourl=http%3A%2F%2Fwww.bilibili.com;Expires=15551000;DedeUserID__ckMd5=427a3d38a2f2f73b;SESSDATA=33732820%2C1675171069%2Cbd46f%2A81;
+#会员Cookie
+Cookie: l=v; PVID=1; buvid3=F10A9E92-166F-D7B0-9492-7A294A427BF241784infoc; i-wanna-go-back=-1; _uuid=A1018A103F-9DFD-7F110-5166-9106B33CDDA10743106infoc; buvid4=51636527-B758-B365-5058-48023AA5203012762-022062715-pi29DxjWV7cTCy1mnn/G7w%3D%3D; b_nut=100; fingerprint=17deff6fd7526e216ffda059d2f8e5b5; buvid_fp_plain=undefined; rpdid=|(u~)l~~lk|Y0J'uYYJ|lluul; DedeUserID=102664436; DedeUserID__ckMd5=e06276c0e8d91488; buvid_fp=9a65cb139bc7d5fce21895a86694fc41; fingerprint3=835fd079c23731c2fb89f1d9ef9f3bd6; b_ut=5; nostalgia_conf=-1; CURRENT_QUALITY=80; CURRENT_BLACKGAP=0; CURRENT_FNVAL=4048; bp_video_offset_102664436=713881533946003500; innersign=0; b_lsid=237106D88_183EB187A71; SESSDATA=bc1fb84e%2C1681648597%2Cc3e56%2Aa1; bili_jct=3274cfd4a326557d447fbc9e37bf6c7f; sid=8aj1tn5x
+
+
+###
+GET http://api.bilibili.com/x/player/playurl?bvid=BV1U34y1R7gM&cid=455794260&fnver=0&fourk=1&fnval=1040&qn=127
+#Cookie: bili_jct=c286c4e10900293d8c1d9c6fb3872196;DedeUserID=204700919;gourl=http%3A%2F%2Fwww.bilibili.com;Expires=15551000;DedeUserID__ckMd5=427a3d38a2f2f73b;SESSDATA=33732820%2C1675171069%2Cbd46f%2A81;
+Cookie: l=v; PVID=1; buvid3=F10A9E92-166F-D7B0-9492-7A294A427BF241784infoc; i-wanna-go-back=-1; _uuid=A1018A103F-9DFD-7F110-5166-9106B33CDDA10743106infoc; buvid4=51636527-B758-B365-5058-48023AA5203012762-022062715-pi29DxjWV7cTCy1mnn/G7w%3D%3D; b_nut=100; fingerprint=17deff6fd7526e216ffda059d2f8e5b5; buvid_fp_plain=undefined; rpdid=|(u~)l~~lk|Y0J'uYYJ|lluul; DedeUserID=102664436; DedeUserID__ckMd5=e06276c0e8d91488; buvid_fp=9a65cb139bc7d5fce21895a86694fc41; fingerprint3=835fd079c23731c2fb89f1d9ef9f3bd6; b_ut=5; nostalgia_conf=-1; CURRENT_QUALITY=80; CURRENT_BLACKGAP=0; CURRENT_FNVAL=4048; bp_video_offset_102664436=713881533946003500; innersign=0; b_lsid=237106D88_183EB187A71; SESSDATA=bc1fb84e%2C1681648597%2Cc3e56%2Aa1; bili_jct=3274cfd4a326557d447fbc9e37bf6c7f; sid=8aj1tn5x

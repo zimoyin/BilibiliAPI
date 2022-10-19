@@ -55,7 +55,8 @@ public class QN {
         if (qn == P4k_cookie_vip) {
             val.put("128", "128");
             val.put("fourk", "1");
-            val.put("fnval", "128");
+//            val.put("fnval", "128");
+            val.put("fnval", "120");
         }
 
         if (qn == HDR_cookie_vip) {

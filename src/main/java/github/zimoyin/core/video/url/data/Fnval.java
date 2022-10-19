@@ -39,16 +39,46 @@ public class Fnval {
     public HashMap<String, String> getVal(HashMap<String, String> val) {
         //QN里面传来的fnval，如果有这里需要合并下
         String fnval = val.get("fnval");
-        //是否存在需要组合的数组
+        //是否存在需要组合的数组（这是个败笔，最新系统中没有这种情况出现了 直接 fnval+VideoFormat 的值返回即可）
         if (fnval != null) {
             if (fnval.split("|").length >= 2) {
-                //组合功能需要使用OR(|)运算结合一下数值,例如请求dash格式且需要HDR的视频流，则fnval=16|64=80
-                String[] split = fnval.split("|");
+                //组合功能需要使用OR(|)运算结合一下数值
+                String[] split = fnval.split("\\|");
                 int i = 0;
                 for (String str : split) {
                     i += Integer.parseInt(str);
                 }
-                fnval = VideoFormat + fnval + "=" + i;
+                fnval = String.valueOf(VideoFormat + Integer.parseInt(fnval));
+            } else {
+                if (Integer.parseInt(fnval) + VideoFormat != 0) {
+                    //组合功能需要使用OR(|)运算结合一下数值，例如请求dash格式且需要HDR的视频流，则fnval=16|64=80
+                    fnval = String.valueOf(VideoFormat + Integer.parseInt(fnval));
+                }
+            }
+        } else {
+            fnval = String.valueOf(VideoFormat);
+        }
+        val.put("fnval", fnval);
+        return null;
+    }
+
+    @Deprecated
+    public HashMap<String, String> getVal_old(HashMap<String, String> val) {
+        //QN里面传来的fnval，如果有这里需要合并下
+        String fnval = val.get("fnval");
+        //是否存在需要组合的数组
+        if (fnval != null) {
+            if (fnval.split("|").length >= 2) {
+                //组合功能需要使用OR(|)运算结合一下数值,例如请求dash格式且需要HDR的视频流，则fnval=16|64=80
+                String[] split = fnval.split("\\|");
+                int i = 0;
+                for (String str : split) {
+                    i += Integer.parseInt(str);
+                }
+//                fnval = VideoFormat + "|" + fnval + "=" + (i+VideoFormat);
+                fnval = String.valueOf(VideoFormat) + "|" + fnval + "=" + (VideoFormat + Integer.parseInt(fnval));
+                //原代码
+//                fnval = VideoFormat  + fnval + "=" + i;
             } else {
                 if (Integer.parseInt(fnval) + VideoFormat != 0) {
                     //组合功能需要使用OR(|)运算结合一下数值，例如请求dash格式且需要HDR的视频流，则fnval=16|64=80

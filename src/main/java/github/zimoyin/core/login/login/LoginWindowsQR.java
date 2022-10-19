@@ -47,12 +47,11 @@ public class LoginWindowsQR extends Application {
                 //设置全局第二Cookie
                 GlobalCookie.getInstance().setCookie(cookie);
                 //卸载窗体
-                Platform.runLater(() -> stage.close());
+                Platform.runLater(stage::close);
             }catch (Exception e){
                 throw new RuntimeException("无法登录",e);
             }
         }).start();
-
     }
 
 
