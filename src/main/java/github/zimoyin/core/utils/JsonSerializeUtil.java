@@ -233,7 +233,6 @@ public class JsonSerializeUtil {
 
     /**
      * json解析类
-     * 不应该放在这里，下次移出去
      */
     public static class Path {
 

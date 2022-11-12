@@ -22,6 +22,7 @@ import java.util.concurrent.Future;
  * 如何获取下载地址：不需要向类里面传入下载地址，他会自己生成。如果要获取请get以下对象（根据需要）:urlPojo、durlDownloadObj、dashDownloadObj
  * bug：无法并发（指多次调用download等方法）下载多任务（控制器失效，下载文件字节块丢失）,控制器在使用非多线程下载时会报错
  */
+@Deprecated
 @Data
 public class VideoDownload extends VideoDownloadAbs {
 
@@ -354,6 +355,7 @@ public class VideoDownload extends VideoDownloadAbs {
      * 是否运行下载
      */
     public boolean isNotDownload() {
+        System.out.println(urlPojo);
         return urlPojo.getCode() != 0;
     }
 

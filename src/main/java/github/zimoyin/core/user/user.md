@@ -105,12 +105,12 @@ github.zimoyin.core.user.state.ContributionStat
 github.zimoyin.core.user.pojo.state
 
 #### 用户关系（未写）
-获取用户的粉丝信息（前250个）：github.zimoyin.core.user.userinfo.UserFans
-获取用户的关注信息：github.zimoyin.core.user.userinfo.UserFollow
-其他关注信息情况：未实现（以后按需求酌情实现）
-黑名单：未实现（以后按需求酌情实现）
-操作用户关系，如关注等：未实现（以后按需求酌情实现）
-关注分组：未实现（以后按需求酌情实现）
+获取用户的粉丝信息（前250个）：github.zimoyin.core.user.userinfo.UserFans  
+获取用户的关注信息：github.zimoyin.core.user.userinfo.UserFollow  
+其他关注信息情况：未实现（以后按需求酌情实现）  
+黑名单：未实现（以后按需求酌情实现）  
+操作用户关系，如关注等：未实现（以后按需求酌情实现）  
+关注分组：未实现（以后按需求酌情实现）  
 #### 用户空间（未实现）
-视频 、收藏 、订阅等
-以后按需求酌情实现
+视频 、收藏 、订阅等  
+以后按需求酌情实现  

@@ -31,6 +31,7 @@ import java.util.concurrent.Future;
  * dash格式视频下载器，并提供了合并方法 （禁止用户创建该类实例，应该通过VideoDownload类 使用该类）
  */
 @lombok.Data
+@Deprecated
 public class WebDashVideoDownload {
     private volatile VideoURLJsonRoot json;
     private volatile VideoURLJsonRoot.Data data;

@@ -31,6 +31,7 @@ import java.util.concurrent.Future;
  *  5. 对于互动视频，请构建 ID时，传入bv与cid。对于互动视频cid请见 InteractVideoInfo.class
  */
 @Data
+@Deprecated
 public abstract class VideoDownloadAbs {
 
 

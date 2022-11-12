@@ -15,6 +15,7 @@ import java.util.HashMap;
 /**
  * 视频ID
  */
+@Deprecated
 public class ID {
     public ID() {
     }

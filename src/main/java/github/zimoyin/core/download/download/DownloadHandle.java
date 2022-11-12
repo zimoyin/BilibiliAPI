@@ -1,6 +1,4 @@
-package github.zimoyin.core.video.download;
-
-import java.util.HashMap;
+package github.zimoyin.core.download.download;
 
 
 /**

@@ -92,6 +92,8 @@
 
     <!-- logger 定义 -->
     <Loggers>
+        <!--禁止打印该包下的日志-->
+        <logger name="io.netty" level="ERROR"/>
         <!-- 使用 rootLogger 配置 日志级别 level="trace" -->
         <!--<Root level="trace">-->
         <Root level="debug">

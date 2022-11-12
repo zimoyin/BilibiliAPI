@@ -7,6 +7,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+@Deprecated
 public class FFmpeg {
     /**
      * ffmpeg 位置

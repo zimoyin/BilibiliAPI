@@ -92,7 +92,7 @@ public class IDConvert {
      * Av转为CID
      * @return
      */
-    public static String AvToCID(String av) throws CodeException, IOException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException {
+    public static String AvToCID(String av) throws IOException {
         return BvToCID(AvToBv(av));
     }
 
@@ -102,7 +102,7 @@ public class IDConvert {
      * @return
      * @throws Exception
      */
-    public static String BvToCID(String bv) throws IOException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException, CodeException {
+    public static String BvToCID(String bv) throws IOException {
         final String CID_URL_TEMP = "https://api.bilibili.com/x/player/pagelist?bvid=%s&jsonp=jsonp";
         String url = String.format(CID_URL_TEMP, bv);
         HttpClientResult httpClientResult = HttpClientUtils.doGet(url);
@@ -120,7 +120,8 @@ public class IDConvert {
      * @return
      * @throws Exception
      */
-    public static String BvToCID(String bv,int pageNum) throws IOException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException, CodeException {
+    @Deprecated
+    public static String BvToCID(String bv,int pageNum) throws IOException {
         HashMap<Integer, Long> map = BvToCIDs(bv);
         final long[] cid = {0};
         map.forEach((integer, aLong) -> {
@@ -138,7 +139,7 @@ public class IDConvert {
      * @return HashMap<Integer, Long> 当前p对于的cid
      * @throws Exception
      */
-    public static HashMap<Integer, Long> BvToCIDs(String bv) throws IOException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException, CodeException {
+    public static HashMap<Integer, Long> BvToCIDs(String bv) throws IOException {
         HashMap<Integer, Long> cidMap = new HashMap<Integer, Long>();
         VideoInfo videoInfo = new VideoInfo();
 //        WEBVideoINFOJsonRootBean b = videoInfo.getInfo("BV1PE411i7CV");

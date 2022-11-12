@@ -8,6 +8,7 @@ import java.util.HashMap;
  * 视频格式
  */
 @ToString
+@Deprecated
 public class Fnval {
     /**
      * flv格式	仅H.264编码，部分老视频存在分段现象，与其他 VideoFormat 互斥

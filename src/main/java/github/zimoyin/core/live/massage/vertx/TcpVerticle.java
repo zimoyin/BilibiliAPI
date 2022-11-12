@@ -5,6 +5,7 @@ import github.zimoyin.core.cookie.Cookie;
 import github.zimoyin.core.live.massage.LiveMassageHandle;
 import github.zimoyin.core.live.massage.data.Massage;
 import github.zimoyin.core.live.massage.MassageStreamInfo;
+import github.zimoyin.core.live.pojo.message.LiveMessageJsonRootBean;
 import github.zimoyin.core.live.pojo.message.host.DanmuInfoJsonRootBean;
 import github.zimoyin.core.live.pojo.message.host.Host;
 import github.zimoyin.core.utils.ZLibUtil;
@@ -188,12 +189,16 @@ public class TcpVerticle extends AbstractVerticle {
             massage.setHot(this.hot);
             //解压信息
             analyzeData(buffer.getBytes(), massage);
-            //发送事件
-            if (handles != null) {
-                for (LiveMassageHandle handle : handles) {
-                    handle.handle(massage);
-                }
+            //变量命令类型，判断是否在列表中
+            for (String command : massage.getCommands()) {
+                LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
+                boolean success = false;
+                for (Massage.MessageType type : Massage.MessageType.values())
+                    if (!bean.getCmd().isEmpty() && bean.getCmd().equalsIgnoreCase(type.name())) success = true;
+                if (!success) logger.warn("不存在的命令指令: {}",bean.getCmd());
             }
+            //发送事件
+            if (handles != null) for (LiveMassageHandle handle : handles) handle.handle(massage);
         });
         //链接关闭
         result.closeHandler(handler -> {

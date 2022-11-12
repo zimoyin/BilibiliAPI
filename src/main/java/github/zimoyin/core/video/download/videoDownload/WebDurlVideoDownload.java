@@ -23,6 +23,7 @@ import java.util.concurrent.*;
  *
  * Durl 格式视频下载（禁止用户创建该类实例，应该通过VideoDownload类 使用该类）
  */
+@Deprecated
 @lombok.Data
 public class WebDurlVideoDownload{
     private volatile VideoURLJsonRoot json;

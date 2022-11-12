@@ -24,6 +24,7 @@ import java.util.HashMap;
  * 视频流（源）信息，可以获取视频的URL，但是不能直接下载，因为下载视频需要防盗链("referer"为"https://www.bilibili.com")并且部分类型视频需要cookie才能下载
  * @API: https://github.com/SocialSisterYi/bilibili-API-collect
  */
+@Deprecated
 public class VideoURLFormat {
     /**
      * <h2>获取视频流URL（web端</h2>

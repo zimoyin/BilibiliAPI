@@ -1,4 +1,4 @@
-package github.zimoyin.core.video.download;
+package github.zimoyin.core.download.download;
 
 import lombok.Data;
 

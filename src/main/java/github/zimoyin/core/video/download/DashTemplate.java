@@ -6,6 +6,7 @@ import lombok.Data;
  * dash 格式视频下载匹配模板，根据模板下载符合要求的视频
  */
 @Data
+@Deprecated
 public class DashTemplate {
     /**
      * 视频/音频文件格式，音频与视频格式应保持一直，并且音频使用的是视频的格式

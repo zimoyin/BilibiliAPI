@@ -1,5 +1,6 @@
 package github.zimoyin.core.video.url.data;
 
+import github.zimoyin.core.music.url.MusicURLFormat;
 import lombok.ToString;
 
 import java.util.HashMap;
@@ -7,6 +8,7 @@ import java.util.HashMap;
 /**
  * 视频清晰度
  */
+@Deprecated
 @ToString
 public class QN {
     public static final int P204 = 6;//204P 极速	 仅mp4方式支持

@@ -68,7 +68,6 @@ public class DateFormat {
         SimpleDateFormat sdf2 = new SimpleDateFormat("YYYY-MM") ;        // 实例化模板对象
         String format = sdf2.format(calendar.getTime());
         System.out.println(format);
-
     }
 
 

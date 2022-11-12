@@ -1,23 +1,35 @@
 import github.zimoyin.core.cookie.GlobalCookie;
-import github.zimoyin.core.login.Login;
-import github.zimoyin.core.login.login.LoginImpl;
-import github.zimoyin.core.video.download.VideoDownloadSetting;
-import github.zimoyin.core.video.url.VideoURLFormat;
-import github.zimoyin.core.video.url.data.Fnval;
-import github.zimoyin.core.video.url.data.QN;
-import github.zimoyin.core.video.url.pojo.VideoURLJsonRoot;
+import github.zimoyin.core.download.download.VideoDownload;
+import github.zimoyin.core.download.download.setting.DownloadVideoInfo;
+import github.zimoyin.core.download.download.setting.DownloadVideoSetting;
+import github.zimoyin.core.download.param.Fnval;
+import github.zimoyin.core.download.param.ParamBuilder;
+import github.zimoyin.core.download.param.QN;
+import github.zimoyin.core.exception.CookieNotFoundException;
+import org.apache.http.HttpException;
+
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.security.KeyManagementException;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
-        System.out.println(GlobalCookie.getInstance().toStringV2());
-        VideoDownloadSetting videoDownloadSetting = new VideoDownloadSetting("BV1U34y1R7gM");
-        videoDownloadSetting.setFnval(Fnval.VideoFormat_dash);
-        videoDownloadSetting.setQn(QN.P8k_cookie_vip);
-        videoDownloadSetting.setPreview1080p(false);
+    public static void main(String[] args) throws IOException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException, HttpException, CookieNotFoundException {
+        long cid = 878104053;
+        String bv = "BV1Ce4y147dS";
 
-        VideoURLFormat videoURLFormat = new VideoURLFormat(GlobalCookie.getInstance());
-        VideoURLJsonRoot jsonPOJO = videoURLFormat.getJsonPOJO(videoDownloadSetting);
-        System.out.println(jsonPOJO.getUri());
-        System.out.println(jsonPOJO);
+        ParamBuilder builder = new ParamBuilder()
+                .append(bv)
+//                .append(cid)
+                .append(QN.P306)
+                .append(Fnval.Dash);
+
+        DownloadVideoSetting setting = new DownloadVideoSetting(builder);
+        setting.setCookie(GlobalCookie.getInstance());
+        DownloadVideoInfo page = setting.getPage();
+        System.out.println(page.getTitle());
+
+        new VideoDownload(setting).download();
     }
 }

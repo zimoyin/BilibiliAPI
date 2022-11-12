@@ -245,7 +245,10 @@ public class HttpClientUtils {
      * @param url     请求地址
      * @param headers 请求头集合
      * @param params  请求参数集合
+     *                //文件或字符串等
      *                HttpEntity reqEntity = MultipartEntityBuilder.create().addPart("file", bin).addPart("comment", comment).build();
+     *                //字符串 (注意设置请求头为test或者json："Content-Type", "application/json")
+     *                HttpEntity reqEntity = StringEntity("json/text");
      * @return
      * @throws Exception
      * @body 二进制文件参数，用于上传二进制文件，构建方式<br>

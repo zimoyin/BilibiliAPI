@@ -8,10 +8,8 @@ import lombok.Data;
 import org.apache.logging.log4j.LogManager;
 
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.RandomAccessFile;
+import java.io.*;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.concurrent.Callable;
@@ -34,7 +32,7 @@ public class VideoDownloadUtil {
         this.bv = bv;
     }
 
-//    private static Logger logger = LoggerFactory.getLogger(VideoDownloadUtil.class);
+    //    private static Logger logger = LoggerFactory.getLogger(VideoDownloadUtil.class);
     private final static org.apache.logging.log4j.Logger logger = LogManager.getLogger(VideoDownloadUtil.class);
 
     /**
@@ -64,9 +62,9 @@ public class VideoDownloadUtil {
 //        logger.debug("=========================================================");
 
         if (threadCount != downloadControl.getThreadCount() &&
-                downloadControl.getFinalThreadCount() >= downloadControl.getThreadCount()){
-            throw new DownloadException("禁止下载 开启文件下载的线程数 "+threadCount+" 与控制器中描述的线程数"+downloadControl.getThreadCount()+
-                    "不符,并且控制器中描述的最终线程数"+downloadControl.getFinalThreadCount()+"小于描述线程数 "+downloadControl.getThreadCount());
+                downloadControl.getFinalThreadCount() >= downloadControl.getThreadCount()) {
+            throw new DownloadException("禁止下载 开启文件下载的线程数 " + threadCount + " 与控制器中描述的线程数" + downloadControl.getThreadCount() +
+                    "不符,并且控制器中描述的最终线程数" + downloadControl.getFinalThreadCount() + "小于描述线程数 " + downloadControl.getThreadCount());
         }
 
         //将文件下载线程池放入控制器中进行托管
@@ -111,8 +109,7 @@ public class VideoDownloadUtil {
                                                   HashMap<String, String> header, String bv,
                                                   DownloadControl control) throws IOException {
         //构建单次请求头
-        HashMap<String, String> headerCope = new HashMap<>();
-        headerCope.putAll(header);
+        HashMap<String, String> headerCope = new HashMap<>(header);
         headerCope.put("Range", "bytes=" + start + "-" + end);
         //下载结果对象
         DownloadResult downloadResult = new DownloadResult();
@@ -149,11 +146,11 @@ public class VideoDownloadUtil {
 
                 randFile.write(b, 0, code);
                 len += code;
-                count+=code;
+                count += code;
                 if (control != null) {
                     //如果出现停止下载标准就停止下载
                     if (control.isStop()) break;
-                    control.setLength(code,count,end-start);
+                    control.setLength(code, count, end - start);
                 }
             }
         } catch (Exception e) {
@@ -200,4 +197,38 @@ public class VideoDownloadUtil {
         }
     }
 
+
+    public static void downloadFile(String path, URL url) throws IOException {
+        //TODO
+        InputStream inputStream = null;
+        HttpClientResult result;
+        try {
+            result = HttpClientUtils.doGet(url.toString());
+            inputStream = result.getInputStream();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        try (FileOutputStream outputStream = new FileOutputStream(path)) {
+            int code = 0;
+            byte[] bytes = new byte[1024 * 1021 * 3];
+            while ((code = inputStream.read(bytes)) != -1) {
+                outputStream.write(bytes, 0, code);
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }finally {
+            try {
+                result.release();
+            } catch (IOException e) {
+                throw e;
+            }
+            try {
+                inputStream.close();
+            } catch (IOException e) {
+                throw e;
+            }
+        }
+
+    }
 }

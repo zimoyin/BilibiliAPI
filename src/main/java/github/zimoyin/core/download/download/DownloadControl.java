@@ -1,13 +1,10 @@
-package github.zimoyin.core.video.download;
+package github.zimoyin.core.download.download;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.apache.logging.log4j.LogManager;
 
-
 import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 

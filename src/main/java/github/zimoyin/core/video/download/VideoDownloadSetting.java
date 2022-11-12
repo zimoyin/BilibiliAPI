@@ -34,6 +34,7 @@ import java.util.function.Consumer;
  * 对于互动视频，请手动指定一个模块的cid这样才可以下载，至于自动下载所有p视频、下载指定范围视频p与下载所有模块视频，请找上层实现
  */
 @Data
+@Deprecated
 public class VideoDownloadSetting {
     private ArrayList<EpisodesInfo> episodesList = new ArrayList<EpisodesInfo>();
     private String id;
@@ -120,13 +121,16 @@ public class VideoDownloadSetting {
 
     public VideoDownloadSetting() {
     }
+
     public VideoDownloadSetting(Cookie cookie) {
         setCookie(cookie);
     }
-    public VideoDownloadSetting(String id,Cookie cookie) {
+
+    public VideoDownloadSetting(String id, Cookie cookie) {
         setID(id);
         setCookie(cookie);
     }
+
     /**
      * 视频id 可以是 ssid avid bvid epid
      *
@@ -170,11 +174,9 @@ public class VideoDownloadSetting {
                 break;
             case "EP":
                 this.ep = id;
-                this.setPage(0);
                 break;
             case "SS":
                 this.ssid = id;
-                this.setPage(0);
                 break;
             default:
                 throw new IllegalArgumentException("不合法的id，无法判断的id类型");
@@ -208,18 +210,18 @@ public class VideoDownloadSetting {
         buildFileDirectory();
         //剧集
         try {
-            isFanju=buildFanJu();
+            isFanju = buildFanJu();
         } catch (HttpException e) {
             throw new RuntimeException(e);
         }
         //视频信息对象
         buildVideoInfo();
         //视频的所有page数
-        if (!isFanju)buildPageCount(this.videoInfo);
+        if (!isFanju) buildPageCount(this.videoInfo);
         //当前p名称
-        if (!isFanju)buildPageName(this.videoInfo);
+        if (!isFanju) buildPageName(this.videoInfo);
         //page到 cid 的映射
-        if (!isFanju)buildCidMap(this.videoInfo);
+        if (!isFanju) buildCidMap(this.videoInfo);
 
         //设置cid
         buildCid();
@@ -240,9 +242,9 @@ public class VideoDownloadSetting {
         //文件保存路径构建
         buildFileDirectory();
         //当前p名称
-        if (episodesList.size() == 0)buildPageName(this.videoInfo);
+        if (episodesList.size() == 0) buildPageName(this.videoInfo);
         //设置bv号
-        if (episodesList.size() > 0)this.setBv(episodesList.get(this.getPage()-1).getBvid());
+        if (episodesList.size() > 0) this.setBv(episodesList.get(this.getPage() - 1).getBvid());
         buildCid();
         //文件名称
         buildFileName(this.videoInfo);
@@ -394,8 +396,6 @@ public class VideoDownloadSetting {
     }
 
 
-
-
     /**
      * 如果是番剧就构建
      */
@@ -418,7 +418,7 @@ public class VideoDownloadSetting {
             long ecid = episodes0.getCid();
             String ename = episodes0.getShare_copy();
             String epage = episodes0.getTitle();
-            cidMap.put(Integer.parseInt(epage),ecid);
+            cidMap.put(Integer.parseInt(epage), ecid);
             episodesList.add(new EpisodesInfo(Integer.parseInt(epage), result.getEpisodes().size(), ecid, ebvid, ename));
         });
         return true;
@@ -472,7 +472,7 @@ public class VideoDownloadSetting {
 
     @Data
     @NoArgsConstructor
-    static class EpisodesInfo {
+    public static class EpisodesInfo {
         private int page;
         private int pageCount;
         private long cid;
