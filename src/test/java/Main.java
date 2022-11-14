@@ -1,11 +1,11 @@
-import github.zimoyin.core.cookie.GlobalCookie;
-import github.zimoyin.core.video.download.download.VideoDownload;
-import github.zimoyin.core.video.download.setting.info.DownloadVideoInfo;
-import github.zimoyin.core.video.download.setting.DownloadVideoSetting;
-import github.zimoyin.core.video.url.param.Fnval;
-import github.zimoyin.core.video.url.param.ParamBuilder;
-import github.zimoyin.core.video.url.param.QN;
-import github.zimoyin.core.exception.CookieNotFoundException;
+import github.zimoyin.bili.cookie.GlobalCookie;
+import github.zimoyin.bili.video.download.download.VideoDownload;
+import github.zimoyin.bili.video.download.setting.info.DownloadVideoInfo;
+import github.zimoyin.bili.video.download.setting.DownloadVideoSetting;
+import github.zimoyin.bili.video.url.param.Fnval;
+import github.zimoyin.bili.video.url.param.ParamBuilder;
+import github.zimoyin.bili.video.url.param.QN;
+import github.zimoyin.bili.exception.CookieNotFoundException;
 import org.apache.http.HttpException;
 
 import java.io.IOException;
