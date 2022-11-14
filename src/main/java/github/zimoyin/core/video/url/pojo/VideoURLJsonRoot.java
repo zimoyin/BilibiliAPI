@@ -1,6 +1,5 @@
 package github.zimoyin.core.video.url.pojo;
 
-import github.zimoyin.core.video.download.VideoDownload;
 
 import java.net.URI;
 import java.net.URL;
@@ -86,17 +85,6 @@ public class VideoURLJsonRoot {
     }
 
 
-    /**
-     * 获取视频下载器
-     *
-     * @return
-     */
-    @Deprecated
-    public VideoDownload getVideoDownload() {
-        return new VideoDownload(this.getBv());
-    }
-
-
 
     /**
      * data对象，里面的字段只保留了部分
@@ -178,4 +166,3 @@ public class VideoURLJsonRoot {
         }
     }
 }
-

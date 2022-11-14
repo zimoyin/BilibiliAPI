@@ -1,7 +1,6 @@
-package github.zimoyin.core.download.download;
+package github.zimoyin.core.video.download.download;
 
 import github.zimoyin.core.exception.DownloadException;
-import github.zimoyin.core.video.download.DownloadResult;
 
 import java.util.ArrayList;
 import java.util.concurrent.Future;

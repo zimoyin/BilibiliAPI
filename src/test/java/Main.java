@@ -1,10 +1,10 @@
 import github.zimoyin.core.cookie.GlobalCookie;
-import github.zimoyin.core.download.download.VideoDownload;
-import github.zimoyin.core.download.download.setting.DownloadVideoInfo;
-import github.zimoyin.core.download.download.setting.DownloadVideoSetting;
-import github.zimoyin.core.download.param.Fnval;
-import github.zimoyin.core.download.param.ParamBuilder;
-import github.zimoyin.core.download.param.QN;
+import github.zimoyin.core.video.download.download.VideoDownload;
+import github.zimoyin.core.video.download.setting.info.DownloadVideoInfo;
+import github.zimoyin.core.video.download.setting.DownloadVideoSetting;
+import github.zimoyin.core.video.url.param.Fnval;
+import github.zimoyin.core.video.url.param.ParamBuilder;
+import github.zimoyin.core.video.url.param.QN;
 import github.zimoyin.core.exception.CookieNotFoundException;
 import org.apache.http.HttpException;
 
@@ -25,11 +25,13 @@ public class Main {
                 .append(QN.P306)
                 .append(Fnval.Dash);
 
-        DownloadVideoSetting setting = new DownloadVideoSetting(builder);
+        DownloadVideoSetting setting = new DownloadVideoSetting("ep674245");
         setting.setCookie(GlobalCookie.getInstance());
         DownloadVideoInfo page = setting.getPage();
         System.out.println(page.getTitle());
 
-        new VideoDownload(setting).download();
+        VideoDownload download = new VideoDownload(setting);
+        download.setListener(info -> System.out.print("\r" + info.getThreadName() + ": " + info));
+        download.downloadAsynchronous();
     }
 }

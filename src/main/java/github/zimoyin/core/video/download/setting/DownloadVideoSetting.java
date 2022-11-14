@@ -1,10 +1,12 @@
-package github.zimoyin.core.download.download.setting;
+package github.zimoyin.core.video.download.setting;
 
 import github.zimoyin.core.cookie.Cookie;
-import github.zimoyin.core.download.param.ParamBuilder;
-import lombok.*;
+import github.zimoyin.core.video.download.setting.info.DownloadVideoID;
+import github.zimoyin.core.video.download.setting.info.DownloadVideoInfo;
+import github.zimoyin.core.video.download.setting.info.DownloadVideoInfoList;
+import github.zimoyin.core.video.url.param.ParamBuilder;
+import lombok.Getter;
 
-import java.io.File;
 import java.util.function.Consumer;
 
 public class DownloadVideoSetting extends DownloadVideoSettingAbs {
@@ -27,12 +29,6 @@ public class DownloadVideoSetting extends DownloadVideoSettingAbs {
     @Getter
     private DownloadVideoInfoList pages;
     private int page = 1;
-    @Getter
-    private String filePath = "./download/"; //文件夹位置
-
-    @Getter
-    @Setter
-    private int threadCount = 32;
 
     public DownloadVideoSetting(String ID) {
         this.ID = new DownloadVideoID(ID);
@@ -125,12 +121,5 @@ public class DownloadVideoSetting extends DownloadVideoSettingAbs {
         this.cookie = cookie;
         this.param.append(cookie);
         this.pages.setCookie(this.cookie);
-    }
-
-    public void setFilePath(String filePath) {
-        File file = new File(filePath);
-        if (file.exists() && file.isFile()) throw new IllegalStateException("请指定路径为文件夹");
-        boolean mkdirs = file.mkdirs();
-        this.filePath = filePath;
     }
 }

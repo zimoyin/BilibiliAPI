@@ -1,7 +1,5 @@
 package github.zimoyin.core.utils;
 
-import github.zimoyin.core.video.download.DownloadControl;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -31,24 +29,6 @@ public class IO {
         fileOutputStream.close();
     }
 
-    public static void toFile(InputStream inputStream, String path, DownloadControl control) throws IOException {
-        FileOutputStream fileOutputStream = new FileOutputStream(path);
-        byte[] b = new byte[65535/3*2];
-        int code = 0;
-        //累计下载大小
-        int size = 0;
-        while ((code = inputStream.read(b)) != -1) {
-            fileOutputStream.write(b, 0, code);
-            size+=code;
-            if (control != null){
-                if (control.isStop()) break;
-                control.setLength(code,size,control.getFileSize());
-            }
-        }
-        if (control != null) control.finish();
-        fileOutputStream.flush();
-        fileOutputStream.close();
-    }
 
     /**
      * 获取指定后缀的文件

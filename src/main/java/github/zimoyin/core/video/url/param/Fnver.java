@@ -1,4 +1,4 @@
-package github.zimoyin.core.download.param;
+package github.zimoyin.core.video.url.param;
 
 /**
  * fnver视频流版本标识

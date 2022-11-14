@@ -1,10 +1,10 @@
-package github.zimoyin.core.download.download.setting;
+package github.zimoyin.core.video.download.setting.info;
 
-import github.zimoyin.core.download.param.Fnval;
-import github.zimoyin.core.download.param.ParamBuilder;
-import github.zimoyin.core.download.param.QN;
-import github.zimoyin.core.download.url.VideoURLFormat;
-import github.zimoyin.core.download.url.VideoURLPreviewFormatP1080;
+import github.zimoyin.core.video.url.VideoURLFormat;
+import github.zimoyin.core.video.url.VideoURLPreviewFormatP1080;
+import github.zimoyin.core.video.url.param.Fnval;
+import github.zimoyin.core.video.url.param.ParamBuilder;
+import github.zimoyin.core.video.url.param.QN;
 import github.zimoyin.core.video.url.pojo.Dash;
 import github.zimoyin.core.video.url.pojo.Media;
 import github.zimoyin.core.video.url.pojo.VideoURLJsonRoot;

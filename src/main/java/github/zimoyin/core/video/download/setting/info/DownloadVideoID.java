@@ -1,4 +1,4 @@
-package github.zimoyin.core.download.download.setting;
+package github.zimoyin.core.video.download.setting.info;
 
 import github.zimoyin.core.utils.IDConvert;
 import lombok.Getter;

@@ -1,8 +1,6 @@
 package github.zimoyin.core.utils.net.httpclient;
 
 import github.zimoyin.core.utils.IO;
-import github.zimoyin.core.video.download.DownloadControl;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.apache.http.Header;
@@ -135,15 +133,6 @@ public class HttpClientResult implements Serializable {
         release();
     }
 
-    /**
-     * 保存到文件中
-     *
-     * @param filePath
-     */
-    public void toFile(String filePath, DownloadControl control) throws IOException {
-        IO.toFile(getInputStream(), filePath,control);
-        release();
-    }
 
     public CloseableHttpClient getHttpClient() {
         return httpClient;

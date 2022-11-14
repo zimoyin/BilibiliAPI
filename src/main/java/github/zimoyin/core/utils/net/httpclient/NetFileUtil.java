@@ -30,8 +30,6 @@ public class NetFileUtil {
             //根据响应获取文件大小
             length = urlcon.getContentLength();
             urlcon.disconnect();
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

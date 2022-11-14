@@ -13,23 +13,15 @@ import github.zimoyin.core.favorites.operation.ModifyFavorite;
 import github.zimoyin.core.favorites.pojo.conter.FavoriteContentListJsonRoot;
 import github.zimoyin.core.favorites.pojo.conter.Medias;
 import github.zimoyin.core.favorites.pojo.info.FavoriteInfoJsonRoot;
-import github.zimoyin.core.favorites.pojo.userfavorites.Data;
 import github.zimoyin.core.favorites.pojo.userfavorites.FavList;
 import github.zimoyin.core.favorites.pojo.userfavorites.UserFavoritesJsonRoot;
 import github.zimoyin.core.user.pojo.search.Result;
 import github.zimoyin.core.user.up.SearchUser;
-import github.zimoyin.core.video.download.DownloadResult;
-import github.zimoyin.core.video.download.VideoDownload;
-import github.zimoyin.core.video.download.VideoDownloadSetting;
-import github.zimoyin.core.video.url.data.Fnval;
+import github.zimoyin.core.video.download.download.DownloadResult;
 import org.apache.logging.log4j.LogManager;
 
 
 import java.io.IOException;
-import java.net.URISyntaxException;
-import java.security.KeyManagementException;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -401,6 +393,7 @@ public class FavoriteUtil {
      * @param title    收藏夹标题
      * @throws IOException
      */
+    @Deprecated
     public ArrayList<Future<DownloadResult>> download(String username, String title) throws IOException {
         return download(getFavoriteID(username, title));
     }
@@ -412,6 +405,7 @@ public class FavoriteUtil {
      * @param title 收藏夹标题
      * @throws IOException
      */
+    @Deprecated
     public ArrayList<Future<DownloadResult>> download(long mid, String title) throws IOException {
         return download(getFavoriteID(mid, title));
     }
@@ -422,47 +416,11 @@ public class FavoriteUtil {
      * @param id
      * @throws IOException
      */
+    @Deprecated
     public ArrayList<Future<DownloadResult>> download(long id) throws IOException {
-        ArrayList<Future<DownloadResult>> futures = new ArrayList<Future<DownloadResult>>();
-        ArrayList<Medias> list = getUserFavoriteList(id);
-        for (Medias medias : list) {
-            if (isStop){
-                logger.info("停止下载收藏夹({})内的视频",id);
-                this.isStop = false;
-                return futures;
-            }
-            String bvid = medias.getBvid();
-            logger.info("开始下载：{}({})", medias.getTitle(), medias.getBvid());
-            ArrayList<Future<DownloadResult>> download = download(bvid);
-            futures.addAll(download);
-            logger.info("下载完成：{}({})", medias.getTitle(), medias.getBvid());
-        }
-        return futures;
+        throw new IllegalStateException("未实现");
     }
 
-    /**
-     * 具体下载逻辑
-     * @param bv
-     * @return
-     */
-    private ArrayList<Future<DownloadResult>> download(String bv) {
-        ArrayList<Future<DownloadResult>> futures0 = new ArrayList<Future<DownloadResult>>();
-        VideoDownloadSetting setting = new VideoDownloadSetting(bv);
-        setting.setPreview1080p(true);
-        setting.setOverride(false);
-        VideoDownload videoDownload = new VideoDownload();
-        videoDownload.setSetting(setting);
-
-        for (int i = 0; i < setting.getPageCount(); i++) {
-            logger.info("开始下载：第 {}p", i + 1);
-            setting.setPage(i + 1);
-            ArrayList<Future<DownloadResult>> futures = videoDownload.downloadThread(true);
-            futures0.addAll(futures);
-            logger.info("下载完成：第 {}p", i + 1);
-        }
-//        ArrayList<Future<DownloadResult>> futures = videoDownload.downloadThread(true);
-        return futures0;
-    }
 
     /**
      * 停止下载下一个视频的下载（不会立刻暂停的）

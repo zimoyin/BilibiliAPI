@@ -1,4 +1,4 @@
-package github.zimoyin.core.download.param;
+package github.zimoyin.core.video.url.param;
 
 /**
  * fnval视频流格式标识

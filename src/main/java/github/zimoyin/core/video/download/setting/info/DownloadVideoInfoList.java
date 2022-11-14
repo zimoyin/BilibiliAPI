@@ -1,10 +1,10 @@
-package github.zimoyin.core.download.download.setting;
+package github.zimoyin.core.video.download.setting.info;
 
 import github.zimoyin.core.cookie.Cookie;
-import github.zimoyin.core.download.param.ParamBuilder;
 import github.zimoyin.core.fanju.info.SeriesINFO;
 import github.zimoyin.core.fanju.pojo.info.seriesI.Episodes;
 import github.zimoyin.core.fanju.pojo.info.seriesI.SeriesJsonRootBean;
+import github.zimoyin.core.video.url.param.ParamBuilder;
 import github.zimoyin.core.video.info.VideoInfo;
 import github.zimoyin.core.video.info.pojo.info.WEBVideoINFOJsonRootBean;
 import github.zimoyin.core.video.info.pojo.info.data.Pages;
@@ -73,18 +73,6 @@ public class DownloadVideoInfoList {
                     count,
                     list.size()
             );
-//            //构建 ParamBuilder
-//            DownloadVideoID id = info.getID();
-//            ParamBuilder builder = new ParamBuilder()
-//                    .append(id.getBV())
-//                    .append(id.getCID())
-//                    .append(Param.getFourk())
-//                    .append(Param.getFnver())
-//                    .append(Param.getFnvals())
-//                    .append(Param.getQn())
-//                    .append(Param.getCookie());
-            //分发 ParamBuilder
-//            info.setParam(Param);
 
             Pages.add(info);
             count++;
@@ -94,27 +82,17 @@ public class DownloadVideoInfoList {
     private void getVideos() throws IOException {
         WEBVideoINFOJsonRootBean.Data data = new VideoInfo().getInfo(ID.getBV()).getData();
         String title = data.getTitle();
-        for (Pages page : data.getPages()) {
+        List<Pages> pages = data.getPages();
+        for (Pages page : pages) {
             DownloadVideoInfo info = new DownloadVideoInfo(
                     Param,
                     new DownloadVideoID(ID.getID(), page.getCid()),
-                    title + "#" + page.getPage() + "#" + page.getPart(),
+                    pages.size() > 1 ? title + "#" + page.getPage() + "#" + page.getPart() : title,
                     title,
                     page.getPart(),
                     page.getPage(),
                     data.getVideos()
             );
-            //构建 ParamBuilder
-//            DownloadVideoID id = info.getID();
-//            ParamBuilder builder = new ParamBuilder()
-//                    .append(id.getBV())
-//                    .append(id.getCID())
-//                    .append(Param.getFourk())
-//                    .append(Param.getFnver())
-//                    .append(Param.getFnvals())
-//                    .append(Param.getQn())
-//                    .append(Param.getCookie());
-//            info.setParam(Param);
 
             this.Pages.add(info);
         }

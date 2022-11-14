@@ -7,10 +7,6 @@ import github.zimoyin.core.utils.IDConvert;
 import github.zimoyin.core.utils.net.httpclient.HttpClientResult;
 import github.zimoyin.core.utils.net.httpclient.HttpClientUtils;
 import github.zimoyin.core.utils.net.httpclient.ShortURL;
-import github.zimoyin.core.video.download.DownloadResult;
-import github.zimoyin.core.video.download.VideoDownload;
-import github.zimoyin.core.video.download.VideoDownloadSetting;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.apache.logging.log4j.LogManager;
@@ -184,39 +180,7 @@ public class VideoCollection {
         return collectionInfo.getJsonPojo(mid);
     }
 
-    /**
-     * 下载合集内所有的视频
-     */
-    public void download() throws IOException {
-        for (Long aid : getInfo().getData().getAids()) {
-            String bv = IDConvert.AvToBv(String.valueOf(aid));
-            download(bv);
-        }
-    }
 
-    /**
-     * 具体下载逻辑
-     * @param bv
-     * @return
-     */
-    private ArrayList<Future<DownloadResult>> download(String bv) {
-        ArrayList<Future<DownloadResult>> futures0 = new ArrayList<Future<DownloadResult>>();
-        VideoDownloadSetting setting = new VideoDownloadSetting(bv);
-        setting.setPreview1080p(true);
-        setting.setOverride(false);
-        VideoDownload videoDownload = new VideoDownload();
-        videoDownload.setSetting(setting);
-
-        for (int i = 0; i < setting.getPageCount(); i++) {
-            logger.info("开始下载：第 {}p", i + 1);
-            setting.setPage(i + 1);
-            ArrayList<Future<DownloadResult>> futures = videoDownload.downloadThread(true);
-            futures0.addAll(futures);
-            logger.info("下载完成：第 {}p", i + 1);
-        }
-//        ArrayList<Future<DownloadResult>> futures = videoDownload.downloadThread(true);
-        return futures0;
-    }
     @Data
     @NoArgsConstructor
     public static class VideoItem {

@@ -1,15 +1,13 @@
-package github.zimoyin.core.download.param;
+package github.zimoyin.core.video.url.param;
 
 import github.zimoyin.core.cookie.Cookie;
-import github.zimoyin.core.download.download.setting.DownloadVideoID;
 import github.zimoyin.core.utils.IDConvert;
+import github.zimoyin.core.video.download.setting.info.DownloadVideoID;
 import lombok.Getter;
-import lombok.ToString;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Objects;
 
 @Getter
 public final class ParamBuilder {

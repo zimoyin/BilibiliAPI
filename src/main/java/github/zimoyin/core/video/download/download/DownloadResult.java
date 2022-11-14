@@ -1,4 +1,4 @@
-package github.zimoyin.core.download.download;
+package github.zimoyin.core.video.download.download;
 
 import lombok.Data;
 
@@ -6,7 +6,6 @@ import lombok.Data;
  * 多线程下载结果类
  */
 @Data
-@Deprecated
 public class DownloadResult {
     private String bv;
     /**
@@ -24,7 +23,7 @@ public class DownloadResult {
     /**
      * 下一次开始的位置
      */
-    private long start;
+    private long pointer;
 
     /**
      * 下载开始的位置

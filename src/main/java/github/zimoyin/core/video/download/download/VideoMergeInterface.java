@@ -1,4 +1,4 @@
-package github.zimoyin.core.download.download;
+package github.zimoyin.core.video.download.download;
 
 import java.io.File;
 import java.util.ArrayList;

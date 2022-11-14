@@ -5,6 +5,7 @@ import lombok.Data;
 import java.net.URL;
 import java.util.ArrayList;
 
+
 @Data
 public class Durl {
 
