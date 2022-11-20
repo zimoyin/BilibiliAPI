@@ -1,12 +1,10 @@
 package github.zimoyin.bili.barrage.barrage.video;
 
 
-
 import com.alibaba.fastjson.JSONObject;
 import github.zimoyin.bili.barrage.barrage.BarrageInterface;
 import github.zimoyin.bili.barrage.data.Barrage;
 import github.zimoyin.bili.utils.net.httpclient.HttpClientUtils;
-
 
 import java.util.ArrayList;
 import java.util.HashMap;

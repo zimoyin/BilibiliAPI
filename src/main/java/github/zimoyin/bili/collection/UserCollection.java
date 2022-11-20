@@ -18,8 +18,7 @@ public class UserCollection {
      */
     public UserCollectionListJsonRoot getJsonPojo(long mid) throws IOException {
         String page = getPage(mid);
-        UserCollectionListJsonRoot userCollectionListJsonRoot = JSONObject.parseObject(page, UserCollectionListJsonRoot.class);
-        return userCollectionListJsonRoot;
+        return JSONObject.parseObject(page, UserCollectionListJsonRoot.class);
     }
     /**
      * 返回用户创建的合集列表
@@ -29,8 +28,7 @@ public class UserCollection {
      */
     public UserCollectionListJsonRoot getJsonPojo(long mid, int pn) throws IOException {
         String page = getPage(mid, pn);
-        UserCollectionListJsonRoot userCollectionListJsonRoot = JSONObject.parseObject(page, UserCollectionListJsonRoot.class);
-        return userCollectionListJsonRoot;
+        return JSONObject.parseObject(page, UserCollectionListJsonRoot.class);
     }
     /**
      * 返回用户创建的合集列表
@@ -41,8 +39,7 @@ public class UserCollection {
      */
     public UserCollectionListJsonRoot getJsonPojo(long mid, int pn, int ps) throws IOException {
         String page = getPage(mid, pn, ps);
-        UserCollectionListJsonRoot userCollectionListJsonRoot = JSONObject.parseObject(page, UserCollectionListJsonRoot.class);
-        return userCollectionListJsonRoot;
+        return JSONObject.parseObject(page, UserCollectionListJsonRoot.class);
     }
     /**
      * 返回用户创建的合集列表

@@ -6,7 +6,6 @@ import github.zimoyin.bili.utils.net.httpclient.HttpClientResult;
 import github.zimoyin.bili.utils.net.httpclient.HttpClientUtils;
 import org.apache.logging.log4j.LogManager;
 
-
 import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Map;

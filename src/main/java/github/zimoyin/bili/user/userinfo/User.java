@@ -63,16 +63,6 @@ public class User {
     }
 
     public UserRootBean getPojo() throws HttpException {
-//        String page = null;
-//        try {
-//             page = getPage(mid);
-//        } catch (Exception e) {
-//            throw new HttpException("访问URL失败",e);
-//        }
-//        if (page == null) return null;
-//        UserRootBean bean = JSONObject.parseObject(page, UserRootBean.class);
-//        return bean;
-
         return getPojo(mid);
     }
 

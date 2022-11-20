@@ -13,7 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 public abstract class CInfo {
     /**
-     * 稿件
+     * 合集中的稿件（部分最多只有6个）
      */
     private List<Archives> archives;
     /**

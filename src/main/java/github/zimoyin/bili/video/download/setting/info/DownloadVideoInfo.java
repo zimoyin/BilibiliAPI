@@ -86,7 +86,7 @@ public class DownloadVideoInfo {
         if (param.getQn().getQn() > QN.P720.getQn() && param.getFnval() >= Fnval.Dash.getValue())
             throw new IllegalArgumentException("请设置 Cookie");
         //禁止获取 1080P 以上的视频
-        if (param.getQn().getQn() != QN.P1080_cookie.getQn())
+        if (param.getQn().getQn() > QN.P1080_cookie.getQn())
             throw new IllegalArgumentException("请设置 Cookie");
         //如果是非Dash模式，且获取1080P视频；访问1080p固定接口
         if (param.getQn() == QN.P1080_cookie && param.getFnval() < Fnval.Dash.getValue()) isP1080();

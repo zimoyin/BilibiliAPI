@@ -20,7 +20,6 @@ import github.zimoyin.bili.user.up.SearchUser;
 import github.zimoyin.bili.video.download.download.DownloadResult;
 import org.apache.logging.log4j.LogManager;
 
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;

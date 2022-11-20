@@ -5,7 +5,6 @@ import github.zimoyin.bili.video.download.download.event.DownloadingINFO;
 import lombok.Data;
 import org.apache.logging.log4j.LogManager;
 
-
 import java.io.*;
 import java.net.URL;
 import java.util.HashMap;
@@ -18,6 +17,12 @@ import java.util.HashMap;
 public class VideoDownloadUtil {
 
     private String bv;
+    //缓冲区大小为最大数据包大小的三分之二。因为通常数据包负载不会达到65535
+    private static final int BUFFER_SIZE = 65535 / 3 * 2;
+    //    private static final int BUFFER_SIZE = 1024;
+    //限速 byte ：对于多线程下载则不限速（都多线程了限什么速）
+    @Deprecated
+    private static volatile int Ratelimit = 0;
 
     public VideoDownloadUtil() {
     }
@@ -49,7 +54,6 @@ public class VideoDownloadUtil {
     }
 
 
-
     /**
      * 从断点处下载文件
      *
@@ -70,7 +74,7 @@ public class VideoDownloadUtil {
         String bv = info.getPage().getID().getBV();
         //构建单次请求头
         HashMap<String, String> headerCope = new HashMap<>();
-        headerCope.put("referer","http://www.bilibili.com");
+        headerCope.put("referer", "http://www.bilibili.com");
         headerCope.put("Range", "bytes=" + start + "-" + end);
         //下载结果对象
         DownloadResult downloadResult = new DownloadResult();
@@ -93,15 +97,14 @@ public class VideoDownloadUtil {
             inputStream = result.getInputStream();
             //返回的数据大小
             int code = 0;
-            //缓存区：缓冲区大小为最大数据包大小的三分之二。因为通常数据包负载不会达到65535
-            byte[] bytes = new byte[65535 / 3 * 2];
+            //缓存区
+            byte[] bytes = new byte[BUFFER_SIZE];
             //写入文件
             while ((code = inputStream.read(bytes)) != -1) {
                 if (info.isStop()) break;
                 randFile.write(bytes, 0, code);
                 info.addFileSize(code);
             }
-            info.threadFinish();
         } catch (Exception e) {
             downloadResult.setDownloadFinish(false);
             downloadResult.setException(e);
@@ -132,6 +135,7 @@ public class VideoDownloadUtil {
 
     /**
      * 下载文件
+     *
      * @param path
      * @param url
      * @param info
@@ -149,17 +153,34 @@ public class VideoDownloadUtil {
         }
 
         try (FileOutputStream outputStream = new FileOutputStream(path)) {
+
             int code = 0;
-            byte[] bytes = new byte[1024 * 1021 * 3];
+            byte[] bytes = new byte[BUFFER_SIZE];
+            //通过单位时间内接收完指定字节数后，将剩余时间进行睡眠实现
+            int count = 0;
+            long start = System.currentTimeMillis();
+            long end = System.currentTimeMillis();
+            //接收字节
             while ((code = inputStream.read(bytes)) != -1) {
                 outputStream.write(bytes, 0, code);
                 info.addFileSize(code);
                 if (info.isStop()) break;
+
+                //限速
+                end = System.currentTimeMillis();
+                count += code;
+                if (count >= Ratelimit && Ratelimit > 0) {
+                    long l = 1000 - (end - start);
+                    if (l > 0) {
+                        Thread.sleep(l);
+                    }
+                    start = System.currentTimeMillis();
+                    count = 0;
+                }
             }
-            info.threadFinish();
         } catch (Exception e) {
             throw new RuntimeException(e);
-        }finally {
+        } finally {
             info.threadFinish();
             try {
                 result.release();
@@ -172,6 +193,10 @@ public class VideoDownloadUtil {
                 throw e;
             }
         }
+    }
 
+    @Deprecated
+    public static void setRatelimit(int ratelimit) {
+        Ratelimit = ratelimit;
     }
 }

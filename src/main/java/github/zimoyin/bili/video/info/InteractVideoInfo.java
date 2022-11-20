@@ -10,13 +10,15 @@ import github.zimoyin.bili.video.info.pojo.interact.InteractVideoRootBean;
 import github.zimoyin.bili.video.info.pojo.interact.Questions;
 import lombok.Data;
 
-
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.security.KeyManagementException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
-import java.util.*;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
 /**
  * 互动视频

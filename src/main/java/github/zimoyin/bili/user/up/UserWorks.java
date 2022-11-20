@@ -101,6 +101,9 @@ public class UserWorks {
      * @throws KeyManagementException
      */
     public String userWorksPage(long mid, int publishNumber, int page, String order) throws IOException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException {
+        if (publishNumber > 50 || publishNumber <= 0)
+            throw new IllegalArgumentException(" param 'publishNumber' must be between 1 and 50");
+        if (page <= 0) throw new IllegalArgumentException(" param 'page' must be greater than 0");
         String url = String.format(URL, mid, publishNumber, page, order);
         HttpClientResult result = HttpClientUtils.doGet(url);
         return result.getContent();

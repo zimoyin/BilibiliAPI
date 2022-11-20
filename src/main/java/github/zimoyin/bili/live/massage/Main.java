@@ -5,6 +5,8 @@ import github.zimoyin.bili.cookie.GlobalCookie;
 import github.zimoyin.bili.exception.CookieNotFoundException;
 import github.zimoyin.bili.live.massage.data.Massage;
 
+import java.util.Date;
+
 public class Main {
     public static void main(String[] args) throws CookieNotFoundException {
         LiveMessage liveMassage = new LiveMessage();
@@ -13,7 +15,7 @@ public class Main {
             @Override
             public void handle(Massage massage) {
                 for (Barrage barrage : massage.getBarrages()) {
-                    System.out.println(barrage.getAuthor()+":  "+barrage.getText());
+                    System.out.println(new Date(barrage.getSendTime())+"  "+barrage.getAuthor()+":  "+barrage.getText());
                 }
             }
         });

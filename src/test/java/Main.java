@@ -1,37 +1,15 @@
-import github.zimoyin.bili.cookie.GlobalCookie;
-import github.zimoyin.bili.video.download.download.VideoDownload;
-import github.zimoyin.bili.video.download.setting.info.DownloadVideoInfo;
-import github.zimoyin.bili.video.download.setting.DownloadVideoSetting;
-import github.zimoyin.bili.video.url.param.Fnval;
-import github.zimoyin.bili.video.url.param.ParamBuilder;
-import github.zimoyin.bili.video.url.param.QN;
-import github.zimoyin.bili.exception.CookieNotFoundException;
-import org.apache.http.HttpException;
-
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.security.KeyManagementException;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
+import github.zimoyin.bili.video.download.download.downloader.UserVideoDownload;
+import github.zimoyin.bili.video.download.download.downloader.VideoDownload;
+import github.zimoyin.bili.video.download.setting.UserVideoSetting;
+import github.zimoyin.bili.video.download.setting.VideoSetting;
 
 public class Main {
-    public static void main(String[] args) throws IOException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException, HttpException, CookieNotFoundException {
-        long cid = 878104053;
-        String bv = "BV1Ce4y147dS";
+    public static void main(String[] args) {
 
-        ParamBuilder builder = new ParamBuilder()
-                .append(bv)
-//                .append(cid)
-                .append(QN.P306)
-                .append(Fnval.Dash);
+        UserVideoSetting setting = new UserVideoSetting(37974444);
+        UserVideoDownload download = new UserVideoDownload(setting);
+        download.setListener(info -> System.out.print("\r" + info.getPage().getTitle() + ": " + info.getFileSize() + "/" + info.getFileFinalSize()));
+        download.downloadAll();
 
-        DownloadVideoSetting setting = new DownloadVideoSetting("ep674245");
-        setting.setCookie(GlobalCookie.getInstance());
-        DownloadVideoInfo page = setting.getPage();
-        System.out.println(page.getTitle());
-
-        VideoDownload download = new VideoDownload(setting);
-        download.setListener(info -> System.out.print("\r" + info.getThreadName() + ": " + info));
-        download.downloadAsynchronous();
     }
 }

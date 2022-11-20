@@ -1,11 +1,11 @@
 package github.zimoyin.bili.video.url;
 
 import com.alibaba.fastjson.JSONObject;
-import github.zimoyin.bili.video.url.param.ParamBuilder;
 import github.zimoyin.bili.exception.CodeException;
 import github.zimoyin.bili.utils.IDConvert;
 import github.zimoyin.bili.utils.net.httpclient.HttpClientResult;
 import github.zimoyin.bili.utils.net.httpclient.HttpClientUtils;
+import github.zimoyin.bili.video.url.param.ParamBuilder;
 import github.zimoyin.bili.video.url.pojo.VideoURLJsonRoot;
 
 import java.io.IOException;

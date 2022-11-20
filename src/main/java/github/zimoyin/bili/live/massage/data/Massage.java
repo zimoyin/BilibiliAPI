@@ -11,7 +11,6 @@ import github.zimoyin.bili.utils.JsonSerializeUtil;
 import lombok.Data;
 import org.apache.logging.log4j.LogManager;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +24,7 @@ public class Massage {
 
     private Package page;
     /**
-     * 存储所有的服务器命令，包括弹幕
+     * 存储所有的服务器命令，包括弹幕；原始数据未进行解析状态
      */
     private ArrayList<String> commands = new ArrayList<String>();
     /**
@@ -301,21 +300,25 @@ public class Massage {
         barrage.setText(info.get(1));
         //设置发送弹幕的人 和 他的mid
         String authorJson = info.get(2);
+        //弹幕发送的时间
+        String tsJson = info.get(9);
+        Long ts = JSONObject.parseObject(tsJson).getLong("ts");
+        //解析发送者
         JSONArray authorArray = JSONObject.parseArray(authorJson);
         barrage.setMid(authorArray.get(0).toString());
         barrage.setAuthor(authorArray.get(1).toString());
         barrages.add(barrage);
         try {
-            // 设置弹幕属性
+            // 设置弹幕属性（获取弹幕数组中第一个元素(数组)的倒数第二个元素并解析）
             JSONArray cas = JSONObject.parseArray(info.get(0));
             JSONObject casJson = (JSONObject) cas.get(cas.size() - 2);
             //extra
             String extraContent = casJson.get("extra").toString();
             JSONObject extra = JSONObject.parseObject(extraContent);
             //用户发送的时间
-            barrage.setSendTime(Long.parseLong(cas.get(5).toString()) * 1000);
+            barrage.setSendTime(ts*1000);
             //接收时的时间
-            barrage.setShowTime(Long.parseLong(cas.get(4).toString()));
+            barrage.setShowTime(ts*1000);
             //颜色
             barrage.setRbg(Integer.parseInt(extra.get("color").toString()));
             //字体大小

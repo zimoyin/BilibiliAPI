@@ -15,7 +15,7 @@ import java.util.List;
  * 获取指定用户创建的所有收藏夹信息
  */
 public class UserFavorites {
-    private static final String URL ="http://api.bilibili.com/x/v3/fav/folder/created/list-all";
+    private static final String URL = "https://api.bilibili.com/x/v3/fav/folder/created/list-all";
     private Cookie cookie;
 
     public UserFavorites() {
@@ -27,16 +27,17 @@ public class UserFavorites {
 
     /**
      * 获取指定用户创建的所有收藏夹信息,列表
+     *
      * @param mid 用户的ID
      * @return
      */
     public List<FavList> getFavoritesInfoList(long mid) throws IOException {
-        List<FavList> list = getJsonPojo(mid).getData().getList();
-        return list;
+        return getJsonPojo(mid).getData().getList();
     }
 
     /**
      * 获取指定用户创建的所有收藏夹信息
+     *
      * @param mid 用户的ID
      * @return
      */
@@ -47,23 +48,25 @@ public class UserFavorites {
 
     /**
      * 获取指定用户创建的所有收藏夹信息
-     * @param mid 用户的ID
+     *
+     * @param mid  用户的ID
      * @param type 目标内容属性
      * @return
      */
-    public UserFavoritesJsonRoot getJsonPojo(long mid,Type type) throws IOException {
+    public UserFavoritesJsonRoot getJsonPojo(long mid, Type type) throws IOException {
         String page = getPage(mid, type);
         return JSONObject.parseObject(page, UserFavoritesJsonRoot.class);
     }
 
     /**
      * 获取指定用户创建的所有收藏夹信息
-     * @param mid 用户的ID
+     *
+     * @param mid  用户的ID
      * @param type 目标内容属性
-     * @param rid 目标内容id，可位视频avid
+     * @param rid  目标内容id，可位视频avid
      * @return
      */
-    public UserFavoritesJsonRoot getJsonPojo(long mid,Type type,long rid) throws IOException {
+    public UserFavoritesJsonRoot getJsonPojo(long mid, Type type, long rid) throws IOException {
         String page = getPage(mid, type, rid);
         return JSONObject.parseObject(page, UserFavoritesJsonRoot.class);
     }
@@ -71,6 +74,7 @@ public class UserFavorites {
 
     /**
      * 获取指定用户创建的所有收藏夹信息
+     *
      * @param mid 用户的ID
      * @return
      */
@@ -80,26 +84,29 @@ public class UserFavorites {
 
     /**
      * 获取指定用户创建的所有收藏夹信息
-     * @param mid 用户的ID
+     *
+     * @param mid  用户的ID
      * @param type 目标内容属性
      * @return
      */
-    public String getPage(long mid,Type type) throws IOException {
-        return getPage(mid, type,-1L);
+    public String getPage(long mid, Type type) throws IOException {
+        return getPage(mid, type, -1L);
     }
 
     /**
      * 获取指定用户创建的所有收藏夹信息
-     * @param mid 用户的ID
+     *
+     * @param mid  用户的ID
      * @param type 目标内容属性
-     * @param rid 目标内容id，可位视频avid
+     * @param rid  目标内容id，可位视频avid
      * @return
      */
-    public String getPage(long mid,Type type,long rid) throws IOException {
+    public String getPage(long mid, Type type, long rid) throws IOException {
         HashMap<String, String> params = new HashMap<String, String>();
         params.put("up_mid", String.valueOf(mid));
-        if (type != null)params.put("type", String.valueOf(type.getType()));
-        if (rid > -1)params.put("rid", String.valueOf(rid));
+        if (type != null) params.put("type", String.valueOf(type.getType()));
+        else params.put("type", String.valueOf(Type.Video.getType()));
+        if (rid > -1) params.put("rid", String.valueOf(rid));
 
         HttpClientResult httpClientResult = HttpClientUtils.doGet(URL, cookie != null ? cookie.toHeaderCookie() : null, params);
         return httpClientResult.getContent();
@@ -108,7 +115,7 @@ public class UserFavorites {
     /**
      * 目标内容属性
      */
-    static enum Type{
+    static enum Type {
         All(0),
         Video(2);
         private int type;

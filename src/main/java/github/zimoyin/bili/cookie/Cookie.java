@@ -19,6 +19,21 @@ import java.util.function.BiConsumer;
 public abstract class Cookie extends HashMap<String, String> implements Serializable {
     private static final long serialVersionUID = 2168152194164783950L;
 
+    /**
+     * 将字符串解析出Cookie
+     *
+     * @param cookie
+     * @return
+     */
+    public static WebCookie parse(String cookie) {
+        WebCookie webCookie = new WebCookie();
+        for (String cookie0 : cookie.trim().split(";")) {
+            String[] split = cookie0.split("=");
+            webCookie.put(split[0].trim(),split[1].trim());
+        }
+        return webCookie;
+    }
+
     public String getCsrf(){
         return this.get("bili_jct");
     }

@@ -25,7 +25,16 @@ public class Live_room {
      * 0：未开播
      * 1：直播中
      */
+    @Deprecated
     private int liveStatus;
+    /**
+     * 直播状态
+     * 0：未开播
+     * 1：直播中
+     */
+    private int live_status;
+
+
     /**
      * 直播间网页 url
      */

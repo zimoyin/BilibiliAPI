@@ -44,4 +44,12 @@ public abstract class DownloadVideoSettingAbs {
         boolean mkdirs = file.mkdirs();
         this.filePath = filePath;
     }
+
+    /**
+     * 使文件名合法
+     * @param name 文件名称
+     */
+    public String buildFileName(String name) {
+        return name.replaceAll("[&/:*?\"<>|\\\\]","_");
+    }
 }

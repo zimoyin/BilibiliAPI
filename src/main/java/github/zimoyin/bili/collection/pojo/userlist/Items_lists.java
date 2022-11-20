@@ -17,21 +17,26 @@ import java.util.List;
  */
 @Data
 public class Items_lists {
-
+    /**
+     * 此次查询用户的合集信息
+     */
     private Page page;
     /**
-     * 合集 分不清他们之间的区别
+     * 询用户的合集列表
      */
     private List<Seasons_list> seasons_list;
     /**
-     * 视频列表 分不清他们之间的区别
+     * 询用户的合集列表
      */
     private List<Series_list> series_list;
 
+    /**
+     * 询用户的合集列表 推荐
+     */
     private List<CInfo> list;
 
     /**
-     * 获取所有的合集信息
+     * 询用户的合集列表
      * @return
      */
     public List<CInfo> getList() {

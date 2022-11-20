@@ -1,12 +1,13 @@
-package github.zimoyin.bili.video.download.download;
+package github.zimoyin.bili.video.download.download.downloader;
 
 import github.zimoyin.bili.exception.DownloadException;
 import github.zimoyin.bili.utils.AllocateBytes;
 import github.zimoyin.bili.utils.net.httpclient.NetFileUtil;
 import github.zimoyin.bili.utils.net.httpclient.VideoDownloadUtil;
+import github.zimoyin.bili.video.download.download.DownloadResult;
 import github.zimoyin.bili.video.download.download.event.DownloadHandle;
 import github.zimoyin.bili.video.download.download.event.DownloadingINFO;
-import github.zimoyin.bili.video.download.setting.DownloadVideoSetting;
+import github.zimoyin.bili.video.download.setting.DownloadVideoSettingAbs;
 import lombok.Getter;
 
 import java.io.IOException;
@@ -21,19 +22,21 @@ import java.util.concurrent.Future;
 import java.util.concurrent.FutureTask;
 
 /**
- * 完成基本内容
+ * 基础视频下载器
  */
 @Getter
 public class VideoDownload implements VideoDownloadInterface {
 
-    private final DownloadVideoSetting setting;
+    private final DownloadVideoSettingAbs setting;
     private final ArrayList<DownloadHandle> handles = new ArrayList<>();
     private DownloadingINFO Info;
     private boolean stop = false;
+    private String filePath;
 
-    public VideoDownload(DownloadVideoSetting setting) {
+    public VideoDownload(DownloadVideoSettingAbs setting) {
         this.setting = setting;
     }
+
 
     @Override
     public boolean download() throws DownloadException {
@@ -43,16 +46,16 @@ public class VideoDownload implements VideoDownloadInterface {
             ArrayList<URL> list = setting.getPage().getURL();
             for (int i = 0; i < list.size(); i++) {
                 if (stop) break;
-                String path = buildPath(i);
+                filePath = buildPath(i);
                 DownloadingINFO info = toDownloadingINFOBuild(
                         list.get(i),
                         setting,
                         list.size(),
                         (i + 1),
-                        path
+                        filePath
                 );
                 this.Info = info;
-                VideoDownloadUtil.downloadFile(path, list.get(i), info);
+                VideoDownloadUtil.downloadFile(filePath, list.get(i), info);
             }
         } catch (Exception e) {
             throw new DownloadException("下载失败", e);
@@ -60,8 +63,10 @@ public class VideoDownload implements VideoDownloadInterface {
         return false;
     }
 
-    private String buildPath(int i) {
-        return setting.getFilePath() + "/" + setting.getPage().getTitle() + "-" + i + "." + setting.getPage().getType();
+    private String buildPath(int i){
+        String fileName = setting.getPage().getTitle() + "-" + i + "." + setting.getPage().getType();
+        fileName = setting.buildFileName(fileName);
+        return setting.getFilePath() + "/" + fileName;
     }
 
     /**
@@ -72,7 +77,7 @@ public class VideoDownload implements VideoDownloadInterface {
      * @param taskNumber 当前是第几个任务
      * @param filePath   文件保存位置
      */
-    private DownloadingINFO toDownloadingINFOBuild(URL url, DownloadVideoSetting setting, int taskCount, int taskNumber, String filePath) throws IOException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException {
+    private DownloadingINFO toDownloadingINFOBuild(URL url, DownloadVideoSettingAbs setting, int taskCount, int taskNumber, String filePath) throws IOException, NoSuchAlgorithmException, KeyStoreException, URISyntaxException, KeyManagementException {
         HashMap<String, String> headers = new HashMap<>();
         long fileSize = NetFileUtil.getFileLength2(url.toString(), headers);
         DownloadingINFO info = new DownloadingINFO(setting.getPage(), setting.getThreadCount(), taskCount, fileSize, filePath);
@@ -105,14 +110,14 @@ public class VideoDownload implements VideoDownloadInterface {
             //遍历链接
             for (int i = 0; i < list.size(); i++) {
                 if (stop) break;
-                String path = buildPath(i);
+                filePath = buildPath(i);
                 URL url = list.get(i);
                 DownloadingINFO info = toDownloadingINFOBuild(
                         url,
                         setting,
                         list.size(),
                         (i + 1),
-                        path
+                        filePath
                 );
                 this.Info = info;
                 //下载逻辑
@@ -122,7 +127,7 @@ public class VideoDownload implements VideoDownloadInterface {
                         Thread.currentThread().setName("downloading-" + start + "-" + end);
                         return VideoDownloadUtil.downloadPartFile(
                                 url.toString(),
-                                path,
+                                filePath,
                                 start,
                                 end,
                                 info
@@ -136,7 +141,7 @@ public class VideoDownload implements VideoDownloadInterface {
             throw new DownloadException("下载失败", e);
         }
 
-        //等待所有的任务完成,完成后才执行结束线程池代码
+        //等待所有的任务完成
         if (isWaitTakeFinish) for (Future<DownloadResult> task : futures) {
             try {
                 task.get();
@@ -144,10 +149,22 @@ public class VideoDownload implements VideoDownloadInterface {
                 throw new DownloadException("等待视频下载完毕时出现异常，异常原因大概为未能正常关闭资源导致", e);
             }
         }
-
-
         return futures;
     }
+
+    /**
+     * 下载所有分P
+     */
+    @Override
+    public ArrayList<Future<DownloadResult>> downloadAll() {
+        ArrayList<Future<DownloadResult>> futures = new ArrayList<>();
+        for (int i = 0; i < setting.getSize(); i++) {
+            setting.updateDownloadPage(i + 1);
+            futures.addAll(downloadThread(true));
+        }
+        return futures;
+    }
+
 
     @Override
     public void stop() throws DownloadException {

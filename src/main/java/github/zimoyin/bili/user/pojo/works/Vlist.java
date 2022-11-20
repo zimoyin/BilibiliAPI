@@ -57,7 +57,9 @@ public class Vlist {
 
     private long aid;
     private String bvid;
-
+    /**
+     * 发布时间 (s)
+     */
     private long created;
     /**
      * 视频时长  格式化后的（分钟：秒）

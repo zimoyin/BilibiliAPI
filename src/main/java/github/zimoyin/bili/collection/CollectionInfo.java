@@ -19,8 +19,7 @@ public class CollectionInfo {
      */
     public CollectionJsonRoot getJsonPojo(long mid, long sid) throws IOException {
         String page = getPage(mid, sid);
-        CollectionJsonRoot collectionJsonRoot = JSONObject.parseObject(page, CollectionJsonRoot.class);
-        return collectionJsonRoot;
+        return JSONObject.parseObject(page, CollectionJsonRoot.class);
     }
     /**
      * 获取这个合集的信息
@@ -31,8 +30,7 @@ public class CollectionInfo {
      */
     public CollectionJsonRoot getJsonPojo(long mid, long sid, int pn) throws IOException {
         String page = getPage(mid, sid, pn);
-        CollectionJsonRoot collectionJsonRoot = JSONObject.parseObject(page, CollectionJsonRoot.class);
-        return collectionJsonRoot;
+        return JSONObject.parseObject(page, CollectionJsonRoot.class);
     }
     /**
      * 获取这个合集的信息
@@ -44,8 +42,7 @@ public class CollectionInfo {
      */
     public CollectionJsonRoot getJsonPojo(long mid, long sid, int pn, int ps) throws IOException {
         String page = getPage(mid, sid, pn, ps);
-        CollectionJsonRoot collectionJsonRoot = JSONObject.parseObject(page, CollectionJsonRoot.class);
-        return collectionJsonRoot;
+        return JSONObject.parseObject(page, CollectionJsonRoot.class);
     }
     /**
      * 获取这个合集的信息
@@ -58,8 +55,7 @@ public class CollectionInfo {
      */
     public CollectionJsonRoot getJsonPojo(long mid, long sid, int pn, int ps, boolean sort_reverse) throws IOException {
         String page = getPage(mid, sid, pn, ps, sort_reverse);
-        CollectionJsonRoot collectionJsonRoot = JSONObject.parseObject(page, CollectionJsonRoot.class);
-        return collectionJsonRoot;
+        return JSONObject.parseObject(page, CollectionJsonRoot.class);
     }
     /**
      * 获取这个合集的信息

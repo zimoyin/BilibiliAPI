@@ -3,7 +3,7 @@
   */
 package github.zimoyin.bili.comment.pojo.table;
 
-import github.zimoyin.bili.comment.pojo.area.page.*;
+import github.zimoyin.bili.comment.pojo.area.page.User_sailing;
 import github.zimoyin.bili.user.pojo.user.Nameplate;
 import github.zimoyin.bili.user.pojo.user.Pendant;
 import github.zimoyin.bili.user.pojo.user.Vip;

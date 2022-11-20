@@ -1,6 +1,7 @@
 package github.zimoyin.bili.video.download.setting;
 
 import github.zimoyin.bili.cookie.Cookie;
+import github.zimoyin.bili.utils.net.httpclient.VideoDownloadUtil;
 import github.zimoyin.bili.video.download.setting.info.DownloadVideoID;
 import github.zimoyin.bili.video.download.setting.info.DownloadVideoInfo;
 import github.zimoyin.bili.video.download.setting.info.DownloadVideoInfoList;
@@ -9,7 +10,12 @@ import lombok.Getter;
 
 import java.util.function.Consumer;
 
-public class DownloadVideoSetting extends DownloadVideoSettingAbs {
+
+/**
+ * 单视频下载设置
+ * 一个设置类对应一个视频（包括番剧、剧集、分p视频）
+ */
+public class VideoSetting extends DownloadVideoSettingAbs {
     /**
      * 初步构建 ParamBuilder 只要求包含 QN，Fnval 字段
      * 进一步(DownloadVideoInfo)构建 ParamBuilder 要求追加 BVID，CID 字段。此次构建是设置浮动字段
@@ -30,25 +36,40 @@ public class DownloadVideoSetting extends DownloadVideoSettingAbs {
     private DownloadVideoInfoList pages;
     private int page = 1;
 
-    public DownloadVideoSetting(String ID) {
+    /**
+     * 适合对格式，清晰度没有要求的
+     */
+    public VideoSetting(String ID) {
         this.ID = new DownloadVideoID(ID);
         this.param = new ParamBuilder();
         init();
     }
 
-    public DownloadVideoSetting(DownloadVideoID ID) {
+    /**
+     * 适合对格式，清晰度没有要求的
+     */
+    public VideoSetting(DownloadVideoID ID) {
         this.ID = ID;
         this.param = new ParamBuilder();
         init();
     }
 
-    public DownloadVideoSetting(ParamBuilder param) {
+    /**
+     * 适用于只下载视频
+     * @param param 视频
+     */
+    public VideoSetting(ParamBuilder param) {
         this.param = param;
         this.ID = new DownloadVideoID(param.getBvid());
         init();
     }
 
-    public DownloadVideoSetting(ParamBuilder param, Cookie cookie) {
+    /**
+     * 适用于只下载视频
+     * @param param 视频
+     * @param cookie cookie
+     */
+    public VideoSetting(ParamBuilder param, Cookie cookie) {
         this.param = param;
         this.cookie = cookie;
         this.ID = new DownloadVideoID(param.getBvid());
@@ -57,8 +78,10 @@ public class DownloadVideoSetting extends DownloadVideoSettingAbs {
 
     /**
      * 推荐使用
+     * 对于番剧等适合使用
+     * 注意：下载视频的ID依照 ID 所定义的，param 的 id 会被忽略
      */
-    public DownloadVideoSetting(ParamBuilder param, DownloadVideoID ID) {
+    public VideoSetting(ParamBuilder param, DownloadVideoID ID) {
         this.param = param;
         this.ID = ID;
         init();
@@ -66,8 +89,10 @@ public class DownloadVideoSetting extends DownloadVideoSettingAbs {
 
     /**
      * 推荐使用
+     * 对于番剧等适合使用
+     * 注意：下载视频的ID依照 ID 所定义的，param 的 id 会被忽略
      */
-    public DownloadVideoSetting(ParamBuilder param, Cookie cookie, DownloadVideoID ID) {
+    public VideoSetting(ParamBuilder param, DownloadVideoID ID,Cookie cookie) {
         this.param = param;
         this.cookie = cookie;
         this.ID = ID;
@@ -121,5 +146,15 @@ public class DownloadVideoSetting extends DownloadVideoSettingAbs {
         this.cookie = cookie;
         this.param.append(cookie);
         this.pages.setCookie(this.cookie);
+    }
+
+    /**
+     * 下载限速：只对单线程下载有效。(不推荐进行限速，因为限速是通过 sleep thread 进行实现的)
+     * 为了测试代码而不占用他人带宽而写的’大聪明‘实现
+     * @param rateLimit
+     */
+    @Deprecated
+    public void setRatelimit(int rateLimit) {
+        VideoDownloadUtil.setRatelimit(rateLimit);
     }
 }

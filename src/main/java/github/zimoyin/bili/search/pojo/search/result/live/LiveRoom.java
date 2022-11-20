@@ -2,10 +2,11 @@
   * Copyright 2022 json.cn 
   */
 package github.zimoyin.bili.search.pojo.search.result.live;
+
 import lombok.Data;
 
-import java.util.List;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Auto-generated: 2022-08-19 19:58:27

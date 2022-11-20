@@ -2,15 +2,12 @@ package github.zimoyin.bili.barrage.barrage.video;
 
 
 import com.google.protobuf.InvalidProtocolBufferException;
-
 import github.zimoyin.bili.barrage.barrage.BarrageInterface;
 import github.zimoyin.bili.barrage.com.github.proto.BarrageProto;
 import github.zimoyin.bili.barrage.data.Barrage;
 import github.zimoyin.bili.cookie.Cookie;
 import github.zimoyin.bili.utils.net.httpclient.HttpClientResult;
 import github.zimoyin.bili.utils.net.httpclient.HttpClientUtils;
-
-
 
 import java.util.ArrayList;
 import java.util.HashMap;

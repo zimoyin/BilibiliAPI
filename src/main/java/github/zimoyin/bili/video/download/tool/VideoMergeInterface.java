@@ -1,4 +1,4 @@
-package github.zimoyin.bili.video.download.download;
+package github.zimoyin.bili.video.download.tool;
 
 import java.io.File;
 import java.util.ArrayList;

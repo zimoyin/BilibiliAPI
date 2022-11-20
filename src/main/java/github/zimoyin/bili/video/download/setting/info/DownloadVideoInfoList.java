@@ -4,10 +4,10 @@ import github.zimoyin.bili.cookie.Cookie;
 import github.zimoyin.bili.fanju.info.SeriesINFO;
 import github.zimoyin.bili.fanju.pojo.info.seriesI.Episodes;
 import github.zimoyin.bili.fanju.pojo.info.seriesI.SeriesJsonRootBean;
-import github.zimoyin.bili.video.url.param.ParamBuilder;
 import github.zimoyin.bili.video.info.VideoInfo;
 import github.zimoyin.bili.video.info.pojo.info.WEBVideoINFOJsonRootBean;
 import github.zimoyin.bili.video.info.pojo.info.data.Pages;
+import github.zimoyin.bili.video.url.param.ParamBuilder;
 import lombok.Data;
 import org.apache.http.HttpException;
 
@@ -19,8 +19,8 @@ import java.util.List;
  * 视频列表信息
  */
 @Data
-public class DownloadVideoInfoList {
-    private ArrayList<DownloadVideoInfo> Pages = new ArrayList<DownloadVideoInfo>();
+public class DownloadVideoInfoList implements VideoInfoListInterface {
+    private ArrayList<DownloadVideoInfo> Pages = new ArrayList<>();
     private DownloadVideoID ID;
     /**
      * 进一步构建 ParamBuilder 要求追加 BVID，CID 字段
@@ -98,6 +98,7 @@ public class DownloadVideoInfoList {
         }
     }
 
+    @Override
     public DownloadVideoInfo getPage(int page) {
         return this.Pages.get(page - 1);
     }
@@ -106,5 +107,9 @@ public class DownloadVideoInfoList {
         for (DownloadVideoInfo page : this.Pages) {
             page.getParam().append(cookie);
         }
+    }
+
+    public int size() {
+        return getPages().size();
     }
 }

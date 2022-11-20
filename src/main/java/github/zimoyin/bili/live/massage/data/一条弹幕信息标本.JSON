@@ -8,11 +8,11 @@
       0,
       1,
       25,
-      16777215,
-      1659594456013,
-      639942574,
+      5816798,
+      1668612326706,
+      1078679145,
       0,
-      "07e0eb46",
+      "272b7c79",
       0,
       0,
       0,
@@ -23,7 +23,7 @@
       {
         "mode": 0,
         "show_player_type": 0,
-        "extra": "{\"send_from_me\":false,\"mode\":0,\"color\":16777215,\"dm_type\":0,\"font_size\":25,\"player_mode\":1,\"show_player_type\":0,\"content\":\"你播不播\",\"user_hash\":\"132180806\",\"emoticon_unique\":\"\",\"bulge_display\":0,\"recommend_score\":0,\"main_state_dm_color\":\"\",\"objective_state_dm_color\":\"\",\"direction\":0,\"pk_direction\":0,\"quartet_direction\":0,\"anniversary_crowd\":0,\"yeah_space_type\":\"\",\"yeah_space_url\":\"\",\"jump_to_url\":\"\",\"space_type\":\"\",\"space_url\":\"\"}"
+        "extra": "{\"send_from_me\":false,\"mode\":0,\"color\":5816798,\"dm_type\":0,\"font_size\":25,\"player_mode\":1,\"show_player_type\":0,\"content\":\"妖姬很厉害，爆杀\",\"user_hash\":\"657161337\",\"emoticon_unique\":\"\",\"bulge_display\":0,\"recommend_score\":0,\"main_state_dm_color\":\"\",\"objective_state_dm_color\":\"\",\"direction\":0,\"pk_direction\":0,\"quartet_direction\":0,\"anniversary_crowd\":0,\"yeah_space_type\":\"\",\"yeah_space_url\":\"\",\"jump_to_url\":\"\",\"space_type\":\"\",\"space_url\":\"\"}"
       },
       {
         "activity_identity": "",
@@ -31,10 +31,10 @@
         "not_show": 0
       }
     ],
-    "你播不播",
+    "妖姬很厉害，爆杀",
     [
-      357906426,
-      "玉帝日王母1956",
+      66876171,
+      "俺来收债",
       0,
       0,
       0,
@@ -42,12 +42,26 @@
       1,
       ""
     ],
-    [],
     [
+      18,
+      "罪域",
+      "守护茶茶",
+      1440094,
+      13081892,
+      "",
       0,
+      13081892,
+      13081892,
+      13081892,
+      0,
+      1,
+      37946996
+    ],
+    [
+      10,
       0,
       9868950,
-      ">50000",
+      "\u003e50000",
       0
     ],
     [
@@ -58,14 +72,14 @@
     0,
     null,
     {
-      "ts": 1659594456,
-      "ct": "6E34AFD0"
+      "ts": 1668612326,
+      "ct": "17C7FCD"
     },
     0,
     0,
     null,
     null,
     0,
-    7
+    63
   ]
 }
