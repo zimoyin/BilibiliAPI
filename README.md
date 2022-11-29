@@ -33,7 +33,7 @@
 | github.zimoyin.core.live       | io.vertx            |
 
 ### 本地导入jar
-
+**请自行打包为 jar**
 ```xml
 
 <dependency>

@@ -3,7 +3,7 @@ package github.zimoyin.bili.live.massage.vertx;
 import com.alibaba.fastjson.JSONObject;
 import github.zimoyin.bili.live.massage.LiveMassageHandle;
 import github.zimoyin.bili.live.massage.MassageStreamInfo;
-import github.zimoyin.bili.live.massage.data.Massage;
+import github.zimoyin.bili.live.massage.data.Message;
 import github.zimoyin.bili.live.pojo.message.LiveMessageJsonRootBean;
 import github.zimoyin.bili.live.pojo.message.host.DanmuInfoJsonRootBean;
 import github.zimoyin.bili.live.pojo.message.host.Host;
@@ -185,7 +185,7 @@ public class TcpVerticle extends AbstractVerticle {
                         buffer.toString()
                 );
             //构建本次的信息体
-            Massage massage = new Massage();
+            Message massage = new Message();
             massage.setPage(page);
             massage.setHot(this.hot);
             //解压信息
@@ -194,7 +194,7 @@ public class TcpVerticle extends AbstractVerticle {
             for (String command : massage.getCommands()) {
                 LiveMessageJsonRootBean bean = JSONObject.parseObject(command, LiveMessageJsonRootBean.class);
                 boolean success = false;
-                for (Massage.MessageType type : Massage.MessageType.values())
+                for (Message.MessageType type : Message.MessageType.values())
                     if (!bean.getCmd().isEmpty() && bean.getCmd().equalsIgnoreCase(type.name())) success = true;
                 if (!success) logger.warn("不存在的命令指令: {}",bean.getCmd());
             }
@@ -256,7 +256,7 @@ public class TcpVerticle extends AbstractVerticle {
      * @param data
      * @Author mxnter
      */
-    private void analyzeData(byte[] data, Massage message) {
+    private void analyzeData(byte[] data, Message message) {
         int dataLength = data.length;
         if (dataLength < 16) {
             logger.error("错误的数据");

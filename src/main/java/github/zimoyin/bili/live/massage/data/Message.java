@@ -20,7 +20,7 @@ import java.util.List;
  * 注意如果包中没有则获取不到部分内容，请手动判断这部分内容
  */
 @Data
-public class Massage {
+public class Message {
 
     private Package page;
     /**
