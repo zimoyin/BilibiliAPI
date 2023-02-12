@@ -6,19 +6,20 @@ package github.zimoyin.bili.comment.enums;
  */
 public enum CommentType {
     /**
-     * 视频的AVID
+     * 视频的AVID: 视频的 AVID （纯数字）
      */
     AV_ID(1),
     /**
      * 话题
+     * oid:话题 id
      */
     TOPIC_OF_CONVERSATION(2),
     /**
-     * 活动
+     * 活动:活动 id
      */
     ACTIVITY(4),
     /**
-     * 小视频
+     * 小视频:	小视频 id
      */
     ACTIVITY_VIDEO(5),
     /**

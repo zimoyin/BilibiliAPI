@@ -96,7 +96,7 @@ public class CommentAreaPageLoad {
     /**
      * 评论区翻页加载
      * @param type 评论区类型
-     * @param oid 评论区的oid，每个type对影一个oid，oid具体是什么见该type的注释中“：”后面的内容
+     * @param oid 评论区的oid(对于视频评论来说通常一个纯数字的 avid )，每个type对应一个oid，oid具体是什么见该 CommentType中对于type 的注释中“：”后面的内容
      * @param sort 排序方式：
      * 0：按时间
      * 1：按点赞数
